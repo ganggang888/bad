@@ -1,0 +1,51 @@
+<admintpl file="header" />
+</head>
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="">{:L('GOODS_TERM_INDEX')}</a></li>
+			<li><a href="{:U('Goods/term_add')}">{:L('GOODS_TERM_ADD')}</a></li>
+		</ul>
+		<form class="js-ajax-form" action="{:U('Menu/listorders')}" method="post">
+			<!--<div class="table-actions">
+				<button class="btn btn-primary btn-small js-ajax-submit" type="submit">{:L('SORT')}</button>
+			</div>-->
+			<table class="table table-hover table-bordered table-list" id="menus-table">
+				<thead>
+					<tr>
+						<th width="50">{:L('GOODS_TERM_NAME')}</th>
+						<th width="80">{:L('GOODS_TERM_STATUS')}</th>
+						<th width="180">{:L('ACTIONS')}</th>
+					</tr>
+				</thead>
+				<tbody>
+					{$taxonomys}
+				</tbody>
+				
+			</table>
+			<!--<div class="table-actions">
+				<button class="btn btn-primary btn-small js-ajax-submit" type="submit">{:L('SORT')}</button>
+			</div>-->
+		</form>
+	</div>
+	<script src="__PUBLIC__/js/common.js"></script>
+	<script>
+		$(document).ready(function() {
+			Wind.css('treeTable');
+			Wind.use('treeTable', function() {
+				$("#menus-table").treeTable({
+					indent : 20
+				});
+			});
+		});
+
+		setInterval(function() {
+			var refersh_time = getCookie('refersh_time_admin_menu_index');
+			if (refersh_time == 1) {
+				reloadPage(window);
+			}
+		}, 1000);
+		setCookie('refersh_time_admin_menu_index', 0);
+	</script>
+</body>
+</html>

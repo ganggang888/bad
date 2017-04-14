@@ -1,0 +1,50 @@
+<admintpl file="header" />
+</head>
+<body>
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+			<li><a href="{:U('Goods/term_index')}">{:L('GOODS_TERM_INDEX')}</a></li>
+			<li class="active"><a href="jacascript:;">{:L('GOODS_TERM_EDIT')}</a></li>
+		</ul>
+		<form method="post" class="form-horizontal js-ajax-form" action="">
+			<fieldset>
+				<div class="control-group">
+					<label class="control-label">{:L('GOODS_TERM_PARENT')}</label>
+                    <div class="controls">
+						<select name="parentid">
+                        <if condition="!$_GET['parentid']">
+                        <option value="0">请选择分类</option>
+                        </if>
+                    {$tree}
+                    </select>
+					</div>
+					
+				</div>
+				<div class="control-group">
+					<label class="control-label">{:L('GOODS_TERM_NAME')}</label>
+					<div class="controls">
+						<input type="text" name="name" value="{$data.name}">
+						<span class="form-required">*</span>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label">{:L('GOODS_TERM_STATUS')}</label>
+					<div class="controls">
+						<select name="status">
+                        <option value="1" <if condition="$data['status'] eq 1">selected</if>>启用</option>
+                        <option value="0" <if condition="$data['status'] eq 0">selected</if>>禁用</option>
+                        </select>
+						<span class="form-required">*</span>
+					</div>
+				</div>
+				<input type="hidden" value="{$data.id}" name="id">
+				
+			</fieldset>
+			<div class="form-actions">
+				<button type="submit" class="btn btn-primary js-ajax-submit">{:L('EDIT')}</button>
+			</div>
+		</form>
+	</div>
+	<script src="__PUBLIC__/js/common.js"></script>
+</body>
+</html>

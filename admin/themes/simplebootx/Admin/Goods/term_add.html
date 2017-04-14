@@ -1,0 +1,50 @@
+<admintpl file="header" />
+</head>
+<body>
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+			<li><a href="{:U('Goods/term_index')}">{:L('GOODS_TERM_INDEX')}</a></li>
+			<li class="active"><a href="{:U('Goods/term_add')}">{:L('GOODS_TERM_ADD')}</a></li>
+		</ul>
+		<form method="post" class="form-horizontal js-ajax-form" action="">
+			<fieldset>
+				<div class="control-group">
+					<label class="control-label">{:L('GOODS_TERM_PARENT')}</label>
+                    <div class="controls">
+						<select name="parentid">
+                        <if condition="!$_GET['parentid']">
+                        <option value="0">请选择分类</option>
+                        </if>
+                    {$tree}
+                    </select>
+					</div>
+					
+				</div>
+				<div class="control-group">
+					<label class="control-label">{:L('GOODS_TERM_NAME')}</label>
+					<div class="controls">
+						<input type="text" name="name">
+						<span class="form-required">*</span>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label">{:L('GOODS_TERM_STATUS')}</label>
+					<div class="controls">
+						<select name="status">
+                        <option value="1">启用</option>
+                        <option value="0">禁用</option>
+                        </select>
+						<span class="form-required">*</span>
+					</div>
+				</div>
+				
+				
+			</fieldset>
+			<div class="form-actions">
+				<button type="submit" class="btn btn-primary js-ajax-submit">{:L('ADD')}</button>
+			</div>
+		</form>
+	</div>
+	<script src="__PUBLIC__/js/common.js"></script>
+</body>
+</html>
