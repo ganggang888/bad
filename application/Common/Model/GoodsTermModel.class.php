@@ -7,10 +7,19 @@ class GoodsTermModel extends CommonModel
 		//array(验证字段,验证规则,错误提示,验证条件,附加规则,验证时间)
 		array('name', 'require', '请输入名称', 1, 'regex', CommonModel:: MODEL_BOTH  ),
 	);
-        //操作一些数据
+     /**
+      * [_before_insert 操作一些数据]
+      * @param  [type] &$data  [description]
+      * @param  [type] $option [description]
+      * @return [type]         [description]
+      */
 	protected function _before_insert(&$data,$option)
 	{
 		$data['add_time'] = date("Y-m-d H:i:s");
 		$data['admin_id'] = get_current_admin_id();
 	}
+	/**
+	 * 
+	 */
+	
 }

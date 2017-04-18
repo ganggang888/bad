@@ -27,7 +27,7 @@ define('APP_PATH', SITE_PATH . 'application/');
 define('SPAPP_PATH',   SITE_PATH.'simplewind/');
 //
 define('SPAPP',   './application/');
-//项目资源目录，不可更改
+//项目资源目录，不可更改d
 define('SPSTATIC',   SITE_PATH.'statics/');
 //定义缓存存放路径
 define("RUNTIME_PATH", SITE_PATH . "data/runtime/");
@@ -41,12 +41,12 @@ define("THINKCMF_CORE_TAGLIBS", 'cx,Common\Lib\Taglib\TagLibSpadmin,Common\Lib\T
 if(function_exists('saeAutoLoader') || isset($_SERVER['HTTP_BAE_ENV_APPID'])){
 	
 }else{
-	if(!file_exists("data/install.lock")){
+	/*if(!file_exists("data/install.lock")){
 		if(strtolower($_GET['g'])!="install"){
 		    header("Location:./index.php?g=install");
 		    exit();
 		}
-	}
+	}*/
 }
 //uc client root
 define("UC_CLIENT_ROOT", './api/uc_client/');

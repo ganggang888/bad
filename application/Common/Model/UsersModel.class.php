@@ -34,6 +34,40 @@ class UsersModel extends CommonModel
 			$data['user_pass']=sp_password($data['user_pass']);
 		}
 	}
+
+	/**
+	 * 修改用户信息
+	 * @param  [type] $uid  [description]
+	 * @param  [type] $data [description]
+	 * @return [type]       [description]
+	 */
+	public function changeUserInfo($uid,$data)
+	{
+		if ($uid == $data['id']) {
+			$isMatched = preg_match('/0?(13|14|15|18)[0-9]{9}/', $data['mobile'], $matches);
+			if (!$isMatched) {
+				return ['code'=>1,'msg'=>'请输入正确手机号'];
+			}
+			if ($this->create() !== false) {
+				if ($this->save() !== false) {
+					return ['code'=>0];
+				} else {
+					return ['code'=>1,'msg'=>'修改失败']
+				}
+			} else {
+				return ['code'=>1,'msg'=>$this->getError()]
+			}
+		} else {
+			return false;
+		}
+	}
+
+	public function changePasswd($uid,$password)
+	{
+		$change = $this->where("id=%d",array($uid))->save(['user_pass'=>$password]);
+		return ($change ? true : false);
+	}
+	
 	
 }
 

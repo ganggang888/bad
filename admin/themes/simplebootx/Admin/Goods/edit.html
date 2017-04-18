@@ -13,7 +13,7 @@
 	<div class="wrap">
 		<ul class="nav nav-tabs">
 			<li><a href="{:U('Goods/index')}">商品首页</a></li>
-			<li class="active"><a href="{:U('Goods/add')}">添加商品</a></li>
+			<li class="active"><a href="javascript:;">修改商品</a></li>
 		</ul>
 		<form method="post" class="form-horizontal js-ajax-form" action="">
 			<fieldset>
@@ -22,7 +22,7 @@
 					<div class="controls">
 						<select name="term_id">
                         <option value="0">请选择分类</option>
-                        {$tree}
+                        {$select_categorys}
                         </select>
 						<span class="form-required">*</span>
 					</div>
@@ -30,42 +30,42 @@
 				<div class="control-group">
 					<label class="control-label">商品名称</label>
 					<div class="controls">
-						<input type="text" required name="name" placeholder="请输入商品名称">
+						<input type="text" required name="name" placeholder="请输入商品名称" value="{$info.name}">
 						<span class="form-required">*</span>
 					</div>
 				</div>
 				<div class="control-group">
 					<label class="control-label">成品价</label>
 					<div class="controls">
-						<input type="text" name="cost_price" required placeholder="请输入成品价">
+						<input type="text" name="cost_price" required placeholder="请输入成品价" value="{$info.cost_price}">
 						<span class="form-required">*</span>
 					</div>
 				</div>
 				<div class="control-group">
 					<label class="control-label">销售价</label>
 					<div class="controls">
-						<input type="text" name="selling_price" required placeholder="请输入销售价">
+						<input type="text" name="selling_price" required placeholder="请输入销售价" value="{$info.selling_price}">
 						<span class="form-required">*</span>
 					</div>
 				</div>
                 <div class="control-group">
 					<label class="control-label">市场价</label>
 					<div class="controls">
-						<input type="text" required placeholder="请输入市场价" name="market_value">
+						<input type="text" required placeholder="请输入市场价" name="market_value" value="{$info.market_value}">
 						<span class="form-required">*</span>
 					</div>
 				</div>
                 <div class="control-group">
 					<label class="control-label">单位</label>
 					<div class="controls">
-						<input type="text" required placeholder="请输入商品单位" name="unit">
+						<input type="text" required placeholder="请输入商品单位" name="unit" value="{$info.unit}">
 						<span class="form-required">个、瓶、件</span>
 					</div>
 				</div>
                 <div class="control-group">
 					<label class="control-label">库存</label>
 					<div class="controls">
-						<input type="text" required name="stock" placeholder="请输入库存">
+						<input type="text" required name="stock" placeholder="请输入库存" value="{$info.stock}">
 						<span class="form-required">*</span>
 					</div>
 				</div>
@@ -73,8 +73,8 @@
 					<label class="control-label">状态</label>
 					<div class="controls">
 						<select name="status">
-                        <option value="1">上架</option>
-                        <option value="0">下架</option>
+                        <option value="1" <if condition="$info['status'] eq 1">selected</if>>上架</option>
+                        <option value="0" <if condition="$info['status'] eq 0">selected</if>>下架</option>
                         </select>
 						<span class="form-required">*</span>
 					</div>
@@ -82,7 +82,7 @@
                 <div class="control-group">
 					<label class="control-label">商品详情</label>
 					<div class="controls">
-						<script type="text/plain" id="content" name="content"></script>
+						<script type="text/plain" id="content" name="content">{:htmlspecialchars_decode($info['content'])}</script>
 						<span class="form-required">*</span>
 					</div>
 				</div>
@@ -96,16 +96,27 @@
 				<div class="control-group">
 					<label class="control-label">图集</label>
 					<div class="controls">
-						<ul id="photos" class="pic-list unstyled"></ul>
+                    
+						<ul id="photos" class="pic-list unstyled">
+										<foreach name="info['photos_url']" item="vo">
+										<php>$img_url=sp_get_image_preview_url($vo);</php>
+										<li id="savedimage{$key}">
+											<input id="photo-{$key}" type="hidden" name="photos_url[]" value="{$img_url}"> 
+											<input id="photo-{$key}-name" type="text" name="photos_alt[]" value="{$vo}" style="width: 200px;" title="图片名称">
+											<img id="photo-{$key}-preview" src="{:sp_get_image_preview_url($vo)}" style="height:36px;width: 36px;" onClick="parent.image_preview_dialog(this.src);">
+											<a href="javascript:upload_one_image('图片上传','#photo-{$key}');">替换</a>
+											<a href="javascript:(function(){ $('#savedimage{$key}').remove();})();">移除</a>
+										</li>
+										</foreach>
+								</ul>
 								<a href="javascript:upload_multi_image('图片上传','#photos','photos-item-wrapper');" class="btn btn-small">选择图片</a>
 						<span class="form-required">*</span>
 					</div>
 				</div>
-				
+				<input type="hidden" name="id" value="{$info.id}">
 			</fieldset>
 			<div class="form-actions">
-				<button type="submit" class="btn btn-primary js-ajax-submit">{:L('ADD')}</button>
-				<a class="btn" href="javascript:history.back(-1);">{:L('BACK')}</a>
+				<button type="submit" class="btn btn-primary js-ajax-submit">修改</button>
 			</div>
 		</form>
 	</div>

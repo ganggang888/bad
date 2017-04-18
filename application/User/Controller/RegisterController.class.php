@@ -10,8 +10,35 @@ class RegisterController extends HomebaseController {
 	    if(sp_is_user_login()){ //已经登录时直接跳到首页
 	        redirect(__ROOT__."/");
 	    }else{
+	    	//省列表
+	    	$province = M("province")->order(array('provinceid'=>'ASC'))->select();
+	    	$this->assign(compact('province'));
 	        $this->display(":register");
 	    }
+	}
+
+	public function city()
+	{
+		$provinceid = I("get.provinceid");
+		$info = M('city')->where("fatherid = %d",array($provinceid))->select();
+		$tex = '<select id="city" name="city" onchange="selectArea()"><option value="0">请选则市</option>';
+		array_map(function($v)use(&$tex){
+			$tex .= '<option value="'.$v['cityid'].'">'.$v['city'].'</option>';
+		},$info);
+		$tex .= '</select>';
+		exit($tex);
+	}
+
+	public function Area()
+	{
+		$cityid = I('get.cityid');
+		$info = M('area')->where("fatherid = %d",array($cityid))->select();
+		$tex = '<select id="area" name="area">';
+		array_map(function($v)use(&$tex){
+			$tex .= '<option value="'.$v['areaid'].'">'.$v['area'].'</option>';
+		},$info);
+		$tex .= '</select>';
+		exit($tex);
 	}
 	
 	// 前台用户注册提交
@@ -54,9 +81,9 @@ class RegisterController extends HomebaseController {
 	        $this->error($users_model->getError());
 	    }
 	    
-	    if(!sp_check_mobile_verify_code()){
+	    /*if(!sp_check_mobile_verify_code()){
 	        $this->error("手机验证码错误！");
-        }
+        }*/
 	     
 	    $password=I('post.password');
 	    $mobile=I('post.mobile');
@@ -73,8 +100,11 @@ class RegisterController extends HomebaseController {
 	        'last_login_time' => date("Y-m-d H:i:s"),
 	        'user_status' => 1,
 	        "user_type"=>2,//会员
+	        'uuid'=>uuid(),
+	        'province'=>I('post.province'),
+	        'city'=>I('post.city'),
+	        'area'=>I('post.area'),
 	    );
-	    
 	    $result = $users_model->add($data);
 	    if($result){
 	        //注册成功页面跳转

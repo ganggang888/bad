@@ -2173,3 +2173,23 @@ function uuid() {
                .substr($charid,20,12);
         return $uuid;
 }
+
+//根据ID获取所在省
+function provinceName($provinceid)
+{
+	$name = M('province')->where("provinceid = %d",array($provinceid))->getField('province');
+	return $name;
+}
+//根据ID获取所在市
+function cityName($cityid)
+{
+	$name = M('city')->where("cityid = %d",array($cityid))->getField('city');
+	return $name;
+}
+
+//获取所在区
+function areaName($areaid)
+{
+	$name = M('area')->where("areaid = $d",array($areaid))->getField('areaid');
+	return $name;
+}

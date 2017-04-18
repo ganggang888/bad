@@ -1,0 +1,186 @@
+<admintpl file="header" />
+</head>
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="javascript:;">商品首页</a></li>
+			<li><a href="{:U('Goods/add')}" target="_self">添加商品</a></li>
+		</ul>
+		<form class="well form-search">
+			分类： 
+			<select name="term" id="term" style="width: 120px;">
+				<option value='0'>全部</option>{$tree}
+			</select> &nbsp;&nbsp;
+			时间：
+			<input type="text" id="begin" name="start_time" class="js-date" value="{$begin|default=''}" style="width: 120px;" autocomplete="off">-
+			<input type="text" class="js-date" name="end_time" value="{$end|default=''}" style="width: 120px;" autocomplete="off" id="end"> &nbsp; &nbsp;
+			标题： 
+			<input type="text" name="name" id="name" style="width: 200px;" value="{$name|default=''}" placeholder="请输入标题...">
+			<a class="btn " href="javascript:;" onClick="doSearch()">搜索</a>
+		</form>
+        <script>
+        function doSearch()
+		{
+			var term_id = $("#term").val();
+			var begin = $("#begin").val();
+			var end = $("#end").val();
+			var name = $("#name").val();
+			window.location.href='index.php?g=Admin&m=Goods&a=index&term_id='+term_id+'&begin='+begin+'&end='+end+'&name='+name;
+		}
+        </script>
+		<form class="js-ajax-form" action="" method="post">
+			
+			<table class="table table-hover table-bordered table-list">
+				<thead>
+					<tr>
+						<th width="15"><label><input type="checkbox" class="js-check-all" data-direction="x" data-checklist="js-check-x"></label></th>
+						<th width="50">排序</th>
+						<th>商品名称</th>
+                        <th>所属分类</th>
+						<th>缩略图</th>
+						<th>成本价</th>
+						<th>销售价</th>
+						<th width="160">市场价</th>
+						<th width="100">库存</th>
+						<th width="50">状态</th>
+                        <th width="50">首页推荐</th>
+                        <th width="50">会员专区推</th>
+                        <th width="50">添加时间</th>
+						<th width="70">操作</th>
+					</tr>
+				</thead>
+				<foreach name="result" item="vo">
+				<tr>
+					<td><input type="checkbox" class="js-check" data-yid="js-check-y" data-xid="js-check-x" name="ids[]" value="{$vo.id}" title="ID:{$vo.id}"></td>
+					<td><input name="listorders[{$vo.id}]" class="input input-order" type="text" size="5" value="{$vo.listorder}"></td>
+					<td><b>{$vo.name}</b></td>
+                    <td><b>{$vo.term_name}</b></td>
+					<td>
+					 <php>
+                    $info = json_decode($vo['photos_url'],true);
+                    </php>
+                    <if condition="$info">
+                    <foreach name="info" item="v">
+                    <a href="{:sp_get_image_preview_url($v)}"><img src="{:sp_get_image_preview_url($v)}" width="100" style="float:left"></a>
+                   </foreach>
+                    <else />
+                    无
+                    </if>
+					</td>
+					<td>
+                   {$vo.cost_price}
+                    </td>
+					<td>{$vo.selling_price}</td>
+					<td>
+					{$vo.market_value}
+					</td>
+					<td>
+					{$vo.stock}
+					</td>
+					<td>
+                    <php>
+                        echo $vo['status'] == 1 ? '上架' : '下架';
+                        </php>
+                    </td>
+					<td>
+						<php> echo $vo['index'] == 1 ? '是' : '否';</php>
+					</td>
+                    <td>
+						<php> echo $vo['member'] == 1 ? '是' : '否';</php>
+					</td>
+                    <td>
+						{$vo.add_time}
+					</td>
+					<td>
+						<a href="{:U('Goods/edit',array('id'=>$vo['id']))}">修改</a> 
+					</td>
+				</tr>
+				</foreach>
+				
+			</table>
+			<div class="table-actions">
+				<button class="btn btn-primary btn-small js-ajax-submit" type="submit" data-action="{:U('Goods/listorders')}">排序</button>
+				<button class="btn btn-primary btn-small js-ajax-submit" type="submit" data-action="{:U('Goods/changeStatus',array('type'=>1,'status'=>1))}" data-subcheck="true">首页推荐</button>
+				<button class="btn btn-primary btn-small js-ajax-submit" type="submit" data-action="{:U('Goods/changeStatus',array('type'=>1,'status'=>0))}" data-subcheck="true">取消首页推荐</button>
+				<button class="btn btn-primary btn-small js-ajax-submit" type="submit" data-action="{:U('Goods/changeStatus',array('type'=>2,'status'=>1))}" data-subcheck="true">会员专区推荐</button>
+				<button class="btn btn-primary btn-small js-ajax-submit" type="submit" data-action="{:U('Goods/changeStatus',array('type'=>2,'status'=>0))}" data-subcheck="true">取消会员专区推荐</button>
+				<button class="btn btn-primary btn-small js-ajax-submit" type="submit" data-action="{:U('Goods/changeStatus',array('type'=>3,'status'=>1))}" data-subcheck="true">上架</button>
+				<button class="btn btn-primary btn-small js-ajax-submit" type="submit" data-action="{:U('Goods/changeStatus',array('type'=>3,'status'=>0))}" data-subcheck="true">下架</button>
+				
+				
+				<button class="btn btn-danger btn-small js-ajax-submit" type="submit" data-action="{:U('Goods/delete')}" data-subcheck="true" data-msg="你确定删除吗？">{:L('DELETE')}</button>
+			</div>
+			<div class="pagination">{$page->show('Admin')}</div>
+		</form>
+	</div>
+	<script src="__PUBLIC__/js/common.js"></script>
+	<script>
+		function refersh_window() {
+			var refersh_time = getCookie('refersh_time');
+			if (refersh_time == 1) {
+				window.location = "{:U('AdminPost/index',$formget)}";
+			}
+		}
+		setInterval(function() {
+			refersh_window();
+		}, 2000);
+		$(function() {
+			setCookie("refersh_time", 0);
+			Wind.use('ajaxForm', 'artDialog', 'iframeTools', function() {
+				//批量复制
+				$('.js-articles-copy').click(function(e) {
+					var ids=[];
+					$("input[name='ids[]']").each(function() {
+						if ($(this).is(':checked')) {
+							ids.push($(this).val());
+						}
+					});
+					
+					if (ids.length == 0) {
+						art.dialog.through({
+							id : 'error',
+							icon : 'error',
+							content : '您没有勾选信息，无法进行操作！',
+							cancelVal : '关闭',
+							cancel : true
+						});
+						return false;
+					}
+					
+					ids= ids.join(',');
+					art.dialog.open("__ROOT__/index.php?g=portal&m=AdminPost&a=copy&ids="+ ids, {
+						title : "批量复制",
+						width : "300px"
+					});
+				});
+				//批量移动
+				$('.js-articles-move').click(function(e) {
+					var ids=[];
+					$("input[name='ids[]']").each(function() {
+						if ($(this).is(':checked')) {
+							ids.push($(this).val());
+						}
+					});
+					
+					if (ids.length == 0) {
+						art.dialog.through({
+							id : 'error',
+							icon : 'error',
+							content : '您没有勾选信息，无法进行操作！',
+							cancelVal : '关闭',
+							cancel : true
+						});
+						return false;
+					}
+					
+					ids= ids.join(',');
+					art.dialog.open("__ROOT__/index.php?g=portal&m=AdminPost&a=move&old_term_id={$term.term_id|default=0}&ids="+ ids, {
+						title : "批量移动",
+						width : "300px"
+					});
+				});
+			});
+		});
+	</script>
+</body>
+</html>

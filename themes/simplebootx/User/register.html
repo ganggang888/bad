@@ -21,49 +21,33 @@
 				</ul> -->
 
 				<div class="tab-content">
-					<div class="tab-pane" id="mobile">
-						<form class="form-horizontal js-ajax-form" action="{:U('user/register/doregister')}" method="post">
+				  <div class="tab-pane active" id="email">
+					  <form class="form-horizontal js-ajax-form" action="{:U('user/register/doregister')}" method="post">
 		
 							<div class="control-group">
 								<input type="text" name="mobile" placeholder="手机号" class="span4">
 							</div>
-		
 							<div class="control-group">
-								<input type="password" name="password" placeholder="密码" class="span4">
+								<input type="text" name="user_login" placeholder="姓名" class="span4">
 							</div>
-							
-							<div class="control-group">
-								<div class="span4" style="margin-left: 0px;">
-									<input type="text" name="verify" placeholder="验证码" style="width:232px;">
-									{:sp_verifycode_img('length=4&font_size=14&width=120&height=34&charset=1234567890&use_noise=1&use_curve=0')}
-								</div>
+                            <div class="control-group">
+								<select name="province" id="province">
+                                <option value="0">请选择省</option>
+                                <foreach name="province" item="vo">
+                                <option value="{$vo.provinceid}">{$vo.province}</option>
+                                </foreach>
+                                </select>
 							</div>
-		
-							<div class="control-group">
-								<div class="span4" style="margin-left: 0px;">
-									<input type="text" name="mobile_verify" placeholder="手机验证码" style="width:232px;">
-									<a class="btn btn-success" style="width: 96px;">获取验证码</a>
-								</div>
+                            <div class="control-group" id="citySpan">
+								<select name="city" id="city">
+                                <option value="0">请选择市</option>
+                                </select>
 							</div>
-		
-							<div class="control-group">
-								<button class="btn btn-primary js-ajax-submit span4" type="submit" data-wait="1500" style="margin-left: 0px;">确定注册</button>
+                            <div class="control-group" id="areaSpan">
+								<select name="area">
+                                <option value="0">请选择区</option>
+                                </select>
 							</div>
-		
-							<div class="control-group" style="text-align: center;">
-								<p>
-									已有账号? <a href="{:leuu('user/login/index')}">点击此处登录</a>
-								</p>
-							</div>
-						</form>
-					</div>
-					<div class="tab-pane active" id="email">
-						<form class="form-horizontal js-ajax-form" action="{:U('user/register/doregister')}" method="post">
-		
-							<div class="control-group">
-								<input type="text" name="email" placeholder="邮箱" class="span4">
-							</div>
-		
 							<div class="control-group">
 								<input type="password" name="password" placeholder="密码" class="span4">
 							</div>
@@ -89,10 +73,10 @@
 									已有账号? <a href="{:leuu('user/login/index')}">点击此处登录</a>
 								</p>
 							</div>
-						</form>
+					</form>
 					
-					</div>
-				</div>
+				  </div>
+			  </div>
 				
 			</div>
 		</div>
@@ -103,5 +87,20 @@
 	<!-- /container -->
 
 	<tc_include file="Public:scripts" />
+    <script>
+	$(document).ready(function(){
+		$("#province").change(function(){
+			
+			var provinceid=$(this).val();
+			$("#citySpan").load("index.php?g=user&m=register&a=city&provinceid="+provinceid);
+			$("#areaSpan").html("<select id=\"area\" name=\"area\"><option value=\"0\">请选则区</option></select>");
+		});
+	})
+	function selectArea(){
+		var cityid=$("#city").val();
+		$("#areaSpan").load("index.php?g=user&m=register&a=Area&cityid="+cityid);
+	}
+</script>
+
 </body>
 </html>

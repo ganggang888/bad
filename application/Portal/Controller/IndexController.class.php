@@ -35,6 +35,8 @@ class IndexController extends HomebaseController {
     	$this->display(":index");
     }
 
+    
+
 }
 
 
