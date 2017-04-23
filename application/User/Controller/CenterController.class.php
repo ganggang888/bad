@@ -43,6 +43,35 @@ class CenterController extends MemberbaseController {
    		$this->display();
    	}
 
+      public function save()
+      {
+         header("Content-type: text/html; charset=utf-8");
+         $itemcount=I('itemCount');
+         for ($i=0;$i<=$itemcount;$i++){
+           $arrname=I('item_name_'.$i);
+           if ($arrname){
+           $arr[$i]['fname']=I('item_name_'.$i);
+           $arr[$i]['fprice']=(I('item_price_'.$i));
+           $arr[$i]['fcount']=I('item_quantity_'.$i);
+           $arr[$i]['prices']=$arr[$i]['fcount'] * $arr[$i]['fprice'];
+           $fid=I('item_options_'.$i);
+           $arr[$i]['fid']=trim(substr($fid,4));
+         
+           }
+           
+           
+         
+         }
+         var_dump(I());exit;
+      }
+
+      public function Cart()
+      {
+         $address = M('address')->where(array('uid'=>get_current_userid()))->order(array('listorder'=>'desc'))->select();
+         $uid = get_current_userid();
+         $this->assign(compact('address','uid'));
+         $this->display();
+      }
    	//修改收获地址
    	public function editAddress()
    	{
@@ -86,4 +115,10 @@ class CenterController extends MemberbaseController {
    	{
    		
    	}
+
+   	//订单提交
+   	public function submitOrder()
+   	{
+   	}
 }
+

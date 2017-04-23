@@ -15,8 +15,13 @@
 			<li><a href="{:U('Goods/index')}">商品首页</a></li>
 			<li class="active"><a href="javascript:;">修改商品</a></li>
 		</ul>
+        <ul class="nav nav-tabs" id="navs">
+			<li class="active"><a href="javascript:;" class="1">商品信息</a></li>
+			<li><a href="javascript:;"  class="2">商品属性</a></li>
+		</ul>
 		<form method="post" class="form-horizontal js-ajax-form" action="">
 			<fieldset>
+            <div class="one">
             <div class="control-group">
 					<label class="control-label">分类名称</label>
 					<div class="controls">
@@ -30,51 +35,20 @@
 				<div class="control-group">
 					<label class="control-label">商品名称</label>
 					<div class="controls">
-						<input type="text" required name="name" placeholder="请输入商品名称" value="{$info.name}">
+						<input type="text" value="{$info.name}" required name="name" placeholder="请输入商品名称">
 						<span class="form-required">*</span>
 					</div>
 				</div>
-				<div class="control-group">
-					<label class="control-label">成品价</label>
-					<div class="controls">
-						<input type="text" name="cost_price" required placeholder="请输入成品价" value="{$info.cost_price}">
-						<span class="form-required">*</span>
-					</div>
-				</div>
-				<div class="control-group">
-					<label class="control-label">销售价</label>
-					<div class="controls">
-						<input type="text" name="selling_price" required placeholder="请输入销售价" value="{$info.selling_price}">
-						<span class="form-required">*</span>
-					</div>
-				</div>
-                <div class="control-group">
-					<label class="control-label">市场价</label>
-					<div class="controls">
-						<input type="text" required placeholder="请输入市场价" name="market_value" value="{$info.market_value}">
-						<span class="form-required">*</span>
-					</div>
-				</div>
-                <div class="control-group">
-					<label class="control-label">单位</label>
-					<div class="controls">
-						<input type="text" required placeholder="请输入商品单位" name="unit" value="{$info.unit}">
-						<span class="form-required">个、瓶、件</span>
-					</div>
-				</div>
-                <div class="control-group">
-					<label class="control-label">库存</label>
-					<div class="controls">
-						<input type="text" required name="stock" placeholder="请输入库存" value="{$info.stock}">
-						<span class="form-required">*</span>
-					</div>
-				</div>
+				
+                
+                
+                
                 <div class="control-group">
 					<label class="control-label">状态</label>
 					<div class="controls">
 						<select name="status">
-                        <option value="1" <if condition="$info['status'] eq 1">selected</if>>上架</option>
-                        <option value="0" <if condition="$info['status'] eq 0">selected</if>>下架</option>
+                        <option value="1" <if condition="$status eq 1">selected</if>>上架</option>
+                        <option value="0" <if condition="$status eq 0">selected</if>>下架</option>
                         </select>
 						<span class="form-required">*</span>
 					</div>
@@ -89,7 +63,7 @@
                 <div class="control-group">
 					<label class="control-label">商品标签</label>
 					<div class="controls">
-						<textarea name="label" rows="5"></textarea>
+						<textarea name="label" rows="5">{$info.label}</textarea>
 						<span class="form-required">多个标签请以#隔开入（优惠#限量）</span>
 					</div>
 				</div>
@@ -113,14 +87,129 @@
 						<span class="form-required">*</span>
 					</div>
 				</div>
-				<input type="hidden" name="id" value="{$info.id}">
+                <input type="hidden" name="id" value="{$info.id}">
+				</div>
+                <div class="two" style="display:none">
+                <php>
+                $attribute = json_decode($info['attribute'],true);
+                </php>
+                <if condition="$attribute">
+                <foreach name="attribute" item="vos" key="keys">
+                <div class="control-group">
+					<label class="control-label">对应属性</label>
+					<div class="controls">
+						<select class="shuxing" name="attribute[id][]">
+                        <option value="0">请选择</option>
+                        <foreach name="attributes" item="vo" key="key">
+                        <foreach name="vo['son']" item="v" key="k">
+                        <option value="{$key}-{$k}" <if condition="$vos['id'] eq $key.'-'.$k">selected</if>>{$vo.name}/{$v.name}/{$v.info}</option>
+                        </foreach>
+                        </foreach>
+                        </select>
+                        <if condition="$keys">
+                        <span class="form-required"><a href="javascript:;" class="deleteOne">删除</a></span>
+                        <else />
+                        <span class="form-required"><a href="javascript:;" id="addMore">添加更多</a></span>
+                        </if>
+                        
+					</div>
+				</div>
+                <div class="control-group" style="border-bottom:dotted 1px #333">
+					<label class="control-label">详细参数</label>
+					<div class="controls about">
+						<input type="text" required name="attribute[cost_price][]" value="{$vos.cost_price}" placeholder="成品价">
+                        <input type="text" required name="attribute[selling_price][]" value="{$vos.selling_price}" placeholder="销售价">
+                        <input type="text" required name="attribute[market_value][]" value="{$vos.market_value}" placeholder="市场价">
+                        <input type="text" required name="attribute[unit][]" value="{$vos.unit}" placeholder="商品单位">
+                        <input type="text" required name="attribute[stock][]" value="{$vos.stock}" placeholder="库存">
+                        <input type="text" required name="attribute[name][]" value="{$vos.name}" placeholder="">
+                        <input type="text" required name="attribute[info][]" value="{$vos.info}" placeholder="">
+					</div>
+				</div>
+                </foreach>
+                <else />
+                <div class="control-group">
+					<label class="control-label">对应属性</label>
+					<div class="controls">
+						<select class="shuxing">
+                        <option value="0">请选择</option>
+                        <foreach name="attribute" item="vo" key="key">
+                        <foreach name="vo['son']" item="v" key="k">
+                        <option value="{$key}-{$k}">{$vo.name}/{$v.name}/{$v.info}</option>
+                        </foreach>
+                        </foreach>
+                        </select>
+                        <span class="form-required"><a href="javascript:;" id="addMore">添加更多</a></span>
+					</div>
+				</div>
+                <div class="control-group" style="border-bottom:dotted 1px #333">
+					<label class="control-label">详细参数</label>
+					<div class="controls about">
+						<input type="text" required name="attribute[cost_price][]" placeholder="成品价">
+                        <input type="text" required name="attribute[selling_price][]" placeholder="销售价">
+                        <input type="text" required name="attribute[market_value][]" placeholder="市场价">
+                        <input type="text" required name="attribute[unit][]" placeholder="商品单位">
+                        <input type="text" required name="attribute[stock][]" placeholder="库存">
+					</div>
+				</div>
+                </if>
+                
+                
+                
+                
+                </div>
 			</fieldset>
 			<div class="form-actions">
-				<button type="submit" class="btn btn-primary js-ajax-submit">修改</button>
+				<button type="submit" class="btn btn-primary js-ajax-submit">{:L('EDIT')}</button>
+				<a class="btn" href="javascript:history.back(-1);">{:L('BACK')}</a>
 			</div>
 		</form>
 	</div>
 	<script src="__PUBLIC__/js/common.js"></script>
+     <script>
+    $(document).ready(function(){
+		$(".shuxing").change(function(){
+			var value = $(this).val();
+			$(this).parent().parent().next().children(".controls.about").load("index.php?g=Admin&m=Goods&a=shuxing&value="+value);
+		});
+		$("#addMore").click(function(){
+			$(".two").last().append(window.infos);
+		})
+		var other = '<div class="control-group">';
+		other += $(".two").children().prev().html();
+		other += '</div>';
+		other += '<div class="control-group">';
+		other += $(".two").children().prev().next().html();
+		other += '</div>';
+		other += "\<script type=\"text/javascript\" src=\"getInfo.js\" >\</script\>";
+		
+		other = other.replace('<a href="javascript:;" id="addMore">添加更多</a>','<a href="javascript:;" class="deleteOne">删除</a>');
+		window.infos = other;
+	})
+
+    </script>
+    <script>
+    $(function(){
+		$("#navs a").click(function(){
+			if ($(this).attr("class") == 1) {
+				$(".one").show();
+				$(".two").hide();
+				$("#navs li").attr("class","");
+				$(this).parent().attr("class","active");
+			} else if ($(this).attr("class") == 2) {
+				$(".one").hide();
+				$(".two").show();
+				$("#navs li").attr("class","");
+				$(this).parent().attr("class","active");
+			}
+		})
+		$(".deleteOne").click(function(){
+	$(this).parent().parent().parent().next().hide();
+	$(this).parent().parent().parent().hide();
+	
+})
+	})
+    </script>
     <script type="text/javascript">
 		//编辑器路径定义
 		var editorURL = GV.WEB_ROOT;
@@ -131,5 +220,6 @@
     editorcontent = new baidu.editor.ui.Editor({initialFrameHeight:200/*initialFrameWidth:400 */});
 	editorcontent.render('content');
     </script>
+   
 </body>
 </html>

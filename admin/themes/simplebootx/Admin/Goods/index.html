@@ -38,10 +38,7 @@
 						<th>商品名称</th>
                         <th>所属分类</th>
 						<th>缩略图</th>
-						<th>成本价</th>
-						<th>销售价</th>
-						<th width="160">市场价</th>
-						<th width="100">库存</th>
+						<th>商品属性</th>
 						<th width="50">状态</th>
                         <th width="50">首页推荐</th>
                         <th width="50">会员专区推</th>
@@ -68,15 +65,18 @@
                     </if>
 					</td>
 					<td>
-                   {$vo.cost_price}
+                    <php>
+                    $attribute = json_decode($vo['attribute'],true);
+                    </php>
+                   <foreach name="attribute" item="v">
+                   成本价：{$v.cost_price} &nbsp;&nbsp;销售价：{$v.selling_price}&nbsp;&nbsp; 市场价：{$v.market_value}&nbsp;&nbsp; 单位：{$v.unit} &nbsp;&nbsp;库存：{$v.stock}&nbsp;&nbsp;
+                   <php>
+                   $info = explode('-',$v['id']);
+                   </php>
+                   {$attributes[$info[0]]['son'][$info[1]]['name']}：{$v.name}&nbsp;&nbsp;
+                   {$attributes[$info[0]]['son'][$info[1]]['info']} : {$v.info}<br/>
+                   </foreach>
                     </td>
-					<td>{$vo.selling_price}</td>
-					<td>
-					{$vo.market_value}
-					</td>
-					<td>
-					{$vo.stock}
-					</td>
 					<td>
                     <php>
                         echo $vo['status'] == 1 ? '上架' : '下架';
@@ -99,7 +99,7 @@
 				
 			</table>
 			<div class="table-actions">
-				<button class="btn btn-primary btn-small js-ajax-submit" type="submit" data-action="{:U('Goods/listorders')}">排序</button>
+			  <button class="btn btn-primary btn-small js-ajax-submit" type="submit" data-action="{:U('Goods/listorders')}">排序</button>
 				<button class="btn btn-primary btn-small js-ajax-submit" type="submit" data-action="{:U('Goods/changeStatus',array('type'=>1,'status'=>1))}" data-subcheck="true">首页推荐</button>
 				<button class="btn btn-primary btn-small js-ajax-submit" type="submit" data-action="{:U('Goods/changeStatus',array('type'=>1,'status'=>0))}" data-subcheck="true">取消首页推荐</button>
 				<button class="btn btn-primary btn-small js-ajax-submit" type="submit" data-action="{:U('Goods/changeStatus',array('type'=>2,'status'=>1))}" data-subcheck="true">会员专区推荐</button>

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: 2017-04-18 23:11:13
+-- Generation Time: 2017-04-23 23:09:10
 -- 服务器版本： 10.0.16-MariaDB
 -- PHP Version: 5.5.22
 
@@ -3869,9 +3869,10 @@ CREATE TABLE IF NOT EXISTS `i_goods` (
   `stock` mediumint(9) NOT NULL COMMENT '库存',
   `status` tinyint(4) NOT NULL COMMENT '1上架0下架',
   `content` longtext NOT NULL COMMENT '内容',
+  `attribute` longtext NOT NULL COMMENT '商品属性信息',
   `label` varchar(100) NOT NULL COMMENT '标签',
   `listorder` int(11) NOT NULL COMMENT '排序',
-  `index` tinyint(4) NOT NULL DEFAULT '0' COMMENT '首页推荐1是0否',
+  `indexs` tinyint(4) NOT NULL DEFAULT '0' COMMENT '首页推荐1是0否',
   `member` tinyint(4) NOT NULL DEFAULT '0' COMMENT '会员推荐1是0否',
   `term_id` int(11) NOT NULL COMMENT '分类ID',
   `admin_id` mediumint(9) NOT NULL COMMENT '操作者',
@@ -3883,11 +3884,9 @@ CREATE TABLE IF NOT EXISTS `i_goods` (
 -- 转存表中的数据 `i_goods`
 --
 
-INSERT INTO `i_goods` (`id`, `name`, `photos_url`, `cost_price`, `selling_price`, `market_value`, `unit`, `stock`, `status`, `content`, `label`, `listorder`, `index`, `member`, `term_id`, `admin_id`, `add_time`, `is_delete`) VALUES
-('', '', '', 0.00, 0.00, 0.00, '', 0, 0, '', '', 0, 0, 0, 0, 0, '0000-00-00 00:00:00', 0),
-('20170415113508850', '第二个商品', '["admin\\/20170415\\/58f194e45837b.png","admin\\/20170415\\/58f194e9428ec.jpg"]', 18.50, 19.00, 20.00, '个', 10, 0, '&lt;p&gt;dsasadsa&lt;/p&gt;', '', 0, 0, 0, 4, 1, '2017-04-15 11:35:08', 0),
-('20170414222636332', '第一个商品', '["admin\\/20170414\\/58f0dc172b3e6.jpg","admin\\/20170414\\/58f0dc1b48d7a.png"]', 16.00, 18.00, 20.00, '瓶', 20, 1, '', '优惠#限量#特惠', 2, 1, 0, 5, 1, '2017-04-14 22:26:36', 0),
-('20170418221153118', '会员专区的商品', '["admin\\/20170418\\/58f61ea71a8cd.gif"]', 18.00, 19.00, 20.00, '个', 20, 1, '&lt;p&gt;倒萨打算打算&lt;/p&gt;', '', 0, 0, 0, 7, 1, '2017-04-18 22:11:53', 0);
+INSERT INTO `i_goods` (`id`, `name`, `photos_url`, `cost_price`, `selling_price`, `market_value`, `unit`, `stock`, `status`, `content`, `attribute`, `label`, `listorder`, `indexs`, `member`, `term_id`, `admin_id`, `add_time`, `is_delete`) VALUES
+('20170423124543553', 'next商品', '', 0.00, 0.00, 0.00, '', 0, 1, '&lt;p&gt;倒萨打算&lt;/p&gt;', '[{"id":"0-0","cost_price":"15","selling_price":"16","market_value":"17","unit":"\\u4e2a","stock":"15","name":"500ML","info":"1"}]', '优惠#限量', 2, 0, 0, 7, 1, '2017-04-23 12:45:43', 0),
+('20170422212306786', '规格', '', 0.00, 0.00, 0.00, '', 0, 1, '&lt;p&gt;的撒旦撒的&lt;/p&gt;', '[{"id":"0-0","cost_price":"15","selling_price":"16","market_value":"17","unit":"\\u4e2a","stock":"15","name":"ML","info":"20"},{"id":"1-1","cost_price":"8","selling_price":"9","market_value":"10","unit":"\\u4e2a","stock":"13","name":"ML","info":"\\u7ea2\\u8272"}]', '优惠#限量', 3, 0, 0, 4, 1, '2017-04-22 21:23:06', 0);
 
 -- --------------------------------------------------------
 
@@ -4392,6 +4391,23 @@ INSERT INTO `i_province` (`id`, `provinceid`, `province`) VALUES
 -- --------------------------------------------------------
 
 --
+-- 表的结构 `i_recharge`
+--
+
+CREATE TABLE IF NOT EXISTS `i_recharge` (
+  `id` int(11) NOT NULL COMMENT '自增ID',
+  `uid` mediumint(9) NOT NULL COMMENT '用户ID',
+  `action` tinyint(4) NOT NULL COMMENT '1充值2提现',
+  `status` int(11) NOT NULL COMMENT '0待操作1成功',
+  `type` tinyint(4) NOT NULL COMMENT '1支付宝2微信',
+  `monery` double(11,2) NOT NULL COMMENT '金额',
+  `number` int(11) NOT NULL COMMENT '第三方平台生成的订单号',
+  `add_time` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='用户充值表（P2P）';
+
+-- --------------------------------------------------------
+
+--
 -- 表的结构 `i_role`
 --
 
@@ -4549,17 +4565,19 @@ CREATE TABLE IF NOT EXISTS `i_users` (
   `pid` varchar(150) DEFAULT NULL,
   `province` smallint(6) NOT NULL DEFAULT '0',
   `city` mediumint(9) NOT NULL DEFAULT '0',
-  `area` mediumint(9) DEFAULT '0'
+  `area` mediumint(9) DEFAULT '0',
+  `money` double(11,2) NOT NULL COMMENT '所充值金额',
+  `can_money` double(11,2) NOT NULL COMMENT '可提现金额'
 ) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='用户表';
 
 --
 -- 转存表中的数据 `i_users`
 --
 
-INSERT INTO `i_users` (`id`, `parentid`, `user_login`, `user_pass`, `user_nicename`, `shop_name`, `user_email`, `user_url`, `avatar`, `sex`, `birthday`, `signature`, `last_login_ip`, `last_login_time`, `create_time`, `user_activation_key`, `user_status`, `score`, `user_type`, `coin`, `mobile`, `uuid`, `pid`, `province`, `city`, `area`) VALUES
-(1, 0, 'admin', '###f25434b0a5e217fd97b2737ecf52d72e', 'admin', '', 'a526584713@qq.com', '', NULL, 0, '2000-01-01', NULL, '127.0.0.1', '2017-04-18 20:07:36', '2017-04-13 03:02:05', '', 1, 0, 1, 0, '', NULL, NULL, 0, 0, 0),
-(2, 0, '', '###009af4e80982b93a8cda7b60004ac05a', '', '', '', '', NULL, 0, '2000-01-01', NULL, '127.0.0.1', '2017-04-18 21:30:16', '2017-04-18 21:29:44', '', 1, 0, 2, 0, '18816978523', NULL, NULL, 0, 0, 0),
-(3, 0, '', '###009af4e80982b93a8cda7b60004ac05a', '', '', '', '', NULL, 0, '2000-01-01', NULL, '127.0.0.1', '2017-04-18 21:33:22', '2017-04-18 21:33:22', '', 1, 0, 2, 0, '18816978511', 'fa6e51e1-7475-248c-aa3f-32406676d8de', NULL, 32767, 120100, 120103);
+INSERT INTO `i_users` (`id`, `parentid`, `user_login`, `user_pass`, `user_nicename`, `shop_name`, `user_email`, `user_url`, `avatar`, `sex`, `birthday`, `signature`, `last_login_ip`, `last_login_time`, `create_time`, `user_activation_key`, `user_status`, `score`, `user_type`, `coin`, `mobile`, `uuid`, `pid`, `province`, `city`, `area`, `money`, `can_money`) VALUES
+(1, 0, 'admin', '###f25434b0a5e217fd97b2737ecf52d72e', 'admin', '', 'a526584713@qq.com', '', NULL, 0, '2000-01-01', NULL, '127.0.0.1', '2017-04-23 11:24:54', '2017-04-13 03:02:05', '', 1, 0, 1, 0, '', NULL, NULL, 0, 0, 0, 0.00, 0.00),
+(2, 0, '', '###009af4e80982b93a8cda7b60004ac05a', '', '', '', '', NULL, 0, '2000-01-01', NULL, '127.0.0.1', '2017-04-23 20:35:58', '2017-04-18 21:29:44', '', 1, 0, 2, 0, '18816978523', NULL, NULL, 0, 0, 0, 0.00, 0.00),
+(3, 0, '', '###009af4e80982b93a8cda7b60004ac05a', '', '', '', '', NULL, 0, '2000-01-01', NULL, '127.0.0.1', '2017-04-18 21:33:22', '2017-04-18 21:33:22', '', 1, 0, 2, 0, '18816978511', 'fa6e51e1-7475-248c-aa3f-32406676d8de', NULL, 32767, 120100, 120103, 0.00, 0.00);
 
 -- --------------------------------------------------------
 
@@ -4706,6 +4724,12 @@ ALTER TABLE `i_posts`
 -- Indexes for table `i_province`
 --
 ALTER TABLE `i_province`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `i_recharge`
+--
+ALTER TABLE `i_recharge`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -4856,6 +4880,11 @@ ALTER TABLE `i_posts`
 --
 ALTER TABLE `i_province`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=35;
+--
+-- AUTO_INCREMENT for table `i_recharge`
+--
+ALTER TABLE `i_recharge`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增ID';
 --
 -- AUTO_INCREMENT for table `i_role`
 --

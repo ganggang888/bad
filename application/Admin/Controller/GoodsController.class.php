@@ -14,6 +14,11 @@ class GoodsController extends AdminbaseController {
     protected $goods = NULL;
     protected $termField = ['id', 'name', 'parentid', 'status'];
 
+    protected $attribute = array(
+        array('name'=>'吃','son'=>array(array('name'=>'规格','info'=>'数量'))),
+        array('name'=>'穿','son'=>array(array('name'=>'尺码','info'=>'颜色'),array('name'=>'款式','info'=>'颜色'))),
+        array('name'=>'用','son'=>array(array('name'=>'规格','info'=>'颜色'))),
+    );
     public function _initialize() {
         parent::_initialize();
         $this->term = D("Common/GoodsTerm");
@@ -178,11 +183,19 @@ class GoodsController extends AdminbaseController {
         }
 
         $join = "".C('DB_PREFIX').'goods_term as b on a.term_id = b.id';
-        $field = ['a.name','b.name AS term_name','a.photos_url','a.cost_price','a.selling_price','a.market_value','a.unit','a.stock','a.status','a.label','a.listorder','a.term_id','a.id','a.index','a.member','a.add_time'];
+        $field = ['a.name','b.name AS term_name','a.photos_url','a.cost_price','a.attribute','a.selling_price','a.market_value','a.unit','a.stock','a.status','a.label','a.listorder','a.term_id','a.id','a.indexs','a.member','a.add_time'];
         $count = $this->goods->alias('a')->join($join,'LEFT')->where($where)->count();
         $page = $this->page($count,15);
         $result = $this->goods->alias('a')->join($join,'LEFT')->where($where)->field($field)->order(['listorder'=>asc])->limit($page->firsRow,$page->listRows)->select();
-        $this->assign(compact('page','result','tree'));
+        //查找出是否所有库存为0
+        $result = array_filter($result,function($v){
+            $check = json_decode($v['attribute'],true);
+            $find = array_filter($check,function($f){return $f['stock'] == 0;});
+            $find ? $v['status'] = 0 : $v['status'] = 1;
+            return 1;
+        });
+        $attributes = $this->attribute;
+        $this->assign(compact('page','result','tree','attributes'));
         $this->display();
     }
 
@@ -215,8 +228,27 @@ class GoodsController extends AdminbaseController {
         $tree->init($new_terms);
         $tree_tpl = "<option value='\$id' \$selected>\$spacer\$name</option>";
         $tree = $tree->get_tree(0, $tree_tpl);
-        $this->assign(compact('tree'));
+        //商品属性
+        $attribute = $this->attribute;
+        $this->assign(compact('tree','attribute'));
         $this->display();
+    }
+
+    public function shuxing()
+    {
+        $value = I('get.value');
+        $attribute = $this->attribute;
+        if ($value) {
+            $info = explode('-',$value);
+            $tex = '<input type="text" required name="attribute[cost_price][]" placeholder="成品价">
+                        <input type="text" required name="attribute[selling_price][]" placeholder="销售价">
+                        <input type="text" required name="attribute[market_value][]" placeholder="市场价">
+                        <input type="text" required name="attribute[unit][]" placeholder="商品单位">
+                        <input type="text" required name="attribute[stock][]" placeholder="库存">
+                        <input type="text" required name="attribute[name][]" placeholder="'.$attribute[$info[0]]['son'][$info[1]]['name'].'">
+                        <input type="text" required name="attribute[info][]" placeholder="'.$attribute[$info[0]]['son'][$info[1]]['info'].'">';
+                        echo $tex;exit;
+        }
     }
 
     /*
@@ -248,7 +280,8 @@ class GoodsController extends AdminbaseController {
         $str = "<option value='\$id' \$selected>\$spacer \$name</option>";
         $tree->init($array);
         $select_categorys = $tree->get_tree(0, $str);
-        $this->assign(compact('info','select_categorys'));
+        $attributes = $this->attribute;
+        $this->assign(compact('info','select_categorys','attributes'));
         $this->display();
     }
 
@@ -271,14 +304,16 @@ class GoodsController extends AdminbaseController {
         $caseThen = '';$i = '';
         $i = '';
         foreach ($listorders as $key=>$vo) {
-            $caseThen .= " WHEN $key THEN $vo \n";
+            $caseThen .= " WHEN '$key' THEN $vo \n";
             $i .= "$key,";
         }
         $i = substr($i,0,strlen($i)-1);
         if ($i && $caseThen) {
-            $sql = " UPDATE ".C('DB_PREFIX')."goods SET listorder = CASE id $caseThen \n END \n WHERE ID IN($i)";
+            $sql = " UPDATE ".C('DB_PREFIX')."goods SET listorder = CASE id $caseThen \n END \n WHERE id IN($i)";
+            //var_dump($sql);exit;
             $try = M()->execute($sql);
         }
+        $this->success('成功');
     }
 
     /**

@@ -52,16 +52,22 @@ class UsersModel extends CommonModel
 				if ($this->save() !== false) {
 					return ['code'=>0];
 				} else {
-					return ['code'=>1,'msg'=>'修改失败']
+					return ['code'=>1,'msg'=>'修改失败'];
 				}
 			} else {
-				return ['code'=>1,'msg'=>$this->getError()]
+				return ['code'=>1,'msg'=>$this->getError()];
 			}
 		} else {
 			return false;
 		}
 	}
 
+	/**
+	 * 修改密码
+	 * @param  [type] $uid      [description]
+	 * @param  [type] $password [description]
+	 * @return [type]           [description]
+	 */
 	public function changePasswd($uid,$password)
 	{
 		$change = $this->where("id=%d",array($uid))->save(['user_pass'=>$password]);
