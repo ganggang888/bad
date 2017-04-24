@@ -2190,7 +2190,7 @@ function cityName($cityid)
 //获取所在区
 function areaName($areaid)
 {
-	$name = M('area')->where("areaid = $d",array($areaid))->getField('areaid');
+	$name = M('area')->where("areaid = %d",array($areaid))->getField('areaid');
 	return $name;
 }
 

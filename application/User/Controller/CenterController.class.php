@@ -27,10 +27,13 @@ class CenterController extends MemberbaseController {
    	public function addAddress()
    	{
    		if (IS_POST) {
-   			$post = I('post.post');
+   			$post = $_POST;
 	   		$post['uid'] = get_current_userid();
 	   		$isMatched = preg_match('/0?(13|14|15|18)[0-9]{9}/', $post['phone'], $matches);
 	   		!$post['address'] ? $this->error('缺少参数') : '';
+            if (!$post['name']) {
+               $this->error('请输入名称');
+            }
 	   		if (!$isMatched) {
 	   			$this->error('请输入正确手机号');
 	   		}
@@ -40,12 +43,15 @@ class CenterController extends MemberbaseController {
 	   			$this->error('添加失败');
 	   		}
    		}
+         $province = M("province")->order(array('provinceid'=>'ASC'))->select();
+         $this->assign(compact('province'));
    		$this->display();
    	}
 
       public function save()
       {
          header("Content-type: text/html; charset=utf-8");
+         //提交处理
          $itemcount=I('itemCount');
          for ($i=0;$i<=$itemcount;$i++){
            $arrname=I('item_name_'.$i);
@@ -56,13 +62,14 @@ class CenterController extends MemberbaseController {
            $arr[$i]['prices']=$arr[$i]['fcount'] * $arr[$i]['fprice'];
            $fid=I('item_options_'.$i);
            $arr[$i]['fid']=trim(substr($fid,4));
-         
            }
-           
-           
-         
          }
-         var_dump(I());exit;
+
+         //处理完购物车信息后查看该商品是否有库存并且处于上架状态
+         foreach ($arr as $key=>$vo) {
+
+         }
+         var_dump($_POST);exit;
       }
 
       public function Cart()
@@ -76,7 +83,7 @@ class CenterController extends MemberbaseController {
    	public function editAddress()
    	{
    		if (IS_POST) {
-   			$post = I('post.post');
+   			$post = $_POST;
 	   		$post['uid'] = get_current_userid();
 	   		$isMatched = preg_match('/0?(13|14|15|18)[0-9]{9}/', $post['phone'], $matches);
 	   		!$post['address'] ? $this->error('缺少参数') : '';
@@ -84,14 +91,15 @@ class CenterController extends MemberbaseController {
 	   			$this->error('请输入正确手机号');
 	   		}
 	   		if (M('address')->save($post) !== false) {
-	   			$this->success('添加成功',U('Center/addressList'));
+	   			$this->success('修改成功',U('Center/addressList'));
 	   		} else {
-	   			$this->error('添加失败');
+	   			$this->error('修改失败');
 	   		}
    		}
    		$id = I('get.id');
    		$info = M('address')->where("id=%d",array($id))->find();
-   		$this->assign(compact('info'));
+         $province = M("province")->order(array('provinceid'=>'ASC'))->select();
+   		$this->assign(compact('info','province'));
    		$this->display();
    	}
 

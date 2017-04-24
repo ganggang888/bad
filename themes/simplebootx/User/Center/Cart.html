@@ -49,57 +49,11 @@
 		</head>
 		<body class="body-white">
 <tc_include file="Public:nav" />
-<php> $home_slides=sp_getslide("portal_index");
-          
-          $home_slides=empty($home_slides)?$default_home_slides:$home_slides; </php>
+
 商品名称：{$info.name}
 <php> $attribute = json_decode($info['attribute'],true); </php>
-<foreach name="attribute" item="v" key="key">
-          <div class="col-sm-4 col-xs-6 simpleCart_shelfItem row-padding">
-    <div class="thumbnail i_list">
-              <div class="caption">
-        <h3 class="item_name"><a href="{:U('Index/goodsInfo',array('id'=>$vo['id']))}">{$vo.name}</a></h3>
-        <input value="{$info.id}-{$key}" class="item_Quantity" type="hidden">
-        <p ><span class="pull-left item_price" style="color:#FF7700;font-weight:600;font-size:14px"> ￥{$v.selling_price} </span> <span class="pull-right "><a  href="javascript:;" class="btn btn-warning btn-sm item_add"><i class="fa fa-shopping-cart"></i> 加入购物车</a> </span> </p>
-        <div class="clearfix"></div>
-      </div>
-            </div>
-  </div>
-          成本价：{$v.cost_price} &nbsp;&nbsp;销售价：{$v.selling_price}&nbsp;&nbsp; 市场价：{$v.market_value}&nbsp;&nbsp; 单位：{$v.unit} &nbsp;&nbsp;库存：{$v.stock}&nbsp;&nbsp;
-          <php> $info = explode('-',$v['id']); </php>
-          {$attributes[$info[0]]['son'][$info[1]]['name']}：{$v.name}&nbsp;&nbsp;
-          {$attributes[$info[0]]['son'][$info[1]]['info']} : {$v.info}<br/>
-        </foreach>
-<div style="background-color:#FF7700" class="panel panel-cart top5">
-          <div class="panel-heading">
-    <h4 class="panel-title"> <a href="#collapseOne" data-parent="#accordion" data-toggle="collapse"> <i class="fa fa-shopping-cart"></i> 购物车 <i class="fa fa-angle-down"></i> <span class="simpleCart_quantity pull-right">0</span> </a> </h4>
-  </div>
-          <div class="panel-collapse collapse in" id="collapseOne">
-    <div style="padding:5px;" class="panel-body">
-              <div style="max-height:250px;overflow:auto;">
-        <div class="simpleCart_items">
-                  <div>
-            <div class="headerRow">
-                      <div class="item-name">商品</div>
-                      <div class="item-price">单价</div>
-                      <div class="item-decrement"></div>
-                      <div class="item-quantity">数量</div>
-                      <div class="item-increment"></div>
-                      <div class="item-total">总价</div>
-                      <div class="item-remove">操作</div>
-                    </div>
-          </div>
-                </div>
-      </div>
-              <div style="clear:left"></div>
-              <hr class="top5">
-              <div class="count"> 数量: <span class="simpleCart_quantity">0</span></div>
-              <div class="ship"> 配送费: <span class="simpleCart_shipping">¥0</span> (含打包费)</div>
-              <p class="grand"> 合计总额: <span class="simpleCart_grandTotal">¥0</span></p>
-              <p align="center"><span style="margin-right:20px;" class="pull-right"><a href="javascript:;" class="simpleCart_empty">清空</a> </span> <a href="{:U('Index/Cart')}" class="btn btn-warning"><i class="fa fa-shopping-cart"></i> 立刻结算</a> </p>
-            </div>
-  </div>
-        </div>
+
+
 <div class=" container " style="margin-top:10px">
           <div class="panel panel-cart">
     <div class="panel-heading">
@@ -119,7 +73,14 @@
                 </div>
       </div>
               <div class="well"> 
-              <div class="address"></div>
+              请选择地址：
+              <foreach name="address" item="vo">
+              <div class="address"><input type="radio" name="optionad" id="optionad">{$vo.address}|{$vo.name}|{$vo.phone}</div>
+              </foreach>
+              <textarea id="ocontent" placeholder="请输入备注"></textarea>
+              <if condition="empty($address)">
+              <a href="{:U('Center/addAddress')}">添加地址</a>
+              </if>
               <p align="center"> <a href="javascript:;" class="btn btn-danger simpleCart_checkout" ><i class="fa fa-shopping-cart"></i> 提交订单</a></p>
               <!--if login end--> 
               
@@ -184,14 +145,7 @@ method: "POST" ,
  
    data.address = document.getElementById("optionad").value;
   data.ocontent = document.getElementById("ocontent").value;
-   data.days = document.getElementById("days").value;
-    data.times = document.getElementById("times").value;
-   var zt = document.getElementsByName("inlineRadioOptions"); for(var i=0;i<zt.length;i++){
-if(zt[i].checked) {
-
-data.paytype=zt[i].value;
-}
-}
+ 
  data.item_totals = simpleCart.grandTotal();
    data.shopspay = simpleCart.shipping(); 
 });
