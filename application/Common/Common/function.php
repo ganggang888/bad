@@ -2226,3 +2226,10 @@ function postRequest( $api, array $params = array(), $timeout = 30 ) {
     curl_close( $ch );
     return $response;
 }
+
+//根据地址ID获取地址详细信息
+function addressInfos($addressId)
+{
+	$info = M('address')->where(array('id'=>$id))->find();
+	return $info;
+}

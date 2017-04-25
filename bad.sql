@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: 2017-04-23 23:09:10
+-- Generation Time: 2017-04-25 23:16:57
 -- 服务器版本： 10.0.16-MariaDB
 -- PHP Version: 5.5.22
 
@@ -47,10 +47,18 @@ CREATE TABLE IF NOT EXISTS `i_address` (
   `area` varchar(200) NOT NULL COMMENT '区',
   `address` varchar(200) NOT NULL COMMENT '地址',
   `code` int(11) NOT NULL COMMENT '编码',
+  `name` varchar(80) NOT NULL COMMENT '收货人',
   `phone` bigint(20) NOT NULL COMMENT '手机',
   `listorder` int(11) NOT NULL,
   `add_time` datetime NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='用户地址表';
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='用户地址表';
+
+--
+-- 转存表中的数据 `i_address`
+--
+
+INSERT INTO `i_address` (`id`, `uid`, `province`, `city`, `area`, `address`, `code`, `name`, `phone`, `listorder`, `add_time`) VALUES
+(1, 2, '120000', '120100', '120103', '中山北路901号', 422100, '王三', 15541215412, 0, '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -3878,15 +3886,15 @@ CREATE TABLE IF NOT EXISTS `i_goods` (
   `admin_id` mediumint(9) NOT NULL COMMENT '操作者',
   `add_time` datetime NOT NULL,
   `is_delete` tinyint(4) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- 转存表中的数据 `i_goods`
 --
 
 INSERT INTO `i_goods` (`id`, `name`, `photos_url`, `cost_price`, `selling_price`, `market_value`, `unit`, `stock`, `status`, `content`, `attribute`, `label`, `listorder`, `indexs`, `member`, `term_id`, `admin_id`, `add_time`, `is_delete`) VALUES
-('20170423124543553', 'next商品', '', 0.00, 0.00, 0.00, '', 0, 1, '&lt;p&gt;倒萨打算&lt;/p&gt;', '[{"id":"0-0","cost_price":"15","selling_price":"16","market_value":"17","unit":"\\u4e2a","stock":"15","name":"500ML","info":"1"}]', '优惠#限量', 2, 0, 0, 7, 1, '2017-04-23 12:45:43', 0),
-('20170422212306786', '规格', '', 0.00, 0.00, 0.00, '', 0, 1, '&lt;p&gt;的撒旦撒的&lt;/p&gt;', '[{"id":"0-0","cost_price":"15","selling_price":"16","market_value":"17","unit":"\\u4e2a","stock":"15","name":"ML","info":"20"},{"id":"1-1","cost_price":"8","selling_price":"9","market_value":"10","unit":"\\u4e2a","stock":"13","name":"ML","info":"\\u7ea2\\u8272"}]', '优惠#限量', 3, 0, 0, 4, 1, '2017-04-22 21:23:06', 0);
+('20170422212306786', '规格', '', 0.00, 0.00, 0.00, '', 0, 1, '&lt;p&gt;的撒旦撒的&lt;/p&gt;', '[{"id":"0-0","cost_price":"15","selling_price":"16","market_value":"17","unit":"\\u4e2a","stock":"15","name":"ML","info":"20"},{"id":"1-1","cost_price":"8","selling_price":"9","market_value":"10","unit":"\\u4e2a","stock":"13","name":"ML","info":"\\u7ea2\\u8272"}]', '优惠#限量', 3, 0, 0, 4, 1, '2017-04-22 21:23:06', 0),
+('20170423124543553', 'next商品', '', 0.00, 0.00, 0.00, '', 0, 0, '&lt;p&gt;倒萨打算1&lt;/p&gt;', '[{"id":"0-0","cost_price":"15","selling_price":"16","market_value":"17","unit":"\\u4e2a","stock":"15","name":"500ML","info":"1"},{"id":"0-0","cost_price":"16","selling_price":"16","market_value":"17","unit":"\\u4e2a","stock":"15","name":"600ML","info":"1"}]', '优惠#限量', 2, 0, 0, 7, 1, '2017-04-23 12:45:43', 0);
 
 -- --------------------------------------------------------
 
@@ -4268,10 +4276,11 @@ INSERT INTO `i_options` (`option_id`, `option_name`, `option_value`, `autoload`)
 
 CREATE TABLE IF NOT EXISTS `i_orders` (
   `id` int(11) NOT NULL,
-  `order_num` int(11) DEFAULT NULL,
+  `order_num` bigint(11) DEFAULT NULL,
   `uid` mediumint(9) NOT NULL DEFAULT '0' COMMENT '用户ID',
   `address_id` mediumint(9) NOT NULL DEFAULT '0' COMMENT '收获地址id',
   `number` mediumint(9) DEFAULT '0' COMMENT '商品数量',
+  `prices` double(11,2) NOT NULL,
   `order_time` datetime DEFAULT NULL COMMENT '下单时间',
   `pay_time` datetime DEFAULT NULL,
   `delivery_time` datetime DEFAULT NULL COMMENT '发货时间',
@@ -4280,9 +4289,20 @@ CREATE TABLE IF NOT EXISTS `i_orders` (
   `logistics_num` datetime DEFAULT NULL COMMENT '物流单号',
   `goodsInfo` text COMMENT '所选择的商品信息，为json格式',
   `pay_type` tinyint(4) DEFAULT NULL COMMENT '支付方式1支付宝2微信',
+  `content` text NOT NULL COMMENT '订单备注',
   `status` tinyint(4) DEFAULT '0' COMMENT '订单状态0未付款1已付款2已发货3已收获4已作废',
   `is_delete` tinyint(4) DEFAULT '0' COMMENT '是否删除'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+
+--
+-- 转存表中的数据 `i_orders`
+--
+
+INSERT INTO `i_orders` (`id`, `order_num`, `uid`, `address_id`, `number`, `prices`, `order_time`, `pay_time`, `delivery_time`, `receiving_time`, `logistics_mode`, `logistics_num`, `goodsInfo`, `pay_type`, `content`, `status`, `is_delete`) VALUES
+(1, 2147483647, 2, 1, 0, 0.00, '2017-04-25 21:11:47', NULL, NULL, NULL, NULL, NULL, '{"1":{"fname":"next\\u5546\\u54c1 (\\u89c4\\u683c\\uff1a500ML\\u00a0\\u00a0\\r\\n                   \\u6570\\u91cf : 1)","fprice":"16","fcount":"1","prices":16,"fid":"20170423124543553-0"},"2":{"fname":"\\u89c4\\u683c (\\u6b3e\\u5f0f\\uff1aML\\u00a0\\u00a0\\r\\n                   \\u989c\\u8272 : \\u7ea2\\u8272)","fprice":"9","fcount":"1","prices":9,"fid":"20170422212306786-1"},"3":{"fname":"\\u89c4\\u683c (\\u89c4\\u683c\\uff1aML\\u00a0\\u00a0\\r\\n                   \\u6570\\u91cf : 20)","fprice":"16","fcount":"2","prices":32,"fid":"20170422212306786-0"}}', NULL, '123', 0, 0),
+(2, 20170425212537672, 2, 1, 0, 59.00, '2017-04-25 21:25:37', NULL, NULL, NULL, NULL, NULL, '{"1":{"fname":"\\u89c4\\u683c (\\u89c4\\u683c\\uff1aML\\u00a0\\u00a0\\r\\n                   \\u6570\\u91cf : 20)","fprice":"16","fcount":"2","prices":32,"fid":"20170422212306786-0"},"2":{"fname":"\\u89c4\\u683c (\\u6b3e\\u5f0f\\uff1aML\\u00a0\\u00a0\\r\\n                   \\u989c\\u8272 : \\u7ea2\\u8272)","fprice":"9","fcount":"3","prices":27,"fid":"20170422212306786-1"}}', NULL, '123456', 0, 0),
+(7, 20170425214948410, 2, 1, 0, 143.00, '2017-04-25 21:49:48', NULL, NULL, NULL, NULL, NULL, '{"1":{"fname":"\\u89c4\\u683c (\\u89c4\\u683c\\uff1aML\\u00a0\\u00a0\\r\\n                   \\u6570\\u91cf : 20)","fprice":"16","fcount":"5","prices":80,"fid":"20170422212306786-0"},"2":{"fname":"\\u89c4\\u683c (\\u6b3e\\u5f0f\\uff1aML\\u00a0\\u00a0\\r\\n                   \\u989c\\u8272 : \\u7ea2\\u8272)","fprice":"9","fcount":"7","prices":63,"fid":"20170422212306786-1"}}', NULL, '123456', 0, 0),
+(8, 20170425221200487, 2, 1, 0, 32.00, '2017-04-25 22:12:00', NULL, NULL, NULL, NULL, NULL, '{"1":{"fname":"next\\u5546\\u54c1 (\\u89c4\\u683c\\uff1a500ML\\u00a0\\u00a0\\r\\n                   \\u6570\\u91cf : 1)","fprice":"16","fcount":"1","prices":16,"fid":"20170423124543553-0"},"2":{"fname":"next\\u5546\\u54c1 (\\u89c4\\u683c\\uff1a600ML\\u00a0\\u00a0\\r\\n                   \\u6570\\u91cf : 1)","fprice":"16","fcount":"1","prices":16,"fid":"20170423124543553-1"}}', NULL, '12121', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -4457,6 +4477,32 @@ CREATE TABLE IF NOT EXISTS `i_route` (
 -- --------------------------------------------------------
 
 --
+-- 表的结构 `i_sku`
+--
+
+CREATE TABLE IF NOT EXISTS `i_sku` (
+  `id` int(11) NOT NULL,
+  `gid` bigint(20) NOT NULL COMMENT '商品ID',
+  `uid` int(11) NOT NULL COMMENT '用户ID',
+  `action` tinyint(4) NOT NULL COMMENT '1减2加',
+  `gid_info` tinyint(4) DEFAULT NULL COMMENT '商品属性',
+  `number` int(11) NOT NULL COMMENT '数量',
+  `add_time` datetime NOT NULL COMMENT '操作记录'
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COMMENT='SKU库存记录';
+
+--
+-- 转存表中的数据 `i_sku`
+--
+
+INSERT INTO `i_sku` (`id`, `gid`, `uid`, `action`, `gid_info`, `number`, `add_time`) VALUES
+(5, 20170422212306786, 2, 1, 0, 5, '2017-04-25 21:49:48'),
+(6, 20170422212306786, 2, 1, 1, 7, '2017-04-25 21:49:48'),
+(7, 20170423124543553, 2, 1, 0, 1, '2017-04-25 22:12:00'),
+(8, 20170423124543553, 2, 1, 1, 1, '2017-04-25 22:12:00');
+
+-- --------------------------------------------------------
+
+--
 -- 表的结构 `i_slide`
 --
 
@@ -4575,8 +4621,8 @@ CREATE TABLE IF NOT EXISTS `i_users` (
 --
 
 INSERT INTO `i_users` (`id`, `parentid`, `user_login`, `user_pass`, `user_nicename`, `shop_name`, `user_email`, `user_url`, `avatar`, `sex`, `birthday`, `signature`, `last_login_ip`, `last_login_time`, `create_time`, `user_activation_key`, `user_status`, `score`, `user_type`, `coin`, `mobile`, `uuid`, `pid`, `province`, `city`, `area`, `money`, `can_money`) VALUES
-(1, 0, 'admin', '###f25434b0a5e217fd97b2737ecf52d72e', 'admin', '', 'a526584713@qq.com', '', NULL, 0, '2000-01-01', NULL, '127.0.0.1', '2017-04-23 11:24:54', '2017-04-13 03:02:05', '', 1, 0, 1, 0, '', NULL, NULL, 0, 0, 0, 0.00, 0.00),
-(2, 0, '', '###009af4e80982b93a8cda7b60004ac05a', '', '', '', '', NULL, 0, '2000-01-01', NULL, '127.0.0.1', '2017-04-23 20:35:58', '2017-04-18 21:29:44', '', 1, 0, 2, 0, '18816978523', NULL, NULL, 0, 0, 0, 0.00, 0.00),
+(1, 0, 'admin', '###f25434b0a5e217fd97b2737ecf52d72e', 'admin', '', 'a526584713@qq.com', '', NULL, 0, '2000-01-01', NULL, '127.0.0.1', '2017-04-25 20:04:13', '2017-04-13 03:02:05', '', 1, 0, 1, 0, '', NULL, NULL, 0, 0, 0, 0.00, 0.00),
+(2, 0, '', '###009af4e80982b93a8cda7b60004ac05a', '', '', '', '', NULL, 0, '2000-01-01', NULL, '127.0.0.1', '2017-04-25 20:02:32', '2017-04-18 21:29:44', '', 1, 0, 2, 0, '18816978523', NULL, NULL, 0, 0, 0, 0.00, 0.00),
 (3, 0, '', '###009af4e80982b93a8cda7b60004ac05a', '', '', '', '', NULL, 0, '2000-01-01', NULL, '127.0.0.1', '2017-04-18 21:33:22', '2017-04-18 21:33:22', '', 1, 0, 2, 0, '18816978511', 'fa6e51e1-7475-248c-aa3f-32406676d8de', NULL, 32767, 120100, 120103, 0.00, 0.00);
 
 -- --------------------------------------------------------
@@ -4605,6 +4651,12 @@ CREATE TABLE IF NOT EXISTS `i_user_favorites` (
 --
 ALTER TABLE `i_ad`
   ADD PRIMARY KEY (`ad_id`), ADD KEY `ad_name` (`ad_name`);
+
+--
+-- Indexes for table `i_address`
+--
+ALTER TABLE `i_address`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `i_area`
@@ -4751,6 +4803,12 @@ ALTER TABLE `i_route`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `i_sku`
+--
+ALTER TABLE `i_sku`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `i_slide`
 --
 ALTER TABLE `i_slide`
@@ -4795,6 +4853,11 @@ ALTER TABLE `i_user_favorites`
 --
 ALTER TABLE `i_ad`
   MODIFY `ad_id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '广告id';
+--
+-- AUTO_INCREMENT for table `i_address`
+--
+ALTER TABLE `i_address`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `i_area`
 --
@@ -4866,6 +4929,11 @@ ALTER TABLE `i_oauth_user`
 ALTER TABLE `i_options`
   MODIFY `option_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
 --
+-- AUTO_INCREMENT for table `i_orders`
+--
+ALTER TABLE `i_orders`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
+--
 -- AUTO_INCREMENT for table `i_plugins`
 --
 ALTER TABLE `i_plugins`
@@ -4895,6 +4963,11 @@ ALTER TABLE `i_role`
 --
 ALTER TABLE `i_route`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '路由id';
+--
+-- AUTO_INCREMENT for table `i_sku`
+--
+ALTER TABLE `i_sku`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `i_slide`
 --

@@ -96,4 +96,28 @@ class GoodsModel extends CommonModel
 		}
 		return ($this->execute($sql) ? true : false);
 	}
+
+	//根据ID来区别是否已经卖完或者下架
+	public function getStatus($id,$number)
+	{
+		//先判断是否下架
+		$info = explode('-',$id);
+		$first = $info[0];
+		$next = $info[1];
+		$food = $this->where(array('id'=>$first))->field(array('status','attribute'))->find();
+		if ($food['status'] == 0 || !$food) {
+			return false;
+		}
+
+		//是否库存为空
+		$attribute = json_decode($food['attribute'],true);
+		if ($attribute[$next]['stock'] <= 0) {
+			return false;
+		}
+		//库存不够
+		if ($number - $attribute[$next]['stock'] < 0) {
+			return 1;
+		}
+		return 2;
+	}
 }

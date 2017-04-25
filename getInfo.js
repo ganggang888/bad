@@ -4,8 +4,8 @@ $(".shuxing").change(function(){
 	$(this).parent().parent().next().children(".controls.about").load("index.php?g=Admin&m=Goods&a=shuxing&value="+value);
 });
 $(".deleteOne").click(function(){
-	$(this).parent().parent().parent().next().hide();
-	$(this).parent().parent().parent().hide();
+	$(this).parent().parent().parent().next().remove();
+	$(this).parent().parent().parent().remove();
 	
 })
 		

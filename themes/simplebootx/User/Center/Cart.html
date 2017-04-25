@@ -53,7 +53,7 @@
 商品名称：{$info.name}
 <php> $attribute = json_decode($info['attribute'],true); </php>
 
-
+<a href="javascript:;" class="simpleCart_empty">empty cart</a>
 <div class=" container " style="margin-top:10px">
           <div class="panel panel-cart">
     <div class="panel-heading">
@@ -75,7 +75,7 @@
               <div class="well"> 
               请选择地址：
               <foreach name="address" item="vo">
-              <div class="address"><input type="radio" name="optionad" id="optionad">{$vo.address}|{$vo.name}|{$vo.phone}</div>
+              <div class="address"><input type="radio" name="optionad" id="optionad" value="{$vo.id}">{$vo.address}|{$vo.name}|{$vo.phone}</div>
               </foreach>
               <textarea id="ocontent" placeholder="请输入备注"></textarea>
               <if condition="empty($address)">
@@ -143,7 +143,7 @@ method: "POST" ,
  simpleCart.bind( 'beforeCheckout' , function( data ){
   
  
-   data.address = document.getElementById("optionad").value;
+   data.addressid = document.getElementById("optionad").value;
   data.ocontent = document.getElementById("ocontent").value;
  
  data.item_totals = simpleCart.grandTotal();
