@@ -38,7 +38,62 @@ class IndexController extends HomebaseController {
         $this->term = D("Common/GoodsTerm");
     }
 	public function index() {
-    	$this->display(":index");
+    	//获取分类
+        $id = I("get.term_id", 0, 'intval');
+        $data = $this->term->where(array("id" => $id))->field($this->termField)->find();
+        $tree = new \Tree();
+        $tree->icon = array('&nbsp;&nbsp;&nbsp;│ ', '&nbsp;&nbsp;&nbsp;├─ ', '&nbsp;&nbsp;&nbsp;└─ ');
+        $tree->nbsp = '&nbsp;&nbsp;&nbsp;';
+        $terms = $this->term->where(array("id" => array("NEQ", $id)))->order(array("id" => "asc"))->select();
+
+        $new_terms = array();
+        foreach ($terms as $r) {
+            $r['selected'] = $data['parentid'] == $r['id'] ? "selected" : "";
+            $new_terms[] = $r;
+        }
+
+        $tree->init($new_terms);
+        $tree_tpl = "<option value='\$id' \$selected>\$spacer\$name</option>";
+        $tree = $tree->get_tree(0, $tree_tpl);
+
+        $name = I('get.name'); //名称
+        $term_id = I('get.term_id'); //分类ID
+        $begin = I('get.begin'); //开始时间
+        $end = I('get.end');//结束时间
+        $status = I('get.status'); //状态
+        $this->assign(compact('name','term_id','begin','end','status'));
+        $begin ? $begin = $begin." 00:00:00" : '';
+        $end ? $end = $end ." 23:59:59" : '';
+        $term_id ? $where['a.term_id'] = $term_id : '';
+        $name ? $where['a.name'] = array('like',"%$name%") : '';
+        $where['a.is_delete'] = 0;
+        $where['b.is_delete'] = 0;
+        $where['a.indexs'] = 1;
+        $where['a.member'] = 1;
+        if ($begin && $end) {
+            $where['a.add_time'] = array('EGT',$begin);
+            $where['a.add_time'] = array('LT',$end);
+        } elseif ($begin && !$end) {
+            $where['a.add_time'] = array('EGT',$begin);
+        } elseif (!$begin && $end) {
+            $where['a.add_time'] = array('LT',$end);
+        }
+
+        $join = "".C('DB_PREFIX').'goods_term as b on a.term_id = b.id';
+        $field = ['a.name','b.name AS term_name','a.photos_url','a.cost_price','a.selling_price','a.market_value','a.unit','a.stock','a.status','a.label','a.listorder','a.term_id','a.attribute','a.id','a.indexs','a.member','a.add_time'];
+        $count = $this->goods->alias('a')->join($join,'LEFT')->where($where)->count();
+        $page = $this->page($count,100);
+        $result = $this->goods->alias('a')->join($join,'LEFT')->where($where)->field($field)->order(['listorder'=>asc])->limit($page->firsRow,$page->listRows)->select();
+        array_map(function($vo) use (&$one,&$two){
+        	if ($vo['indexs'] == 1) {
+        		$one[] = $vo;
+        	}
+        	if ($vo['member'] == 1) {
+        		$two[] = $vo;
+        	}
+        },$result);
+        $this->assign(compact('page','result','tree','one','two'));
+        $this->display();
     }
 
     //商品列表
@@ -88,7 +143,6 @@ class IndexController extends HomebaseController {
         $count = $this->goods->alias('a')->join($join,'LEFT')->where($where)->count();
         $page = $this->page($count,15);
         $result = $this->goods->alias('a')->join($join,'LEFT')->where($where)->field($field)->order(['listorder'=>asc])->limit($page->firsRow,$page->listRows)->select();
-        var_dump($result);
         $this->assign(compact('page','result','tree'));
         $this->display();
 
@@ -104,8 +158,75 @@ class IndexController extends HomebaseController {
 		);
     	$id = I('get.id');
     	$info = $this->goods->where("id=%f",array($id))->find();
-    	$this->assign(compact('info','attributes'));
+    	$attribute = json_decode($info['attribute'],true);
+    	array_map(function($vo)use(&$one,&$two){
+    		$one[] = $vo['name'];
+    		$two[] = $vo['info'];
+    	},$attribute);
+    	$one = array_unique($one);
+    	$two = array_unique($two);
+    	$this->assign(compact('info','attributes','one','two'));
     	$this->display();
+    }
+
+    function goodClick()
+    {
+    	$id = I('get.id');
+    	$name = intval(I('get.name'));
+    	$attribute = M('goods')->where("id=%f",array($id))->getField('attribute');
+    	$attribute = json_decode($attribute,true);
+    	$data = '';
+    	array_map(function($vo) use (&$data,$name){
+    		if ($vo['name'] == $name) {
+    			$data .= "<li><a href='javascript:;'>$vo[info]</a></li>";
+    		}
+    	},$attribute);
+    	$data .= "<script type='text/javascript' src='getInfo.js' ></script>";
+    	echo $data;exit;
+    }
+
+    //商品加入购物车
+    public function addCart()
+    {
+    	$id = I('get.id');
+    	$good_name = I('get.good_name');
+    	$pic = I('get.pic');
+    	$name = I('get.name');
+    	$info = I('get.info');
+    	$all_cart = $_SESSION['cat'];
+    	//计算已有商品数量
+    	//查找是否存在
+    	$i='';
+    	foreach ($all_cart as $key=>$vo) {
+    		$i += $vo['count'];
+    		if ($vo['good_name'] == $good_name && $vo['name'] == $name && $vo['info'] == $info && $vo['id'] == $id) {
+    			$vo['count'] = $vo['count'] + 1;
+    		}
+    		$data[] = $vo;
+    	}
+    	$_SESSION['cat'] = $data;
+    	echo $i;
+    }
+
+    //商品购物车1+2-操作
+    public function caozuo()
+    {
+    	$type = I('get.type');
+    	$keys = I('get.key');
+    	$all_cart = $_SESSION['cat'];
+    	switch ($type) {
+    		case 1:
+    			foreach ($all_cart as $key=>$vo) {
+		    		if ($keys == $key) {
+		    			$vo['count'] = $vo['count'] - 1;
+		    		}
+		    	}
+    			break;
+    		
+    		default:
+    			# code...
+    			break;
+    	}
     }
 
     //

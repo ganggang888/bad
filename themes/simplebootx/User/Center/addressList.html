@@ -1,67 +1,36 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>{$site_name}</title>
-<meta name="keywords" content="{$site_seo_keywords}" />
-<meta name="description" content="{$site_seo_description}">
-<meta name="author" content="ThinkCMF">
-<tc_include file="Public:head" />
+<title>地址管理</title>
+<meta charset="utf-8">
+<tc_include file="Public:css" />
 </head>
+<body ontouchstart>
+<!--主体-->
+<header class="wy-header">
+  <div class="wy-header-icon-back"><span></span></div>
+  <div class="wy-header-title">地址管理</div>
+</header>
+<div class="weui-content">
+  <div class="weui-panel address-box">
+  <foreach name="info" item="vo">
+    <div class="weui-panel__bd">
+      <div class="weui-media-box weui-media-box_text address-list-box">
+        <a href="{:leuu('User/Center/editAddress',array('id'=>$vo['id']))}" class="address-edit"></a>
+        <h4 class="weui-media-box__title"><span>{$vo.name}</span><span>{$vo.phone}</span></h4>
+        <p class="weui-media-box__desc address-txt">{$vo.address}</p>
+        <if condition="$vo['listorder'] eq 1">
+        <span class="default-add">默认地址</span>
+        </if>
+      </div>
+    </div>
+    </foreach>
+  </div>
+  <div class="weui-btn-area">
+    <a class="weui-btn weui-btn_primary" href="{:leuu('User/Center/addAddress')}" id="showTooltips">添加收货地址</a>
+  </div>
+</div>
 
-<body class="body-white">
-	<tc_include file="Public:nav" />
-
-	<div class="container tc-main">
-		<div class="row">
-			<div class="span4 offset4">
-				<h2 class="text-center">添加地址</h2>
-				<!-- <ul class="nav nav-tabs" id="myTab">
-					<li class="active"><a href="#mobile" data-toggle="tab">手机注册</a></li>
-					<li><a href="#email" data-toggle="tab">邮箱注册</a></li>
-				</ul> -->
-
-				<div class="tab-content">
-				  <div class="tab-pane active" id="email">
-					  <form class="form-horizontal js-ajax-form"  method="post" action="">
-		
-							
-							<foreach name="info" item="vo">
-                            <div class="control-group">
-						{:provinceName($vo['province'])}{:cityName($vo['city'])}{:areaName($vo['area'])}{$vo.address}{$vo.name}{$vo.phone} <a href="{:U('User/Center/editAddress',array('id'=>$vo['id']))}">修改</a> <a href="{:U('User/Center/deleteAddress',array('id'=>$vo['id']))}">删除</a>
-							</div>
-                            </foreach>
-                            
-							
-		
-							
-					</form>
-					
-				  </div>
-			  </div>
-				
-			</div>
-		</div>
-
-		<tc_include file="Public:footer" />
-
-	</div>
-	<!-- /container -->
-
-	<tc_include file="Public:scripts" />
-    <script>
-	$(document).ready(function(){
-		$("#province").change(function(){
-			
-			var provinceid=$(this).val();
-			$("#citySpan").load("index.php?g=user&m=register&a=city&provinceid="+provinceid);
-			$("#areaSpan").html("<select id=\"area\" name=\"area\"><option value=\"0\">请选则区</option></select>");
-		});
-	})
-	function selectArea(){
-		var cityid=$("#city").val();
-		$("#areaSpan").load("index.php?g=user&m=register&a=Area&cityid="+cityid);
-	}
-</script>
-
+<tc_include file="Public:js" />
 </body>
 </html>

@@ -2190,7 +2190,7 @@ function cityName($cityid)
 //获取所在区
 function areaName($areaid)
 {
-	$name = M('area')->where("areaid = %d",array($areaid))->getField('areaid');
+	$name = M('area')->where("areaid = %d",array($areaid))->getField('area');
 	return $name;
 }
 
@@ -2232,4 +2232,97 @@ function addressInfos($addressId)
 {
 	$info = M('address')->where(array('id'=>$id))->find();
 	return $info;
+}
+
+function getUserInfo($id,$name)
+{
+	$info = M('users')->where("id=%d",array($id))->find();
+	return $info[$name];
+}
+
+//根据订单json获取订单详细信息
+function orderContent($content)
+{
+	$info = json_decode($content,true);
+	$tex = '';
+	foreach ($info as $vo) {
+		$res = explode('-',$vo['fid']);
+		$first = $res[0];
+		$next = $res[1];
+		//查询商品信息
+		$goods = M('goods')->where(array('id'=>$first))->find();
+		$attribute = json_decode($goods['attribute'],true);
+		$id = explode('-',$attribute[$next]['id']);
+		$id_1 = $id[0];
+		$id_2 = $id[1];
+		$attributeType = attributeType();
+		$tex .= "商品名称：{$goods['name']} &nbsp;&nbsp; 商品数量：{$vo['fcount']} &nbsp;&nbsp; 商品单价：{$vo['fprice']} &nbsp;&nbsp; 总价：{$vo['prices']} &nbsp;&nbsp; {$attributeType[$id_1]['son'][$id_2]['name']} : {$attribute[$next]['name']} &nbsp;&nbsp; {$attributeType[$id_1]['son'][$id_2]['info']} : {$attribute[$next]['info']}<br/>";
+	}
+	return $tex;
+}
+//获取info、name信息
+function getGoodsInfo($id,$type)
+{
+	$attributeType = attributeType();
+	$info = explode('-',$id);
+	switch ($type) {
+		case 1:
+			$name = $attributeType[$info[0]]['son'][$info[1]]['name'];
+			break;
+		case 2:
+			$name =  $attributeType[$info[0]]['son'][$info[1]]['info'];
+			break;
+		default:
+			# code...
+			break;
+	}
+	return $name;
+}
+function attributeType() {
+	$attribute = array(
+        array('name'=>'吃','son'=>array(array('name'=>'规格','info'=>'数量'))),
+        array('name'=>'穿','son'=>array(array('name'=>'尺码','info'=>'颜色'),array('name'=>'款式','info'=>'颜色'))),
+        array('name'=>'用','son'=>array(array('name'=>'规格','info'=>'颜色'))),
+    );
+    return $attribute;
+}
+
+//订单状态
+function getOrderStatusInfo($status)
+{
+	switch ($status) {
+		case 0:
+			$name = '未付款';
+			break;
+		case 1:
+			$name = '已付款';
+			break;
+		case 2:
+			$name = '已发货';
+			break;
+		case 3:
+			$name = '已收货';
+			break;
+		case 4:
+			$name = '已作废';
+			break;
+		default:
+			# code...
+			break;
+	}
+	return $name;
+}
+
+//物流
+function wuliu()
+{
+	$array = ['顺丰','圆通','申通','韵达','中通','天天','汇通','优速','国通'];
+	return $array;
+}
+
+//银行列表
+function bankInfo()
+{
+	$array = ['中国工商银行','招商银行','中国农业银行','中国建设银行','中国银行','中国民生银行','中国光大银行','中信银行','交通银行','兴业银行','上海浦东发展银行','中国人民银行','华夏银行','深圳发展银行','广东发展银行','国家开发银行','中国邮政储蓄银行','中国进出口银行','中国农业发展银行'];
+	return $array;
 }

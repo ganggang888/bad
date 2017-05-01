@@ -40,8 +40,8 @@
 						<th>缩略图</th>
 						<th>商品属性</th>
 						<th width="50">状态</th>
-                        <th width="50">首页推荐</th>
-                        <th width="50">会员专区推</th>
+                        <th width="50">精品推荐</th>
+                        <th width="50">酒水推荐</th>
                         <th width="50">添加时间</th>
 						<th width="70">操作</th>
 					</tr>
@@ -83,7 +83,7 @@
                         </php>
                     </td>
 					<td>
-						<php> echo $vo['index'] == 1 ? '是' : '否';</php>
+						<php> echo $vo['indexs'] == 1 ? '是' : '否';</php>
 					</td>
                     <td>
 						<php> echo $vo['member'] == 1 ? '是' : '否';</php>
@@ -100,10 +100,10 @@
 			</table>
 			<div class="table-actions">
 			  <button class="btn btn-primary btn-small js-ajax-submit" type="submit" data-action="{:U('Goods/listorders')}">排序</button>
-				<button class="btn btn-primary btn-small js-ajax-submit" type="submit" data-action="{:U('Goods/changeStatus',array('type'=>1,'status'=>1))}" data-subcheck="true">首页推荐</button>
-				<button class="btn btn-primary btn-small js-ajax-submit" type="submit" data-action="{:U('Goods/changeStatus',array('type'=>1,'status'=>0))}" data-subcheck="true">取消首页推荐</button>
-				<button class="btn btn-primary btn-small js-ajax-submit" type="submit" data-action="{:U('Goods/changeStatus',array('type'=>2,'status'=>1))}" data-subcheck="true">会员专区推荐</button>
-				<button class="btn btn-primary btn-small js-ajax-submit" type="submit" data-action="{:U('Goods/changeStatus',array('type'=>2,'status'=>0))}" data-subcheck="true">取消会员专区推荐</button>
+				<button class="btn btn-primary btn-small js-ajax-submit" type="submit" data-action="{:U('Goods/changeStatus',array('type'=>1,'status'=>1))}" data-subcheck="true">精选推荐</button>
+				<button class="btn btn-primary btn-small js-ajax-submit" type="submit" data-action="{:U('Goods/changeStatus',array('type'=>1,'status'=>0))}" data-subcheck="true">取消精选推荐</button>
+				<button class="btn btn-primary btn-small js-ajax-submit" type="submit" data-action="{:U('Goods/changeStatus',array('type'=>2,'status'=>1))}" data-subcheck="true">酒水推荐</button>
+				<button class="btn btn-primary btn-small js-ajax-submit" type="submit" data-action="{:U('Goods/changeStatus',array('type'=>2,'status'=>0))}" data-subcheck="true">取消酒水推荐</button>
 				<button class="btn btn-primary btn-small js-ajax-submit" type="submit" data-action="{:U('Goods/changeStatus',array('type'=>3,'status'=>1))}" data-subcheck="true">上架</button>
 				<button class="btn btn-primary btn-small js-ajax-submit" type="submit" data-action="{:U('Goods/changeStatus',array('type'=>3,'status'=>0))}" data-subcheck="true">下架</button>
 				

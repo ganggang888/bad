@@ -1,0 +1,47 @@
+<admintpl file="header" />
+</head>
+<body>
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+			<li><a href="{:U('Goods/orderList')}">订单列表</a></li>
+			<li class="active"><a href="javascript:;">物流信息</a></li>
+		</ul>
+		<form method="post" class="form-horizontal js-ajax-form" action="">
+			<fieldset>
+            <div class="control-group">
+					<label class="control-label">订单号码</label>
+					<div class="controls">
+						<input type="text" value="{$info.order_num}" disabled>
+						<span class="form-required">*</span>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label">选择物流公司</label>
+                    <div class="controls">
+						<select name="logistics_mode">
+                        <foreach name="wuliu" item="vo">
+                        <option value="{$vo}" <if condition="$info['logistics_mode'] eq $vo"> selected</if>>{$vo}</option>
+                        </foreach>
+                    </select>
+					</div>
+					
+				</div>
+				<div class="control-group">
+					<label class="control-label">运单号码</label>
+					<div class="controls">
+						<input type="text" name="logistics_num" value="{$info.logistics_num}">
+						<span class="form-required">*</span>
+					</div>
+				</div>
+				
+				
+				<input type="hidden" name="id" value="{$info.id}">
+			</fieldset>
+			<div class="form-actions">
+				<button type="submit" class="btn btn-primary js-ajax-submit">确定</button>
+			</div>
+		</form>
+	</div>
+	<script src="__PUBLIC__/js/common.js"></script>
+</body>
+</html>

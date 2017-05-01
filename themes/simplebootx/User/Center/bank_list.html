@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>银行卡管理</title>
+<meta charset="utf-8">
+<tc_include file="Public:css" />
+</head>
+<body ontouchstart>
+<!--主体-->
+<header class="wy-header">
+  <div class="wy-header-icon-back"><span></span></div>
+  <div class="wy-header-title">银行卡管理</div>
+</header>
+<div class="weui-content">
+  <div class="weui-cells cardlist">
+  <foreach name="result" item="vo">
+    <a class="weui-cell weui-cell_access card-opt{$vo.id}" href="javascript:;">
+      <div class="weui-cell__bd"><p>{$vo.card}</p></div>
+      <div class="weui-cell__ft">{$vo.bank_name}</div>
+    </a>
+    </foreach>
+  </div>
+  <div class="weui-btn-area">
+   <a href="{:leuu('User/Center/add_bank')}" class="weui-btn weui-btn_plain-default">+添加银行卡</a>
+  </div>
+</div>
+
+<tc_include file="Public:js" />
+
+<script src="__TMPL__Public/js/jquery-weui.js"></script>
+<foreach name="result" item="vo">
+<script>
+$(document).on("click", ".card-opt{$vo.id}", function() {
+        $.actions({
+          actions: [
+            {
+              text: "删除",
+              className: 'bg-danger {$vo.id}',
+			  onClick: function() {
+				  $.ajax({
+					type:"GET",
+					url:"/index.php?g=User&m=Center&a=delete_bank&id={$vo.id}",
+					success: function(data){
+						if (data.status == 0) {
+							alert(data.info);
+							window.location.href=data.url;
+						} else if (data.status == 1) {
+							alert('删除成功');
+							window.location.href='/index.php?g=User&m=Center&a=bank_list';
+						}
+					}
+				})
+              }
+
+            }
+          ]
+        });
+      });
+</script>
+</foreach>
+</body>
+</html>

@@ -12,13 +12,18 @@ class CenterController extends MemberbaseController {
     // 会员中心首页
 	public function index() {
 		$this->assign($this->user);
-    	$this->display(':center');
+      $this->display();
+    	//$this->display(':center');
     }
 
     //收货地址管理
     public function addressList()
    	{
    		$info = M('address')->where(array('uid'=>get_current_userid()))->order(array('listorder'=>'DESC'))->select();
+         $info = array_map(function($v){
+            $v['phone'] = substr_replace($v['phone'],"****",3,4);
+            return $v;
+         },$info);
    		$this->assign(compact('info'));
    		$this->display();
    	}
@@ -27,8 +32,13 @@ class CenterController extends MemberbaseController {
    	public function addAddress()
    	{
    		if (IS_POST) {
+            $info = explode(',',$_POST['codeinfo']);
+            $_POST['province'] = $info[0];
+            $_POST['city'] = $info[1];
+            $_POST['area'] = $info[2];
    			$post = $_POST;
 	   		$post['uid'] = get_current_userid();
+            
 	   		$isMatched = preg_match('/0?(13|14|15|18)[0-9]{9}/', $post['phone'], $matches);
 	   		!$post['address'] ? $this->error('缺少参数') : '';
             if (!$post['name']) {
@@ -37,6 +47,10 @@ class CenterController extends MemberbaseController {
 	   		if (!$isMatched) {
 	   			$this->error('请输入正确手机号');
 	   		}
+            if ($_POST['de'] == true) {
+               $post['listorder'] = 1;
+               M('address')->where(array('uid'=>get_current_userid()))->save(array('listorder'=>0));
+            }
 	   		if (M('address')->add($post) !== false) {
 	   			$this->success('添加成功',U('Center/addressList'));
 	   		} else {
@@ -106,7 +120,7 @@ class CenterController extends MemberbaseController {
             $next = $info[1];
             $attribute = M('goods')->where(array('id'=>$first))->getField('attribute');
             $attribute = json_decode($attribute,true);
-            $attribute[[$next]]['stock'] = $attribute[[$next]]['stock'] - $vo['fcount'];
+            $attribute[$next]['stock'] = $attribute[$next]['stock'] - $vo['fcount'];
             $update = M('goods')->where(array('id'=>$first))->save(array('attribute'=>json_encode($attribute)));
             if (!$update) {
                $error = 1;
@@ -118,7 +132,7 @@ class CenterController extends MemberbaseController {
                $sku_error = 1;
             }
          }
-         if ($insert && $error != 1 && $sku_insert != 1) {
+         if ($insert && $error != 1 && $sku_error != 1) {
             $orders->commit();
             $this->success('下单成功，正跳转至支付页面');
          } else {
@@ -148,6 +162,11 @@ class CenterController extends MemberbaseController {
    	public function editAddress()
    	{
    		if (IS_POST) {
+            $info = explode(',',$_POST['codeinfo']);
+            $_POST['province'] = $info[0];
+            $_POST['city'] = $info[1];
+            $_POST['area'] = $info[2];
+            $_POST['de'] == true ? $_POST['listorder'] = 1 : $_POST['listorder'] = 0;
    			$post = $_POST;
 	   		$post['uid'] = get_current_userid();
 	   		$isMatched = preg_match('/0?(13|14|15|18)[0-9]{9}/', $post['phone'], $matches);
@@ -155,6 +174,9 @@ class CenterController extends MemberbaseController {
 	   		if (!$isMatched) {
 	   			$this->error('请输入正确手机号');
 	   		}
+            if ($_POST['listorder'] = 1) {
+               M('address')->where(array('uid'=>get_current_userid()))->save(array('listorder'=>0));
+            }
 	   		if (M('address')->save($post) !== false) {
 	   			$this->success('修改成功',U('Center/addressList'));
 	   		} else {
@@ -193,5 +215,69 @@ class CenterController extends MemberbaseController {
    	public function submitOrder()
    	{
    	}
+
+      //添加银行卡
+      public function add_bank()
+      {
+         if (IS_POST) {
+            $post = $_POST;
+            $isMatched = preg_match('/0?(13|14|15|18)[0-9]{9}/', $post['phone'], $matches);
+            if (!$isMatched) {
+               $this->error('请输入正确手机号');
+            }
+            if (strlen($post['card']) < 10) {
+               $this->error('请输入正确的银行卡号');
+            }
+            $post['uid'] = get_current_userid();
+            $post['add_time'] = date("Y-m-d H:i:s");
+            if (M('bank')->add($post) !== false) {
+               $this->success('添加成功');
+            } else {
+               $this->error('添加失败');
+            }
+         }
+         $bankInfo = bankInfo();
+         $this->assign(compact('bankInfo'));
+         $this->display();
+      }
+
+      //银行卡列表
+      public function bank_list()
+      {
+         $result = M('bank')->where(array('uid'=>get_current_userid()))->select();
+         $result = array_map(function($v){
+            $v['card'] = substr_replace($v['card'], "****",3,4);
+            return $v;
+         },$result);
+         $this->assign(compact('result'));
+         $this->display();
+      }
+
+      //删除银行卡
+      public function delete_bank()
+      {
+         $id = I('get.id');
+         M('bank')->where(array('id'=>$id,'uid'=>get_current_userid()))->delete() ? $this->success('删除成功') : $this->error('删除失败');
+      }
+
+      //密码修改
+      public function changePassword()
+      {
+         if (IS_POST) {
+            $post = $_POST;
+            $oldPassword = sp_password($_POST['old_password']);
+            $old = M('users')->where(array('id'=>get_current_userid()))->getField('user_pass');
+            if ($oldPassword != $old) {
+               $this->error('请输入正确的旧密码');
+            } else {
+               if ($post['password'] != $post['repassword']) {
+                  $this->error('两次密码输入不一致');
+               }
+               M('users')->where(array('id'=>get_current_userid()))->save(array('user_pass'=>sp_password($post['password']))) ? $this->success('密码重置成功') : $this->error('密码重置失败');
+            }
+         }
+         $this->display();
+      }
+
 }
 

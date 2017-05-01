@@ -208,9 +208,9 @@ hello;
     // 登录验证提交
     public function dologin(){
 
-    	if(!sp_check_verify_code()){
+    	/*if(!sp_check_verify_code()){
     		$this->error("验证码错误！");
-    	}
+    	}*/
     	
     	$users_model=M("Users");
     	$rules = array(
@@ -225,11 +225,12 @@ hello;
     	
     	$username=I('post.username');
     	
-    	if(preg_match('/(^(13\d|15[^4\D]|17[13678]|18\d)\d{8}|170[^346\D]\d{7})$/', $username)){//手机号登录
+    	/*if(preg_match('/(^(13\d|15[^4\D]|17[13678]|18\d)\d{8}|170[^346\D]\d{7})$/', $username)){//手机号登录
     	    $this->_do_mobile_login();
     	}else{
     	    $this->_do_email_login(); // 用户名或者邮箱登录
-    	}
+    	}*/
+        $this->_do_mobile_login();
     	 
     }
 	

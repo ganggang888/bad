@@ -1,106 +1,76 @@
-<!DOCTYPE html>
-<html>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>{$site_name}</title>
+<title>手机注册</title>
 <meta name="keywords" content="{$site_seo_keywords}" />
 <meta name="description" content="{$site_seo_description}">
-<meta name="author" content="ThinkCMF">
-<tc_include file="Public:head" />
+<tc_include file="Public:css" />
 </head>
-
-<body class="body-white">
-	<tc_include file="Public:nav" />
-
-	<div class="container tc-main">
-		<div class="row">
-			<div class="span4 offset4">
-				<h2 class="text-center">用户注册</h2>
-				<!-- <ul class="nav nav-tabs" id="myTab">
-					<li class="active"><a href="#mobile" data-toggle="tab">手机注册</a></li>
-					<li><a href="#email" data-toggle="tab">邮箱注册</a></li>
-				</ul> -->
-
-				<div class="tab-content">
-				  <div class="tab-pane active" id="email">
-					  <form class="form-horizontal js-ajax-form" action="{:U('user/register/doregister')}" method="post">
-		
-							<div class="control-group">
-								<input type="text" name="mobile" placeholder="手机号" class="span4">
-							</div>
-							<div class="control-group">
-								<input type="text" name="user_login" placeholder="姓名" class="span4">
-							</div>
-                            <div class="control-group">
-								<select name="province" id="province">
+<body ontouchstart>
+<!--主体-->
+<header class="wy-header">
+  <div class="wy-header-icon-back"><span></span></div>
+  <div class="wy-header-title">手机注册</div>
+</header>
+<div class="weui-content">
+  <div class="weui-cells weui-cells_form wy-address-edit">
+    <div class="weui-cell weui-cell_vcode">
+      <div class="weui-cell__hd"><label class="weui-label wy-lab">手机号</label></div>
+      <div class="weui-cell__bd"><input class="weui-input" id="mobile" type="tel" placeholder="请输入手机号"></div>
+      <div class="weui-cell__ft"><input type="button" value="获取验证码" id="btn" class="weui-vcode-btn"></div>
+    </div>
+    <div class="weui-cell">
+      <div class="weui-cell__hd"><label class="weui-label wy-lab">选择省</label></div>
+      <div class="weui-cell__bd">
+      <select name="province" id="province" class="weui-input">
                                 <option value="0">请选择省</option>
                                 <foreach name="province" item="vo">
                                 <option value="{$vo.provinceid}">{$vo.province}</option>
                                 </foreach>
                                 </select>
-							</div>
-                            <div class="control-group" id="citySpan">
-								<select name="city" id="city">
+      </div>
+    </div>
+    <div class="weui-cell">
+      <div class="weui-cell__hd"><label class="weui-label wy-lab">选择市</label></div>
+      <div class="weui-cell__bd"><div class="control-group" id="citySpan">
+								<select name="city" id="city" class="weui-input">
                                 <option value="0">请选择市</option>
                                 </select>
-							</div>
-                            <div class="control-group" id="areaSpan">
-								<select name="area">
+							</div></div>
+    </div>
+    <div class="weui-cell">
+      <div class="weui-cell__hd"><label class="weui-label wy-lab">选择区</label></div>
+      <div class="weui-cell__bd"><div class="control-group" id="areaSpan">
+								<select name="area" id="area" class="weui-input">
                                 <option value="0">请选择区</option>
                                 </select>
-							</div>
-							<div class="control-group">
-								<input type="password" name="password" placeholder="密码" class="span4">
-							</div>
-							
-							<div class="control-group">
-								<input type="password" name="repassword" placeholder="重复密码" class="span4">
-							</div>
-		
-							<div class="control-group">
-								<div class="span4" style="margin-left: 0px;">
-									<input type="text" name="verify" placeholder="验证码" style="width:252px;">
-									{:sp_verifycode_img('length=4&font_size=14&width=100&height=34&charset=1234567890&use_noise=1&use_curve=0')}
-								</div>
-								
-							</div>
-		
-							<div class="control-group">
-								<button class="btn btn-primary js-ajax-submit span4" type="submit" data-wait="1500" style="margin-left: 0px;">确定注册</button>
-							</div>
-		
-							<div class="control-group" style="text-align: center;">
-								<p>
-									已有账号? <a href="{:leuu('user/login/index')}">点击此处登录</a>
-								</p>
-							</div>
-					</form>
-					
-				  </div>
-			  </div>
-				
-			</div>
-		</div>
+							</div></div>
+    </div>
+    <div class="weui-cell weui-cell_vcode">
+      <div class="weui-cell__hd"><label class="weui-label wy-lab">验证码</label></div>
+      <div class="weui-cell__bd"><input class="weui-input" type="number" placeholder="请输入验证码"></div>
+      <div class="weui-cell__ft"><img class="weui-vcode-img" src="__TMPL__Public/images/vcode.jpg"></div>
+    </div>
+    <div class="weui-cell">
+      <div class="weui-cell__hd"><label class="weui-label wy-lab">设置密码</label></div>
+      <div class="weui-cell__bd"><input class="weui-input" id="password" type="number" pattern="[0-9]*" placeholder="请输入新密码"></div>
+    </div>
+    <div class="weui-cell">
+      <div class="weui-cell__hd"><label class="weui-label wy-lab">确认密码</label></div>
+      <div class="weui-cell__bd"><input class="weui-input" type="number" pattern="[0-9]*" id="repassword" placeholder="请再次输入新密码"></div>
+    </div>
+  </div>
+  <label for="weuiAgree" class="weui-agree">
+    <input id="weuiAgree" type="checkbox" class="weui-agree__checkbox" checked="checked" value="1">
+    <span class="weui-agree__text">阅读并同意<a href="javascript:void(0);">《注册协议》</a></span>
+  </label>
+  <div class="weui-btn-area"><a href="javascript:;" class="weui-btn weui-btn_warn" onclick="register()">注册并登陆</a></div>
+  <div class="weui-cells__tips t-c font-12">登陆账号为您输入的手机号码</div>
+  <div class="weui-cells__tips t-c pd-10"><a href="xieyi.html" class="weui-cell_link font-12">查看注册协议</a></div>
+  
+</div>
 
-		<tc_include file="Public:footer" />
-
-	</div>
-	<!-- /container -->
-
-	<tc_include file="Public:scripts" />
-    <script>
-	$(document).ready(function(){
-		$("#province").change(function(){
-			
-			var provinceid=$(this).val();
-			$("#citySpan").load("index.php?g=user&m=register&a=city&provinceid="+provinceid);
-			$("#areaSpan").html("<select id=\"area\" name=\"area\"><option value=\"0\">请选则区</option></select>");
-		});
-	})
-	function selectArea(){
-		var cityid=$("#city").val();
-		$("#areaSpan").load("index.php?g=user&m=register&a=Area&cityid="+cityid);
-	}
-</script>
-
+<tc_include file="Public:js" />
 </body>
 </html>

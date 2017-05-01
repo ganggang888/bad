@@ -51,6 +51,7 @@ class GoodsModel extends CommonModel
 	 */
 	protected function _before_update(&$data,$option)
 	{
+		$data['photos_url'] ? $data['photos_url'] = json_encode($data['photos_url']) : '';
 		if ($data['attribute']) {
 			foreach ($data['attribute']['cost_price'] as $key=>$vo) {
 				$info[] = array(

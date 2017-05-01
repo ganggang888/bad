@@ -350,4 +350,96 @@ class GoodsController extends AdminbaseController {
         }
     }
 
+
+    //订单列表
+    public function orderList()
+    {
+        $orders = M('orders');
+        $pay_type = I('get.pay_type');
+        $name = I('get.name');
+        $phone = I('get.phone');
+        $begin = I('get.begin');
+        $end = I('get.end');
+        $status = I('get.status');
+        $this->assign(compact('begin','end'));
+        $begin ? $begin = $begin." 00:00:00" : '';
+        $end ? $end = $end." 23:59:59" : '';
+        $order_number = I('get.order_number');
+        $status ? $where['a.status'] = $status : $where['a.status'] = 0;
+        $phone ? $where['b.phone'] = $phone : '';
+        $name ? $where['b.name'] = array('like',"%$name%") : '';
+        $pay_type ? $where['a.pay_type'] = $pay_type : '';
+        $order_number ? $where['a.order_num'] = $order_number : '';
+        if ($begin && $end) {
+            $where['a.order_time'] = array('EGT',$begin);
+            $where['a.order_time'] = array('LT',$end);
+        } elseif ($begin && !$end) {
+            $where['a.order_time'] = array('EGT',$begin);
+        } elseif (!$begin && $end) {
+            $where['a.order_time'] = array('LT',$end);
+        }
+        $join = "".C('DB_PREFIX').'address as b on a.address_id = b.id';
+        $field = array('a.id','a.order_num','a.uid','a.number','a.prices','a.order_time','a.pay_time','a.delivery_time','a.receiving_time','a.logistics_mode','a.logistics_num','a.goodsInfo','a.pay_type','a.content','a.status','b.name','b.address','b.phone');
+        $count = $orders->alias('a')->join($join,'LEFT')->where($where)->count();
+        $page = $this->page($count,15);
+        $result = $orders->alias('a')->join($join,'LEFT')->where($where)->order(array('order_time'=>'desc'))->select();
+        $this->assign(compact('page','result','pay_type','phone','order_number','name','status'));
+        $this->display();
+    }
+
+    //发货
+    public function fa()
+    {
+        if (IS_POST) {
+            $post = $_POST;
+            if ($post['logistics_mode'] && $post['logistics_num'] && $post['id']) {
+                if (!is_numeric($post['logistics_num'])) {
+                    $this->error('请输入正确的快递单号');
+                }
+                M('orders')->where("id=%d",array($post['id']))->save(array('logistics_mode'=>$post['logistics_mode'],'logistics_num'=>$post['logistics_num'],'status'=>2,'delivery_time'=>date("Y-m-d H:i:s"))) ? $this->success('成功',U('Goods/orderList')) : $this->error('失败');
+            } else {
+                $this->error('缺少参数');
+            }
+        }
+        $id = I('get.id');
+        $field = array('a.id','a.order_num','a.uid','a.number','a.prices','a.order_time','a.pay_time','a.delivery_time','a.receiving_time','a.logistics_mode','a.logistics_num','a.goodsInfo','a.pay_type','a.content','a.status','b.name','b.address','b.phone');
+        $orders = M('orders');
+        $join = "".C('DB_PREFIX').'address as b on a.address_id = b.id';
+        $info = $orders->alias('a')->join($join,'LEFT')->where("a.id=%d",array($id))->field($field)->find();
+        $wuliu = wuliu();
+        $this->assign(compact('info','wuliu'));
+        $this->display();
+    }
+
+    //删除订单
+    public function deleteOrder()
+    {
+        $id = I('get.id');
+        M('orders')->where("id=%d",array($id))->delete() ? $this->success('删除成功') : $this->error('删除失败');
+    }
+
+    //库存记录
+    public function sku_history()
+    {
+        $begin = I('get.begin');
+        $end = I('get.end');
+        $this->assign(compact('begin','end'));
+        $begin ? $begin = $begin." 00:00:00" : '';
+        $end ? $end = $end." 23:59:59" : '';
+        if ($begin && $end) {
+            $where = "WHERE a.add_time >= '$begin' AND a.add_time < '$end'";
+        } elseif ($begin && !$end) {
+            $where = "WHERE a.add_time >= '$begin'";
+        } elseif (!$begin && $end) {
+            $where = "WHERE a.add_time < '$end'";
+        }
+        $model = M();
+        $num = $model->query("SELECT COUNT(*) AS num FROM i_sku a LEFT JOIN i_goods b ON a.gid = b.id LEFT JOIN i_users c ON a.uid = c.id $where");
+        $page = $this->page($num[0]['num'],15);
+        $result = $model->query("SELECT * FROM i_sku a LEFT JOIN i_goods b ON a.gid = b.id LEFT JOIN i_users c ON a.uid = c.id $where ORDER BY a.add_time DESC");
+        $this->assign(compact('page','result'));
+        $this->display();
+
+    }
+
 }
