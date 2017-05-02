@@ -279,5 +279,137 @@ class CenterController extends MemberbaseController {
          $this->display();
       }
 
+
+      //用户进行商品兑换
+      public function duihuan()
+      {
+         $good_id = I('post.goods_id');
+         $jf = I('post.jf');
+         $goods_info = I('post.info');
+         $user = $_SESSION['user'];
+         $parentid = I('post.parentid'); //他人转发链接
+         $level = $_SESSION['user']['level'];
+
+         //商品信息
+         $theGoods = M('goods')->where("id=%f",array($good_id))->find();
+         //判断是否是他人转发或者没有转发直接点开
+         
+         if ($user['score'] < $jf) {
+            $this->error('您的积分不够，请去充值');
+         }
+         if ($user['pid'] || $parentid) {
+            $parentid ? $theParentid = $parentid : $theParentid = $user['pid'];
+            $parentid ? $zhuanfa = 1 : $zhuanfa = 0;
+            $parent = M('users')->where(array('uuid'=>$theParentid))->find();
+            
+            if ($parent['level'] == 1) {
+               //获得10%原价格提成
+               $getScore = intval($jf * 0.15);
+               $updateParent = "UPDATE i_users SET can_monery = can_monery+$getScore WHERE id = '$parent[id]'";
+               $insertParentLog = "INSERT INTO i_ticheng_log (uid,level,pid,score,gid,zhuanfa,add_time) VALUES ('$parent[id]',1,'$user[id]',$getScore,$good_id,$zhuanfa,NOW())";
+            } elseif ($parent['level'] == 2) {
+               //黄金会员
+               $getScore = intval($jf * 0.15);
+               $updateParent = "UPDATE i_users SET can_monery = can_monery+$getScore WHERE id = '$parent[id]'";
+               $insertParentLog = "INSERT INTO i_ticheng_log (uid,level,pid,score,gid,zhuanfa,add_time) VALUES ('$parent[id]',1,'$user[id]',$getScore,$good_id,$zhuanfa,NOW())";
+            } elseif ($parent['level'] > 2) {
+               //大于2按照钻石会员算进行提成
+               $getScore = intval($jf * 0.45);
+               $updateParent = "UPDATE i_users SET can_monery = can_monery + $getScore WHERE id = '$parent[id]";
+               $insertParentLog = "INSERT INTO i_ticheng_log (uid,level,pid,score,gid,zhuanfa,add_time) VALUES ('$parent[id]',1,'$user[id]',$getScore,$good_id,$zhuanfa,NOW())";
+            }
+            //查看是否继续有上一级
+            if ($parent['pid']) {
+               $grandfather = M('users')->where(array('uuid'=>$parent['pid']))->find();
+               if ($grandfather['level'] > 1) {
+                  //点位钱15没人每次购买
+                  $updateGrand = "UPDATE i_users SET can_monery = can_monery + 15 WHERE id = '$grandfather[id]'";
+                  $insertGrandLog = "INSERT INTO i_ticheng_log (uid,level,pid,score,gid,add_time) VALUES ('$parent[id]',2,'$user[id]',15,$good_id,NOW())";
+               }
+            }
+         }
+         $selfChange = "UPDATE i_users SET score = score - $jf WHERE id = '$user[id]'";
+
+         //开始写入订单信息
+         $order_num = date("YmdHis").mt_rand(100,999);
+         $address_id = $address_id;
+         $number = 1;
+         $score = $jf;
+         $insertOrder = " INSERT INTO i_orders (order_num,uid,address_id,`number`,gid,goodsInfo,score,pay_score,pay_time) VALUES ($order_num,'$user[id]','$number',$good_id,$goodsInfo,$score,$score,NOW())";
+         $insertSelfLog = "INSERT INTO i_ticheng_log (uid,level,pid,score,gid,action,add_time) VALUES ('$user[id]',0,0,$score,$good_id,0,now())";
+         $model = M();
+         $model->startTrans();
+         if ($updateParent && $insertParentLog && $updateGrand && $insertGrandLog && $selfChange && $insertOrder && $insertSelfLog) {
+            $one = $model->execute($updateParent);
+            $two = $model->execute($insertParentLog);
+            $three = $model->execute($updateGrand);
+            $four = $model->execute($insertGrandLog);
+            $five = $model->execute($selfChange);
+            $seven = $model->execute($insertOrder);
+            $eight = $model->execute($insertSelfLog);
+            if ($one && $two && $three && $four && $five && $seven && $eight) {
+               $model->commit();
+               $success =1;
+            } else {
+               $model->rollback();
+            }
+         } elseif ($updateParent && $insertParentLog && !$updateGrand && !$insertGrandLog && $selfChange && $insertOrder && $insertSelfLog) {
+            $one = $model->execute($updateParent);
+            $two = $model->execute($insertParentLog);
+            $three = $model->execute($selfChange);
+            $four = $model->execute($insertOrder);
+            $five = $model->execute($insertSelfLog);
+            if ($one && $two && $three && $four && $five) {
+               $model->commit();
+               $success = 1;
+            } else {
+               $model->rollback();
+            }
+         } elseif (!$updateParent && !$insertParentLog && !$updateGrand && !$insertGrandLog && $selfChange && $insertOrder && $insertSelfLog) {
+            $one = $model->execute($selfChange);
+            $two = $model->execute($insertOrder);
+            $three = $model->execute($insertSelfLog);
+            if ($one && $two && $three) {
+               $model->commit();
+               $success = 1;
+            } else {
+               $model->rollback();
+            }
+         }
+
+         //判断是否为激活黄金会员的商品
+         if ($theGoods['huangjin'] == 1 && $success == 1 && $user['level'] == 1) {
+            //将本用户状态修改为黄金会员
+            M('users')->where(array('id'=>get_current_userid()))->save(array('level'=>2));
+            //当用户状态变成黄金会员时检测上级会员状态
+            $parent = M('users')->where(array('uuid'=>$theParentid))->find();
+            if ($parent) {
+               if ($parent['level'] == 2) {
+                  //当用户还是黄金会员的时候查看他手下已有多少人为黄金会员，超过3个则+1
+                  $count = M('users')->where(array('pid'=>$parent['uuid'],'level'=>2))->count();
+                  if ($count >= 3) {
+                     //刚好超过三个更改上级为钻石会员并写入log日志
+                     M('users')->where(array('uuid'=>$theParentid))->save(array('level'=>3));
+                     M('users_log')->add(array('uid'=>$parent['id'],'old_level'=>2,'new_level'=>3,'status'=>2,'add_time'=>date("Y-m-d H:i:s")));
+                  }
+               }
+            }
+         }
+         //判断是否能成为股东商家
+         if ($theGoods['huangjin'] == 1 && $user['level'] < 4) {
+            //查看当日是否兑换了超过十个商品
+            $uid = get_current_userid();
+            $sql = "SELECT COUNT(*) AS num FROM i_orders WHERE uid = $uid WHERE add_time =to_days(now())";
+            $num = M()->query($sql);
+            $count = $num[0]['num'];
+            //购买超过十次升级
+            if ($count >=10) {
+               M('users')->where(array('id'=>get_current_userid()))->save(array('level'=>4));
+               M('users_log')->add(array('uid'=>get_current_userid(),'old_level'=>$user['level'],'new_level'=>4,'status'=>3,'add_time'=>date("Y-m-d H:i:s")));
+            }
+         }
+         $success ? $this->success('兑换成功') : $this->error('兑换失败');
+         
+      }
 }
 
