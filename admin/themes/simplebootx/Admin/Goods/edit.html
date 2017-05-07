@@ -39,16 +39,31 @@
 						<span class="form-required">*</span>
 					</div>
 				</div>
-				
+				<div class="control-group">
+					<label class="control-label">所需积分</label>
+					<div class="controls">
+						<input type="text" required name="score" placeholder="请输入兑换积分" value="{$info.score}">
+						<span class="form-required">*</span>
+					</div>
+				</div>
                 
-                
+                <div class="control-group">
+					<label class="control-label">黄金会员专区</label>
+					<div class="controls">
+						<select name="huangjin">
+                        <option value="1" <if condition="$info['huangjin'] eq 1">selected</if>>是</option>
+                        <option value="0" <if condition="$info['huangjin'] eq 0">selected</if>>否</option>
+                        </select>
+						<span class="form-required">*</span>
+					</div>
+				</div>
                 
                 <div class="control-group">
 					<label class="control-label">状态</label>
 					<div class="controls">
 						<select name="status">
-                        <option value="1" <if condition="$status eq 1">selected</if>>上架</option>
-                        <option value="0" <if condition="$status eq 0">selected</if>>下架</option>
+                        <option value="1" <if condition="$info['status'] eq 1">selected</if>>上架</option>
+                        <option value="0" <if condition="$info['status'] eq 0">selected</if>>下架</option>
                         </select>
 						<span class="form-required">*</span>
 					</div>

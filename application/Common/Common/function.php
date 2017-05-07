@@ -2292,7 +2292,7 @@ function getOrderStatusInfo($status)
 {
 	switch ($status) {
 		case 0:
-			$name = '未付款';
+			$name = '待发货';
 			break;
 		case 1:
 			$name = '已付款';
@@ -2325,4 +2325,16 @@ function bankInfo()
 {
 	$array = ['中国工商银行','招商银行','中国农业银行','中国建设银行','中国银行','中国民生银行','中国光大银行','中信银行','交通银行','兴业银行','上海浦东发展银行','中国人民银行','华夏银行','深圳发展银行','广东发展银行','国家开发银行','中国邮政储蓄银行','中国进出口银行','中国农业发展银行'];
 	return $array;
+}
+
+//获取随机数
+function generate_code($length = 4) {
+    return rand(pow(10,($length-1)), pow(10,$length)-1);
+}
+
+//根据商品id取得详细信息
+function goodsInfo($id)
+{
+	$goods = M('goods')->where(array('id'=>$id))->find();
+	return $goods;
 }

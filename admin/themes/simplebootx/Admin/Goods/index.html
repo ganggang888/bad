@@ -39,6 +39,7 @@
                         <th>所属分类</th>
 						<th>缩略图</th>
 						<th>商品属性</th>
+                        <th>积分</th>
 						<th width="50">状态</th>
                         <th width="50">精品推荐</th>
                         <th width="50">酒水推荐</th>
@@ -77,6 +78,7 @@
                    {$attributes[$info[0]]['son'][$info[1]]['info']} : {$v.info}<br/>
                    </foreach>
                     </td>
+                    <td>{$vo.score}</td>
 					<td>
                     <php>
                         echo $vo['status'] == 1 ? '上架' : '下架';

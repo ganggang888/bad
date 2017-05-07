@@ -183,7 +183,7 @@ class GoodsController extends AdminbaseController {
         }
 
         $join = "".C('DB_PREFIX').'goods_term as b on a.term_id = b.id';
-        $field = ['a.name','b.name AS term_name','a.photos_url','a.cost_price','a.attribute','a.selling_price','a.market_value','a.unit','a.stock','a.status','a.label','a.listorder','a.term_id','a.id','a.indexs','a.member','a.add_time'];
+        $field = ['a.name','b.name AS term_name','a.score','a.photos_url','a.cost_price','a.attribute','a.selling_price','a.market_value','a.unit','a.stock','a.status','a.label','a.listorder','a.term_id','a.huangjin','a.id','a.indexs','a.member','a.add_time'];
         $count = $this->goods->alias('a')->join($join,'LEFT')->where($where)->count();
         $page = $this->page($count,15);
         $result = $this->goods->alias('a')->join($join,'LEFT')->where($where)->field($field)->order(['listorder'=>asc])->limit($page->firsRow,$page->listRows)->select();
@@ -379,10 +379,11 @@ class GoodsController extends AdminbaseController {
             $where['a.order_time'] = array('LT',$end);
         }
         $join = "".C('DB_PREFIX').'address as b on a.address_id = b.id';
-        $field = array('a.id','a.order_num','a.uid','a.number','a.prices','a.order_time','a.pay_time','a.delivery_time','a.receiving_time','a.logistics_mode','a.logistics_num','a.goodsInfo','a.pay_type','a.content','a.status','b.name','b.address','b.phone');
+        $field = array('a.id','a.pay_time','a.order_num','a.uid','a.number','a.prices','a.order_time','a.pay_time','a.delivery_time','a.receiving_time','a.logistics_mode','a.logistics_num','a.goodsInfo','a.pay_type','a.content','a.status','b.name','b.address','b.phone');
         $count = $orders->alias('a')->join($join,'LEFT')->where($where)->count();
         $page = $this->page($count,15);
-        $result = $orders->alias('a')->join($join,'LEFT')->where($where)->order(array('order_time'=>'desc'))->select();
+        $result = $orders->alias('a')->join($join,'LEFT')->where($where)->field($field)->order(array('order_time'=>'desc'))->select();
+        //var_dump($result);
         $this->assign(compact('page','result','pay_type','phone','order_number','name','status'));
         $this->display();
     }
@@ -440,6 +441,31 @@ class GoodsController extends AdminbaseController {
         $this->assign(compact('page','result'));
         $this->display();
 
+    }
+
+    //积分卡列表
+    public function jf_list()
+    {
+        $count = M('recharges')->count();
+        $page = $this->page($count,20);
+        $result = M('recharges')->limit($page->firsRow,$page->listRows)->order(array('id'=>'DESC'))->select();
+        $this->assign(compact('page','result'));
+        $this->display();
+    }
+
+    //生成积分卡
+    public function get_number()
+    {
+        if (IS_POST) {
+            $number = I('post.number');
+            $jf = I('post.jf');
+            for ($i=1;$i<= $number;$i++) {
+                $add[] = array('jf'=>$jf,'code'=>generate_code(10),'add_time'=>date("Y-m-d H:i:s"));
+            }
+            M('recharges')->addAll($add);
+            $this->success('添加成功',U('Goods/jf_list'));
+        }
+        $this->display();
     }
 
 }

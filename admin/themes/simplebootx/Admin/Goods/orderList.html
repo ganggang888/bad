@@ -15,8 +15,7 @@
             订单号： 
 	  <input type="text" name="order_number" id="order_number" style="width: 200px;" value="{$order_number|default=''}" placeholder="请输入订单号...">
             订单状态:<select id="status">
-            <option value="0" <if condition="$status eq 0"> selected</if>>未付款</option>
-            <option value="1" <if condition="$status eq 1"> selected</if>>已付款</option>
+            <option value="0" <if condition="$status eq 0"> selected</if>>待发货</option>
             <option value="2" <if condition="$status eq 2"> selected</if>>已发货</option>
             <option value="3" <if condition="$status eq 3"> selected</if>>已收货</option>
             <option value="4" <if condition="$status eq 4"> selected</if>>已作废</option>
@@ -67,8 +66,8 @@
                     	echo "暂无";
                     }
                     </php></td>
-					<td>{$vo.order_time}</td>
-                    <td><a href="{:U('Goods/fa',array('id'=>$vo['id']))}">物流状态修改</a> | <a href="{:U('Goods/deleteOrder',array('id'=>$id))}" class="js-ajax-delete">删除</a></td>
+					<td>{$vo.pay_time}</td>
+                    <td><a href="{:U('Goods/fa',array('id'=>$vo['id']))}">物流状态修改</a> | <a href="{:U('Goods/deleteOrder',array('id'=>$vo['id']))}" class="js-ajax-delete">删除</a></td>
 				</tr>
 				</foreach>
 				

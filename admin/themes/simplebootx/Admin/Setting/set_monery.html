@@ -1,0 +1,76 @@
+<admintpl file="header" />
+</head>
+<body>
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="javascript:;">设置返点</a></li>
+		</ul>
+		<form method="post" class="form-horizontal js-ajax-form" action="">
+			<fieldset>
+				<div class="control-group">
+					<label class="control-label">黄金会员下级首单下单返佣比例</label>
+					<div class="controls">
+						<input type="text" name="level_first" value="{$info.level_first}">
+						<span class="form-required">*</span>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label">见点奖（）</label>
+					<div class="controls">
+						<input type="text" name="jiandian" value="{$info.jiandian}">
+						<span class="form-required">积分</span>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label">黄金会员下级非首单下单返佣比例</label>
+					<div class="controls">
+						<input type="text" name="level_next" value="{$info.level_next}"> <span class="form-required"></span>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label">普通会员推荐返佣比例</label>
+					<div class="controls">
+						<input type="text" name="pu" value="{$info.pu}"> <span class="form-required"></span>
+					</div>
+				</div>
+                <div class="control-group">
+					<label class="control-label">钻石会员下级首单下单返佣比例</label>
+					<div class="controls">
+						<input type="text" name="zuanshi_first" value="{$info.zuanshi_first}"> <span class="form-required"></span>
+					</div>
+				</div>
+                
+                <div class="control-group">
+					<label class="control-label">钻石会员下级非首单下单返佣比例</label>
+					<div class="controls">
+						<input type="text" name="zuanshi_next" value="{$info.zuanshi_next}"> <span class="form-required"></span>
+					</div>
+				</div>
+                <div class="control-group">
+					<label class="control-label">下下级下单返佣比例</label>
+					<div class="controls">
+						<input type="text" name="level_level" value="{$info.level_level}"> <span class="form-required"></span>
+					</div>
+				</div>
+                <div class="control-group">
+					<label class="control-label">黄金会员购买商品优惠比例</label>
+					<div class="controls">
+						<input type="text" name="huangjin" value="{$info.huangjin}"> <span class="form-required"></span>
+					</div>
+				</div>
+                <div class="control-group">
+					<label class="control-label">钻石会员购买商品优惠比例</label>
+					<div class="controls">
+						<input type="text" name="zuanshi" value="{$info.zuanshi}"> <span class="form-required"></span>
+					</div>
+				</div>
+				
+			</fieldset>
+			<div class="form-actions">
+				<button type="submit" class="btn btn-primary js-ajax-submit">修改</button>
+			</div>
+		</form>
+	</div>
+	<script src="__PUBLIC__/js/common.js"></script>
+</body>
+</html>

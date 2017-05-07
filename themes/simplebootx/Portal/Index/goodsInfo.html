@@ -35,7 +35,7 @@
           $attribute = json_decode($info['attribute'],true);
           $ends = end($attribute);
           </php>
-          <div class="wy-pro-pri mg-tb-5">¥<em class="num font-20">{$attribute[0]['selling_price']} <if condition="$ends">  ~  {$ends['selling_price']}</if></em></div>
+          <div class="wy-pro-pri mg-tb-5">{$info.score} 积分</div>
         <!--  <p class="weui-media-box__desc">【2017春季全场2件8】春款薄绒休闲套头纯色印花连帽大码卫衣套装新款上新！！</p>-->
         </div>
         <!--<div class="wy-media-box2 weui-media-box_text">
@@ -62,7 +62,7 @@
             <div class="weui-media-box__hd proinfo-txt-l"><span class="promotion-label-tit">{:getGoodsInfo($attribute[0]['id'],1)}</span></div>
             <div class="weui-media-box__bd">
               <div class="promotion-sku clear">
-                <ul>
+                <ul id="one">
                 
                     <foreach name="one" item="vo" key="key">
                     <li class="oneClick"><a href="javascript:;">{$vo}</a></li>
@@ -169,16 +169,21 @@
     <div class="weui-tabbar__icon promotion-foot-menu-collection"></div>
     <p class="weui-tabbar__label">收藏</p>
   </a>
-  <a href="shopcart.html" class="promotion-foot-menu-items">
+  <!--<a href="shopcart.html" class="promotion-foot-menu-items">
     <span class="weui-badge" style="position: absolute;top: -.4em;right: 1em;">8</span>
     <div class="weui-tabbar__icon promotion-foot-menu-cart"></div>
     <p class="weui-tabbar__label">购物车</p>
-  </a>
-  <a href="javascript:;" class="weui-tabbar__item yellow-color open-popup" data-target="#join_cart">
+  </a>-->
+  <!--<a href="javascript:;" class="weui-tabbar__item yellow-color open-popup" data-target="#join_cart">
     <p class="promotion-foot-menu-label">加入购物车</p>
-  </a>
-  <a href="javascript:;" class="weui-tabbar__item red-color open-popup" data-target="#selcet_sku">
-    <p class="promotion-foot-menu-label">立即购买</p>
+  </a>-->
+  <if condition="$_SESSION['user']">
+  <a href="javascript:;" class="weui-tabbar__item red-color " data-target="#selcet_sku" onclick="duihuan()">
+  <else />
+  <a href="javascript:;" class="weui-tabbar__item red-color " data-target="#selcet_sku" onclick="toLogin()">
+  </if>
+  
+    <p class="promotion-foot-menu-label">立即兑换</p>
   </a>
 </div>
 <div id="join_cart" class='weui-popup__container popup-bottom' style="z-index:600;">
@@ -217,7 +222,7 @@
             <div class="weui-media-box__hd proinfo-txt-l"><span class="promotion-label-tit">{:getGoodsInfo($attribute[0]['id'],1)}</span></div>
             <div class="weui-media-box__bd">
               <div class="promotion-sku clear">
-                <ul>
+                <ul >
                   <foreach name="one" item="vo">
                     <li class="inserClick"><a href="javascript:;">{$vo}</a></li>
                     </foreach>
@@ -240,7 +245,7 @@
         </div>
         <div class="weui-msg__opr-area">
           <p class="weui-btn-area">
-            <a href="order_info.html" class="weui-btn weui-btn_primary">立即购买</a>
+            <a href="order_info.html" class="weui-btn weui-btn_primary">立即兑换</a>
             <a href="javascript:;" class="weui-btn weui-btn_default close-popup">不，我再看看</a>
           </p>
         </div>
@@ -275,9 +280,24 @@ $(function(){
 </script>
 <script>
       $(document).on("click", "#show-toast", function() {
-        $.toast("收藏成功", function() {
-          console.log('close');
-        });
+			var info = {
+				good_id:$_GET['id'],
+				is_ajax:1
+			}
+			$.ajax({
+				type:"POST",
+				url:"/index.php?g=User&m=Center&a=saveGoods",
+				data:info,
+				success: function(data){
+					if (data.status == 0) {
+						$.toast(data.info,"cancel");
+						return false;
+					   // window.location.href=data.url;
+					} else if (data.status == 1) {
+						$.toast(data.info);
+					}
+				}
+			})
       })
 </script>
 <script>

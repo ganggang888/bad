@@ -17,7 +17,13 @@
     <div class="weui-panel__bd">
       <div class="weui-media-box weui-media-box_text address-list-box">
         <a href="{:leuu('User/Center/editAddress',array('id'=>$vo['id']))}" class="address-edit"></a>
-        <h4 class="weui-media-box__title"><span>{$vo.name}</span><span>{$vo.phone}</span></h4>
+        <h4 class="weui-media-box__title">
+        <if condition="$good_id">
+        <a href="{:leuu('User/Center/duihuan',array('good_id'=>$good_id,'pid'=>$pid,'address_id'=>$vo['id'],'type1'=>$type1,'type2'=>$type2))}"><span>{$vo.name}</span><span>{$vo.phone}</span></a>
+        <else />
+        <span>{$vo.name}</span><span>{$vo.phone}</span>
+        </if>
+        </h4>
         <p class="weui-media-box__desc address-txt">{$vo.address}</p>
         <if condition="$vo['listorder'] eq 1">
         <span class="default-add">默认地址</span>

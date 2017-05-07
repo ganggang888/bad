@@ -10,10 +10,14 @@ var $_GET = (function(){
         }
         return get;
     } else {
-        return {};
+        return '';
     }
 })();
 
+
+//sleep
+
+//sleep-end
 window.alert = function(name){
  var iframe = document.createElement("IFRAME");
 iframe.style.display="none";
@@ -64,7 +68,8 @@ function login()
         success: function(data){
             if (data.status == 0) {
                 alert(data.info);
-                window.location.href=data.url;
+                return false;
+			   // window.location.href=data.url;
             } else if (data.status == 1) {
                 alert('登录成功');
                 window.location.href='/index.php?g=User&m=Center&a=index';
@@ -360,3 +365,81 @@ function bank_add()
     })
 }
 
+function toLogin()
+{
+	alert('您尚未登录');
+	window.location.href='/index.php?g=User&m=Login&a=index';
+}
+
+//删除收藏
+function deleteShoucang(id)
+{
+	alert(id);
+	$.ajax({
+        type:"GET",
+        url:"/index.php?g=User&m=Center&a=delete_shoucang&id="+id,
+        success: function(data){
+            if (data.status == 0) {
+                alert(data.info);
+                return false;
+				//window.location.href=data.url;
+            } else if (data.status == 1) {
+                alert(data.info);
+				window.location.href='/index.php?g=User&m=Center&a=my_save';
+            }
+        }
+    })
+}
+
+//兑换页面
+function duihuan()
+{
+	var type1 = $("#one .oneClick.active a").text();
+	var type2 = $("#two .active a").text();
+	if (type1 == '' || type2 == '') {
+		alert('请选择商品属性');
+		return false;
+	}
+	if ($_GET['pid']) {
+		window.location.href='/index.php?g=User&m=Center&a=duihuan&type1='+type1+'&type2='+type2+'&pid='+$_GET['pid']+'&good_id='+$_GET['id'];
+	} else {
+		window.location.href='/index.php?g=User&m=Center&a=duihuan&type1='+type1+'&type2='+type2+'&good_id='+$_GET['id'];
+	}
+}
+
+//开始兑换
+function do_duihuan()
+{
+	var goods_id = $_GET['good_id'];
+	alert(goods_id);return false;
+	var parentid = $_GET['pid'];
+	var address_id = $_GET['address_id'];
+	var type1 = $_GET['type1'];
+	var type2 = $_GET['type2'];
+	var jf = $(".num.font-20").text();
+	var info = {
+		goods_id:goods_id,
+		parentid:parentid,
+		address_id:address_id,
+		type1:type1,
+		type2:type2,
+		jf:jf,
+		is_ajax:1
+	}
+	
+	$.ajax({
+        type:"POST",
+        url:"/index.php?g=User&m=Center&a=do_duihuan",
+        data:info,
+        success: function(data){
+            if (data.status == 0) {
+                alert(data.info);
+                return false;
+				//window.location.href=data.url;
+            } else if (data.status == 1) {
+                alert('兑换成功');
+                window.location.href='/index.php?g=User&m=Center&a=orderList';
+            }
+        }
+    })
+}

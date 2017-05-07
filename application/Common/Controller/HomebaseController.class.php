@@ -34,8 +34,12 @@ class HomebaseController extends AppframeController {
 			}else{
 			}
 		}
-		
+		if ($_SESSION['user']) {
+            $info = M('users')->where(array('id'=>$_SESSION['user']['id']))->find();
+            $_SESSION['user'] = $info;
+        }
 		if(sp_is_user_login()){
+			
 			$this->assign("user",sp_get_current_user());
 		}
 		

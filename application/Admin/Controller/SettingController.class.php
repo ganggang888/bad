@@ -155,5 +155,19 @@ class SettingController extends AdminbaseController{
 		$this->display();
 	}
 	
+
+	//对提成返佣进行设置
+	public function set_monery()
+	{
+		if (IS_POST) {
+			$info = json_encode($_POST);
+			M('data')->where(array('id'=>1))->save(array('data'=>$info));
+			$this->success('设置成功');
+		}
+		$info = M('data')->where(array('id'=>1))->getField('data');
+		$info = json_decode($info,true);
+		$this->assign(compact('info'));
+		$this->display();
+	}
 	
 }
