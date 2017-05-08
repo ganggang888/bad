@@ -411,7 +411,6 @@ function duihuan()
 function do_duihuan()
 {
 	var goods_id = $_GET['good_id'];
-	alert(goods_id);return false;
 	var parentid = $_GET['pid'];
 	var address_id = $_GET['address_id'];
 	var type1 = $_GET['type1'];
@@ -439,6 +438,100 @@ function do_duihuan()
             } else if (data.status == 1) {
                 alert('兑换成功');
                 window.location.href='/index.php?g=User&m=Center&a=orderList';
+            }
+        }
+    })
+}
+
+//确认收货
+function queren(id)
+{
+	$.ajax({
+		type:"GET",
+		url:"/index.php?g=User&m=Center&a=queren&id="+id,
+		success: function(data){
+			if (data.status == 0) {
+                alert(data.info);
+                return false;
+				//window.location.href=data.url;
+            } else if (data.status == 1) {
+                alert('确认收货成功');
+                window.location.href='/index.php?g=User&m=Center&a=orderList&status=3';
+            }
+		}
+	})
+}
+
+//修改密码
+function changePassword()
+{
+	var old = $("#old").val();
+	if (old == '') {
+		alert('请输入旧密码');
+		return false;
+	}
+	var password = $("#password").val();
+	if (password.length < 5) {
+		alert('密码必须大于等于6位！');
+	}
+	var repassword = $("#repassword").val();
+	if (password != repassword) {
+		alert('两次密码输入不一致');
+	}
+	var info = {
+		old_password:old,
+		password:password,
+		repassword:repassword,
+		is_ajax:1
+	}
+	$.ajax({
+        type:"POST",
+        url:"/index.php?g=User&m=Center&a=changePassword",
+        data:info,
+        success: function(data){
+            if (data.status == 0) {
+                alert(data.info);
+                return false;
+				//window.location.href=data.url;
+            } else if (data.status == 1) {
+                alert('密码修改成功');
+                window.location.href='/index.php?g=User&m=Login&a=index';
+            }
+        }
+    })
+	
+}
+
+//充值码兑换积分
+function chongzhima()
+{
+	var code = $("#code").val();
+	var mi = $("#mi").val();
+	if (code == '') {
+		alert('请输入充值码');
+		return false;
+	}
+	if (mi == '') {
+		alert('请输入卡密');
+		return false;
+	}
+	var info = {
+		code:code,
+		mi:mi,
+		is_ajax:1
+	}
+	$.ajax({
+        type:"POST",
+        url:"/index.php?g=User&m=Center&a=chongzhima",
+        data:info,
+        success: function(data){
+            if (data.status == 0) {
+                alert(data.info);
+                return false;
+				//window.location.href=data.url;
+            } else if (data.status == 1) {
+                alert(data.info);
+                window.location.href='/index.php?g=User&m=Center&a=index';
             }
         }
     })

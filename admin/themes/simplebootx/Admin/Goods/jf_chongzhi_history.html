@@ -3,8 +3,7 @@
 <body>
 	<div class="wrap js-check-wrap">
 		<ul class="nav nav-tabs">
-			<li class="active"><a href="javascript:;">充值码列表</a></li>
-            <li><a href="{:U('Goods/get_number')}">生成充值码</a></li>
+			<li class="active"><a href="javascript:;">充值列表</a></li>
 		</ul>
 		<form class="js-ajax-form" action="" method="post">
 			
@@ -12,31 +11,25 @@
 				<thead>
 					<tr>
 						<th width="50">id</th>
-						<th>金额</th>
+						<th>积分</th>
                         <th>兑换码</th>
-                        <th>卡密</th>
-						<th>状态</th>
-						<th>生成时间</th>
-                        <th>使用时间</th>
+                        <th>状态</th>
+						<th>使用时间</th>
+                        <th>用户</th>
 					</tr>
 				</thead>
 				<foreach name="result" item="vo">
 				<tr>
 					<td>{$vo.id}</td>
 					<td><b>{$vo.jf}</b></td>
-                    <td>{$vo.code}</td>
-                    <td>{$vo.mi}</td>
-					<td>
-                    <if condition="$vo['status'] eq 0">
-                    未使用
-                    <elseif condition="$vo['status'] eq 1" />
-                    已分配
-                    <else />
-                    已使用
+                    <td>{$vo.number}</td>
+                    <td>
+                    <if condition="$vo['status'] eq 2">
+                    成功
                     </if>
                     </td>
 					<td>{$vo.add_time}</td>
-                    <td>{$vo.use_time}</td>
+                    <td>{:getUserPhone($vo['uid'])}</td>
 				  </tr>
 				</foreach>
 				

@@ -453,6 +453,19 @@ class GoodsController extends AdminbaseController {
         $this->display();
     }
 
+    //积分充值记录
+    public function jf_chongzhi_history()
+    {
+        $type = I('get.type');
+        $where = array();
+        $type or $where['type'] = $type;
+        $count = M('chongzhi_log')->where($where)->count();
+        $page = $this->page($count,15);
+        $result = M('chongzhi_log')->where($where)->limit($page->firsRow,$page->listRows)->order(array('id'=>"DESC"))->select();
+        $this->assign(compact('page','result','type'));
+        $this->display();
+    }
+
     //生成积分卡
     public function get_number()
     {
@@ -460,7 +473,7 @@ class GoodsController extends AdminbaseController {
             $number = I('post.number');
             $jf = I('post.jf');
             for ($i=1;$i<= $number;$i++) {
-                $add[] = array('jf'=>$jf,'code'=>generate_code(10),'add_time'=>date("Y-m-d H:i:s"));
+                $add[] = array('jf'=>$jf,'code'=>generate_code(10),'mi'=>yanzhengma(4),'add_time'=>date("Y-m-d H:i:s"));
             }
             M('recharges')->addAll($add);
             $this->success('添加成功',U('Goods/jf_list'));

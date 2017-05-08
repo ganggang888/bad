@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>余额充值</title>
+<meta charset="utf-8">
+<tc_include file="Public:css" />
+</head>
+<body ontouchstart>
+<!--主体-->
+<header class="wy-header">
+  <div class="wy-header-icon-back"><span></span></div>
+  <div class="wy-header-title">充值码积分兑换</div>
+</header>
+<div class="weui-content">
+  <div class="weui-cells weui-cells_form">
+    <div class="weui-cell">
+      <div class="weui-cell__hd"><label class="weui-label">充值码</label></div>
+      <div class="weui-cell__bd"><input class="weui-input" type="number" placeholder="请输入充值码" id="code"></div>
+    </div>
+    <div class="weui-cell">
+      <div class="weui-cell__hd"><label class="weui-label">卡密</label></div>
+      <div class="weui-cell__bd"><input class="weui-input" type="number" placeholder="请输入卡密" id="mi"></div>
+    </div>
+  </div>
+  <div class="weui-btn-area">
+    <a class="weui-btn weui-btn_primary" href="javascript:" id="showTooltips" onclick="chongzhima()">确认兑换</a>
+  </div>
+</div>
+<tc_include file="Public:js" />
+</body>
+</html>

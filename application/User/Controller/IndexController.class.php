@@ -17,7 +17,6 @@ class IndexController extends HomebaseController {
 		if(empty($user)){
 			$this->error("查无此人！");
 		}
-		
 		$this->assign($user);
 		$this->display(":index");
 
@@ -41,7 +40,7 @@ class IndexController extends HomebaseController {
     		echo uc_user_synlogout();
     	}
     	session("user",null);//只有前台用户退出
-    	redirect(__ROOT__."/");
+    	redirect(__ROOT__."/index.php?g=User&m=Login&a=index");
     }
 
 }

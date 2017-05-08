@@ -39,6 +39,43 @@ class CenterController extends MemberbaseController {
    		$this->display();
    	}
 
+
+      //充值首页
+      public function chongzhi()
+      {
+         $this->display();
+      }
+
+      //充值码充值
+      public function chongzhima()
+      {
+         if (IS_POST) {
+            $code = I('post.code');
+            $mi = I('post.mi');
+            $find = M('recharges')->where("code = $code AND mi = $mi AND status != 2 AND uid IS NULL")->find();
+            if ($find) {
+               //获取金额开始兑换
+               $jf = $find['jf'];
+               //使用日志并写入log
+               $model = M();
+               $uid = get_current_userid();
+               $model->startTrans();
+               $one = $model->execute("UPDATE i_users SET score = score+$find[jf] WHERE id = $uid");
+               $two = $model->execute("INSERT INTO i_chongzhi_log (uid,type,jf,`number`,status,add_time) VALUES ($uid,3,'$find[jf]','$find[code]',2,now())");
+               $three = $model->execute("UPDATE i_recharges SET uid = $uid,use_time=now(),status = 2 WHERE id = '$find[id]'");
+               if ($one && $two && $three) {
+                  $model->commit();
+                  $this->success("充值成功您获得:".$find['jf']."积分");
+               } else {
+                  $model->rollback();
+                  $this->error("充值失败");
+               }
+            } else {
+               $this->error('充值码不存在或已被使用或卡密错误，请核实后再次输入');
+            }
+         }
+         $this->display();
+      }
    	//添加收获地址
    	public function addAddress()
    	{
@@ -160,11 +197,17 @@ class CenterController extends MemberbaseController {
          $this->display();
       }
 
-
+      //用户点击确认收货
+      public function queren()
+      {
+         $id = I('get.id');
+         M('orders')->where(array('id'=>$id,'uid'=>get_current_userid()))->save(array('status'=>3)) ? $this->success('确认收货成功') : $this->error('确认收货失败');
+      }
       //自己的订单列表
       public function orderList()
       {
          $status = I('get.status');
+         $where['uid'] = get_current_userid();
          if ($status == 'all') {
 
          } else {
@@ -172,7 +215,7 @@ class CenterController extends MemberbaseController {
          }
          
          $where['uid'] = get_current_userid();
-         $result = M('orders')->where(array('uid'=>get_current_userid()))->order(array('order_time'=>'desc'))->select();
+         $result = M('orders')->where($where)->order(array('order_time'=>'desc'))->select();
          $result = array_map(function($v){
             $goodsInfo = json_decode($v['goodsinfo'],true);
             $info = current($goodsInfo);
@@ -180,7 +223,6 @@ class CenterController extends MemberbaseController {
             $v['goods'] = goodsInfo($v['gid']);
             return $v;
          },$result);
-         var_dump($result);
          $this->assign(compact('result','status'));
          $this->display();
 
@@ -301,6 +343,7 @@ class CenterController extends MemberbaseController {
                   $this->error('两次密码输入不一致');
                }
                M('users')->where(array('id'=>get_current_userid()))->save(array('user_pass'=>sp_password($post['password']))) ? $this->success('密码重置成功') : $this->error('密码重置失败');
+               
             }
          }
          $this->display();
@@ -361,6 +404,9 @@ class CenterController extends MemberbaseController {
          $parentid = I('post.parentid'); //他人转发链接
          $level = $_SESSION['user']['level'];
          $address_id = I('post.address_id');
+         if (!$address_id) {
+            $this->error("请先去完善地址");
+         }
          $type1 = urldecode(I('post.type1'));
          $type2 = urldecode(I('post.type2'));
          //商品信息

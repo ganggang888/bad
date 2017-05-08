@@ -63,9 +63,9 @@ class RegisterController extends HomebaseController {
 	// 前台用户手机注册
 	private function _do_mobile_register(){
 	    
-	    if(!sp_check_verify_code()){
+	    /*if(!sp_check_verify_code()){
 	        $this->error("验证码错误！");
-	    }
+	    }*/
 	     
         $rules = array(
             //array(验证字段,验证规则,错误提示,验证条件,附加规则,验证时间)

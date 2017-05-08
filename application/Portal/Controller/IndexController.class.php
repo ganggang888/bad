@@ -38,6 +38,7 @@ class IndexController extends HomebaseController {
         $this->term = D("Common/GoodsTerm");
     }
 	public function index() {
+        var_dump(sp_password(123456));
     	//获取分类
         $id = I("get.term_id", 0, 'intval');
         $data = $this->term->where(array("id" => $id))->field($this->termField)->find();

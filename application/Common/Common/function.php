@@ -2329,7 +2329,17 @@ function bankInfo()
 
 //获取随机数
 function generate_code($length = 4) {
-    return rand(pow(10,($length-1)), pow(10,$length)-1);
+	$code = rand(pow(10,($length-1)), pow(10,$length)-1);
+	$find = M('recharges')->where(array('code'=>$code))->getField('id');
+	do {
+		$code = rand(pow(10,($length-1)), pow(10,$length)-1);
+		$find = M('recharges')->where(array('code'=>$code))->getField('id');
+	} while ($find);
+	return $code;
+}
+//获取随机数
+function yanzhengma($length = 4) {
+	return rand(pow(10,($length-1)), pow(10,$length)-1);
 }
 
 //根据商品id取得详细信息
@@ -2337,4 +2347,8 @@ function goodsInfo($id)
 {
 	$goods = M('goods')->where(array('id'=>$id))->find();
 	return $goods;
+}
+function getUserPhone($id) 
+{
+	return M('users')->where(array('id'=>$id))->getField('mobile');
 }

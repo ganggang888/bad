@@ -51,7 +51,8 @@ class HomebaseController extends AppframeController {
 	protected function check_login(){
 	    $session_user=session('user');
 		if(empty($session_user)){
-			$this->error('您还没有登录！',leuu('user/login/index',array('redirect'=>base64_encode($_SERVER['HTTP_REFERER']))));
+			redirect(leuu('User/Login/index'));
+			//$this->error('您还没有登录！',leuu('user/login/index',array('redirect'=>base64_encode($_SERVER['HTTP_REFERER']))));
 		}
 		
 	}

@@ -73,28 +73,28 @@
       <div class="weui-flex">
         <div class="weui-flex__item">
           <a href="myburse.html" class="center-ordersModule">
-            <div class="center-money"><em>800.0</em></div>
+            <div class="center-money"><em>{$_SESSION['user']['score']}</em></div>
             <div class="name">账户总额</div>
           </a>
         </div>
         <div class="weui-flex__item">
           <a href="myburse.html" class="center-ordersModule">
-            <div class="center-money"><em>50.0</em></div>
-            <div class="name">返现金额</div>
+            <div class="center-money"><em><if condition="$_SESSION['user']['can_monery']">{$_SESSION['user']['can_monery']} <else />0</if></em></div>
+            <div class="name">返现积分</div>
           </a>
         </div>
-        <div class="weui-flex__item">
+        <!--<div class="weui-flex__item">
           <a href="myburse.html" class="center-ordersModule">
             <div class="center-money"><em>550.0</em></div>
             <div class="name">待返还</div>
           </a>
-        </div>
-        <div class="weui-flex__item">
+        </div>-->
+        <!--<div class="weui-flex__item">
           <a href="myburse.html" class="center-ordersModule">
             <div class="center-money"><em>165</em></div>
             <div class="name">冻结金额</div>
           </a>
-        </div>
+        </div>-->
       </div>
     </div>
   </div>
@@ -111,7 +111,7 @@
                 </div>
                 <span class="weui-cell__ft"></span>
               </a>
-              <a class="weui-cell weui-cell_access" href="shoucang.html">
+              <a class="weui-cell weui-cell_access" href="{:leuu('User/Center/my_save')}">
                 <div class="weui-cell__hd"><img src="__TMPL__Public/images/center-icon-sc.png" alt="" class="center-list-icon"></div>
                 <div class="weui-cell__bd weui-cell_primary">
                   <p class="center-list-txt">我的收藏</p>
@@ -125,6 +125,13 @@
                 </div>
                 <span class="weui-cell__ft"></span>
               </a>
+              <a class="weui-cell weui-cell_access" href="{:leuu('User/Center/chongzhi')}">
+                <div class="weui-cell__hd"><img src="__TMPL__Public/images/center-icon-dz.png" alt="" class="center-list-icon"></div>
+                <div class="weui-cell__bd weui-cell_primary">
+                  <p class="center-list-txt">去充值</p>
+                </div>
+                <span class="weui-cell__ft"></span>
+              </a>
               <a class="weui-cell weui-cell_access" href="{:leuu('User/Center/bank_list')}">
                 <div class="weui-cell__hd"><img src="__TMPL__Public/images/center-icon-yhk.png" alt="" class="center-list-icon"></div>
                 <div class="weui-cell__bd weui-cell_primary">
@@ -132,14 +139,14 @@
                 </div>
                 <span class="weui-cell__ft"></span>
               </a>
-              <a class="weui-cell weui-cell_access" href="password.html">
+              <a class="weui-cell weui-cell_access" href="{:leuu('User/Center/changePassword')}">
                 <div class="weui-cell__hd"><img src="__TMPL__Public/images/center-icon-dlmm.png" alt="" class="center-list-icon"></div>
                 <div class="weui-cell__bd weui-cell_primary">
                   <p class="center-list-txt">密码修改</p>
                 </div>
                 <span class="weui-cell__ft"></span>
               </a>
-              <a class="weui-cell weui-cell_access" href="login.html">
+              <a class="weui-cell weui-cell_access" href="{:leuu('User/Index/logout')}">
                 <div class="weui-cell__hd"><img src="__TMPL__Public/images/center-icon-out.png" alt="" class="center-list-icon"></div>
                 <div class="weui-cell__bd weui-cell_primary">
                   <p class="center-list-txt">退出账号</p>
