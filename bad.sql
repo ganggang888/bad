@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : 127.0.0.1
-Source Server Version : 100016
+Source Server         : localhost
+Source Server Version : 50714
 Source Host           : localhost:3306
 Source Database       : bad
 
 Target Server Type    : MYSQL
-Target Server Version : 100016
+Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2017-05-08 22:53:13
+Date: 2017-05-09 17:39:39
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -3969,7 +3969,7 @@ CREATE TABLE `i_goods` (
 -- ----------------------------
 -- Records of i_goods
 -- ----------------------------
-INSERT INTO `i_goods` VALUES ('20170422212306786', '规格', '[\"http:\\/\\/bad.cn\\/data\\/upload\\/admin\\/20170501\\/59072797ef409.jpg\",\"http:\\/\\/bad.cn\\/data\\/upload\\/admin\\/20170501\\/5907279c29cd1.jpg\"]', '0.00', '0.00', '0.00', '100', '', '0', '0', '&lt;p&gt;的撒旦撒的&lt;/p&gt;', '[{\"id\":\"1-1\",\"cost_price\":\"8\",\"selling_price\":\"9\",\"market_value\":\"10\",\"unit\":\"\\u4e2a\",\"stock\":\"13\",\"name\":\"\\u5927\\u6b3e\\u5f0f\",\"info\":\"\\u7eff\\u8272\"},{\"id\":\"1-1\",\"cost_price\":\"8\",\"selling_price\":\"9\",\"market_value\":\"10\",\"unit\":\"\\u4e2a\",\"stock\":9,\"name\":\"\\u5c0f\\u6b3e\\u5f0f\",\"info\":\"\\u7ea2\\u8272\"}]', '优惠#限量', '3', '1', '1', '4', '1', '2017-04-22 21:23:06', '0', '1');
+INSERT INTO `i_goods` VALUES ('20170422212306786', '规格', '[\"http:\\/\\/bad.cn\\/data\\/upload\\/admin\\/20170501\\/59072797ef409.jpg\",\"http:\\/\\/bad.cn\\/data\\/upload\\/admin\\/20170501\\/5907279c29cd1.jpg\"]', '0.00', '0.00', '0.00', '100', '', '0', '0', '&lt;p&gt;的撒旦撒的&lt;/p&gt;', '[{\"id\":\"1-1\",\"cost_price\":\"8\",\"selling_price\":\"9\",\"market_value\":\"10\",\"unit\":\"\\u4e2a\",\"stock\":\"13\",\"name\":\"\\u5927\\u6b3e\\u5f0f\",\"info\":\"\\u7eff\\u8272\"},{\"id\":\"1-1\",\"cost_price\":\"8\",\"selling_price\":\"9\",\"market_value\":\"10\",\"unit\":\"\\u4e2a\",\"stock\":6,\"name\":\"\\u5c0f\\u6b3e\\u5f0f\",\"info\":\"\\u7ea2\\u8272\"}]', '优惠#限量', '3', '1', '1', '4', '1', '2017-04-22 21:23:06', '0', '1');
 INSERT INTO `i_goods` VALUES ('20170423124543553', 'next商品', '[\"http:\\/\\/bad.cn\\/data\\/upload\\/admin\\/20170501\\/5907278c56fd8.jpg\",\"http:\\/\\/bad.cn\\/data\\/upload\\/admin\\/20170501\\/5907278fe2eec.jpg\"]', '0.00', '0.00', '0.00', '100', '', '0', '0', '&lt;p&gt;倒萨打算1&lt;/p&gt;', '[{\"id\":\"1-0\",\"cost_price\":\"60\",\"selling_price\":\"65\",\"market_value\":\"70\",\"unit\":\"\\u4ef6\",\"stock\":\"100\",\"name\":\"50\",\"info\":\"\\u7ea2\\u8272\"},{\"id\":\"1-0\",\"cost_price\":\"60\",\"selling_price\":\"65\",\"market_value\":\"70\",\"unit\":\"\\u4ef6\",\"stock\":\"100\",\"name\":\"50\",\"info\":\"\\u84dd\\u8272\"},{\"id\":\"1-0\",\"cost_price\":\"60\",\"selling_price\":\"65\",\"market_value\":\"70\",\"unit\":\"\\u4ef6\",\"stock\":\"100\",\"name\":\"50\",\"info\":\"\\u9ed1\\u8272\"},{\"id\":\"1-0\",\"cost_price\":\"60\",\"selling_price\":\"65\",\"market_value\":\"70\",\"unit\":\"\\u4ef6\",\"stock\":\"100\",\"name\":\"49\",\"info\":\"\\u9ed1\\u8272\"},{\"id\":\"1-0\",\"cost_price\":\"60\",\"selling_price\":\"65\",\"market_value\":\"70\",\"unit\":\"\\u4ef6\",\"stock\":\"100\",\"name\":\"48\",\"info\":\"\\u9ed1\\u8272\"},{\"id\":\"1-0\",\"cost_price\":\"60\",\"selling_price\":\"65\",\"market_value\":\"70\",\"unit\":\"\\u4ef6\",\"stock\":\"100\",\"name\":\"48\",\"info\":\"\\u84dd\\u8272\"},{\"id\":\"1-0\",\"cost_price\":\"60\",\"selling_price\":\"65\",\"market_value\":\"70\",\"unit\":\"\\u4ef6\",\"stock\":\"100\",\"name\":\"48\",\"info\":\"\\u7eff\\u8272\"}]', '优惠#限量', '2', '1', '1', '7', '1', '2017-04-23 12:45:43', '0', '1');
 
 -- ----------------------------
@@ -4342,7 +4342,7 @@ CREATE TABLE `i_options` (
 -- Records of i_options
 -- ----------------------------
 INSERT INTO `i_options` VALUES ('1', 'member_email_active', '{\"title\":\"ThinkCMF\\u90ae\\u4ef6\\u6fc0\\u6d3b\\u901a\\u77e5.\",\"template\":\"<p>\\u672c\\u90ae\\u4ef6\\u6765\\u81ea<a href=\\\"http:\\/\\/www.thinkcmf.com\\\">ThinkCMF<\\/a><br\\/><br\\/>&nbsp; &nbsp;<strong>---------------<strong style=\\\"white-space: normal;\\\">---<\\/strong><\\/strong><br\\/>&nbsp; &nbsp;<strong>\\u5e10\\u53f7\\u6fc0\\u6d3b\\u8bf4\\u660e<\\/strong><br\\/>&nbsp; &nbsp;<strong>---------------<strong style=\\\"white-space: normal;\\\">---<\\/strong><\\/strong><br\\/><br\\/>&nbsp; &nbsp; \\u5c0a\\u656c\\u7684<span style=\\\"FONT-SIZE: 16px; FONT-FAMILY: Arial; COLOR: rgb(51,51,51); LINE-HEIGHT: 18px; BACKGROUND-COLOR: rgb(255,255,255)\\\">#username#\\uff0c\\u60a8\\u597d\\u3002<\\/span>\\u5982\\u679c\\u60a8\\u662fThinkCMF\\u7684\\u65b0\\u7528\\u6237\\uff0c\\u6216\\u5728\\u4fee\\u6539\\u60a8\\u7684\\u6ce8\\u518cEmail\\u65f6\\u4f7f\\u7528\\u4e86\\u672c\\u5730\\u5740\\uff0c\\u6211\\u4eec\\u9700\\u8981\\u5bf9\\u60a8\\u7684\\u5730\\u5740\\u6709\\u6548\\u6027\\u8fdb\\u884c\\u9a8c\\u8bc1\\u4ee5\\u907f\\u514d\\u5783\\u573e\\u90ae\\u4ef6\\u6216\\u5730\\u5740\\u88ab\\u6ee5\\u7528\\u3002<br\\/>&nbsp; &nbsp; \\u60a8\\u53ea\\u9700\\u70b9\\u51fb\\u4e0b\\u9762\\u7684\\u94fe\\u63a5\\u5373\\u53ef\\u6fc0\\u6d3b\\u60a8\\u7684\\u5e10\\u53f7\\uff1a<br\\/>&nbsp; &nbsp; <a title=\\\"\\\" href=\\\"http:\\/\\/#link#\\\" target=\\\"_self\\\">http:\\/\\/#link#<\\/a><br\\/>&nbsp; &nbsp; (\\u5982\\u679c\\u4e0a\\u9762\\u4e0d\\u662f\\u94fe\\u63a5\\u5f62\\u5f0f\\uff0c\\u8bf7\\u5c06\\u8be5\\u5730\\u5740\\u624b\\u5de5\\u7c98\\u8d34\\u5230\\u6d4f\\u89c8\\u5668\\u5730\\u5740\\u680f\\u518d\\u8bbf\\u95ee)<br\\/>&nbsp; &nbsp; \\u611f\\u8c22\\u60a8\\u7684\\u8bbf\\u95ee\\uff0c\\u795d\\u60a8\\u4f7f\\u7528\\u6109\\u5feb\\uff01<br\\/><br\\/>&nbsp; &nbsp; \\u6b64\\u81f4<br\\/>&nbsp; &nbsp; ThinkCMF \\u7ba1\\u7406\\u56e2\\u961f.<\\/p>\"}', '1');
-INSERT INTO `i_options` VALUES ('6', 'site_options', '{\"site_name\":\"\\u7cfb\\u7edf\",\"site_admin_url_password\":\"\",\"site_tpl\":\"simplebootx\",\"site_adminstyle\":\"bluesky\",\"site_icp\":\"\",\"site_admin_email\":\"a526584713@qq.com\",\"site_tongji\":\"\",\"site_copyright\":\"\",\"site_seo_title\":\"\\u7cfb\\u7edf\",\"site_seo_keywords\":\"\\u7cfb\\u7edf\",\"site_seo_description\":\"\\u7cfb\\u7edf\",\"urlmode\":\"0\",\"html_suffix\":\"\",\"comment_time_interval\":\"60\"}', '1');
+INSERT INTO `i_options` VALUES ('6', 'site_options', '{\"site_name\":\"\\u7cfb\\u7edf\",\"site_admin_url_password\":\"\",\"site_tpl\":\"simplebootx\",\"site_adminstyle\":\"flat\",\"site_icp\":\"\",\"site_admin_email\":\"a526584713@qq.com\",\"site_tongji\":\"\",\"site_copyright\":\"\",\"site_seo_title\":\"\\u7cfb\\u7edf\",\"site_seo_keywords\":\"\\u7cfb\\u7edf\",\"site_seo_description\":\"\\u7cfb\\u7edf\",\"urlmode\":\"0\",\"html_suffix\":\"\",\"comment_time_interval\":\"60\"}', '1');
 INSERT INTO `i_options` VALUES ('7', 'cmf_settings', '{\"banned_usernames\":\"\"}', '1');
 INSERT INTO `i_options` VALUES ('8', 'cdn_settings', '{\"cdn_static_root\":\"\"}', '1');
 
@@ -4356,7 +4356,7 @@ CREATE TABLE `i_orders` (
   `uid` mediumint(9) NOT NULL DEFAULT '0' COMMENT '用户ID',
   `address_id` mediumint(9) NOT NULL DEFAULT '0' COMMENT '收获地址id',
   `number` mediumint(9) DEFAULT '0' COMMENT '商品数量',
-  `prices` double(11,2) NOT NULL,
+  `prices` double(11,2) NOT NULL DEFAULT '0.00',
   `order_time` datetime DEFAULT NULL COMMENT '下单时间',
   `pay_time` datetime DEFAULT NULL,
   `delivery_time` datetime DEFAULT NULL COMMENT '发货时间',
@@ -4365,20 +4365,23 @@ CREATE TABLE `i_orders` (
   `logistics_num` bigint(20) DEFAULT NULL COMMENT '物流单号',
   `goodsInfo` text COMMENT '所选择的商品信息，为json格式',
   `pay_type` tinyint(4) DEFAULT NULL COMMENT '支付方式1支付宝2微信',
-  `content` text NOT NULL COMMENT '订单备注',
+  `content` varchar(100) NOT NULL DEFAULT '' COMMENT '订单备注',
   `status` tinyint(4) DEFAULT '0' COMMENT '订单状态0未付款1已付款2已发货3已收获4已作废',
   `is_delete` tinyint(4) DEFAULT '0' COMMENT '是否删除',
   `score` bigint(20) DEFAULT '0',
   `pay_score` bigint(20) DEFAULT '0',
   `gid` bigint(20) DEFAULT '0' COMMENT '商品ID',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of i_orders
 -- ----------------------------
 INSERT INTO `i_orders` VALUES ('22', '20170507223943995', '2', '2', '1', '0.00', null, '2017-05-07 22:39:43', '2017-05-08 10:49:58', null, '顺丰', '152320844709', '[{\"fname\":\"规格|小款式、红色\",\"fprice\":\"100\",\"fcount\":1,\"prices\":\"100\",\"fid\":\"20170422212306786-1\"}]', null, '', '3', '0', '100', '100', '20170422212306786');
 INSERT INTO `i_orders` VALUES ('23', '20170508215111540', '5', '4', '1', '0.00', null, '2017-05-08 21:51:11', null, null, null, null, '[{\"fname\":\"规格|小款式、红色\",\"fprice\":\"100\",\"fcount\":1,\"prices\":\"100\",\"fid\":\"20170422212306786-1\"}]', null, '', '0', '0', '100', '100', '20170422212306786');
+INSERT INTO `i_orders` VALUES ('24', '20170509141814992', '5', '4', '1', '0.00', null, '2017-05-09 14:18:14', null, null, null, null, '[{\"fname\":\"规格|小款式、红色\",\"fprice\":\"100\",\"fcount\":1,\"prices\":\"100\",\"fid\":\"20170422212306786-1\"}]', null, '', '0', '0', '100', '100', '20170422212306786');
+INSERT INTO `i_orders` VALUES ('25', '20170509142550765', '5', '4', '1', '0.00', null, '2017-05-09 14:25:50', null, null, null, null, '[{\"fname\":\"规格|小款式、红色\",\"fprice\":\"85\",\"fcount\":1,\"prices\":\"100\",\"fid\":\"20170422212306786-1\"}]', null, '', '0', '0', '85', '85', '20170422212306786');
+INSERT INTO `i_orders` VALUES ('26', '20170509142650272', '5', '4', '1', '0.00', null, '2017-05-09 14:26:50', null, null, null, null, '[{\"fname\":\"规格|小款式、红色\",\"fprice\":\"100\",\"fcount\":1,\"prices\":\"100\",\"fid\":\"20170422212306786-1\"}]', null, '', '0', '0', '100', '100', '20170422212306786');
 
 -- ----------------------------
 -- Table structure for i_plugins
@@ -4616,7 +4619,7 @@ CREATE TABLE `i_sku` (
   `number` int(11) NOT NULL COMMENT '数量',
   `add_time` datetime NOT NULL COMMENT '操作记录',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8 COMMENT='SKU库存记录';
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8 COMMENT='SKU库存记录';
 
 -- ----------------------------
 -- Records of i_sku
@@ -4634,6 +4637,9 @@ INSERT INTO `i_sku` VALUES ('26', '20170422212306786', '2', '1', '1', '0', '0000
 INSERT INTO `i_sku` VALUES ('27', '20170422212306786', '2', '1', '1', '0', '0000-00-00 00:00:00');
 INSERT INTO `i_sku` VALUES ('28', '20170422212306786', '2', '1', '1', '0', '0000-00-00 00:00:00');
 INSERT INTO `i_sku` VALUES ('29', '20170422212306786', '5', '1', '1', '0', '0000-00-00 00:00:00');
+INSERT INTO `i_sku` VALUES ('30', '20170422212306786', '5', '1', '1', '1', '2017-05-09 00:00:00');
+INSERT INTO `i_sku` VALUES ('31', '20170422212306786', '5', '1', '1', '1', '2017-05-09 00:00:00');
+INSERT INTO `i_sku` VALUES ('32', '20170422212306786', '5', '1', '1', '1', '2017-05-09 00:00:00');
 
 -- ----------------------------
 -- Table structure for i_slide
@@ -4737,14 +4743,14 @@ CREATE TABLE `i_ticheng_log` (
   `level` tinyint(4) DEFAULT NULL COMMENT '第多少级',
   `pid` int(11) DEFAULT '0' COMMENT '谁兑换商品',
   `score` int(11) DEFAULT '0',
-  `gid` int(11) DEFAULT '0' COMMENT '对应商品ID',
+  `gid` bigint(20) DEFAULT '0' COMMENT '对应商品ID',
   `action` tinyint(4) DEFAULT '1' COMMENT '1加 2减  减为购买商品',
   `add_time` datetime DEFAULT NULL,
   `zhuanfa` tinyint(4) DEFAULT '0' COMMENT '是否转发链接进行操作',
   `times` tinyint(4) DEFAULT NULL COMMENT '是否第一次',
   `status` tinyint(4) DEFAULT NULL COMMENT '1推荐奖2抽佣3见点',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of i_ticheng_log
@@ -4757,6 +4763,18 @@ INSERT INTO `i_ticheng_log` VALUES ('5', '2', '0', '0', '85', '2147483647', '0',
 INSERT INTO `i_ticheng_log` VALUES ('6', '2', '0', '0', '100', '2147483647', '0', '2017-05-07 22:39:43', '0', null, null);
 INSERT INTO `i_ticheng_log` VALUES ('7', '4', '1', '5', '10', '2147483647', '1', '2017-05-08 21:51:11', '0', null, '1');
 INSERT INTO `i_ticheng_log` VALUES ('8', '5', '0', '0', '100', '2147483647', '0', '2017-05-08 21:51:11', '0', null, null);
+INSERT INTO `i_ticheng_log` VALUES ('15', '4', '1', '5', '10', '20170422212306786', '1', '2017-05-09 14:18:14', '0', null, '1');
+INSERT INTO `i_ticheng_log` VALUES ('16', '4', '2', '5', '15', '20170422212306786', '1', '2017-05-09 14:18:14', '0', null, null);
+INSERT INTO `i_ticheng_log` VALUES ('17', '4', '2', '5', '5', '20170422212306786', '1', '2017-05-09 14:18:14', '0', null, null);
+INSERT INTO `i_ticheng_log` VALUES ('18', '5', '0', '0', '100', '20170422212306786', '0', '2017-05-09 14:18:14', '0', null, null);
+INSERT INTO `i_ticheng_log` VALUES ('19', '4', '1', '5', '8', '20170422212306786', '1', '2017-05-09 14:25:50', '0', null, '1');
+INSERT INTO `i_ticheng_log` VALUES ('20', '4', '2', '5', '15', '20170422212306786', '1', '2017-05-09 14:25:50', '0', null, null);
+INSERT INTO `i_ticheng_log` VALUES ('21', '4', '2', '5', '4', '20170422212306786', '1', '2017-05-09 14:25:50', '0', null, null);
+INSERT INTO `i_ticheng_log` VALUES ('22', '5', '0', '0', '85', '20170422212306786', '0', '2017-05-09 14:25:50', '0', null, null);
+INSERT INTO `i_ticheng_log` VALUES ('23', '4', '1', '5', '10', '20170422212306786', '1', '2017-05-09 14:26:50', '0', null, '1');
+INSERT INTO `i_ticheng_log` VALUES ('24', '4', '2', '5', '15', '20170422212306786', '1', '2017-05-09 14:26:50', '0', null, null);
+INSERT INTO `i_ticheng_log` VALUES ('25', '4', '2', '5', '5', '20170422212306786', '1', '2017-05-09 14:26:50', '0', null, null);
+INSERT INTO `i_ticheng_log` VALUES ('26', '5', '0', '0', '100', '20170422212306786', '0', '2017-05-09 14:26:50', '0', null, null);
 
 -- ----------------------------
 -- Table structure for i_users
@@ -4802,11 +4820,11 @@ CREATE TABLE `i_users` (
 -- ----------------------------
 -- Records of i_users
 -- ----------------------------
-INSERT INTO `i_users` VALUES ('1', '0', 'admin', '###1fccbd040eb4fc5a3a6440482c5f383e', 'admin', '', 'a526584713@qq.com', '', null, '0', '2000-01-01', null, '127.0.0.1', '2017-05-08 20:18:13', '2017-04-13 03:02:05', '', '1', '0', '1', '0', '', null, null, '0', '0', '0', '0.00', '0', '1', '0');
-INSERT INTO `i_users` VALUES ('2', '0', '', '###1fccbd040eb4fc5a3a6440482c5f383e', '', '', '', '', null, '0', '2000-01-01', null, '127.0.0.1', '2017-05-08 16:17:24', '2017-04-18 21:29:44', '', '1', '9715', '2', '0', '18816978523', 'f1125bfc-a218-69ca-083b-d8af147450ef', null, '0', '0', '0', '0.00', '0', '2', '0');
-INSERT INTO `i_users` VALUES ('3', '0', '', '###1fccbd040eb4fc5a3a6440482c5f383e', '', '', '', '', null, '0', '2000-01-01', null, '127.0.0.1', '2017-04-18 21:33:22', '2017-04-18 21:33:22', '', '1', '0', '2', '0', '18816978511', 'fa6e51e1-7475-248c-aa3f-32406676d8de', 'f1125bfc-a218-69ca-083b-d8af147450ef', '32767', '120100', '120103', '0.00', '0', '1', '0');
-INSERT INTO `i_users` VALUES ('4', '0', '', '###1fccbd040eb4fc5a3a6440482c5f383e', '', '', '', '', null, '0', '2000-01-01', null, '127.0.0.1', '2017-05-08 16:44:47', '2017-05-08 16:44:47', '', '1', '0', '2', '0', '15412123212', '8431b7c9-5a98-c32c-8c2d-20979207cca1', 'fa6e51e1-7475-248c-aa3f-32406676d8de', '120000', '120100', '120109', '0.00', '10', '1', '0');
-INSERT INTO `i_users` VALUES ('5', '0', '', '###1fccbd040eb4fc5a3a6440482c5f383e', '', '', '', '', null, '0', '2000-01-01', null, '127.0.0.1', '2017-05-08 20:21:16', '2017-05-08 16:45:21', '', '1', '300', '2', '0', '18815412178', 'df6e7ba2-a920-a00c-b28c-a185b458c178', '8431b7c9-5a98-c32c-8c2d-20979207cca1', '130000', '130500', '130582', '0.00', '0', '2', '200');
+INSERT INTO `i_users` VALUES ('1', '0', 'admin', '###36d7f03832c89626da2ebe3ba313b845', 'admin', '', 'a526584713@qq.com', '', null, '0', '2000-01-01', null, '127.0.0.1', '2017-05-09 14:07:35', '2017-04-13 03:02:05', '', '1', '0', '1', '0', '', null, null, '0', '0', '0', '0.00', '0', '1', '0');
+INSERT INTO `i_users` VALUES ('2', '0', '', '###36d7f03832c89626da2ebe3ba313b845', '', '', '', '', null, '0', '2000-01-01', null, '127.0.0.1', '2017-05-08 16:17:24', '2017-04-18 21:29:44', '', '1', '9715', '2', '0', '18816978523', 'f1125bfc-a218-69ca-083b-d8af147450ef', null, '0', '0', '0', '0.00', '0', '2', '0');
+INSERT INTO `i_users` VALUES ('3', '0', '', '###36d7f03832c89626da2ebe3ba313b845', '', '', '', '', null, '0', '2000-01-01', null, '127.0.0.1', '2017-04-18 21:33:22', '2017-04-18 21:33:22', '', '1', '0', '2', '0', '18816978511', 'fa6e51e1-7475-248c-aa3f-32406676d8de', 'f1125bfc-a218-69ca-083b-d8af147450ef', '32767', '120100', '120103', '0.00', '59', '2', '0');
+INSERT INTO `i_users` VALUES ('4', '0', '', '###36d7f03832c89626da2ebe3ba313b845', '', '', '', '', null, '0', '2000-01-01', null, '127.0.0.1', '2017-05-08 16:44:47', '2017-05-08 16:44:47', '', '1', '0', '2', '0', '15412123212', '8431b7c9-5a98-c32c-8c2d-20979207cca1', 'fa6e51e1-7475-248c-aa3f-32406676d8de', '120000', '120100', '120109', '0.00', '38', '1', '0');
+INSERT INTO `i_users` VALUES ('5', '0', '', '###36d7f03832c89626da2ebe3ba313b845', '', '', '', '', null, '0', '2000-01-01', null, '127.0.0.1', '2017-05-09 10:43:20', '2017-05-08 16:45:21', '', '1', '15', '2', '0', '18815412178', 'df6e7ba2-a920-a00c-b28c-a185b458c178', '8431b7c9-5a98-c32c-8c2d-20979207cca1', '130000', '130500', '130582', '0.00', '0', '2', '200');
 
 -- ----------------------------
 -- Table structure for i_users_log

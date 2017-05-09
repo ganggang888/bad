@@ -9,7 +9,7 @@ class IndexadminController extends AdminbaseController {
     public function index(){
         $where=array();
         $request=I('request.');
-        
+        $where ['user_type'] = 2;
         if(!empty($request['uid'])){
             $where['id']=intval($request['uid']);
         }

@@ -396,14 +396,15 @@ function duihuan()
 {
 	var type1 = $("#one .oneClick.active a").text();
 	var type2 = $("#two .active a").text();
+	var address_id = $("#address_id").val();
 	if (type1 == '' || type2 == '') {
 		alert('请选择商品属性');
 		return false;
 	}
 	if ($_GET['pid']) {
-		window.location.href='/index.php?g=User&m=Center&a=duihuan&type1='+type1+'&type2='+type2+'&pid='+$_GET['pid']+'&good_id='+$_GET['id'];
+		window.location.href='/index.php?g=User&m=Center&a=duihuan&type1='+type1+'&type2='+type2+'&pid='+$_GET['pid']+'&good_id='+$_GET['id']+'&address_id='+address_id;
 	} else {
-		window.location.href='/index.php?g=User&m=Center&a=duihuan&type1='+type1+'&type2='+type2+'&good_id='+$_GET['id'];
+		window.location.href='/index.php?g=User&m=Center&a=duihuan&type1='+type1+'&type2='+type2+'&good_id='+$_GET['id']+'&address_id='+address_id;
 	}
 }
 

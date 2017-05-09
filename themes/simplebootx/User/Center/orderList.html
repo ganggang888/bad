@@ -42,7 +42,11 @@
           </if>
           <div class="weui-media-box__bd  pd-10">
             <div class="weui-media-box_appmsg ord-pro-list">
-              <div class="weui-media-box__hd"><a href="pro_info.html"><img class="weui-media-box__thumb" src="upload/pro3.jpg" alt=""></a></div>
+            <php>
+            $pics = $vo['goods']['photos_url'];
+            $pics = json_decode($pics,true);
+            </php>
+              <div class="weui-media-box__hd"><a href="{:leuu('Portal/Index/goodsInfo',array('id'=>$vo['goods']['id']))}"><img class="weui-media-box__thumb" src="{:sp_get_image_preview_url($pics[0])}" alt=""></a></div>
               <div class="weui-media-box__bd">
                 <h1 class="weui-media-box__desc"><a href="pro_info.html" class="ord-pro-link">{$vo['goods']['name']}</a></h1>
                 <p class="weui-media-box__desc">规格：{$vo.name}</p>
@@ -76,7 +80,7 @@
     </div>
   </div>
 </div>
-
+<tc_include file="Public:footer" />
 <tc_include file="Public:js" />
 </body>
 </html>

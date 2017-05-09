@@ -7,6 +7,7 @@ class CenterController extends MemberbaseController {
 	
 	function _initialize(){
 		parent::_initialize();
+      $this->assign('huiyuan',1);
 	}
 	
     // 会员中心首页
@@ -46,6 +47,14 @@ class CenterController extends MemberbaseController {
          $this->display();
       }
 
+      //积分变化情况
+      public function jf_change_status()
+      {
+         $result = M('ticheng_log')->where(array('uid'=>get_current_userid(),'level'=>0))->select();
+         $this->assign(compact('result'));
+         $this->display();
+      }
+
       //充值码充值
       public function chongzhima()
       {
@@ -76,6 +85,32 @@ class CenterController extends MemberbaseController {
          }
          $this->display();
       }
+
+      //个人充值码历史记录
+      public function chongzhima_history()
+      {
+         $result = M('chongzhi_log')->where(array('uid'=>get_current_userid(),'type'=>3))->select();
+         $this->assign(compact('result'));
+         $this->display();
+      }
+
+      //交易记录首页
+      public function log_index()
+      {
+         $this->display();
+      }
+      //支付宝充值记录
+      public function zhifubao_history()
+      {
+
+      }
+
+      //微信充值记录
+      public function weixin_history()
+      {
+
+      }
+      //
    	//添加收获地址
    	public function addAddress()
    	{
@@ -512,6 +547,8 @@ class CenterController extends MemberbaseController {
          );
          $goodsInfo = json_encode($goodsInfo,JSON_UNESCAPED_UNICODE);
 
+
+         //插入订单
          $insertOrder = " INSERT INTO i_orders (order_num,uid,address_id,`number`,gid,goodsInfo,score,pay_score,pay_time) VALUES ($order_num,'$user[id]',$address_id,'$number',$good_id,'$goodsInfo',$score,$score,NOW())";
          $insertSelfLog = "INSERT INTO i_ticheng_log (uid,level,pid,score,gid,action,add_time) VALUES ('$user[id]',0,0,$score,$good_id,0,now())";
          $model = M();
@@ -596,7 +633,7 @@ class CenterController extends MemberbaseController {
          //修改商品库存状态以及修改库存记录
          M('goods')->where(array('id'=>$good_id))->save(array('attribute'=>json_encode($attribute)));
          //sku记录写入
-         M('sku')->add(array('gid'=>$good_id,'uid'=>get_current_userid(),'action'=>1,'gid_info'=>$key));
+         M('sku')->add(array('gid'=>$good_id,'uid'=>get_current_userid(),'action'=>1,'gid_info'=>$key,'add_time'=>date("Y-m-d"),'number'=>1));
          //判断是否为激活黄金会员的商品
          if ($theGoods['huangjin'] == 1 && $success == 1 && $user['level'] == 1) {
             //将本用户状态修改为黄金会员
@@ -631,6 +668,8 @@ class CenterController extends MemberbaseController {
          $success ? $this->success('兑换成功') : $this->error('兑换失败');
          
       }
+
+
 
 
       //收藏某个商品

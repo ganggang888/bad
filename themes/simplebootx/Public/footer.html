@@ -1,31 +1,21 @@
-<br>
-<br>
-<br>
-<!-- Footer ================================================== -->
-<hr>
-{:hook('footer')}
-<div id="footer">
-	<div class="links">
-		<php>$links=sp_getlinks();</php>
-		<foreach name="links" item="vo">
-			<notempty name="vo.link_image">
-				<!-- <img src="{:sp_get_image_url($vo['link_image'])}"> --><!-- 如果想加个友链图片可以取消注释 -->
-			</notempty>
-			<a href="{$vo.link_url}" target="{$vo.link_target}">{$vo.link_name}</a>
-		</foreach>
-	</div>
-	<p>
-		Made by <a href="http://www.thinkcmf.com" target="_blank">ThinkCMF</a>
-		Code licensed under the 
-		<a href="http://www.apache.org/licenses/LICENSE-2.0" rel="nofollow" target="_blank">Apache License v2.0</a>.
-		<br />
-		Based on 
-		<a href="http://getbootstrap.com/2.3.2/" target="_blank">Bootstrap</a>.
-		Icons from 
-		<a href="http://fortawesome.github.com/Font-Awesome/" target="_blank">Font Awesome</a>
-	</p>
+<!--底部导航-->
+<div class="foot-black"></div>
+<div class="weui-tabbar wy-foot-menu">
+  <a href="index.html" class="weui-tabbar__item <if condition='$index eq 1'>weui-bar__item--on</if>">
+    <div class="weui-tabbar__icon foot-menu-home"></div>
+    <p class="weui-tabbar__label">首页</p>
+  </a>
+  <a href="classify.html" class="weui-tabbar__item">
+    <div class="weui-tabbar__icon foot-menu-list"></div>
+    <p class="weui-tabbar__label">商品</p>
+  </a>
+  <!--<a href="shopcart.html" class="weui-tabbar__item">
+    <span class="weui-badge" style="position: absolute;top: -.4em;right: 1em;">8</span>
+    <div class="weui-tabbar__icon foot-menu-cart"></div>
+    <p class="weui-tabbar__label">购物车</p>
+  </a>-->
+  <a href="{:leuu('User/Center/index')}" class="weui-tabbar__item <if condition='$huiyuan eq 1'>weui-bar__item--on</if>">
+    <div class="weui-tabbar__icon foot-menu-member"></div>
+    <p class="weui-tabbar__label">我的</p>
+  </a>
 </div>
-<div id="backtotop">
-	<i class="fa fa-arrow-circle-up"></i>
-</div>
-{$site_tongji}

@@ -29,7 +29,7 @@
                     </if>
                     </td>
 					<td>{$vo.add_time}</td>
-                    <td>{:getUserPhone($vo['uid'])}</td>
+                    <td>{:call_user_func_array('getSomeMessage',['users',$vo['uid'],'mobile'])}</td>
 				  </tr>
 				</foreach>
 				

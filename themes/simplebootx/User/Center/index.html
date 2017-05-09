@@ -10,11 +10,23 @@
 <div class='weui-content'>
   <div class="wy-center-top">
     <div class="weui-media-box weui-media-box_appmsg">
-      <div class="weui-media-box__hd"><img class="weui-media-box__thumb radius" src="upload/headimg.jpg" alt=""></div>
+      <div class="weui-media-box__hd"><img class="weui-media-box__thumb radius" src="__TMPL__Public/upload/headimg.jpg" alt=""></div>
       <div class="weui-media-box__bd">
-        <h4 class="weui-media-box__title user-name">飞翔的小土豆</h4>
-        <p class="user-grade">等级：普通会员</p>
-        <p class="user-integral">待返还金额：<em class="num">500.0</em>元</p>
+        <h4 class="weui-media-box__title user-name">{$_SESSION['user']['mobile']}</h4>
+        <p class="user-grade">等级：
+        <if condition="$_SESSION['user']['level'] eq 1">
+        普通会员
+        <elseif condition="$_SESSION['user']['level'] eq 2" />
+        黄金会员
+        <elseif condition="$_SESSION['user']['level'] eq 3" />
+        钻石会员
+        <elseif condition="$_SESSION['user']['level'] eq 4" />
+        代理商
+        <elseid condition="$_SESSION['user']['level'] eq 5" />
+        股东商
+        </if>
+        </p>
+        <p class="user-integral">可用金币：<em class="num">{$_SESSION['user']['gold']}</em></p>
       </div>
     </div>
 <!--    <div class="xx-menu weui-flex">
@@ -25,7 +37,7 @@
   </div>
   <div class="weui-panel weui-panel_access">
     <div class="weui-panel__hd">
-      <a href="all_orders.html" class="weui-cell weui-cell_access center-alloder">
+      <a href="{:leuu('User/Center/orderList',array('status'=>'all'))}" class="weui-cell weui-cell_access center-alloder">
         <div class="weui-cell__bd wy-cell">
           <div class="weui-cell__hd"><img src="__TMPL__Public/images/center-icon-order-all.png" alt="" class="center-list-icon"></div>
           <div class="weui-cell__bd weui-cell_primary"><p class="center-list-txt">全部订单</p></div>
@@ -37,7 +49,7 @@
       <div class="weui-flex">
         
         <div class="weui-flex__item">
-          <a href="all_orders.html" class="center-ordersModule">
+          <a href="{:leuu('User/Center/orderList',array('status'=>0))}" class="center-ordersModule">
           <if condition="$daifa">
             <span class="weui-badge" style="position: absolute;top:5px;right:10px; font-size:10px;">{$daifa}</span>
             </if>
@@ -46,7 +58,7 @@
           </a>
         </div>
         <div class="weui-flex__item">
-          <a href="all_orders.html" class="center-ordersModule">
+          <a href="{:leuu('User/Center/orderList',array('status'=>2))}" class="center-ordersModule">
           <if condition="$daifa">
             <span class="weui-badge" style="position: absolute;top:5px;right:10px; font-size:10px;">{$daishou}</span>
             </if>
@@ -72,9 +84,9 @@
     <div class="weui-panel__bd">
       <div class="weui-flex">
         <div class="weui-flex__item">
-          <a href="myburse.html" class="center-ordersModule">
+          <a href="{:leuu('User/Center/jf_change_status')}" class="center-ordersModule">
             <div class="center-money"><em>{$_SESSION['user']['score']}</em></div>
-            <div class="name">账户总额</div>
+            <div class="name">账户积分</div>
           </a>
         </div>
         <div class="weui-flex__item">
@@ -104,7 +116,7 @@
         <div class="weui-panel__bd">
           <div class="weui-media-box weui-media-box_small-appmsg">
             <div class="weui-cells">
-              <a class="weui-cell weui-cell_access" href="record.html">
+              <a class="weui-cell weui-cell_access" href="{:leuu('User/Center/log_index')}">
                 <div class="weui-cell__hd"><img src="__TMPL__Public/images/center-icon-jyjl.png" alt="" class="center-list-icon"></div>
                 <div class="weui-cell__bd weui-cell_primary">
                   <p class="center-list-txt">交易记录</p>
@@ -162,28 +174,7 @@
   
 </div>
 
-<!--底部导航-->
-<div class="foot-black"></div>
-<div class="weui-tabbar wy-foot-menu">
-  <a href="index.html" class="weui-tabbar__item">
-    <div class="weui-tabbar__icon foot-menu-home"></div>
-    <p class="weui-tabbar__label">首页</p>
-  </a>
-  <a href="classify.html" class="weui-tabbar__item">
-    <div class="weui-tabbar__icon foot-menu-list"></div>
-    <p class="weui-tabbar__label">分类</p>
-  </a>
-  <!--<a href="shopcart.html" class="weui-tabbar__item">
-    <span class="weui-badge" style="position: absolute;top: -.4em;right: 1em;">8</span>
-    <div class="weui-tabbar__icon foot-menu-cart"></div>
-    <p class="weui-tabbar__label">购物车</p>
-  </a>-->
-  <a href="mine.html" class="weui-tabbar__item weui-bar__item--on">
-    <div class="weui-tabbar__icon foot-menu-member"></div>
-    <p class="weui-tabbar__label">我的</p>
-  </a>
-</div>
-
+<tc_include file="Public:footer" />
 <tc_include file="Public:js" />
 </body>
 </html>

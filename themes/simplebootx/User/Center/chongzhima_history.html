@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>积分卡充值历史记录</title>
+<meta charset="utf-8">
+<tc_include file="Public:css" />
+</head>
+<body ontouchstart>
+<!--主体-->
+<header class="wy-header">
+  <div class="wy-header-icon-back"><span></span></div>
+  <div class="wy-header-title">积分卡充值历史记录</div>
+</header>
+<div class="weui-content">
+  <div class="weui-cells wy-news-list">
+    
+     <foreach name="result" item="vo">
+     <a class="weui-cell weui-cell">
+      <div class="weui-cell__bd">
+        <p>积分卡充值：积分+{$vo.jf}</p>
+        <p>卡号：{$vo.number}</p>
+      </div>
+      <div class="weui-cell__ft">{:date("Y-m-d",strtotime($vo['add_time']))}</div>
+     </a>
+     </foreach>
+  </div>
+</div>
+<tc_include file="Public:footer" />
+<tc_include file="Public:js" />
+</body>
+</html>

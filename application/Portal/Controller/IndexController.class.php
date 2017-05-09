@@ -38,6 +38,8 @@ class IndexController extends HomebaseController {
         $this->term = D("Common/GoodsTerm");
     }
 	public function index() {
+        $a = call_user_func_array('getSomeMessage',array('users','2','mobile'));
+        var_dump($a);
         var_dump(sp_password(123456));
     	//获取分类
         $id = I("get.term_id", 0, 'intval');
@@ -166,7 +168,8 @@ class IndexController extends HomebaseController {
     	},$attribute);
     	$one = array_unique($one);
     	$two = array_unique($two);
-    	$this->assign(compact('info','attributes','one','two'));
+        $address_id = M('address')->where(array('uid'=>$_SESSION['user']['id']))->order(array('listorder'=>'DESC'))->getField('id');
+    	$this->assign(compact('info','attributes','one','two','address_id'));
     	$this->display();
     }
 

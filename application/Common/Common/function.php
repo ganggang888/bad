@@ -2348,7 +2348,10 @@ function goodsInfo($id)
 	$goods = M('goods')->where(array('id'=>$id))->find();
 	return $goods;
 }
-function getUserPhone($id) 
+
+//获取想要的参数，多用 1表名 2 id 3 字段名 
+function getSomeMessage()
 {
-	return M('users')->where(array('id'=>$id))->getField('mobile');
+	$info = func_get_args();
+	return M($info[0])->where(array('id'=>$info[1]))->getField($info[2]);
 }
