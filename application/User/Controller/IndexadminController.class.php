@@ -16,12 +16,7 @@ class IndexadminController extends AdminbaseController {
         
         if(!empty($request['keyword'])){
             $keyword=$request['keyword'];
-            $keyword_complex=array();
-            $keyword_complex['user_login']  = array('like', "%$keyword%");
-            $keyword_complex['user_nicename']  = array('like',"%$keyword%");
-            $keyword_complex['user_email']  = array('like',"%$keyword%");
-            $keyword_complex['_logic'] = 'or';
-            $where['_complex'] = $keyword_complex;
+            $where['mobile']  = array('like', "%$keyword%");
         }
         
     	$users_model=M("Users");
@@ -39,6 +34,13 @@ class IndexadminController extends AdminbaseController {
     	$this->assign("page", $page->show('Admin'));
     	
     	$this->display(":index");
+    }
+
+    //用户删除
+    public function delete()
+    {
+        $id = I('get.id');
+        M('users')->where(array('id'=>$id))->delete() ? $this->success('删除成功') : $this->error('删除失败');
     }
     
     // 后台本站用户禁用

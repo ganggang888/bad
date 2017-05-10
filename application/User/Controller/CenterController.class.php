@@ -47,6 +47,12 @@ class CenterController extends MemberbaseController {
          $this->display();
       }
 
+      //反现记录
+      public function fx_log()
+      {
+         
+      }
+
       //积分变化情况
       public function jf_change_status()
       {
