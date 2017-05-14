@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : localhost
-Source Server Version : 50714
+Source Server         : 127.0.0.1
+Source Server Version : 100016
 Source Host           : localhost:3306
 Source Database       : bad
 
 Target Server Type    : MYSQL
-Target Server Version : 50714
+Target Server Version : 100016
 File Encoding         : 65001
 
-Date: 2017-05-09 17:39:39
+Date: 2017-05-14 22:12:36
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -3272,7 +3272,7 @@ CREATE TABLE `i_auth_rule` (
   `condition` varchar(300) NOT NULL DEFAULT '' COMMENT '规则附加条件',
   PRIMARY KEY (`id`),
   KEY `module` (`module`,`status`,`type`)
-) ENGINE=MyISAM AUTO_INCREMENT=195 DEFAULT CHARSET=utf8 COMMENT='权限规则表';
+) ENGINE=MyISAM AUTO_INCREMENT=198 DEFAULT CHARSET=utf8 COMMENT='权限规则表';
 
 -- ----------------------------
 -- Records of i_auth_rule
@@ -3464,11 +3464,14 @@ INSERT INTO `i_auth_rule` VALUES ('186', 'Admin', 'admin_url', 'admin/goods/orde
 INSERT INTO `i_auth_rule` VALUES ('187', 'Admin', 'admin_url', 'admin/goods/fa', null, '发货', '1', '');
 INSERT INTO `i_auth_rule` VALUES ('188', 'Admin', 'admin_url', 'admin/goods/deleteorder', null, '删除订单', '1', '');
 INSERT INTO `i_auth_rule` VALUES ('189', 'Admin', 'admin_url', 'admin/goods/sku_history', null, '库存记录', '1', '');
-INSERT INTO `i_auth_rule` VALUES ('190', 'Admin', 'admin_url', 'admin/setting/set_monery', null, '返点设置', '1', '');
+INSERT INTO `i_auth_rule` VALUES ('190', 'Admin', 'admin_url', 'admin/setting/set_monery', null, '网站设置', '1', '');
 INSERT INTO `i_auth_rule` VALUES ('191', 'Admin', 'admin_url', 'admin/goods/jf_list', null, '充值码管理', '1', '');
 INSERT INTO `i_auth_rule` VALUES ('192', 'Admin', 'admin_url', 'admin/goods/get_number', null, '生成积分卡', '1', '');
 INSERT INTO `i_auth_rule` VALUES ('193', 'Admin', 'admin_url', 'admin/link/chongzhi', null, '充值记录', '1', '');
 INSERT INTO `i_auth_rule` VALUES ('194', 'Admin', 'admin_url', 'admin/goods/jf_chongzhi_history', null, '兑换码记录', '1', '');
+INSERT INTO `i_auth_rule` VALUES ('195', 'User', 'admin_url', 'user/indexadmin/jb_dh_jf', null, '金币兑换积分记录', '1', '');
+INSERT INTO `i_auth_rule` VALUES ('196', 'User', 'admin_url', 'user/indexadmin/tixian_log', null, '提现记录', '1', '');
+INSERT INTO `i_auth_rule` VALUES ('197', 'User', 'admin_url', 'user/indexadmin/change_tixian_status', null, '提现状态修改', '1', '');
 
 -- ----------------------------
 -- Table structure for i_bank
@@ -3483,13 +3486,14 @@ CREATE TABLE `i_bank` (
   `bank_name` varchar(100) DEFAULT NULL COMMENT '银行名称',
   `add_time` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of i_bank
 -- ----------------------------
 INSERT INTO `i_bank` VALUES ('4', '2', '王彬彬', '13797326214', '42154214521421521', '华夏银行', '2017-05-01 19:43:54');
 INSERT INTO `i_bank` VALUES ('3', '2', '王三包', '18816541214', '4521452145214521', '中国农业银行', '2017-05-01 19:43:08');
+INSERT INTO `i_bank` VALUES ('7', '3', '王三包', '18816521452', '14524561123456561245612', '中国工商银行', '2017-05-14 16:16:55');
 
 -- ----------------------------
 -- Table structure for i_chongzhi_log
@@ -3505,12 +3509,13 @@ CREATE TABLE `i_chongzhi_log` (
   `status` tinyint(4) DEFAULT '1' COMMENT '1带支付 2 成功',
   `add_time` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP COMMENT '操作时间',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COMMENT='充值记录';
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COMMENT='充值记录';
 
 -- ----------------------------
 -- Records of i_chongzhi_log
 -- ----------------------------
 INSERT INTO `i_chongzhi_log` VALUES ('4', '5', '3', '200', '1088125018', null, '2', '2017-05-08 21:35:34');
+INSERT INTO `i_chongzhi_log` VALUES ('5', '5', '3', '5000', '1031272993', null, '2', '2017-05-11 20:59:43');
 
 -- ----------------------------
 -- Table structure for i_city
@@ -3933,7 +3938,26 @@ CREATE TABLE `i_data` (
 -- ----------------------------
 -- Records of i_data
 -- ----------------------------
-INSERT INTO `i_data` VALUES ('1', '{\"level_first\":\"0.15\",\"jiandian\":\"15\",\"level_next\":\"0.05\",\"pu\":\"0.1\",\"zuanshi_first\":\"0.15\",\"zuanshi_next\":\"0.05\",\"level_level\":\"0.05\",\"huangjin\":\"0.15\",\"zuanshi\":\"0.15\"}');
+INSERT INTO `i_data` VALUES ('1', '{\"level_first\":\"0.15\",\"jiandian\":\"15\",\"level_next\":\"0.05\",\"pu\":\"0.1\",\"zuanshi_first\":\"0.15\",\"zuanshi_next\":\"0.05\",\"level_level\":\"0.05\",\"huangjin\":\"0.15\",\"zuanshi\":\"5\",\"jinbi\":\"1000\",\"jinbi_shouyi\":\"5\",\"daili_shouyi\":\"5\"}');
+
+-- ----------------------------
+-- Table structure for i_duihuan_log
+-- ----------------------------
+DROP TABLE IF EXISTS `i_duihuan_log`;
+CREATE TABLE `i_duihuan_log` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `uid` int(11) NOT NULL,
+  `gold` bigint(20) NOT NULL,
+  `score` bigint(20) NOT NULL,
+  `add_time` datetime NOT NULL ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COMMENT='金豆积分兑换记录';
+
+-- ----------------------------
+-- Records of i_duihuan_log
+-- ----------------------------
+INSERT INTO `i_duihuan_log` VALUES ('3', '5', '2', '4', '2017-05-13 14:31:58');
+INSERT INTO `i_duihuan_log` VALUES ('4', '5', '1', '2', '2017-05-13 14:32:17');
 
 -- ----------------------------
 -- Table structure for i_goods
@@ -3969,8 +3993,8 @@ CREATE TABLE `i_goods` (
 -- ----------------------------
 -- Records of i_goods
 -- ----------------------------
-INSERT INTO `i_goods` VALUES ('20170422212306786', '规格', '[\"http:\\/\\/bad.cn\\/data\\/upload\\/admin\\/20170501\\/59072797ef409.jpg\",\"http:\\/\\/bad.cn\\/data\\/upload\\/admin\\/20170501\\/5907279c29cd1.jpg\"]', '0.00', '0.00', '0.00', '100', '', '0', '0', '&lt;p&gt;的撒旦撒的&lt;/p&gt;', '[{\"id\":\"1-1\",\"cost_price\":\"8\",\"selling_price\":\"9\",\"market_value\":\"10\",\"unit\":\"\\u4e2a\",\"stock\":\"13\",\"name\":\"\\u5927\\u6b3e\\u5f0f\",\"info\":\"\\u7eff\\u8272\"},{\"id\":\"1-1\",\"cost_price\":\"8\",\"selling_price\":\"9\",\"market_value\":\"10\",\"unit\":\"\\u4e2a\",\"stock\":6,\"name\":\"\\u5c0f\\u6b3e\\u5f0f\",\"info\":\"\\u7ea2\\u8272\"}]', '优惠#限量', '3', '1', '1', '4', '1', '2017-04-22 21:23:06', '0', '1');
-INSERT INTO `i_goods` VALUES ('20170423124543553', 'next商品', '[\"http:\\/\\/bad.cn\\/data\\/upload\\/admin\\/20170501\\/5907278c56fd8.jpg\",\"http:\\/\\/bad.cn\\/data\\/upload\\/admin\\/20170501\\/5907278fe2eec.jpg\"]', '0.00', '0.00', '0.00', '100', '', '0', '0', '&lt;p&gt;倒萨打算1&lt;/p&gt;', '[{\"id\":\"1-0\",\"cost_price\":\"60\",\"selling_price\":\"65\",\"market_value\":\"70\",\"unit\":\"\\u4ef6\",\"stock\":\"100\",\"name\":\"50\",\"info\":\"\\u7ea2\\u8272\"},{\"id\":\"1-0\",\"cost_price\":\"60\",\"selling_price\":\"65\",\"market_value\":\"70\",\"unit\":\"\\u4ef6\",\"stock\":\"100\",\"name\":\"50\",\"info\":\"\\u84dd\\u8272\"},{\"id\":\"1-0\",\"cost_price\":\"60\",\"selling_price\":\"65\",\"market_value\":\"70\",\"unit\":\"\\u4ef6\",\"stock\":\"100\",\"name\":\"50\",\"info\":\"\\u9ed1\\u8272\"},{\"id\":\"1-0\",\"cost_price\":\"60\",\"selling_price\":\"65\",\"market_value\":\"70\",\"unit\":\"\\u4ef6\",\"stock\":\"100\",\"name\":\"49\",\"info\":\"\\u9ed1\\u8272\"},{\"id\":\"1-0\",\"cost_price\":\"60\",\"selling_price\":\"65\",\"market_value\":\"70\",\"unit\":\"\\u4ef6\",\"stock\":\"100\",\"name\":\"48\",\"info\":\"\\u9ed1\\u8272\"},{\"id\":\"1-0\",\"cost_price\":\"60\",\"selling_price\":\"65\",\"market_value\":\"70\",\"unit\":\"\\u4ef6\",\"stock\":\"100\",\"name\":\"48\",\"info\":\"\\u84dd\\u8272\"},{\"id\":\"1-0\",\"cost_price\":\"60\",\"selling_price\":\"65\",\"market_value\":\"70\",\"unit\":\"\\u4ef6\",\"stock\":\"100\",\"name\":\"48\",\"info\":\"\\u7eff\\u8272\"}]', '优惠#限量', '2', '1', '1', '7', '1', '2017-04-23 12:45:43', '0', '1');
+INSERT INTO `i_goods` VALUES ('20170422212306786', '规格', '[\"http:\\/\\/bad.cn\\/data\\/upload\\/admin\\/20170501\\/59072797ef409.jpg\",\"http:\\/\\/bad.cn\\/data\\/upload\\/admin\\/20170501\\/5907279c29cd1.jpg\"]', '0.00', '0.00', '0.00', '100', '', '0', '0', '&lt;p&gt;的撒旦撒的&lt;/p&gt;', '[{\"id\":\"1-1\",\"cost_price\":\"8\",\"selling_price\":\"9\",\"market_value\":\"10\",\"unit\":\"\\u4e2a\",\"stock\":\"13\",\"name\":\"\\u5927\\u6b3e\\u5f0f\",\"info\":\"\\u7eff\\u8272\"},{\"id\":\"1-1\",\"cost_price\":\"8\",\"selling_price\":\"9\",\"market_value\":\"10\",\"unit\":\"\\u4e2a\",\"stock\":4,\"name\":\"\\u5c0f\\u6b3e\\u5f0f\",\"info\":\"\\u7ea2\\u8272\"}]', '优惠#限量', '3', '1', '1', '4', '1', '2017-04-22 21:23:06', '0', '1');
+INSERT INTO `i_goods` VALUES ('20170423124543553', 'next商品', '[\"http:\\/\\/bad.cn\\/data\\/upload\\/admin\\/20170501\\/5907278c56fd8.jpg\",\"http:\\/\\/bad.cn\\/data\\/upload\\/admin\\/20170501\\/5907278fe2eec.jpg\"]', '0.00', '0.00', '0.00', '100', '', '0', '0', '&lt;p&gt;倒萨打算1&lt;/p&gt;', '[{\"id\":\"1-0\",\"cost_price\":\"60\",\"selling_price\":\"65\",\"market_value\":\"70\",\"unit\":\"\\u4ef6\",\"stock\":98,\"name\":\"50\",\"info\":\"\\u7ea2\\u8272\"},{\"id\":\"1-0\",\"cost_price\":\"60\",\"selling_price\":\"65\",\"market_value\":\"70\",\"unit\":\"\\u4ef6\",\"stock\":95,\"name\":\"50\",\"info\":\"\\u84dd\\u8272\"},{\"id\":\"1-0\",\"cost_price\":\"60\",\"selling_price\":\"65\",\"market_value\":\"70\",\"unit\":\"\\u4ef6\",\"stock\":\"100\",\"name\":\"50\",\"info\":\"\\u9ed1\\u8272\"},{\"id\":\"1-0\",\"cost_price\":\"60\",\"selling_price\":\"65\",\"market_value\":\"70\",\"unit\":\"\\u4ef6\",\"stock\":\"100\",\"name\":\"49\",\"info\":\"\\u9ed1\\u8272\"},{\"id\":\"1-0\",\"cost_price\":\"60\",\"selling_price\":\"65\",\"market_value\":\"70\",\"unit\":\"\\u4ef6\",\"stock\":\"100\",\"name\":\"48\",\"info\":\"\\u9ed1\\u8272\"},{\"id\":\"1-0\",\"cost_price\":\"60\",\"selling_price\":\"65\",\"market_value\":\"70\",\"unit\":\"\\u4ef6\",\"stock\":\"100\",\"name\":\"48\",\"info\":\"\\u84dd\\u8272\"},{\"id\":\"1-0\",\"cost_price\":\"60\",\"selling_price\":\"65\",\"market_value\":\"70\",\"unit\":\"\\u4ef6\",\"stock\":\"100\",\"name\":\"48\",\"info\":\"\\u7eff\\u8272\"}]', '优惠#限量', '2', '1', '1', '7', '1', '2017-04-23 12:45:43', '0', '1');
 
 -- ----------------------------
 -- Table structure for i_goods_term
@@ -3981,22 +4005,23 @@ CREATE TABLE `i_goods_term` (
   `name` varchar(100) NOT NULL COMMENT '名称',
   `parentid` int(11) NOT NULL,
   `status` tinyint(4) NOT NULL DEFAULT '1' COMMENT '1启用0禁用',
+  `is_index` tinyint(4) NOT NULL DEFAULT '0',
   `admin_id` mediumint(9) NOT NULL,
   `add_time` datetime NOT NULL,
   `is_delete` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COMMENT='商品分类表';
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COMMENT='商品分类表';
 
 -- ----------------------------
 -- Records of i_goods_term
 -- ----------------------------
-INSERT INTO `i_goods_term` VALUES ('1', '21323', '0', '1', '0', '0000-00-00 00:00:00', '0');
-INSERT INTO `i_goods_term` VALUES ('2', '第三方斯蒂芬斯蒂芬速度', '1', '1', '0', '0000-00-00 00:00:00', '0');
-INSERT INTO `i_goods_term` VALUES ('3', '你好吗', '2', '1', '0', '0000-00-00 00:00:00', '0');
-INSERT INTO `i_goods_term` VALUES ('4', '第二个商品', '0', '1', '0', '0000-00-00 00:00:00', '0');
-INSERT INTO `i_goods_term` VALUES ('5', '下级分类', '4', '1', '0', '0000-00-00 00:00:00', '0');
-INSERT INTO `i_goods_term` VALUES ('6', '下下级分类', '5', '1', '0', '0000-00-00 00:00:00', '0');
-INSERT INTO `i_goods_term` VALUES ('7', '会员专区', '0', '1', '1', '2017-04-18 22:10:58', '0');
+INSERT INTO `i_goods_term` VALUES ('1', '21323', '0', '1', '0', '0', '0000-00-00 00:00:00', '1');
+INSERT INTO `i_goods_term` VALUES ('2', '第三方斯蒂芬斯蒂芬速度', '1', '1', '0', '0', '0000-00-00 00:00:00', '1');
+INSERT INTO `i_goods_term` VALUES ('3', '你好吗', '2', '1', '0', '0', '0000-00-00 00:00:00', '1');
+INSERT INTO `i_goods_term` VALUES ('4', '家具', '0', '1', '1', '0', '0000-00-00 00:00:00', '0');
+INSERT INTO `i_goods_term` VALUES ('5', '下级分类', '4', '1', '0', '0', '0000-00-00 00:00:00', '1');
+INSERT INTO `i_goods_term` VALUES ('7', '日用品', '0', '1', '1', '1', '2017-04-18 22:10:58', '0');
+INSERT INTO `i_goods_term` VALUES ('8', '1', '4', '1', '1', '1', '2017-05-13 18:00:26', '1');
 
 -- ----------------------------
 -- Table structure for i_guestbook
@@ -4062,7 +4087,7 @@ CREATE TABLE `i_menu` (
   KEY `status` (`status`),
   KEY `parentid` (`parentid`),
   KEY `model` (`model`)
-) ENGINE=MyISAM AUTO_INCREMENT=208 DEFAULT CHARSET=utf8 COMMENT='后台菜单表';
+) ENGINE=MyISAM AUTO_INCREMENT=211 DEFAULT CHARSET=utf8 COMMENT='后台菜单表';
 
 -- ----------------------------
 -- Records of i_menu
@@ -4252,11 +4277,14 @@ INSERT INTO `i_menu` VALUES ('199', '187', 'Admin', 'Goods', 'orderList', '', '1
 INSERT INTO `i_menu` VALUES ('200', '199', 'Admin', 'Goods', 'fa', '', '1', '0', '发货', '', '', '0');
 INSERT INTO `i_menu` VALUES ('201', '199', 'Admin', 'Goods', 'deleteOrder', '', '1', '0', '删除订单', '', '', '0');
 INSERT INTO `i_menu` VALUES ('202', '187', 'Admin', 'Goods', 'sku_history', '', '1', '1', '库存记录', '', '', '0');
-INSERT INTO `i_menu` VALUES ('203', '109', 'Admin', 'Setting', 'set_monery', '', '1', '1', '返点设置', '', '', '0');
+INSERT INTO `i_menu` VALUES ('203', '109', 'Admin', 'Setting', 'set_monery', '', '1', '1', '网站设置', '', '', '0');
 INSERT INTO `i_menu` VALUES ('204', '109', 'Admin', 'Goods', 'jf_list', '', '1', '1', '充值码管理', '', '', '0');
 INSERT INTO `i_menu` VALUES ('205', '204', 'Admin', 'Goods', 'get_number', '', '1', '0', '生成积分卡', '', '', '0');
 INSERT INTO `i_menu` VALUES ('206', '132', 'Admin', 'Link', 'chongzhi', '', '1', '1', '充值记录', '', '', '0');
 INSERT INTO `i_menu` VALUES ('207', '206', 'Admin', 'Goods', 'jf_chongzhi_history', 'type=3', '1', '1', '兑换码记录', '', '', '0');
+INSERT INTO `i_menu` VALUES ('208', '132', 'User', 'Indexadmin', 'jb_dh_jf', '', '1', '1', '金币兑换积分记录', '', '', '0');
+INSERT INTO `i_menu` VALUES ('209', '132', 'User', 'Indexadmin', 'tixian_log', '', '1', '1', '提现记录', '', '', '0');
+INSERT INTO `i_menu` VALUES ('210', '209', 'User', 'Indexadmin', 'change_tixian_status', '', '1', '0', '提现状态修改', '', '', '0');
 
 -- ----------------------------
 -- Table structure for i_nav
@@ -4372,16 +4400,14 @@ CREATE TABLE `i_orders` (
   `pay_score` bigint(20) DEFAULT '0',
   `gid` bigint(20) DEFAULT '0' COMMENT '商品ID',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=44 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of i_orders
 -- ----------------------------
-INSERT INTO `i_orders` VALUES ('22', '20170507223943995', '2', '2', '1', '0.00', null, '2017-05-07 22:39:43', '2017-05-08 10:49:58', null, '顺丰', '152320844709', '[{\"fname\":\"规格|小款式、红色\",\"fprice\":\"100\",\"fcount\":1,\"prices\":\"100\",\"fid\":\"20170422212306786-1\"}]', null, '', '3', '0', '100', '100', '20170422212306786');
-INSERT INTO `i_orders` VALUES ('23', '20170508215111540', '5', '4', '1', '0.00', null, '2017-05-08 21:51:11', null, null, null, null, '[{\"fname\":\"规格|小款式、红色\",\"fprice\":\"100\",\"fcount\":1,\"prices\":\"100\",\"fid\":\"20170422212306786-1\"}]', null, '', '0', '0', '100', '100', '20170422212306786');
-INSERT INTO `i_orders` VALUES ('24', '20170509141814992', '5', '4', '1', '0.00', null, '2017-05-09 14:18:14', null, null, null, null, '[{\"fname\":\"规格|小款式、红色\",\"fprice\":\"100\",\"fcount\":1,\"prices\":\"100\",\"fid\":\"20170422212306786-1\"}]', null, '', '0', '0', '100', '100', '20170422212306786');
-INSERT INTO `i_orders` VALUES ('25', '20170509142550765', '5', '4', '1', '0.00', null, '2017-05-09 14:25:50', null, null, null, null, '[{\"fname\":\"规格|小款式、红色\",\"fprice\":\"85\",\"fcount\":1,\"prices\":\"100\",\"fid\":\"20170422212306786-1\"}]', null, '', '0', '0', '85', '85', '20170422212306786');
-INSERT INTO `i_orders` VALUES ('26', '20170509142650272', '5', '4', '1', '0.00', null, '2017-05-09 14:26:50', null, null, null, null, '[{\"fname\":\"规格|小款式、红色\",\"fprice\":\"100\",\"fcount\":1,\"prices\":\"100\",\"fid\":\"20170422212306786-1\"}]', null, '', '0', '0', '100', '100', '20170422212306786');
+INSERT INTO `i_orders` VALUES ('41', '20170512212612682', '5', '4', '1', '0.00', null, '2017-05-12 21:26:12', null, null, null, null, '[{\"fname\":\"next商品|50、红色\",\"fprice\":\"100\",\"fcount\":1,\"prices\":\"100\",\"fid\":\"20170423124543553-0\"}]', null, '', '0', '0', '100', '100', '20170423124543553');
+INSERT INTO `i_orders` VALUES ('42', '20170512212652807', '5', '4', '1', '0.00', null, '2017-05-12 21:26:52', null, null, null, null, '[{\"fname\":\"next商品|50、红色\",\"fprice\":\"100\",\"fcount\":1,\"prices\":\"100\",\"fid\":\"20170423124543553-0\"}]', null, '', '0', '0', '100', '100', '20170423124543553');
+INSERT INTO `i_orders` VALUES ('43', '20170512212854116', '5', '4', '1', '0.00', null, '2017-05-12 21:28:54', null, null, null, null, '[{\"fname\":\"规格|小款式、绿色\",\"fprice\":\"85\",\"fcount\":1,\"prices\":\"100\",\"fid\":\"20170422212306786-1\"}]', null, '', '0', '0', '85', '85', '20170422212306786');
 
 -- ----------------------------
 -- Table structure for i_plugins
@@ -4439,12 +4465,14 @@ CREATE TABLE `i_posts` (
   KEY `post_parent` (`post_parent`),
   KEY `post_author` (`post_author`),
   KEY `post_date` (`post_date`) USING BTREE
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='Portal文章表';
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='Portal文章表';
 
 -- ----------------------------
 -- Records of i_posts
 -- ----------------------------
-INSERT INTO `i_posts` VALUES ('1', '1', '', '', '2017-04-30 13:59:58', '<p>1</p>', '1', '', '1', '1', '2017-04-30 14:00:08', null, '0', '1', '', '0', '{\"thumb\":\"\",\"template\":\"\"}', '0', '0', '0', '0');
+INSERT INTO `i_posts` VALUES ('1', '1', '', '', '2017-04-30 13:59:58', '<p>1</p>', '1', '', '3', '1', '2017-04-30 14:00:08', null, '0', '1', '', '0', '{\"thumb\":\"\",\"template\":\"\"}', '0', '0', '0', '0');
+INSERT INTO `i_posts` VALUES ('2', '1', '关于平台的一些标准', '关于平台的一些标准', '2017-05-13 18:10:56', '<p>关于平台的一些标准关于平台的一些标准</p>', '关于平台的一些标准', '关于平台的一些标准', '1', '1', '2017-05-13 18:11:40', null, '0', '1', '', '0', '{\"thumb\":\"\",\"template\":\"\"}', '2', '0', '0', '0');
+INSERT INTO `i_posts` VALUES ('3', '1', '平台积分使用说明', '平台积分使用说明', '2017-05-13 18:11:43', '<p>平台积分使用说明</p>', '平台积分使用说明', '平台积分使用说明', '1', '1', '2017-05-13 18:11:56', null, '0', '1', '', '0', '{\"thumb\":\"\",\"template\":\"\"}', '0', '0', '0', '0');
 
 -- ----------------------------
 -- Table structure for i_province
@@ -4530,7 +4558,7 @@ CREATE TABLE `i_recharges` (
   `status` tinyint(255) DEFAULT '0' COMMENT '0为分配1已分配2已使用',
   PRIMARY KEY (`id`),
   UNIQUE KEY `code` (`code`)
-) ENGINE=MyISAM AUTO_INCREMENT=146 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=147 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of i_recharges
@@ -4550,6 +4578,7 @@ INSERT INTO `i_recharges` VALUES ('144', '1157115820', '8587', '200', null, '201
 INSERT INTO `i_recharges` VALUES ('143', '1038393575', '2302', '200', '5', '2017-05-08 21:22:26', '2017-05-08 21:31:08', '2');
 INSERT INTO `i_recharges` VALUES ('142', '1060180802', '8720', '200', '5', '2017-05-08 21:22:26', '2017-05-08 21:33:00', '2');
 INSERT INTO `i_recharges` VALUES ('141', '1088125018', '1180', '200', '5', '2017-05-08 21:22:26', '2017-05-08 21:35:34', '2');
+INSERT INTO `i_recharges` VALUES ('146', '1031272993', '5658', '5000', '5', '2017-05-11 20:59:35', '2017-05-11 20:59:43', '2');
 
 -- ----------------------------
 -- Table structure for i_role
@@ -4619,7 +4648,7 @@ CREATE TABLE `i_sku` (
   `number` int(11) NOT NULL COMMENT '数量',
   `add_time` datetime NOT NULL COMMENT '操作记录',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8 COMMENT='SKU库存记录';
+) ENGINE=InnoDB AUTO_INCREMENT=47 DEFAULT CHARSET=utf8 COMMENT='SKU库存记录';
 
 -- ----------------------------
 -- Records of i_sku
@@ -4640,6 +4669,20 @@ INSERT INTO `i_sku` VALUES ('29', '20170422212306786', '5', '1', '1', '0', '0000
 INSERT INTO `i_sku` VALUES ('30', '20170422212306786', '5', '1', '1', '1', '2017-05-09 00:00:00');
 INSERT INTO `i_sku` VALUES ('31', '20170422212306786', '5', '1', '1', '1', '2017-05-09 00:00:00');
 INSERT INTO `i_sku` VALUES ('32', '20170422212306786', '5', '1', '1', '1', '2017-05-09 00:00:00');
+INSERT INTO `i_sku` VALUES ('33', '20170422212306786', '5', '1', '1', '1', '2017-05-11 00:00:00');
+INSERT INTO `i_sku` VALUES ('34', '20170422212306786', '5', '1', '1', '1', '2017-05-11 00:00:00');
+INSERT INTO `i_sku` VALUES ('35', '20170422212306786', '5', '1', '1', '1', '2017-05-11 00:00:00');
+INSERT INTO `i_sku` VALUES ('36', '20170422212306786', '5', '1', '1', '1', '2017-05-11 00:00:00');
+INSERT INTO `i_sku` VALUES ('37', '20170422212306786', '5', '1', '1', '1', '2017-05-11 00:00:00');
+INSERT INTO `i_sku` VALUES ('38', '20170422212306786', '5', '1', '1', '1', '2017-05-11 00:00:00');
+INSERT INTO `i_sku` VALUES ('39', '20170423124543553', '5', '1', '1', '1', '2017-05-12 00:00:00');
+INSERT INTO `i_sku` VALUES ('40', '20170423124543553', '5', '1', '1', '1', '2017-05-12 00:00:00');
+INSERT INTO `i_sku` VALUES ('41', '20170423124543553', '5', '1', '1', '1', '2017-05-12 00:00:00');
+INSERT INTO `i_sku` VALUES ('42', '20170423124543553', '5', '1', '1', '1', '2017-05-12 00:00:00');
+INSERT INTO `i_sku` VALUES ('43', '20170423124543553', '5', '1', '1', '1', '2017-05-12 00:00:00');
+INSERT INTO `i_sku` VALUES ('44', '20170423124543553', '5', '1', '0', '1', '2017-05-12 00:00:00');
+INSERT INTO `i_sku` VALUES ('45', '20170423124543553', '5', '1', '0', '1', '2017-05-12 00:00:00');
+INSERT INTO `i_sku` VALUES ('46', '20170422212306786', '5', '1', '1', '1', '2017-05-12 00:00:00');
 
 -- ----------------------------
 -- Table structure for i_slide
@@ -4705,14 +4748,12 @@ CREATE TABLE `i_terms` (
   `listorder` int(5) NOT NULL DEFAULT '0' COMMENT '排序',
   `status` int(2) NOT NULL DEFAULT '1' COMMENT '状态，1发布，0不发布',
   PRIMARY KEY (`term_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='Portal 文章分类表';
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COMMENT='Portal 文章分类表';
 
 -- ----------------------------
 -- Records of i_terms
 -- ----------------------------
-INSERT INTO `i_terms` VALUES ('1', '列表演示', '', 'article', '', '0', '0', '0-1', '', '', '', 'list', 'article', '0', '1');
-INSERT INTO `i_terms` VALUES ('2', '瀑布流', '', 'article', '', '0', '0', '0-2', '', '', '', 'list_masonry', 'article', '0', '1');
-INSERT INTO `i_terms` VALUES ('3', '1', '', 'article', '', '1', '0', '0-1-3', '', '', '', 'list', 'article', '0', '1');
+INSERT INTO `i_terms` VALUES ('4', '首页新闻', '', 'article', '首页新闻', '0', '0', '0-4', '', '', '', 'list', 'article', '0', '1');
 
 -- ----------------------------
 -- Table structure for i_term_relationships
@@ -4726,12 +4767,14 @@ CREATE TABLE `i_term_relationships` (
   `status` int(2) NOT NULL DEFAULT '1' COMMENT '状态，1发布，0不发布',
   PRIMARY KEY (`tid`),
   KEY `term_taxonomy_id` (`term_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='Portal 文章分类对应表';
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='Portal 文章分类对应表';
 
 -- ----------------------------
 -- Records of i_term_relationships
 -- ----------------------------
 INSERT INTO `i_term_relationships` VALUES ('1', '1', '1', '0', '1');
+INSERT INTO `i_term_relationships` VALUES ('2', '2', '4', '0', '1');
+INSERT INTO `i_term_relationships` VALUES ('3', '3', '4', '0', '1');
 
 -- ----------------------------
 -- Table structure for i_ticheng_log
@@ -4750,31 +4793,43 @@ CREATE TABLE `i_ticheng_log` (
   `times` tinyint(4) DEFAULT NULL COMMENT '是否第一次',
   `status` tinyint(4) DEFAULT NULL COMMENT '1推荐奖2抽佣3见点',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=82 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of i_ticheng_log
 -- ----------------------------
-INSERT INTO `i_ticheng_log` VALUES ('1', '2', '0', '0', '100', '2147483647', '0', '2017-05-07 19:08:58', '0', null, null);
-INSERT INTO `i_ticheng_log` VALUES ('2', '2', '0', '0', '100', '2147483647', '0', '2017-05-07 19:32:37', '0', null, null);
-INSERT INTO `i_ticheng_log` VALUES ('3', '2', '0', '0', '100', '2147483647', '0', '2017-05-07 20:16:13', '0', null, null);
-INSERT INTO `i_ticheng_log` VALUES ('4', '2', '0', '0', '100', '2147483647', '0', '2017-05-07 21:15:27', '0', null, null);
-INSERT INTO `i_ticheng_log` VALUES ('5', '2', '0', '0', '85', '2147483647', '0', '2017-05-07 21:56:28', '0', null, null);
-INSERT INTO `i_ticheng_log` VALUES ('6', '2', '0', '0', '100', '2147483647', '0', '2017-05-07 22:39:43', '0', null, null);
-INSERT INTO `i_ticheng_log` VALUES ('7', '4', '1', '5', '10', '2147483647', '1', '2017-05-08 21:51:11', '0', null, '1');
-INSERT INTO `i_ticheng_log` VALUES ('8', '5', '0', '0', '100', '2147483647', '0', '2017-05-08 21:51:11', '0', null, null);
-INSERT INTO `i_ticheng_log` VALUES ('15', '4', '1', '5', '10', '20170422212306786', '1', '2017-05-09 14:18:14', '0', null, '1');
-INSERT INTO `i_ticheng_log` VALUES ('16', '4', '2', '5', '15', '20170422212306786', '1', '2017-05-09 14:18:14', '0', null, null);
-INSERT INTO `i_ticheng_log` VALUES ('17', '4', '2', '5', '5', '20170422212306786', '1', '2017-05-09 14:18:14', '0', null, null);
-INSERT INTO `i_ticheng_log` VALUES ('18', '5', '0', '0', '100', '20170422212306786', '0', '2017-05-09 14:18:14', '0', null, null);
-INSERT INTO `i_ticheng_log` VALUES ('19', '4', '1', '5', '8', '20170422212306786', '1', '2017-05-09 14:25:50', '0', null, '1');
-INSERT INTO `i_ticheng_log` VALUES ('20', '4', '2', '5', '15', '20170422212306786', '1', '2017-05-09 14:25:50', '0', null, null);
-INSERT INTO `i_ticheng_log` VALUES ('21', '4', '2', '5', '4', '20170422212306786', '1', '2017-05-09 14:25:50', '0', null, null);
-INSERT INTO `i_ticheng_log` VALUES ('22', '5', '0', '0', '85', '20170422212306786', '0', '2017-05-09 14:25:50', '0', null, null);
-INSERT INTO `i_ticheng_log` VALUES ('23', '4', '1', '5', '10', '20170422212306786', '1', '2017-05-09 14:26:50', '0', null, '1');
-INSERT INTO `i_ticheng_log` VALUES ('24', '4', '2', '5', '15', '20170422212306786', '1', '2017-05-09 14:26:50', '0', null, null);
-INSERT INTO `i_ticheng_log` VALUES ('25', '4', '2', '5', '5', '20170422212306786', '1', '2017-05-09 14:26:50', '0', null, null);
-INSERT INTO `i_ticheng_log` VALUES ('26', '5', '0', '0', '100', '20170422212306786', '0', '2017-05-09 14:26:50', '0', null, null);
+INSERT INTO `i_ticheng_log` VALUES ('71', '4', '1', '5', '10', '20170423124543553', '1', '2017-05-12 21:26:12', '0', null, '1');
+INSERT INTO `i_ticheng_log` VALUES ('72', '5', '0', '0', '100', '20170423124543553', '0', '2017-05-12 21:26:12', '0', null, null);
+INSERT INTO `i_ticheng_log` VALUES ('73', '4', '1', '5', '10', '20170423124543553', '1', '2017-05-12 21:26:52', '0', null, '1');
+INSERT INTO `i_ticheng_log` VALUES ('74', '3', '2', '5', '15', '20170423124543553', '1', '2017-05-12 21:26:52', '0', null, '2');
+INSERT INTO `i_ticheng_log` VALUES ('75', '3', '2', '5', '5', '20170423124543553', '1', '2017-05-12 21:26:52', '0', null, '3');
+INSERT INTO `i_ticheng_log` VALUES ('76', '5', '0', '0', '100', '20170423124543553', '0', '2017-05-12 21:26:52', '0', null, null);
+INSERT INTO `i_ticheng_log` VALUES ('77', '4', '1', '5', '4', '20170422212306786', '1', '2017-05-12 21:28:54', '0', null, '2');
+INSERT INTO `i_ticheng_log` VALUES ('78', '4', '1', '5', '4', '20170422212306786', '1', '2017-05-12 21:28:54', '0', null, '3');
+INSERT INTO `i_ticheng_log` VALUES ('79', '3', '2', '5', '15', '20170422212306786', '1', '2017-05-12 21:28:54', '0', null, '2');
+INSERT INTO `i_ticheng_log` VALUES ('80', '3', '2', '5', '4', '20170422212306786', '1', '2017-05-12 21:28:54', '0', null, '3');
+INSERT INTO `i_ticheng_log` VALUES ('81', '5', '0', '0', '85', '20170422212306786', '0', '2017-05-12 21:28:54', '0', null, null);
+
+-- ----------------------------
+-- Table structure for i_tixian
+-- ----------------------------
+DROP TABLE IF EXISTS `i_tixian`;
+CREATE TABLE `i_tixian` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `uid` int(11) NOT NULL,
+  `money` decimal(10,2) NOT NULL,
+  `status` tinyint(4) DEFAULT '0' COMMENT '0提交 1 处理中 2成功 3驳回',
+  `bank_id` int(11) NOT NULL COMMENT '银行id',
+  `message` varchar(100) DEFAULT '',
+  `type` tinyint(4) NOT NULL DEFAULT '0' COMMENT '1返现积分提现 2金币提现 3',
+  `add_time` datetime NOT NULL ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of i_tixian
+-- ----------------------------
+INSERT INTO `i_tixian` VALUES ('1', '3', '10.00', '2', '7', '', '1', '2017-05-14 17:37:50');
 
 -- ----------------------------
 -- Table structure for i_users
@@ -4810,7 +4865,8 @@ CREATE TABLE `i_users` (
   `money` double(11,2) NOT NULL DEFAULT '0.00' COMMENT '所充值金额',
   `can_monery` bigint(20) NOT NULL DEFAULT '0' COMMENT '可提现金额',
   `level` tinyint(4) DEFAULT '1' COMMENT '1普通会员 2黄金会员 3钻石会员 4股东商 5代理商 6董事长',
-  `gold` bigint(20) DEFAULT '0',
+  `gold` decimal(10,2) DEFAULT '0.00',
+  `dong` double(10,2) NOT NULL DEFAULT '0.00' COMMENT '代理商冻结金额',
   PRIMARY KEY (`id`),
   KEY `user_login_key` (`user_login`),
   KEY `user_nicename` (`user_nicename`),
@@ -4820,11 +4876,11 @@ CREATE TABLE `i_users` (
 -- ----------------------------
 -- Records of i_users
 -- ----------------------------
-INSERT INTO `i_users` VALUES ('1', '0', 'admin', '###36d7f03832c89626da2ebe3ba313b845', 'admin', '', 'a526584713@qq.com', '', null, '0', '2000-01-01', null, '127.0.0.1', '2017-05-09 14:07:35', '2017-04-13 03:02:05', '', '1', '0', '1', '0', '', null, null, '0', '0', '0', '0.00', '0', '1', '0');
-INSERT INTO `i_users` VALUES ('2', '0', '', '###36d7f03832c89626da2ebe3ba313b845', '', '', '', '', null, '0', '2000-01-01', null, '127.0.0.1', '2017-05-08 16:17:24', '2017-04-18 21:29:44', '', '1', '9715', '2', '0', '18816978523', 'f1125bfc-a218-69ca-083b-d8af147450ef', null, '0', '0', '0', '0.00', '0', '2', '0');
-INSERT INTO `i_users` VALUES ('3', '0', '', '###36d7f03832c89626da2ebe3ba313b845', '', '', '', '', null, '0', '2000-01-01', null, '127.0.0.1', '2017-04-18 21:33:22', '2017-04-18 21:33:22', '', '1', '0', '2', '0', '18816978511', 'fa6e51e1-7475-248c-aa3f-32406676d8de', 'f1125bfc-a218-69ca-083b-d8af147450ef', '32767', '120100', '120103', '0.00', '59', '2', '0');
-INSERT INTO `i_users` VALUES ('4', '0', '', '###36d7f03832c89626da2ebe3ba313b845', '', '', '', '', null, '0', '2000-01-01', null, '127.0.0.1', '2017-05-08 16:44:47', '2017-05-08 16:44:47', '', '1', '0', '2', '0', '15412123212', '8431b7c9-5a98-c32c-8c2d-20979207cca1', 'fa6e51e1-7475-248c-aa3f-32406676d8de', '120000', '120100', '120109', '0.00', '38', '1', '0');
-INSERT INTO `i_users` VALUES ('5', '0', '', '###36d7f03832c89626da2ebe3ba313b845', '', '', '', '', null, '0', '2000-01-01', null, '127.0.0.1', '2017-05-09 10:43:20', '2017-05-08 16:45:21', '', '1', '15', '2', '0', '18815412178', 'df6e7ba2-a920-a00c-b28c-a185b458c178', '8431b7c9-5a98-c32c-8c2d-20979207cca1', '130000', '130500', '130582', '0.00', '0', '2', '200');
+INSERT INTO `i_users` VALUES ('1', '0', 'admin', '###1fccbd040eb4fc5a3a6440482c5f383e', 'admin', '', 'a526584713@qq.com', '', null, '0', '2000-01-01', null, '127.0.0.1', '2017-05-14 17:06:12', '2017-04-13 03:02:05', '', '1', '0', '1', '0', '', null, null, '0', '0', '0', '0.00', '0', '1', '0.00', '0.00');
+INSERT INTO `i_users` VALUES ('2', '0', '', '###1fccbd040eb4fc5a3a6440482c5f383e', '', '', '', '', null, '0', '2000-01-01', null, '127.0.0.1', '2017-05-09 20:21:26', '2017-04-18 21:29:44', '', '1', '9715', '2', '0', '18816978523', 'f1125bfc-a218-69ca-083b-d8af147450ef', null, '0', '0', '0', '0.00', '0', '1', '0.00', '0.00');
+INSERT INTO `i_users` VALUES ('3', '0', '', '###1fccbd040eb4fc5a3a6440482c5f383e', '', '', '', '', null, '0', '2000-01-01', null, '127.0.0.1', '2017-05-14 13:15:35', '2017-04-18 21:33:22', '', '1', '0', '2', '0', '18816978511', 'fa6e51e1-7475-248c-aa3f-32406676d8de', 'f1125bfc-a218-69ca-083b-d8af147450ef', '32767', '120100', '120103', '0.00', '19', '2', '0.00', '0.00');
+INSERT INTO `i_users` VALUES ('4', '0', '', '###1fccbd040eb4fc5a3a6440482c5f383e', '', '', '', '', null, '0', '2000-01-01', null, '127.0.0.1', '2017-05-12 21:29:23', '2017-05-08 16:44:47', '', '1', '0', '2', '0', '15412123212', '8431b7c9-5a98-c32c-8c2d-20979207cca1', 'fa6e51e1-7475-248c-aa3f-32406676d8de', '120000', '120100', '120109', '0.00', '39', '2', '0.00', '0.00');
+INSERT INTO `i_users` VALUES ('5', '0', '', '###1fccbd040eb4fc5a3a6440482c5f383e', '', '', '', '', null, '0', '2000-01-01', null, '127.0.0.1', '2017-05-14 13:12:51', '2017-05-08 16:45:21', '', '1', '3953', '2', '0', '18815412178', 'df6e7ba2-a920-a00c-b28c-a185b458c178', '8431b7c9-5a98-c32c-8c2d-20979207cca1', '130000', '130500', '130582', '0.00', '0', '2', '193.00', '0.00');
 
 -- ----------------------------
 -- Table structure for i_users_log

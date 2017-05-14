@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>商品列表</title>
+<meta charset="utf-8">
+<tc_include file="Public:css" />
+</head>
+<body ontouchstart>
+<!--主体-->
+<header class="wy-header">
+  <div class="wy-header-icon-back"><span></span></div>
+  <div class="wy-header-title">商品列表</div>
+</header>
+<div class="weui-content">
+  <div class="weui-navbar" style="position:fixed; top:44px; left:0; right:0; height:44px; background:#fff;">
+  <a class="weui-navbar__item proinfo-tab-tit font-14 weui-bar__item<if condition="$_GET['term_id'] eq 0 && !$_GET['name']">--on</if>" href="{:leuu('Portal/Index/good_list',array('term_id'=>0))}">全部商品</a>
+  <foreach name="termInfo" item="vo">
+  <a class="weui-navbar__item proinfo-tab-tit font-14 weui-bar__item<if condition="$_GET['term_id'] eq $vo['id']">--on</if>" href="{:leuu('Portal/Index/good_list',array('term_id'=>$vo['id']))}">{$vo.name}</a>
+  
+  </foreach>
+  <if condition="$_GET['name']">
+  <a class="weui-navbar__item proinfo-tab-tit font-14 weui-bar__item--on" href="{:leuu('Portal/Index/good_list',array('term_id'=>$vo['id']))}">搜索：{$_GET['name']}</a>
+  </if>
+  </div>
+  <div class="wy-Module" style="margin-top:50px">
+    <div class="wy-Module-con">
+      <ul class="wy-pro-list clear">
+      <foreach name="result" item="vo">
+      <php>
+                    $info = json_decode($vo['photos_url'],true);
+                    </php>
+        <li> <a href="{:leuu('Portal/Index/goodsInfo',array('id'=>$vo['id']))}">
+          <div class="proimg"><if condition="$info[0]"><img src="{:sp_get_image_preview_url($info[0])}" /></if></div>
+          <div class="protxt">
+            <div class="name">{$vo.name}</div>
+            <div class="wy-pro-pri">0元+{$vo.score} 积分</div>
+          </div>
+          </a> </li>
+          </foreach>
+      </ul>
+    </div>
+  </div>
+</div>
+<tc_include file="Public:footer" />
+<tc_include file="Public:js" />
+</body>
+</html>

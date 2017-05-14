@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>提现操作</title>
+<meta charset="utf-8">
+<tc_include file="Public:css" />
+</head>
+<body ontouchstart>
+<header class="wy-header" style="position:fixed; top:0; left:0; right:0; z-index:200;">
+  <div class="wy-header-icon-back"><span></span></div>
+  <div class="wy-header-title">提现操作-兑换积分</div>
+</header>
+<div class='weui-content'>
+  <div class="weui-tab">
+    <div class="weui-navbar" style="position:fixed; top:44px; left:0; right:0; height:44px; background:#fff;">
+     
+      
+      <a class="weui-navbar__item proinfo-tab-tit font-14 weui-bar__item" href="{:leuu('User/Other/getGold')}">金币提现</a>
+      <a class="weui-navbar__item proinfo-tab-tit font-14 weui-bar__item--on" href="{:leuu('User/Other/index')}">返现积分提现</a>
+     
+    </div>
+    <div class="weui-tab__bd proinfo-tab-con" style="padding-top:87px;">
+    <input type="number" name="score" id="score" class="ydy_jf_input fl" placeholder="2积分=1人民币" style="width:42%;    height: 43px;
+    line-height: 43px;
+    font-size: 14px; border:solid #dedcdd 1px; margin-top:10px; margin-left:10px">
+    <span style="float:left; margin-top:20px; margin-left:5px">=</span><input type="number" name="rmb" id="rmb" class="ydy_jf_input fl" placeholder="人民币" style="width:42%;    height: 43px;
+    line-height: 43px;
+    font-size: 14px; border:solid #dedcdd 1px; margin-top:10px; margin-left:5px">
+    
+    </div>
+    
+    <div class="weui-cell__bd" style="width:90%; float:left; text-align:right; padding-right:10%">
+    <p>可提现积分：{$_SESSION['user']['can_monery']}</p>
+    </div>
+  </div>
+  <div class="weui-cell wy-address-edit">
+    <div class="weui-cell__hd"><label for="" class="weui-label wy-lab">提现银行</label></div>
+    <div class="weui-cell__bd">
+    <input class="weui-input" id="bank" type="text" value="请选择提现银行" readonly="" data-values="">
+    </div>
+    <div class="weui-cell__ft"><!--<i class="weui-icon-warn"></i>--></div>
+  </div>
+  <div class="weui-btn-area" style=" margin-top:200px"><a href="javascript:;" class="weui-btn weui-btn_warn" onclick="jf_tixian()">立即兑换</a></div>
+</div>
+<div class="ydy_jf_wenzi">
+					&nbsp;&nbsp;&nbsp;兑换说明：
+				</div>
+                <div class="ydy_jf_wenzi ydy_jf_wenzi2 ydy_jf_wenzi3">
+					&nbsp;&nbsp;&nbsp;两积分兑换一人民币。	
+				</div>
+<tc_include file="Public:footer" />
+<tc_include file="Public:js" />
+<script>
+$("#bank").select({
+	title:"请选择银行名称",
+	items: [{$tex}]
+})
+</script>
+</body>
+</html>

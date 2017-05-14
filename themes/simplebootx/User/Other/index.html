@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>充值管理</title>
+<meta charset="utf-8">
+<tc_include file="Public:css" />
+</head>
+<body ontouchstart>
+<header class="wy-header" style="position:fixed; top:0; left:0; right:0; z-index:200;">
+  <div class="wy-header-icon-back"><span></span></div>
+  <div class="wy-header-title">充值管理-兑换积分</div>
+</header>
+<div class='weui-content'>
+  <div class="weui-tab">
+    <div class="weui-navbar" style="position:fixed; top:44px; left:0; right:0; height:44px; background:#fff;">
+     
+      
+      <a class="weui-navbar__item proinfo-tab-tit font-14 weui-bar__item" href="{:leuu('User/Other/getGold')}">充值金币</a>
+      <a class="weui-navbar__item proinfo-tab-tit font-14 weui-bar__item--on" href="{:leuu('User/Other/index')}">兑换积分</a>
+     
+    </div>
+    <div class="weui-tab__bd proinfo-tab-con" style="padding-top:87px;">
+    <input type="number" name="user_money" id="user_gold" class="ydy_jf_input fl" placeholder="1金豆=2积分" style="width:42%;    height: 43px;
+    line-height: 43px;
+    font-size: 14px; border:solid #dedcdd 1px; margin-top:10px; margin-left:10px">
+    <span style="float:left; margin-top:20px; margin-left:5px">=</span><input type="number" name="user_money" id="user_score" class="ydy_jf_input fl" placeholder="积分" style="width:42%;    height: 43px;
+    line-height: 43px;
+    font-size: 14px; border:solid #dedcdd 1px; margin-top:10px; margin-left:5px">
+    
+    </div>
+    <div class="weui-cell__bd" style="width:90%; float:left; text-align:right; padding-right:10%">
+    <p>金币余额：{$_SESSION['user']['gold']}</p>
+    </div>
+  </div>
+  <div class="weui-btn-area" style=" margin-top:200px"><a href="javascript:;" class="weui-btn weui-btn_warn" onclick="gold_get_jf()">立即兑换</a></div>
+</div>
+<div class="ydy_jf_wenzi">
+					&nbsp;&nbsp;&nbsp;兑换说明：
+				</div>
+                <div class="ydy_jf_wenzi ydy_jf_wenzi2">
+					&nbsp;&nbsp;&nbsp;积分可在商城进行商品兑换；
+				</div>
+                <div class="ydy_jf_wenzi ydy_jf_wenzi2 ydy_jf_wenzi3">
+					&nbsp;&nbsp;&nbsp;一个金币可以兑换两积分。	
+				</div>
+<tc_include file="Public:footer" />
+<tc_include file="Public:js" />
+</body>
+</html>

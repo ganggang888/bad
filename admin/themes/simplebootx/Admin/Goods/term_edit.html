@@ -37,6 +37,16 @@
 						<span class="form-required">*</span>
 					</div>
 				</div>
+                <div class="control-group">
+					<label class="control-label">首页展示</label>
+					<div class="controls">
+						<select name="is_index">
+                        <option value="1" <if condition="$data['is_index'] eq 1">selected</if>>是</option>
+                        <option value="0" <if condition="$data['is_index'] eq 0">selected</if>>否</option>
+                        </select>
+						<span class="form-required">*</span>
+					</div>
+				</div>
 				<input type="hidden" value="{$data.id}" name="id">
 				
 			</fieldset>

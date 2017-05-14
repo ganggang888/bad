@@ -12,7 +12,7 @@ class GoodsController extends AdminbaseController {
 
     protected $term = NULL;
     protected $goods = NULL;
-    protected $termField = ['id', 'name', 'parentid', 'status'];
+    protected $termField = ['id', 'name', 'parentid', 'status','is_index'];
 
     protected $attribute = array(
         array('name'=>'吃','son'=>array(array('name'=>'规格','info'=>'数量'))),
@@ -33,7 +33,7 @@ class GoodsController extends AdminbaseController {
         $tree->icon = array('&nbsp;&nbsp;&nbsp;│ ', '&nbsp;&nbsp;&nbsp;├─ ', '&nbsp;&nbsp;&nbsp;└─ ');
         $tree->nbsp = '&nbsp;&nbsp;&nbsp;';
         foreach ($result as $r) {
-            $r['str_manage'] = '<a href="' . U('Goods/term_add', array('parentid' => $r['id'])) . '">添加子分类</a> | <a href="' . U('Goods/term_edit', array('id' => $r['id'])) . '">修改</a> | <a href="' . U('Goods/term_delete', array('id' => $r['id'])) . '">删除</a>';
+            $r['str_manage'] = '<a href="' . U('Goods/term_add', array('parentid' => $r['id'])) . '">添加子分类</a> | <a href="' . U('Goods/term_edit', array('id' => $r['id'])) . '">修改</a> | <a class="js-ajax-delete" href="' . U('Goods/term_delete', array('id' => $r['id'])) . '">删除</a>';
             $url = U('portal/list/index', array('id' => $r['term_id']));
             $r['url'] = $url;
             $r['id'] = $r['id'];
@@ -132,7 +132,7 @@ class GoodsController extends AdminbaseController {
 
     public function term_delete() {
         $id = I('get.id');
-        $id ? $this->term->where("id=%d", array($id))->save(array('is_delete' => 1)) : $this->error('参数出错');
+        $this->term->where("id=%d", array($id))->delete() ? $this->success('删除成功',U('Goods/term_index')) : $this->error('参数出错');
     }
     
 

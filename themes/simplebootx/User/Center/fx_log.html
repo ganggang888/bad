@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>返现收益记录</title>
+<meta charset="utf-8">
+<tc_include file="Public:css" />
+</head>
+<body ontouchstart>
+<!--主体-->
+<header class="wy-header">
+  <div class="wy-header-icon-back"><span></span></div>
+  <div class="wy-header-title">返现收益记录</div>
+</header>
+<div class="weui-content">
+  <div class="weui-cells wy-news-list">
+    
+     <foreach name="result" item="vo">
+     <a class="weui-cell weui-cell">
+      <div class="weui-cell__bd">
+        <p>你的<if condition="$vo['level'] eq 1">下级 <elseif condition="$vo['level'] eq 2" />下下级</if>购买商品所得：{$vo.score}</p>
+        <p>
+        {:getSomeMessage('users',$vo['pid'],'mobile')}
+        <if condition="$vo['status'] eq 1">
+        推荐奖
+        <elseif condition="$vo['status'] eq 2" />
+        抽佣
+        <elseif condition="$vo['status'] eq 3" />
+        见点奖
+        </if> 
+        <if condition="$vo['times'] eq 1">
+        (首单下单)
+        </if>
+        </p>
+      </div>
+      <div class="weui-cell__ft">{:date("Y-m-d",strtotime($vo['add_time']))}</div>
+     </a>
+     </foreach>
+  </div>
+  <div class="weui-cell__bd" style="width:90%; float:left; text-align:right; padding-right:10%">
+    <p>可提现积分：{$_SESSION['user']['can_monery']}</p>
+    </div>
+  <div class="weui-btn-area" style=" margin-top:90px"><a href="{:leuu('User/Other/tixian')}" class="weui-btn weui-btn_warn">申请提现</a></div>
+</div>
+<div class="ydy_jf_wenzi">
+					&nbsp;&nbsp;&nbsp;提现说明：
+				</div>
+                <div class="ydy_jf_wenzi ydy_jf_wenzi2">
+					&nbsp;&nbsp;&nbsp;返现收益超过2000即可提现；
+				</div>
+                <div class="ydy_jf_wenzi ydy_jf_wenzi2 ydy_jf_wenzi3">
+					&nbsp;&nbsp;&nbsp;两个返现积分兑换一人民币。	
+				</div>
+<tc_include file="Public:footer" />
+<tc_include file="Public:js" />
+</body>
+</html>

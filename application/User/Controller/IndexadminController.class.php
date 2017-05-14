@@ -10,10 +10,14 @@ class IndexadminController extends AdminbaseController {
         $where=array();
         $request=I('request.');
         $where ['user_type'] = 2;
+
         if(!empty($request['uid'])){
             $where['id']=intval($request['uid']);
         }
         
+        if (!empty($request['level'])) {
+            $where['level'] = $request['level'];
+        }
         if(!empty($request['keyword'])){
             $keyword=$request['keyword'];
             $where['mobile']  = array('like', "%$keyword%");
@@ -71,5 +75,69 @@ class IndexadminController extends AdminbaseController {
     	} else {
     		$this->error('数据传入失败！');
     	}
+    }
+
+    //金币兑换积分记录
+    public function jb_dh_jf()
+    {
+        $begin = I('get.begin');
+        $end = I('get.end');
+        $mobile = I('get.mobile');
+        $this->assign(compact('begin','end'));
+        $begin ? $begin = $begin." 00:00:00" : '';
+        $end ? $end = $end." 23:59:59" : '';
+
+        $where = "WHERE a.id > 0 ";
+        $mobile ? $where .= " AND b.mobile LIKE '%$mobile%'" : '';
+        if ($begin && $end) {
+            $where .= " AND a.add_time >= '$begin' AND a.add_time < '$end'";
+        } elseif ($begin && !$end) {
+            $where .= " AND a.add_time >= '$begin'";
+        } elseif (!$begin && $end) {
+            $where .= " AND a.add_time < '$end'";
+        }
+
+        $model = M();
+        $num = $model->query("SELECT COUNT(*) AS num FROM i_duihuan_log a LEFT JOIN i_users b ON a.uid = b.id $where ORDER BY a.id DESC");
+        $count = $num[0]['num'];
+        $page = $this->page($count,20);
+        $result = $model->query("SELECT a.id,a.uid,a.gold,a.score,a.add_time,b.mobile FROM i_duihuan_log a LEFT JOIN i_users b ON a.uid = b.id $where ORDER BY a.id DESC LIMIT ".$page->firstRow.",".$page->listRows);
+        $this->assign(compact('page','result','mobile'));
+        $this->display();
+    }
+
+    //用户提现记录
+    public function tixian_log()
+    {
+        $begin = I('get.begin');
+        $end = I('get.end');
+        $mobile = I('get.mobile');
+        $this->assign(compact('begin','end'));
+        $begin ? $begin = $begin." 00:00:00" : '';
+        $end ? $end = $end." 23:59:59" : '';
+        $where = "WHERE a.id > 0 ";
+        $mobile ? $where .= " AND b.mobile LIKE '%$mobile%'" : '';
+        if ($begin && $end) {
+            $where .= " AND a.add_time >= '$begin' AND a.add_time < '$end'";
+        } elseif ($begin && !$end) {
+            $where .= " AND a.add_time >= '$begin'";
+        } elseif (!$begin && $end) {
+            $where .= " AND a.add_time < '$end'";
+        }
+        $model = M();
+        $num = $model->query("SELECT COUNT(*) AS num FROM i_tixian a LEFT JOIN i_users b ON a.uid = b.id $where");
+        $count = $num[0]['num'];
+        $page = $this->page($count,20);
+        $result = $model->query("SELECT a.id,a.money,a.status,a.type,a.bank_id,a.add_time,b.mobile FROM i_tixian a LEFT JOIN i_users b ON a.uid = b.id $where ORDER BY a.id DESC LIMIT ".$page->firstRow.",".$page->listRows);
+        $this->assign(compact('page','mobile','result'));
+        $this->display();
+    }
+
+    //修改用户提现记录
+    public function change_tixian_status()
+    {
+        $id = I('get.id');
+        $status = I('get.status');
+        M('tixian')->where(array('id'=>$id))->save(array('status'=>$status)) ? $this->success('操作成功') : $this->error('操作失败');
     }
 }

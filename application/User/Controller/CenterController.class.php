@@ -50,6 +50,12 @@ class CenterController extends MemberbaseController {
       //反现记录
       public function fx_log()
       {
+         $uid = get_current_userid();
+         $where = "uid = $uid AND level > 0 AND action = 1 AND pid != 0";
+         $result = M('ticheng_log')->where($where)->order(array('add_time'=>"desc"))->select();
+         $this->assign(compact('result'));
+         //var_dump($result);
+         $this->display();
          
       }
 
@@ -535,9 +541,9 @@ class CenterController extends MemberbaseController {
                   $level_level = intval($jf * $dataInfo['level_level']);
                   $updateGrand = "UPDATE i_users SET can_monery = can_monery + $jiandian WHERE id = '$grandfather[id]'";
                   
-                  $insertGrandLog = "INSERT INTO i_ticheng_log (uid,level,pid,score,gid,add_time) VALUES ('$parent[id]',2,'$user[id]',$jiandian,$good_id,NOW())";
+                  $insertGrandLog = "INSERT INTO i_ticheng_log (uid,level,pid,score,gid,add_time,status) VALUES ('$grandfather[id]',2,'$user[id]',$jiandian,$good_id,NOW(),2)";
                   $updateGrandYongjin = " UPDATE i_users SET can_monery = can_monery + $level_level WHERE id = '$grandfather[id]'";
-                  $insertGrandYongjinLog = "INSERT INTO i_ticheng_log (uid,level,pid,score,gid,add_time) VALUES ('$parent[id]',2,'$user[id]',$level_level,$good_id,NOW())";
+                  $insertGrandYongjinLog = "INSERT INTO i_ticheng_log (uid,level,pid,score,gid,add_time,status) VALUES ('$grandfather[id]',2,'$user[id]',$level_level,$good_id,NOW(),3)";
                }
             }
          }
@@ -578,6 +584,7 @@ class CenterController extends MemberbaseController {
                $model->commit();
                $success =1;
             } else {
+               $errors = 1;
                $model->rollback();
             }
             //没有上上级或者上上级不为黄金会员
@@ -587,12 +594,13 @@ class CenterController extends MemberbaseController {
             $three = $model->execute($insert_jiandian);
             $four = $model->execute($insert_jiandian_log);
             $five = $model->execute($selfChange);
-            $seven = $model->execute($insertOrder);
-            $eight = $model->execute($insertSelfLog);
-            if ($one && $two && $three && $four && $five && $six && $seven && $eight) {
+            $six = $model->execute($insertOrder);
+            $seven = $model->execute($insertSelfLog);
+            if ($one && $two && $three && $four && $five && $six && $seven) {
                $model->commit();
                $success = 1;
             } else {
+               $errors = 2;
                $model->rollback();
             }
 
@@ -611,6 +619,7 @@ class CenterController extends MemberbaseController {
                $model->commit();
                $success = 1;
             } else {
+               $errors = 3;
                $model->rollback();
             }
          }  elseif ($updateParent && $insertParentLog && $selfChange && $insertOrder && $insertSelfLog) {
@@ -623,6 +632,7 @@ class CenterController extends MemberbaseController {
                   $model->commit();
                   $success = 1;
                } else {
+                  $errors = 4;
                   $model->rollback();
                }
             } elseif ($selfChange && $insertOrder && $insertSelfLog) {
@@ -633,6 +643,7 @@ class CenterController extends MemberbaseController {
                   $model->commit();
                   $success = 1;
                } else {
+                  $errors = 5;
                   $model->rollback();
                }
             }
@@ -671,7 +682,7 @@ class CenterController extends MemberbaseController {
                M('users_log')->add(array('uid'=>get_current_userid(),'old_level'=>$user['level'],'new_level'=>4,'status'=>3,'add_time'=>date("Y-m-d H:i:s")));
             }
          }
-         $success ? $this->success('兑换成功') : $this->error('兑换失败');
+         $success ? $this->success('兑换成功') : $this->error('兑换失败'.$errors);
          
       }
 

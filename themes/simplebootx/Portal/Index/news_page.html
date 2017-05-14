@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>新闻详情</title>
+<meta charset="utf-8">
+<tc_include file="Public:css" />
+</head>
+<body ontouchstart>
+<!--主体-->
+<header class="wy-header">
+  <div class="wy-header-icon-back"><span></span></div>
+  <div class="wy-header-title">新闻详情</div>
+</header>
+<div class="weui-content">
+  <article class="weui-article">
+    <h1>{$article.post_title}</h1>
+    <h3 class="wy-news-time">{:date("Y-m-d",strtotime($article['post_modified']))}</h3>
+    <section class="wy-news-info">
+      {$article.post_content}
+    </section>
+  </article>
+  
+</div>
+<tc_include file="Public:footer" />
+<tc_include file="Public:js" />
+</body>
+</html>

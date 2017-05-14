@@ -241,7 +241,6 @@ hello;
         $where['mobile']=I('post.username');
         $password=I('post.password');
         $result = $users_model->where($where)->find();
-        
         if(!empty($result)){
             if(sp_compare_password($password, $result['user_pass'])){
                 session('user',$result);

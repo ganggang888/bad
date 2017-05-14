@@ -20,7 +20,8 @@
         <span>搜索您想要的商品</span>
       </label>
     </form>
-    <a href="javascript:" class="weui-search-bar__cancel-btn" id="searchCancel">取消</a>
+    <a href="javascript:" class="weui-search-bar__cancel-btn" id="searchCancel" onclick="var name = $('#searchInput').val();
+	window.location.href='/index.php?g=Portal&m=Index&a=good_list&name='+name;"style="display:block">搜索</a>
   </div>
 </header>
 <!--主体-->
@@ -39,23 +40,38 @@ $banner=sp_getslide("banner");
     <div class="swiper-pagination"></div>
   </div>
   <!--图标分类-->
-  <div class="weui-flex wy-iconlist-box">
-    <div class="weui-flex__item"><a href="pro_list.html" class="wy-links-iconlist"><div class="img"><img src="__TMPL__Public/images/icon-link1.png"></div><p>精选推荐</p></a></div>
-    <div class="weui-flex__item"><a href="pro_list.html" class="wy-links-iconlist"><div class="img"><img src="__TMPL__Public/images/icon-link2.png"></div><p>酒水专场</p></a></div>
-    <div class="weui-flex__item"><a href="all_orders.html" class="wy-links-iconlist"><div class="img"><img src="__TMPL__Public/images/icon-link3.png"></div><p>订单管理</p></a></div>
-    <div class="weui-flex__item"><a href="Settled_in.html" class="wy-links-iconlist"><div class="img"><img src="__TMPL__Public/images/icon-link4.png"></div><p>商家入驻</p></a></div>
+  <div class="weui-grids" style="background:#FFF">
+  <foreach name="termInfo" item="vo">
+  <a href="{:leuu('Portal/Index/good_list',array('term_id'=>$vo['id']))}" class="weui-grid js_grid">
+        
+        <p class="weui-grid__label">
+          {$vo.name}
+        </p>
+      </a>
+  </foreach>
+  <a href="{:leuu('User/Center/orderList',array('status'=>'all'))}" class="weui-grid js_grid">
+        
+        <p class="weui-grid__label">
+          我的订单列表
+        </p>
+      </a>
   </div>
   <!--新闻切换-->
   <div class="wy-ind-news">
     <i class="news-icon-laba"></i>
     <div class="swiper-container swiper-news">
       <div class="swiper-wrapper">
-        <div class="swiper-slide"><a href="news_info.html">热烈祝贺伟义商城成功热烈祝贺伟义商城成功上线热烈祝贺伟义商城成功上线上线</a></div>
-        <div class="swiper-slide"><a href="news_info.html">蓝之蓝股份成公司上市</a></div>
+      <php>
+      $newInfo=sp_sql_posts("cid:4;field:post_title,post_excerpt,object_id,term_id,smeta;order:post_hits desc;limit:100;"); 
+      </php>
+      <foreach name="newInfo" item="vo">
+      <div class="swiper-slide"><a href="{:leuu('Portal/Index/news_page',array('id'=>$vo['object_id'],'cid'=>$vo['term_id']))}">{$vo.post_title}</a></div>
+      </foreach>
+        
       </div>
       <div class="swiper-pagination"></div>
     </div>
-    <a href="news_list.html" class="newsmore"><i class="news-icon-more"></i></a>
+    <a href="{:leuu('Portal/Index/news_list')}" class="newsmore"><i class="news-icon-more"></i></a>
   </div>
   <!--精选推荐-->
   <div class="wy-Module">
@@ -111,13 +127,13 @@ $banner=sp_getslide("banner");
               <php>
               $attribute = json_decode($vo['attribute'],true);
               </php>
-              <div class="wy-pro-pri">¥<span>{$attribute[0]['selling_price']}</span></div>
+              <div class="wy-pro-pri">0元+{$vo.score} 积分</div>
             </div>
           </a>
         </li>
         </foreach>
       </ul>
-      <div class="morelinks"><a href="pro_list.html">查看更多 >></a></div>
+      <div class="morelinks"><a href="{:leuu('Portal/Index/good_list')}">查看更多 >></a></div>
     </div>
   </div>
 </div>
@@ -133,6 +149,7 @@ $banner=sp_getslide("banner");
 </script> 
 <script src="__TMPL__Public/js/jquery-weui.js"></script>
 <script src="__TMPL__Public/js/swiper.js"></script>
+
 <script>
 	$(".swiper-banner").swiper({
         loop: true,

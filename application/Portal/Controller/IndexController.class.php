@@ -39,9 +39,10 @@ class IndexController extends HomebaseController {
     }
 	public function index() {
         $a = call_user_func_array('getSomeMessage',array('users','2','mobile'));
-        var_dump($a);
-        var_dump(sp_password(123456));
+        /*var_dump($a);
+        var_dump(sp_password(123456));*/
     	//获取分类
+        $termInfo = M('goods_term')->where(array('is_delete'=>0,'is_index'=>1))->select();
         $id = I("get.term_id", 0, 'intval');
         $data = $this->term->where(array("id" => $id))->field($this->termField)->find();
         $tree = new \Tree();
@@ -83,7 +84,7 @@ class IndexController extends HomebaseController {
         }
 
         $join = "".C('DB_PREFIX').'goods_term as b on a.term_id = b.id';
-        $field = ['a.name','b.name AS term_name','a.photos_url','a.cost_price','a.selling_price','a.market_value','a.unit','a.stock','a.status','a.label','a.listorder','a.term_id','a.attribute','a.id','a.indexs','a.member','a.add_time'];
+        $field = ['a.name','b.name AS term_name','a.photos_url','a.cost_price','a.selling_price','a.market_value','a.unit','a.stock','a.status','a.label','a.listorder','a.term_id','a.attribute','a.id','a.indexs','a.member','a.add_time','a.score'];
         $count = $this->goods->alias('a')->join($join,'LEFT')->where($where)->count();
         $page = $this->page($count,100);
         $result = $this->goods->alias('a')->join($join,'LEFT')->where($where)->field($field)->order(['listorder'=>asc])->limit($page->firsRow,$page->listRows)->select();
@@ -95,7 +96,8 @@ class IndexController extends HomebaseController {
         		$two[] = $vo;
         	}
         },$result);
-        $this->assign(compact('page','result','tree','one','two'));
+        $index = 1;
+        $this->assign(compact('page','result','tree','one','two','termInfo','index'));
         $this->display();
     }
 
@@ -255,6 +257,106 @@ class IndexController extends HomebaseController {
     	var_dump($j);
     }
 
+    //订单列表
+    public function good_list()
+    {
+        //获取分类
+        $id = I("get.term_id", 0, 'intval');
+        $termInfo = M('goods_term')->where(array('is_delete'=>0))->select();
+        $data = $this->term->where(array("id" => $id))->field($this->termField)->find();
+        $tree = new \Tree();
+        $tree->icon = array('&nbsp;&nbsp;&nbsp;│ ', '&nbsp;&nbsp;&nbsp;├─ ', '&nbsp;&nbsp;&nbsp;└─ ');
+        $tree->nbsp = '&nbsp;&nbsp;&nbsp;';
+        $terms = $this->term->where(array("id" => array("NEQ", $id)))->order(array("id" => "asc"))->select();
+
+        $new_terms = array();
+        foreach ($terms as $r) {
+            $r['selected'] = $data['parentid'] == $r['id'] ? "selected" : "";
+            $new_terms[] = $r;
+        }
+
+        $tree->init($new_terms);
+        $tree_tpl = "<option value='\$id' \$selected>\$spacer\$name</option>";
+        $tree = $tree->get_tree(0, $tree_tpl);
+
+        $name = I('get.name'); //名称
+        $term_id = I('get.term_id'); //分类ID
+        $begin = I('get.begin'); //开始时间
+        $end = I('get.end');//结束时间
+        $status = I('get.status'); //状态
+        $this->assign(compact('name','term_id','begin','end','status'));
+        $begin ? $begin = $begin." 00:00:00" : '';
+        $end ? $end = $end ." 23:59:59" : '';
+        $term_id ? $where['a.term_id'] = $term_id : '';
+        $name ? $where['a.name'] = array('like',"%$name%") : '';
+        $where['a.is_delete'] = 0;
+        $where['b.is_delete'] = 0;
+        if ($begin && $end) {
+            $where['a.add_time'] = array('EGT',$begin);
+            $where['a.add_time'] = array('LT',$end);
+        } elseif ($begin && !$end) {
+            $where['a.add_time'] = array('EGT',$begin);
+        } elseif (!$begin && $end) {
+            $where['a.add_time'] = array('LT',$end);
+        }
+
+        $join = "".C('DB_PREFIX').'goods_term as b on a.term_id = b.id';
+        $field = ['a.name','b.name AS term_name','a.score','a.photos_url','a.cost_price','a.attribute','a.selling_price','a.market_value','a.unit','a.stock','a.status','a.label','a.listorder','a.term_id','a.huangjin','a.id','a.indexs','a.member','a.add_time'];
+        $count = $this->goods->alias('a')->join($join,'LEFT')->where($where)->count();
+        $page = $this->page($count,2000);
+        $result = $this->goods->alias('a')->join($join,'LEFT')->where($where)->field($field)->order(['listorder'=>asc])->limit($page->firsRow,$page->listRows)->select();
+        //查找出是否所有库存为0
+        $result = array_filter($result,function($v){
+            $check = json_decode($v['attribute'],true);
+            $find = array_filter($check,function($f){return $f['stock'] == 0;});
+            $find ? $v['status'] = 0 : $v['status'] = 1;
+            return 1;
+        });
+        //var_dump($result);
+        $attributes = $this->attribute;
+        $shangpin = 1;
+        $this->assign(compact('page','result','tree','attributes','termInfo','shangpin'));
+        $this->display();
+    }
+
+    //新闻列表页
+    public function news_list()
+    {
+        $this->display();
+    }
+
+    //新闻详细页
+    public function news_page()
+    {
+        $article_id = I('get.id');
+
+        $posts_model=M("Posts");
+        
+        $article=$posts_model
+        ->alias("a")
+        ->field('a.*,c.user_login,c.user_nicename,b.term_id')
+        ->join("__TERM_RELATIONSHIPS__ b ON a.id = b.object_id")
+        ->join("__USERS__ c ON a.post_author = c.id")
+        ->where(array('a.id'=>$article_id))
+        ->find();
+        $this->assign(compact('article'));
+        $this->display();
+    }
+
+    //每日收益
+    public function shouyi_licai()
+    {
+        //读取系统配置信息
+        $data = M('data')->where(array('id'=>1))->getField('data');
+        $data = json_decode($data,true);
+        $result = M('users')->where(array('user_type'=>2))->order(array('level'=>'desc'))->select();
+        foreach ($result as $vo) {
+            //达到金币可提现情况
+            if ($vo['gold'] > $data['jinbi']) {
+                
+            } 
+        }
+    }
 
 }
 

@@ -1,0 +1,148 @@
+<admintpl file="header" />
+</head>
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="javascript:;">用户提现记录</a></li>
+		</ul>
+        <form class="well form-search">
+		
+			时间：
+			<input type="text" id="begin" name="start_time" class="js-date" value="{$begin|default=''}" style="width: 120px;" autocomplete="off" placeholder="开始时间">-
+			<input type="text" class="js-date" name="end_time" value="{$end|default=''}" style="width: 120px;" autocomplete="off" id="end" placeholder="结束时间"> &nbsp; &nbsp;
+			用户名： 
+			<input type="text" name="mobile" id="mobile" style="width: 200px;" value="{$mobile|default=''}" placeholder="请输入用户名...">
+			<a class="btn " href="javascript:;" onClick="doSearch()">搜索</a>
+		</form>
+        <script>
+        function doSearch()
+		{
+			var begin = $("#begin").val();
+			var end = $("#end").val();
+			var mobile = $("#mobile").val();
+			window.location.href='index.php?g=User&m=Indexadmin&a=jb_dh_jf&begin='+begin+'&end='+end+'&mobile='+mobile;
+		}
+        </script>
+		<form class="js-ajax-form" action="" method="post">
+			
+			<table class="table table-hover table-bordered table-list">
+				<thead>
+					<tr>
+						<th width="60">用户名</th>
+						<th>提现金额</th>
+                        <th>状态</th>
+                        <th>类别</th>
+                        <th>提现银行卡信息</th>
+                        <th>提交时间</th>
+                        <th>操作</th>
+					</tr>
+				</thead>
+				<foreach name="result" item="vo">
+				<tr>
+					<td>{$vo.mobile}</td>
+					<td><b>{$vo.money}</b></td>
+                    <td><b><if condition="$vo['status'] eq 1">处理中
+         <elseif condition="$vo['status'] eq 2" />
+         成功
+         <elseif condition="$vo['status'] eq 3" />
+         驳回
+        </if></b></td>
+        <td>
+        <if condition="$vo['type'] eq 1">
+        
+        积分提现
+        <elseif condition="$vo['type'] eq 2" />
+        金币提现
+        </if>
+        </td>
+                    <td>姓名：{:getSomeMessage('bank',$vo['bank_id'],'name')}<br/>
+                    银行卡名称：{:getSomeMessage('bank',$vo['bank_id'],'bank_name')}<br/>
+                    卡号：{:getSomeMessage('bank',$vo['bank_id'],'card')}
+                    </td>
+                    <td>
+                    {$vo.add_time}
+                    </td>
+                    <th>
+                    <a href="{:U('User/Indexadmin/change_tixian_status',array('status'=>2,'id'=>$vo['id']))}" class="js-ajax-dialog-btn" data-msg="确定打款成功？">已成功</a> | 
+                   <a href="{:U('User/Indexadmin/change_tixian_status',array('status'=>3,'id'=>$vo['id']))}" class="js-ajax-dialog-btn" data-msg="确定驳回？">驳回</a> 
+                    
+                    </th>
+				  </tr>
+				</foreach>
+				
+			</table>
+			
+		  <div class="pagination">{$page->show('Admin')}</div>
+		</form>
+	</div>
+	<script src="__PUBLIC__/js/common.js"></script>
+	<script>
+		function refersh_window() {
+			var refersh_time = getCookie('refersh_time');
+			if (refersh_time == 1) {
+				window.location = "{:U('AdminPost/index',$formget)}";
+			}
+		}
+		setInterval(function() {
+			refersh_window();
+		}, 2000);
+		$(function() {
+			setCookie("refersh_time", 0);
+			Wind.use('ajaxForm', 'artDialog', 'iframeTools', function() {
+				//批量复制
+				$('.js-articles-copy').click(function(e) {
+					var ids=[];
+					$("input[name='ids[]']").each(function() {
+						if ($(this).is(':checked')) {
+							ids.push($(this).val());
+						}
+					});
+					
+					if (ids.length == 0) {
+						art.dialog.through({
+							id : 'error',
+							icon : 'error',
+							content : '您没有勾选信息，无法进行操作！',
+							cancelVal : '关闭',
+							cancel : true
+						});
+						return false;
+					}
+					
+					ids= ids.join(',');
+					art.dialog.open("__ROOT__/index.php?g=portal&m=AdminPost&a=copy&ids="+ ids, {
+						title : "批量复制",
+						width : "300px"
+					});
+				});
+				//批量移动
+				$('.js-articles-move').click(function(e) {
+					var ids=[];
+					$("input[name='ids[]']").each(function() {
+						if ($(this).is(':checked')) {
+							ids.push($(this).val());
+						}
+					});
+					
+					if (ids.length == 0) {
+						art.dialog.through({
+							id : 'error',
+							icon : 'error',
+							content : '您没有勾选信息，无法进行操作！',
+							cancelVal : '关闭',
+							cancel : true
+						});
+						return false;
+					}
+					
+					ids= ids.join(',');
+					art.dialog.open("__ROOT__/index.php?g=portal&m=AdminPost&a=move&old_term_id={$term.term_id|default=0}&ids="+ ids, {
+						title : "批量移动",
+						width : "300px"
+					});
+				});
+			});
+		});
+	</script>
+</body>
+</html>

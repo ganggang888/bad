@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>积分消耗记录</title>
+<title>积分记录</title>
 <meta charset="utf-8">
 <tc_include file="Public:css" />
 </head>
@@ -9,10 +9,17 @@
 <!--主体-->
 <header class="wy-header">
   <div class="wy-header-icon-back"><span></span></div>
-  <div class="wy-header-title">积分消耗记录</div>
+  <div class="wy-header-title">积分变化记录</div>
 </header>
 <div class="weui-content">
-  <div class="weui-cells wy-news-list">
+<div class="weui-navbar" style="position:fixed; top:44px; left:0; right:0; height:44px; background:#fff;">
+     <a class="weui-navbar__item proinfo-tab-tit font-14 weui-bar__item" href="{:leuu('User/Center/chongzhima_history')}">充值卡兑换</a>
+      
+      <a class="weui-navbar__item proinfo-tab-tit font-14 weui-bar__item" href="{:leuu('User/Other/getScoreGoldHis')}">兑换记录</a>
+      <a class="weui-navbar__item proinfo-tab-tit font-14 weui-bar__item--on" href="{:leuu('User/Center/jf_change_status')}">消耗记录</a>
+     
+    </div>
+  <div class="weui-cells wy-news-list" style="padding-top:30px">
     
      <foreach name="result" item="vo">
      <a class="weui-cell weui-cell">

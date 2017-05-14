@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>提现记录</title>
+<meta charset="utf-8">
+<tc_include file="Public:css" />
+</head>
+<body ontouchstart>
+<!--主体-->
+<header class="wy-header">
+  <div class="wy-header-icon-back"><span></span></div>
+  <div class="wy-header-title">提现记录</div>
+</header>
+<div class="weui-content">
+<div class="weui-navbar" style="position:fixed; top:44px; left:0; right:0; height:44px; background:#fff;">
+     <a class="weui-navbar__item proinfo-tab-tit font-14 weui-bar__item<if condition="$_GET['status'] eq 0">--on</if>" href="{:leuu('User/Other/tixian_history')}">全部</a>
+      
+      <a class="weui-navbar__item proinfo-tab-tit font-14 weui-bar__item<if condition="$_GET['status'] eq 1">--on</if>" href="{:leuu('User/Other/tixian_history',array('status'=>1))}">处理中</a>
+      <a class="weui-navbar__item proinfo-tab-tit font-14 weui-bar__item<if condition="$_GET['status'] eq 2">--on</if>" href="{:leuu('User/Other/tixian_history',array('status'=>2))}">已成功</a>
+      <a class="weui-navbar__item proinfo-tab-tit font-14 weui-bar__item<if condition="$_GET['status'] eq 3">--on</if>" href="{:leuu('User/Other/tixian_history',array('status'=>3))}">已驳回</a>
+     
+    </div>
+  <div class="weui-cells wy-news-list" style="padding-top:30px">
+    
+     <foreach name="result" item="vo">
+     <a class="weui-cell weui-cell">
+      <div class="weui-cell__bd">
+        <p>提现{$vo.money} 元</p>
+        <p>银行卡：{:getSomeMessage('bank',$vo['bank_id'],'name')}-{:getSomeMessage('bank',$vo['bank_id'],'bank_name')}</p>
+        <p>状态：<if condition="$vo['status'] eq 1">处理中
+         <elseif condition="$vo['status'] eq 2" />
+         成功
+         <elseif condition="$vo['status'] eq 3" />
+         驳回
+        </if>&nbsp;&nbsp;
+        <if condition="$vo['type'] eq 1">
+        返现积分提现
+        <elseif condition="$vo['type'] eq 2" />
+        金币提现 
+        </if>
+        </p>
+      </div>
+      <div class="weui-cell__ft">{:date("Y-m-d",strtotime($vo['add_time']))}</div>
+     </a>
+     </foreach>
+  </div>
+</div>
+<tc_include file="Public:footer" />
+<tc_include file="Public:js" />
+</body>
+</html>

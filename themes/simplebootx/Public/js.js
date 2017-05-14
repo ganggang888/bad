@@ -256,7 +256,6 @@ function deleteAddress()
         }
     })
 }
-
 //省市区联动
 $(document).ready(function(){
 	$("#province").change(function(){
@@ -265,6 +264,19 @@ $(document).ready(function(){
 		$("#citySpan").load("index.php?g=user&m=register&a=city&provinceid="+provinceid);
 		$("#areaSpan").html("<select id=\"area\" name=\"area\"><option value=\"0\">请选则区</option></select>");
 	});
+	$("#user_gold").on('input',function(e){  
+	   var values = $(this).val();
+	   $("#user_score").val(values*2); 
+	});
+	$("#score").on('input',function(e){ 
+	   var values = $(this).val();
+	   var b = values % 2;
+	   if (b != 0) {
+			alert('请输入偶数');
+			return false;  
+	   }
+	   $("#rmb").val(values/2); 
+	});  
 })
 function selectArea(){
 	var cityid=$("#city").val();
@@ -533,6 +545,82 @@ function chongzhima()
             } else if (data.status == 1) {
                 alert(data.info);
                 window.location.href='/index.php?g=User&m=Center&a=index';
+            }
+        }
+    })
+}
+
+
+//gold兑换积分
+function gold_get_jf()
+{
+	var gold = $("#user_gold").val();
+	var jf = $("#user_score").val();
+	if (jf == '') {
+		alert('请输入需要兑换的积分');
+		return false;
+	}
+	var info = {
+		gold:gold,
+		jf:jf,
+		is_ajax:1
+	}
+	$.ajax({
+        type:"POST",
+        url:"/index.php?g=User&m=Other&a=gold_get_jf",
+        data:info,
+        success: function(data){
+            if (data.status == 0) {
+                alert(data.info);
+                return false;
+				//window.location.href=data.url;
+            } else if (data.status == 1) {
+                alert(data.info);
+                window.location.href='/index.php?g=User&m=Center&a=index';
+            }
+        }
+    })
+}
+
+
+//首页商品搜索
+function sousuo()
+{
+	var name = $("#searchInput").val();
+	window.location.href='/index.php?g=Portal&m=Index&a=good_list&name='+name;
+}
+
+//积分提现申请
+function jf_tixian()
+{
+	var score = $("#score").val();
+	var rmb = $("#rmb").val();
+	var bank = $("#bank").attr("data-values");
+	if (score == '') {
+		alert('请输入积分');
+		return false;
+	}
+	if (bank == '') {
+		alert('请选择银行卡');
+		return false;
+	}
+	var info = {
+		jf:score,
+		bank:bank,
+		is_ajax:1
+	}
+	$.ajax({
+        type:"POST",
+        url:"",
+        data:info,
+        success: function(data){
+            if (data.status == 0) {
+                alert(data.info);
+                return false;
+				//window.location.href=data.url;
+            } else if (data.status == 1) {
+                alert(data.info);
+                window.location.href='/index.php?g=User&m=Other&a=tixian_history';
             }
         }
     })
