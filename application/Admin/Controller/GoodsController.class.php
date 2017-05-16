@@ -12,7 +12,7 @@ class GoodsController extends AdminbaseController {
 
     protected $term = NULL;
     protected $goods = NULL;
-    protected $termField = ['id', 'name', 'parentid', 'status','is_index'];
+    protected $termField = ['id', 'name', 'parentid', 'status','is_index','img'];
 
     protected $attribute = array(
         array('name'=>'吃','son'=>array(array('name'=>'规格','info'=>'数量'))),
@@ -144,16 +144,17 @@ class GoodsController extends AdminbaseController {
     public function index() {
 
         //获取分类
-        $id = I("get.term_id", 0, 'intval');
+        $id = I("get.term_id");
         $data = $this->term->where(array("id" => $id))->field($this->termField)->find();
+        //var_dump($data);
         $tree = new \Tree();
         $tree->icon = array('&nbsp;&nbsp;&nbsp;│ ', '&nbsp;&nbsp;&nbsp;├─ ', '&nbsp;&nbsp;&nbsp;└─ ');
         $tree->nbsp = '&nbsp;&nbsp;&nbsp;';
-        $terms = $this->term->where(array("id" => array("NEQ", $id)))->order(array("id" => "asc"))->select();
+        $terms = $this->term->order(array("id" => "asc"))->select();
 
         $new_terms = array();
         foreach ($terms as $r) {
-            $r['selected'] = $data['parentid'] == $r['id'] ? "selected" : "";
+            $r['selected'] = $r['id'] == $data['id'] ? "selected" : "";
             $new_terms[] = $r;
         }
 
@@ -180,6 +181,14 @@ class GoodsController extends AdminbaseController {
             $where['a.add_time'] = array('EGT',$begin);
         } elseif (!$begin && $end) {
             $where['a.add_time'] = array('LT',$end);
+        }
+        if ($data['parentid'] == 0 && $id) {
+            //查处所有下级子类
+            $ids = M('goods_term')->where(array('parentid'=>$data['id']))->field(array('id'))->select();
+            foreach ($ids as $vo) {
+                $data[] = $vo['id'];
+            }
+            $where['a.term_id'] = array('in',$data);
         }
 
         $join = "".C('DB_PREFIX').'goods_term as b on a.term_id = b.id';
@@ -382,7 +391,7 @@ class GoodsController extends AdminbaseController {
         $field = array('a.id','a.pay_time','a.order_num','a.uid','a.number','a.prices','a.order_time','a.pay_time','a.delivery_time','a.receiving_time','a.logistics_mode','a.logistics_num','a.goodsInfo','a.pay_type','a.content','a.status','b.name','b.address','b.phone');
         $count = $orders->alias('a')->join($join,'LEFT')->where($where)->count();
         $page = $this->page($count,15);
-        $result = $orders->alias('a')->join($join,'LEFT')->where($where)->field($field)->order(array('order_time'=>'desc'))->select();
+        $result = $orders->alias('a')->join($join,'LEFT')->where($where)->field($field)->order(array('pay_time'=>'desc'))->select();
         //var_dump($result);
         $this->assign(compact('page','result','pay_type','phone','order_number','name','status'));
         $this->display();

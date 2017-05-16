@@ -167,10 +167,17 @@
     <div class="weui-tabbar__icon promotion-foot-menu-kefu"></div>
     <p class="weui-tabbar__label">客服</p>
   </a>
+  <if condition="$_SESSION['user']['id']">
   <a href="javascript:;" id='show-toast' class="promotion-foot-menu-items">
     <div class="weui-tabbar__icon promotion-foot-menu-collection"></div>
     <p class="weui-tabbar__label">收藏</p>
   </a>
+  <else />
+  <a href="javascript:;" class="promotion-foot-menu-items" onclick="toLogin()">
+    <div class="weui-tabbar__icon promotion-foot-menu-collection"></div>
+    <p class="weui-tabbar__label">收藏</p>
+  </a>
+  </if>
   <!--<a href="shopcart.html" class="promotion-foot-menu-items">
     <span class="weui-badge" style="position: absolute;top: -.4em;right: 1em;">8</span>
     <div class="weui-tabbar__icon promotion-foot-menu-cart"></div>

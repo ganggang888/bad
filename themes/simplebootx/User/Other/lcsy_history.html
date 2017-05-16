@@ -14,8 +14,8 @@
 <div class="weui-content">
 <div class="weui-navbar" style="position:fixed; top:44px; left:0; right:0; height:44px; background:#fff;">
      
-      <a class="weui-navbar__item proinfo-tab-tit font-14 weui-bar__item--on" href="{:leuu('User/Center/fx_log')}">返现收益记录</a>
-      <a class="weui-navbar__item proinfo-tab-tit font-14 weui-bar__item" href="{:leuu('User/Other/lcsy_history')}">理财收益记录</a>
+      <a class="weui-navbar__item proinfo-tab-tit font-14 weui-bar__item" href="{:leuu('User/Center/fx_log')}">返现收益记录</a>
+      <a class="weui-navbar__item proinfo-tab-tit font-14 weui-bar__item--on" href="{:leuu('User/Other/lcsy_history')}">理财收益记录</a>
      
     </div>
   <div class="weui-cells wy-news-list" style="margin-top:43px">
@@ -23,20 +23,15 @@
      <foreach name="result" item="vo">
      <a class="weui-cell weui-cell">
       <div class="weui-cell__bd">
-        <p>你的<if condition="$vo['level'] eq 1">下级 <elseif condition="$vo['level'] eq 2" />下下级</if>购买商品所得：{$vo.score}</p>
         <p>
-        {:getSomeMessage('users',$vo['pid'],'mobile')}
-        <if condition="$vo['status'] eq 1">
-        推荐奖
-        <elseif condition="$vo['status'] eq 2" />
-        抽佣
-        <elseif condition="$vo['status'] eq 3" />
-        见点奖
-        </if> 
-        <if condition="$vo['times'] eq 1">
-        (首单下单)
+        <if condition="$vo['type'] eq 1">
+        金币活期收益
+        <elseif condition="$vo['type'] eq 2" />
+        代理商活期积分收益
         </if>
+        
         </p>
+      	<p>收益：{$vo['money']}</p>
       </div>
       <div class="weui-cell__ft">{:date("Y-m-d",strtotime($vo['add_time']))}</div>
      </a>

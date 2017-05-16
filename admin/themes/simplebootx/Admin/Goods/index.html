@@ -9,7 +9,8 @@
 		<form class="well form-search">
 			分类： 
 			<select name="term" id="term" style="width: 120px;">
-				<option value='0'>全部</option>{$tree}
+				<option value='0'>全部</option>
+                {$tree}
 			</select> &nbsp;&nbsp;
 			时间：
 			<input type="text" id="begin" name="start_time" class="js-date" value="{$begin|default=''}" style="width: 120px;" autocomplete="off">-
@@ -41,7 +42,7 @@
 						<th>商品属性</th>
                         <th>积分</th>
 						<th width="50">状态</th>
-                        <th width="50">精品推荐</th>
+                        <th width="50">商家推荐</th>
                         <th width="50">酒水推荐</th>
                         <th width="50">添加时间</th>
 						<th width="70">操作</th>
@@ -102,10 +103,10 @@
 			</table>
 			<div class="table-actions">
 			  <button class="btn btn-primary btn-small js-ajax-submit" type="submit" data-action="{:U('Goods/listorders')}">排序</button>
-				<button class="btn btn-primary btn-small js-ajax-submit" type="submit" data-action="{:U('Goods/changeStatus',array('type'=>1,'status'=>1))}" data-subcheck="true">精选推荐</button>
-				<button class="btn btn-primary btn-small js-ajax-submit" type="submit" data-action="{:U('Goods/changeStatus',array('type'=>1,'status'=>0))}" data-subcheck="true">取消精选推荐</button>
-				<button class="btn btn-primary btn-small js-ajax-submit" type="submit" data-action="{:U('Goods/changeStatus',array('type'=>2,'status'=>1))}" data-subcheck="true">酒水推荐</button>
-				<button class="btn btn-primary btn-small js-ajax-submit" type="submit" data-action="{:U('Goods/changeStatus',array('type'=>2,'status'=>0))}" data-subcheck="true">取消酒水推荐</button>
+				<button class="btn btn-primary btn-small js-ajax-submit" type="submit" data-action="{:U('Goods/changeStatus',array('type'=>1,'status'=>1))}" data-subcheck="true">会员推荐</button>
+				<button class="btn btn-primary btn-small js-ajax-submit" type="submit" data-action="{:U('Goods/changeStatus',array('type'=>1,'status'=>0))}" data-subcheck="true">取消会员推荐</button>
+				<button class="btn btn-primary btn-small js-ajax-submit" type="submit" data-action="{:U('Goods/changeStatus',array('type'=>2,'status'=>1))}" data-subcheck="true">商家推荐</button>
+				<button class="btn btn-primary btn-small js-ajax-submit" type="submit" data-action="{:U('Goods/changeStatus',array('type'=>2,'status'=>0))}" data-subcheck="true">取消商家推荐</button>
 				<button class="btn btn-primary btn-small js-ajax-submit" type="submit" data-action="{:U('Goods/changeStatus',array('type'=>3,'status'=>1))}" data-subcheck="true">上架</button>
 				<button class="btn btn-primary btn-small js-ajax-submit" type="submit" data-action="{:U('Goods/changeStatus',array('type'=>3,'status'=>0))}" data-subcheck="true">下架</button>
 				

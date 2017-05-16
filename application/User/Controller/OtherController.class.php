@@ -104,4 +104,12 @@ class OtherController extends MemberbaseController {
 		$this->assign(compact('result','uid'));
 		$this->display();
 	}
-}	
+
+	//理财收益记录
+	public function lcsy_history()
+	{
+		$result = M('shouyi')->where(array('uid'=>get_current_userid()))->order(array('id'=>'desc'))->select();
+		$this->assign(compact('result'));
+		$this->display();
+	}
+}

@@ -42,8 +42,10 @@ $banner=sp_getslide("banner");
   <!--图标分类-->
   <div class="weui-grids" style="background:#FFF">
   <foreach name="termInfo" item="vo">
-  <a href="{:leuu('Portal/Index/good_list',array('term_id'=>$vo['id']))}" class="weui-grid js_grid">
-        
+  <a href="{:leuu('Portal/Index/good_list',array('pid'=>$vo['id']))}" class="weui-grid js_grid">
+        <div class="weui-grid__icon">
+            <img src="{:sp_get_image_preview_url($vo['img'])}" >
+        </div>
         <p class="weui-grid__label">
           {$vo.name}
         </p>
@@ -51,6 +53,9 @@ $banner=sp_getslide("banner");
   </foreach>
   <a href="{:leuu('User/Center/orderList',array('status'=>'all'))}" class="weui-grid js_grid">
         
+        <div class="weui-grid__icon">
+            <img src="__TMPL__Public/images/icon-link3.png" >
+        </div>
         <p class="weui-grid__label">
           我的订单列表
         </p>
@@ -75,7 +80,7 @@ $banner=sp_getslide("banner");
   </div>
   <!--精选推荐-->
   <div class="wy-Module">
-    <div class="wy-Module-tit"><span>精选推荐</span></div>
+    <div class="wy-Module-tit"><span>会员推荐</span></div>
     <div class="wy-Module-con">
       <div class="swiper-container swiper-jingxuan" style="padding-top:34px;">
         <div class="swiper-wrapper">
@@ -94,7 +99,7 @@ $banner=sp_getslide("banner");
   </div>
   <!--酒水专场-->
   <div class="wy-Module">
-    <div class="wy-Module-tit"><span>酒水推荐</span></div>
+    <div class="wy-Module-tit"><span>商家推荐</span></div>
     <div class="wy-Module-con">
       <div class="swiper-container swiper-jiushui" style="padding-top:34px;">
         <div class="swiper-wrapper">

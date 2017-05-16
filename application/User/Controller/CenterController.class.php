@@ -62,7 +62,7 @@ class CenterController extends MemberbaseController {
       //积分变化情况
       public function jf_change_status()
       {
-         $result = M('ticheng_log')->where(array('uid'=>get_current_userid(),'level'=>0))->select();
+         $result = M('ticheng_log')->where(array('uid'=>get_current_userid(),'level'=>0))->order(array('add_time'=>'desc'))->select();
          $this->assign(compact('result'));
          $this->display();
       }
@@ -101,7 +101,7 @@ class CenterController extends MemberbaseController {
       //个人充值码历史记录
       public function chongzhima_history()
       {
-         $result = M('chongzhi_log')->where(array('uid'=>get_current_userid(),'type'=>3))->select();
+         $result = M('chongzhi_log')->where(array('uid'=>get_current_userid(),'type'=>3))->order(array('add_time'=>'desc'))->select();
          $this->assign(compact('result'));
          $this->display();
       }
@@ -262,7 +262,7 @@ class CenterController extends MemberbaseController {
          }
          
          $where['uid'] = get_current_userid();
-         $result = M('orders')->where($where)->order(array('order_time'=>'desc'))->select();
+         $result = M('orders')->where($where)->order(array('pay_time'=>'desc'))->select();
          $result = array_map(function($v){
             $goodsInfo = json_decode($v['goodsinfo'],true);
             $info = current($goodsInfo);
@@ -709,7 +709,8 @@ class CenterController extends MemberbaseController {
       public function my_save()
       {
          $model = M();
-         $result = $model->query("SELECT *,a.id AS sid,b.id AS gid FROM i_user_collection a LEFT JOIN i_goods b ON a.gid = b.id ORDER BY a.add_time DESC");
+         $uid = get_current_userid();
+         $result = $model->query("SELECT *,a.id AS sid,b.id AS gid FROM i_user_collection a LEFT JOIN i_goods b ON a.gid = b.id WHERE a.uid = $uid ORDER BY a.add_time DESC");
          $this->assign(compact('result'));
          $this->display();
       }

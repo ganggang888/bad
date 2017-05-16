@@ -140,4 +140,28 @@ class IndexadminController extends AdminbaseController {
         $status = I('get.status');
         M('tixian')->where(array('id'=>$id))->save(array('status'=>$status)) ? $this->success('操作成功') : $this->error('操作失败');
     }
+
+    //用户理财受益
+    public function yhsy_history()
+    {
+        $begin = I('get.begin');
+        $end = I('get.end');
+        $mobile = I('get.mobile');
+        $model = M();
+        $where = " WHERE a.id >0 ";
+        $mobile ? $where .= " AND b.mobile LIKE '%$mobile%'" : '';
+        if ($begin && $end) {
+            $where .= " AND a.add_time >= '$begin' AND a.add_time <= '$end'";
+        } elseif ($begin && !$end) {
+            $where .= " AND a.add_time >= '$begin'";
+        } elseif (!$begin && $end) {
+            $where .= " AND a.add_time <= '$end'";
+        }
+        $num = $model->query("SELECT COUNT(*) AS num FROM i_shouyi a LEFT JOIN i_users b ON a.uid = b.id $where");
+        $count = $num[0]['num'];
+        $page = $this->page($count,20);
+        $result = $model->query("SELECT a.id,a.uid,a.money,a.add_time,a.type,b.mobile FROM i_shouyi a LEFT JOIN i_users b ON a.uid = b.id $where ORDER BY a.id DESC LIMIT ".$page->firstRow.",".$page->listRows);
+        $this->assign(compact('page','result','begin','end','mobile'));
+        $this->display();
+    }
 }

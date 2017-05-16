@@ -49,11 +49,11 @@ function login()
 	var username = $("#username").val();
 	var password = $("#password").val();
 	if (username.length != 11) {
-		alert('请输入正确的用户名');
+		$.toast("请输入正确的用户名", "forbidden");
 		return false;
 	}
 	if (password.length < 5) {
-		alert('请输入正确的密码');
+		$.toast("请输入正确的密码", "forbidden");
 		return false;
 	}
 	var info = {
@@ -67,12 +67,14 @@ function login()
         data:info,
         success: function(data){
             if (data.status == 0) {
-                alert(data.info);
+				$.toast(data.info, "forbidden");
                 return false;
 			   // window.location.href=data.url;
             } else if (data.status == 1) {
-                alert('登录成功');
-                window.location.href='/index.php?g=User&m=Center&a=index';
+				$.toast("登录成功",function() {
+				  window.location.href='/index.php?g=User&m=Center&a=index';
+				});
+                
             }
         }
     })
@@ -90,31 +92,31 @@ function register()
 	var repassword = $("#password").val();
 	var weuiAgree = $("#weuiAgree").is(':checked');
 	if (weuiAgree == false) {
-		alert('请选择同意协议');
+		$.toast("请选择同意协议", "forbidden");
 		return false;
 	}
 	if (mobile.length != 11) {
-		alert('请输入正确的手机号');
+		$.toast("请输入正确的手机号", "forbidden");
 		return false;
 	}
 	if (province == 0) {
-		alert('请选择省份');
+		$.toast("请选择省份", "forbidden");
 		return false;
 	}
 	if (city == 0) {
-		alert('请选择市');
+		$.toast("请选择市", "forbidden");
 		return false;
 	}
 	if (area == 0) {
-		alert('请选择区');
+		$.toast("请选择区", "forbidden");
 		return false;
 	}
 	if (password != repassword) {
-		alert('两次密码输入不一致');
+		$.toast("两次密码输入不一致", "forbidden");
 		return false;
 	}
 	if (password == '') {
-		alert('请输入密码');
+		$.toast("请输入密码", "forbidden");
 		return false;
 	}
 	var info = {
@@ -131,11 +133,12 @@ function register()
         data:info,
         success: function(data){
             if (data.status == 0) {
-                alert(data.info);
-                window.location.href=data.url;
+				$.toast(data.info, "forbidden");
+				return false;
             } else if (data.status == 1) {
-                alert('注册成功');
-                window.location.href='/index.php?g=User&m=Center&a=index';
+				$.toast("注册成功",function() {
+				  window.location.href='/index.php?g=User&m=Center&a=index';
+				});
             }
         }
     })
@@ -149,15 +152,15 @@ function addAddress()
 	var address = $("#address").attr("data-codes");
 	var info = $("#info").val();
 	if (name == '') {
-		alert('请输入地址');
+		$.toast("请输入地址", "forbidden");
 		return false;
 	}
 	if (phone.length != 11) {
-		alert('请输入正确的手机号');
+		$.toast("请输入正确的手机号", "forbidden");
 		return false;
 	}
 	if (info == '') {
-		alert('请输入详细地址');
+		$.toast("请输入详细地址", "forbidden");
 		return false;
 	}
 	var de = $("#default").is(':checked');
@@ -176,11 +179,12 @@ function addAddress()
         data:info,
         success: function(data){
             if (data.status == 0) {
-                alert(data.info);
+				$.toast(data.info, "forbidden");
                 window.location.href=data.url;
             } else if (data.status == 1) {
-                alert('添加成功');
-                window.location.href='/index.php?g=User&m=Center&a=addressList';
+				$.toast("添加成功",function() {
+				  window.location.href='/index.php?g=User&m=Center&a=addressList';
+				});
             }
         }
     })
@@ -198,15 +202,15 @@ function editAddress()
 	var info = $("#info").val();
 	var id = $("#id").val();
 	if (name == '') {
-		alert('请输入地址');
+		$.toast("请输入地址", "forbidden");
 		return false;
 	}
 	if (phone.length != 11) {
-		alert('请输入正确的手机号');
+		$.toast("请输入正确的手机号", "forbidden");
 		return false;
 	}
 	if (info == '') {
-		alert('请输入详细地址');
+		$.toast("请输入详细地址", "forbidden");
 		return false;
 	}
 	var de = $("#default").is(':checked');
@@ -226,11 +230,12 @@ function editAddress()
         data:info,
         success: function(data){
             if (data.status == 0) {
-                alert(data.info);
+				$.toast(data.info, "forbidden");
                 window.location.href=data.url;
             } else if (data.status == 1) {
-                alert('修改成功');
-                window.location.href='/index.php?g=User&m=Center&a=addressList';
+				$.toast("修改成功",function() {
+				  window.location.href='/index.php?g=User&m=Center&a=addressList';
+				});
             }
         }
     })
@@ -247,17 +252,19 @@ function deleteAddress()
         url:"/index.php?g=User&m=Center&a=deleteAddress&id="+id,
         success: function(data){
             if (data.status == 0) {
-                alert(data.info);
+				$.toast(data.info, "forbidden");
                 window.location.href=data.url;
             } else if (data.status == 1) {
-                alert('删除成功');
-                window.location.href='/index.php?g=User&m=Center&a=addressList';
+				$.toast("删除成功",function() {
+				  window.location.href='/index.php?g=User&m=Center&a=addressList';
+				});
             }
         }
     })
 }
 //省市区联动
 $(document).ready(function(){
+	$.toast.prototype.defaults.duration = 1000;
 	$("#province").change(function(){
 		
 		var provinceid=$(this).val();
@@ -272,7 +279,7 @@ $(document).ready(function(){
 	   var values = $(this).val();
 	   var b = values % 2;
 	   if (b != 0) {
-			alert('请输入偶数');
+			$.toast("请输入偶数", "forbidden");
 			return false;  
 	   }
 	   $("#rmb").val(values/2); 
@@ -337,19 +344,19 @@ function bank_add()
 	var card = $("#card").val();
 	var bank_name = $("#bank_name").val();
 	if (name == '') {
-		alert('请输入持卡人名称');
+		$.toast("请输入持卡人名称", "forbidden");
 		return false;
 	}
 	if (phone.length !== 11) {
-		alert('请输入正确的手机号');
+		$.toast("请输入正确的手机号", "forbidden");
 		return false;
 	}
 	if (card.length < 10) {
-		alert('请输入正确的卡号');
+		$.toast("请输入正确的卡号", "forbidden");
 		return false;
 	}
 	if (bank_name == '') {
-		alert('请输入银行名称');
+		$.toast("请输入银行名称", "forbidden");
 		return false;
 	}
 	var info = {
@@ -366,12 +373,13 @@ function bank_add()
         data:info,
         success: function(data){
             if (data.status == 0) {
-                alert(data.info);
+				$.toast(data.info, "forbidden");
                 return false;
 				//window.location.href=data.url;
             } else if (data.status == 1) {
-                alert('添加成功');
-                window.location.href='/index.php?g=User&m=Center&a=bank_list';
+				$.toast("添加成功",function() {
+				  window.location.href='/index.php?g=User&m=Center&a=bank_list';
+				});
             }
         }
     })
@@ -379,25 +387,27 @@ function bank_add()
 
 function toLogin()
 {
-	alert('您尚未登录');
-	window.location.href='/index.php?g=User&m=Login&a=index';
+	$.toast("您尚未登录", "forbidden", function() {
+	  window.location.href='/index.php?g=User&m=Login&a=index';
+	});
+	
 }
 
 //删除收藏
 function deleteShoucang(id)
 {
-	alert(id);
 	$.ajax({
         type:"GET",
         url:"/index.php?g=User&m=Center&a=delete_shoucang&id="+id,
         success: function(data){
             if (data.status == 0) {
-                alert(data.info);
+				$.toast(data.info, "forbidden");
                 return false;
 				//window.location.href=data.url;
             } else if (data.status == 1) {
-                alert(data.info);
-				window.location.href='/index.php?g=User&m=Center&a=my_save';
+				$.toast(data.info,function() {
+				  window.location.href='/index.php?g=User&m=Center&a=my_save';
+				});
             }
         }
     })
@@ -410,7 +420,7 @@ function duihuan()
 	var type2 = $("#two .active a").text();
 	var address_id = $("#address_id").val();
 	if (type1 == '' || type2 == '') {
-		alert('请选择商品属性');
+		$.toast("请选择商品属性", "forbidden");
 		return false;
 	}
 	if ($_GET['pid']) {
@@ -445,12 +455,13 @@ function do_duihuan()
         data:info,
         success: function(data){
             if (data.status == 0) {
-                alert(data.info);
+				$.toast(data.info, "forbidden");
                 return false;
 				//window.location.href=data.url;
             } else if (data.status == 1) {
-                alert('兑换成功');
-                window.location.href='/index.php?g=User&m=Center&a=orderList';
+				$.toast("兑换成功",function() {
+				  window.location.href='/index.php?g=User&m=Center&a=orderList&status=all';
+				});
             }
         }
     })
@@ -464,12 +475,13 @@ function queren(id)
 		url:"/index.php?g=User&m=Center&a=queren&id="+id,
 		success: function(data){
 			if (data.status == 0) {
-                alert(data.info);
+				$.toast(data.info, "forbidden");
                 return false;
 				//window.location.href=data.url;
             } else if (data.status == 1) {
-                alert('确认收货成功');
-                window.location.href='/index.php?g=User&m=Center&a=orderList&status=3';
+				$.toast("确认收货成功",function() {
+				  window.location.href='/index.php?g=User&m=Center&a=orderList&status=3';
+				});
             }
 		}
 	})
@@ -480,16 +492,18 @@ function changePassword()
 {
 	var old = $("#old").val();
 	if (old == '') {
-		alert('请输入旧密码');
+		$.toast("请输入旧密码", "forbidden");
 		return false;
 	}
 	var password = $("#password").val();
 	if (password.length < 5) {
-		alert('密码必须大于等于6位！');
+		$.toast("密码必须大于等于6位！", "forbidden");
+		return false;
 	}
 	var repassword = $("#repassword").val();
 	if (password != repassword) {
-		alert('两次密码输入不一致');
+		$.toast("两次密码输入不一致！", "forbidden");
+		return false;
 	}
 	var info = {
 		old_password:old,
@@ -503,12 +517,13 @@ function changePassword()
         data:info,
         success: function(data){
             if (data.status == 0) {
-                alert(data.info);
+                $.toast(data.info, "forbidden");
                 return false;
 				//window.location.href=data.url;
             } else if (data.status == 1) {
-                alert('密码修改成功');
-                window.location.href='/index.php?g=User&m=Login&a=index';
+				$.toast("密码修改成功",function() {
+				  window.location.href='/index.php?g=User&m=Login&a=index';
+				});
             }
         }
     })
@@ -521,11 +536,11 @@ function chongzhima()
 	var code = $("#code").val();
 	var mi = $("#mi").val();
 	if (code == '') {
-		alert('请输入充值码');
+		$.toast("请输入充值码", "forbidden");
 		return false;
 	}
 	if (mi == '') {
-		alert('请输入卡密');
+		$.toast("请输入卡密", "forbidden");
 		return false;
 	}
 	var info = {
@@ -539,12 +554,13 @@ function chongzhima()
         data:info,
         success: function(data){
             if (data.status == 0) {
-                alert(data.info);
+				$.toast(data.info, "forbidden");
                 return false;
 				//window.location.href=data.url;
             } else if (data.status == 1) {
-                alert(data.info);
-                window.location.href='/index.php?g=User&m=Center&a=index';
+				$.toast(data.info,function() {
+				  window.location.href='/index.php?g=User&m=Center&a=index';
+				});
             }
         }
     })
@@ -557,7 +573,7 @@ function gold_get_jf()
 	var gold = $("#user_gold").val();
 	var jf = $("#user_score").val();
 	if (jf == '') {
-		alert('请输入需要兑换的积分');
+		$.toast("请输入需要兑换的积分", "forbidden");
 		return false;
 	}
 	var info = {
@@ -571,12 +587,13 @@ function gold_get_jf()
         data:info,
         success: function(data){
             if (data.status == 0) {
-                alert(data.info);
+				$.toast(data.info, "forbidden");
                 return false;
 				//window.location.href=data.url;
             } else if (data.status == 1) {
-                alert(data.info);
-                window.location.href='/index.php?g=User&m=Center&a=index';
+				$.toast(data.info,function() {
+				  window.location.href='/index.php?g=User&m=Center&a=index';
+				});
             }
         }
     })
@@ -597,11 +614,11 @@ function jf_tixian()
 	var rmb = $("#rmb").val();
 	var bank = $("#bank").attr("data-values");
 	if (score == '') {
-		alert('请输入积分');
+		$.toast("请输入积分", "forbidden");
 		return false;
 	}
 	if (bank == '') {
-		alert('请选择银行卡');
+		$.toast("请选择银行卡", "forbidden");
 		return false;
 	}
 	var info = {
@@ -615,12 +632,13 @@ function jf_tixian()
         data:info,
         success: function(data){
             if (data.status == 0) {
-                alert(data.info);
+				$.toast(data.info, "forbidden");
                 return false;
 				//window.location.href=data.url;
             } else if (data.status == 1) {
-                alert(data.info);
-                window.location.href='/index.php?g=User&m=Other&a=tixian_history';
+				$.toast(data.info,function() {
+				  window.location.href='/index.php?g=User&m=Center&a=tixian_history';
+				});
             }
         }
     })

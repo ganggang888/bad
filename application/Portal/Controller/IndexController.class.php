@@ -42,7 +42,7 @@ class IndexController extends HomebaseController {
         /*var_dump($a);
         var_dump(sp_password(123456));*/
     	//获取分类
-        $termInfo = M('goods_term')->where(array('is_delete'=>0,'is_index'=>1))->select();
+        $termInfo = M('goods_term')->where(array('is_delete'=>0,'is_index'=>1,'parentid'=>0))->select();
         $id = I("get.term_id", 0, 'intval');
         $data = $this->term->where(array("id" => $id))->field($this->termField)->find();
         $tree = new \Tree();
@@ -262,7 +262,8 @@ class IndexController extends HomebaseController {
     {
         //获取分类
         $id = I("get.term_id", 0, 'intval');
-        $termInfo = M('goods_term')->where(array('is_delete'=>0))->select();
+        $pid = I('get.pid');
+        $termInfo = M('goods_term')->where(array('is_delete'=>0,'parentid'=>$pid))->select();
         $data = $this->term->where(array("id" => $id))->field($this->termField)->find();
         $tree = new \Tree();
         $tree->icon = array('&nbsp;&nbsp;&nbsp;│ ', '&nbsp;&nbsp;&nbsp;├─ ', '&nbsp;&nbsp;&nbsp;└─ ');
@@ -291,6 +292,14 @@ class IndexController extends HomebaseController {
         $name ? $where['a.name'] = array('like',"%$name%") : '';
         $where['a.is_delete'] = 0;
         $where['b.is_delete'] = 0;
+        if ($pid && !$term_id) {
+            //查处所有下级子类
+            $ids = M('goods_term')->where(array('parentid'=>$pid))->field(array('id'))->select();
+            foreach ($ids as $vo) {
+                $data[] = $vo['id'];
+            }
+            $where['a.term_id'] = array('in',$data);
+        }
         if ($begin && $end) {
             $where['a.add_time'] = array('EGT',$begin);
             $where['a.add_time'] = array('LT',$end);
@@ -299,7 +308,6 @@ class IndexController extends HomebaseController {
         } elseif (!$begin && $end) {
             $where['a.add_time'] = array('LT',$end);
         }
-
         $join = "".C('DB_PREFIX').'goods_term as b on a.term_id = b.id';
         $field = ['a.name','b.name AS term_name','a.score','a.photos_url','a.cost_price','a.attribute','a.selling_price','a.market_value','a.unit','a.stock','a.status','a.label','a.listorder','a.term_id','a.huangjin','a.id','a.indexs','a.member','a.add_time'];
         $count = $this->goods->alias('a')->join($join,'LEFT')->where($where)->count();
@@ -315,7 +323,7 @@ class IndexController extends HomebaseController {
         //var_dump($result);
         $attributes = $this->attribute;
         $shangpin = 1;
-        $this->assign(compact('page','result','tree','attributes','termInfo','shangpin'));
+        $this->assign(compact('page','result','tree','attributes','termInfo','shangpin','pid'));
         $this->display();
     }
 
@@ -350,11 +358,51 @@ class IndexController extends HomebaseController {
         $data = M('data')->where(array('id'=>1))->getField('data');
         $data = json_decode($data,true);
         $result = M('users')->where(array('user_type'=>2))->order(array('level'=>'desc'))->select();
+        $date = date("Y-m-d");
+        
         foreach ($result as $vo) {
+            //任何用户充值的金币都可以提现
             //达到金币可提现情况
-            if ($vo['gold'] > $data['jinbi']) {
+            //检查是否存在
+            
+            if ($vo['gold'] >= $data['jinbi']) {
+                //计算收益一年按365天算  1金币等于 2 可提现积分
+                $today_get =  ($vo['gold'] * ($data['jinbi_shouyi'] / 100)) / 365;
+                $today_get = $today_get * 2;
+                $today_get = sprintf("%.2f", $today_get); 
+                $check = M('shouyi')->where(array('add_time'=>$date,'type'=>1,'uid'=>$vo['id']))->getField('id');
+                if (!$check) {
+                    $model = M();
+                    $model->startTrans();
+                    $one = $model->execute("UPDATE i_users SET can_monery = can_monery + $today_get WHERE id = '{$vo['id']}'");
+                    $two = $model->execute("INSERT INTO i_shouyi (uid,money,add_time,type) VALUES ('{$vo['id']}','$today_get',now(),1)");
+                    if ($one && $two) {
+                        $model->commit();
+                    } else {
+                        $model->rollback();
+                    }
+                }
                 
-            } 
+            }
+
+            //如果是代理商，并且有冻结金额
+            if ($vo['dong'] && $vo['level'] == 5) {
+                //如果是代理商则算每日收益
+                $today_get =  ($vo['score'] * ($data['daili_shouyi'] / 100)) / 365;
+                $today_get = sprintf("%.2f", $today_get);
+                $check = M('shouyi')->where(array('add_time'=>$date,'type'=>2,'uid'=>$vo['id']))->getField('id');
+                if (!$check) {
+                    $model = M();
+                    $model->startTrans();
+                    $one = $model->execute("UPDATE i_users SET can_monery = can_monery + $today_get WHERE id = '{$vo['id']}'");
+                    $two = $model->execute("INSERT INTO i_shouyi (uid,money,add_time,type) VALUES ('{$vo['id']}','$today_get',now(),2)");
+                    if ($one && $two) {
+                        $model->commit();
+                    } else {
+                        $model->rollback();
+                    }
+                }
+            }
         }
     }
 

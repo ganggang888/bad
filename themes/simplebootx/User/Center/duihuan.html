@@ -93,5 +93,12 @@
 </div>
 <tc_include file="Public:footer" />
 <tc_include file="Public:js" />
+<if condition="!$address">
+<script>
+$.toast("请先去填写收货地址", "forbidden",function(){
+	window.location.href='/index.php?g=User&m=Center&a=addressList';
+});
+</script>
+</if>
 </body>
 </html>

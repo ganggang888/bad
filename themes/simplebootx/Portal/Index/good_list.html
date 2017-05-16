@@ -9,18 +9,27 @@
 <!--主体-->
 <header class="wy-header">
   <div class="wy-header-icon-back"><span></span></div>
-  <div class="wy-header-title">商品列表</div>
+  <div class="wy-header-title">商品列表-{:getSomeMessage('goods_term',$pid,'name')}
+  <if condition="$_GET['name']">搜索：{$_GET['name']}
+  </if>
+  </div>
 </header>
 <div class="weui-content">
   <div class="weui-navbar" style="position:fixed; top:44px; left:0; right:0; height:44px; background:#fff;">
-  <a class="weui-navbar__item proinfo-tab-tit font-14 weui-bar__item<if condition="$_GET['term_id'] eq 0 && !$_GET['name']">--on</if>" href="{:leuu('Portal/Index/good_list',array('term_id'=>0))}">全部商品</a>
+  <a class="weui-navbar__item proinfo-tab-tit font-14 weui-bar__item<if condition="$_GET['term_id'] eq 0 && !$_GET['name']">--on</if>" href="{:leuu('Portal/Index/good_list',array('term_id'=>0,'pid'=>$pid))}">全部商品</a>
+  <if condition="!$_GET['pid'] && !$_GET['term_id']">
   <foreach name="termInfo" item="vo">
-  <a class="weui-navbar__item proinfo-tab-tit font-14 weui-bar__item<if condition="$_GET['term_id'] eq $vo['id']">--on</if>" href="{:leuu('Portal/Index/good_list',array('term_id'=>$vo['id']))}">{$vo.name}</a>
+  <a class="weui-navbar__item proinfo-tab-tit font-14 weui-bar__item<if condition="$_GET['term_id'] eq $vo['id']">--on</if>" href="{:leuu('Portal/Index/good_list',array('pid'=>$vo['id']))}">{$vo.name}</a>
   
   </foreach>
-  <if condition="$_GET['name']">
-  <a class="weui-navbar__item proinfo-tab-tit font-14 weui-bar__item--on" href="{:leuu('Portal/Index/good_list',array('term_id'=>$vo['id']))}">搜索：{$_GET['name']}</a>
+  <else />
+  <foreach name="termInfo" item="vo">
+  <a class="weui-navbar__item proinfo-tab-tit font-14 weui-bar__item<if condition="$_GET['term_id'] eq $vo['id']">--on</if>" href="{:leuu('Portal/Index/good_list',array('term_id'=>$vo['id'],'pid'=>$pid))}">{$vo.name}</a>
+  
+  </foreach>
   </if>
+  
+  
   </div>
   <div class="wy-Module" style="margin-top:50px">
     <div class="wy-Module-con">

@@ -3,12 +3,15 @@
 <body>
 	<div class="wrap js-check-wrap">
 		<ul class="nav nav-tabs">
-			<li class="active"><a href="javascript:;">订单列表</a></li>
+			<li class="active"><a href="javascript:;">用户理财收入记录</a></li>
 		</ul>
+        <form class="well form-search">
+		
 			时间：
-			<input type="text" id="begin" name="start_time" class="js-date" value="{$begin|default=''}" placeholder="开始时间" style="width: 120px;" autocomplete="off">-
-			<input type="text" class="js-date" name="end_time" value="{$end|default=''}" style="width: 120px;" placeholder="结束时间" autocomplete="off" id="end"> &nbsp; &nbsp;
-			
+			<input type="text" id="begin" name="start_time" class="js-date" value="{$begin|default=''}" style="width: 120px;" autocomplete="off" placeholder="开始时间">-
+			<input type="text" class="js-date" name="end_time" value="{$end|default=''}" style="width: 120px;" autocomplete="off" id="end" placeholder="结束时间"> &nbsp; &nbsp;
+			用户名： 
+			<input type="text" name="mobile" id="mobile" style="width: 200px;" value="{$mobile|default=''}" placeholder="请输入用户名...">
 			<a class="btn " href="javascript:;" onClick="doSearch()">搜索</a>
 		</form>
         <script>
@@ -16,11 +19,8 @@
 		{
 			var begin = $("#begin").val();
 			var end = $("#end").val();
-			var name = $("#name").val();
-			var phone = $("#phone").val();
-			var order_number = $("#order_number").val();
-			var status = $("#status").val();
-			window.location.href='index.php?g=Admin&m=Goods&a=sku_history&begin='+begin+'&end='+end;
+			var mobile = $("#mobile").val();
+			window.location.href='index.php?g=User&m=Indexadmin&a=yhsy_history&begin='+begin+'&end='+end+'&mobile='+mobile;
 		}
         </script>
 		<form class="js-ajax-form" action="" method="post">
@@ -28,47 +28,28 @@
 			<table class="table table-hover table-bordered table-list">
 				<thead>
 					<tr>
-						<th width="50">商品名称</th>
-						<th>事件</th>
-                        <th>数量</th>
-						<th>用户名</th>
-						<th>商品详情</th>
-                        <th>操作时间</th>
+						<th width="60">用户名</th>
+						<th>获得收益</th>
+                        <th>收益类型</th>
+                        <th>收益时间</th>
 					</tr>
 				</thead>
-				<php>
-                $attributes = attributeType(); 
-                </php>
-                <foreach name="result" item="vo">
+				<foreach name="result" item="vo">
 				<tr>
-					<td>{$vo.name}</td>
-					<td>
-                    <if condition="$vo['action'] eq 1">
-                    减
-                    <elseif condition="$vo['action'] eq 2" />
-                    加
-                    </if>
-                    </td>
-                    <td>{$vo.number}</td>
 					<td>{$vo.mobile}</td>
-					<td>
-                    <php>
-                    $attribute = json_decode($vo['attribute'],true);
-                    </php>
-                   <foreach name="attribute" item="v" key="key">
-                   <if condition="$key eq $vo['gid_info']">
-                   成本价：{$v.cost_price} &nbsp;&nbsp;销售价：{$v.selling_price}&nbsp;&nbsp; 市场价：{$v.market_value}&nbsp;&nbsp; 单位：{$v.unit} &nbsp;&nbsp;库存：{$v.stock}&nbsp;&nbsp;
-                   <php>
-                   $info = explode('-',$v['id']);
-                   //var_dump($attribute);
-                   </php>
-                   {$attributes[$info[0]]['son'][$info[1]]['name']}：{$v.name}&nbsp;&nbsp;
-                   {$attributes[$info[0]]['son'][$info[1]]['info']} : {$v.info}<br/>
-                   </if>
-                   </foreach>
+					<td><b>{$vo.money}</b></td>
+                    <td><b>
+                    <if condition="$vo['type'] eq 1">
+        金币活期收益
+        <elseif condition="$vo['type'] eq 2" />
+        代理商活期积分收益
+        </if>
+                    <b/>
+        </td>
+                    <td>
+                    {$vo.add_time}
                     </td>
-                    <td>{$vo.add_time}</td>
-				  </tr>
+                  </tr>
 				</foreach>
 				
 			</table>
