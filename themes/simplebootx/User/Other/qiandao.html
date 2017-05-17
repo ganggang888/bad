@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>密码修改</title>
+<meta charset="utf-8">
+<tc_include file="Public:css" />
+</head>
+<body ontouchstart>
+<!--主体-->
+<header class="wy-header">
+  <div class="wy-header-icon-back"><span></span></div>
+  <div class="wy-header-title">签到</div>
+</header>
+<div class="weui-content">
+  <div style="text-align: -webkit-center;">
+				<div  id="calendar"></div>
+					<div style="text-align: center;">
+						<input type="hidden" name="act" value="sign_do"> 
+						<!-- <input type="submit"  class="button"  id="sign_buttn"/>已签到 -->
+						<button class="sign_button" style="margin: 5% 0 5% 0;">已签到</button>
+					</div>
+
+				<div style=" text-align: left;margin-left: 10px;padding-bottom: 10px;margin-bottom: 20%">
+					<h3>签到规则：</h3>
+					<ul>
+						<li>1.第一次1个积分，之后签到积分依次向上累计</li>
+						<li>2.累计第五次签到后，之后连续签到每次5个积分</li>
+						<li>3.断签后签到重新从1个积分开始累计</li>
+					</ul>
+				</div>
+
+			</div>
+
+</div>
+<link rel="stylesheet" href="__TMPL__Public/css/sign.css">
+<tc_include file="Public:footer" />
+<tc_include file="Public:js" />
+<script type="text/javascript" src="__TMPL__Public/js/calendar.js"></script>
+
+<script type="text/javascript">
+
+$(function(){
+  //ajax获取日历json数据
+  var signList=[{"signDay":"13"},{"signDay":"17"}];
+   calUtil.init(signList);
+});
+
+</script>
+
+</body>
+</html>

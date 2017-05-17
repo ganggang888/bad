@@ -112,4 +112,10 @@ class OtherController extends MemberbaseController {
 		$this->assign(compact('result'));
 		$this->display();
 	}
+
+	//qiandao
+	public function qiandao()
+	{
+		$this->display();
+	}
 }
