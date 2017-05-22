@@ -91,6 +91,7 @@ function register()
 	var password = $("#password").val();
 	var repassword = $("#password").val();
 	var weuiAgree = $("#weuiAgree").is(':checked');
+	var tuijian = $("#tuijian").val();
 	if (weuiAgree == false) {
 		$.toast("请选择同意协议", "forbidden");
 		return false;
@@ -119,12 +120,15 @@ function register()
 		$.toast("请输入密码", "forbidden");
 		return false;
 	}
+	var pid = $_GET['uuid'];
 	var info = {
 		mobile:mobile,
 		password:password,
 		province:province,
 		city:city,
 		area:area,
+		tuijian:tuijian,
+		pid:pid,
 		is_ajax:1
 	}
 	$.ajax({

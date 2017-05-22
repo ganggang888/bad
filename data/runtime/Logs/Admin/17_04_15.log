@@ -1,0 +1,339 @@
+[ 2017-04-15T10:53:59+08:00 ] 127.0.0.1 /index.php?g=Admin&m=public&a=dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.015600s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.015600s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `i_users` WHERE `user_login` = 'admin' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_role_user` [ RunTime:0.0312s ]
+SQL: SELECT `role_id` FROM i_role_user a INNER JOIN i_role as b on a.role_id =b.id  WHERE `user_id` = '1' AND `status` = 1  [ RunTime:0.0956s ]
+SQL: UPDATE `i_users` SET `user_login`='admin',`user_pass`='###f25434b0a5e217fd97b2737ecf52d72e',`user_nicename`='admin',`user_email`='a526584713@qq.com',`user_url`='',`avatar`=NULL,`sex`='0',`birthday`='2000-01-01',`signature`=NULL,`last_login_ip`='127.0.0.1',`last_login_time`='2017-04-15 10:53:59',`create_time`='2017-04-13 03:02:05',`user_activation_key`='',`user_status`='1',`score`='0',`user_type`='1',`coin`='0',`mobile`='' WHERE `id` = '1' [ RunTime:0.0000s ]
+
+[ 2017-04-15T11:15:36+08:00 ] 127.0.0.1 /index.php?g=Admin&m=public&a=dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.007000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013001s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.007001s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.008001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `user_login` = 'admin' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-04-15T11:15:44+08:00 ] 127.0.0.1 /index.php?g=Admin&m=public&a=dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010000s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.007001s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.007001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `user_login` = 'admin' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_role_user` [ RunTime:0.0020s ]
+SQL: SELECT `role_id` FROM i_role_user a INNER JOIN i_role as b on a.role_id =b.id  WHERE `user_id` = '1' AND `status` = 1  [ RunTime:0.0000s ]
+SQL: UPDATE `i_users` SET `user_login`='admin',`user_pass`='###f25434b0a5e217fd97b2737ecf52d72e',`user_nicename`='admin',`user_email`='a526584713@qq.com',`user_url`='',`avatar`=NULL,`sex`='0',`birthday`='2000-01-01',`signature`=NULL,`last_login_ip`='127.0.0.1',`last_login_time`='2017-04-15 11:15:44',`create_time`='2017-04-13 03:02:05',`user_activation_key`='',`user_status`='1',`score`='0',`user_type`='1',`coin`='0',`mobile`='' WHERE `id` = '1' [ RunTime:0.0010s ]
+
+[ 2017-04-15T11:18:36+08:00 ] 127.0.0.1 /index.php?g=Admin&m=public&a=dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010001s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.007001s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.007001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `user_login` = 'admin' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_role_user` [ RunTime:0.0020s ]
+SQL: SELECT `role_id` FROM i_role_user a INNER JOIN i_role as b on a.role_id =b.id  WHERE `user_id` = '1' AND `status` = 1  [ RunTime:0.0000s ]
+SQL: UPDATE `i_users` SET `user_login`='admin',`user_pass`='###f25434b0a5e217fd97b2737ecf52d72e',`user_nicename`='admin',`user_email`='a526584713@qq.com',`user_url`='',`avatar`=NULL,`sex`='0',`birthday`='2000-01-01',`signature`=NULL,`last_login_ip`='127.0.0.1',`last_login_time`='2017-04-15 11:18:36',`create_time`='2017-04-13 03:02:05',`user_activation_key`='',`user_status`='1',`score`='0',`user_type`='1',`coin`='0',`mobile`='' WHERE `id` = '1' [ RunTime:0.0000s ]
+
+[ 2017-04-15T11:32:33+08:00 ] 127.0.0.1 /index.php?g=Admin&m=AdminPost&a=listorders
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010001s ]
+ERR: 无法加载控制器:AdminPost
+
+[ 2017-04-15T11:34:07+08:00 ] 127.0.0.1 /index.php?g=Admin&m=AdminPost&a=add&term=
+ERR: 无法加载控制器:AdminPost
+
+[ 2017-04-15T11:35:08+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=add
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010001s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.007000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: validate E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: INSERT INTO `i_goods` (`term_id`,`name`,`cost_price`,`selling_price`,`market_value`,`unit`,`stock`,`label`,`photos_url`,`id`,`add_time`,`admin_id`) VALUES ('4','第二个商品','18','19','20','个','10','优惠#限量','[\"admin\\/20170415\\/58f194e45837b.png\",\"admin\\/20170415\\/58f194e9428ec.jpg\"]','20170415113508850','2017-04-15 11:35:08','1') [ RunTime:0.0000s ]
+
+[ 2017-04-15T11:38:30+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=listorders
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.008001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013001s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.008001s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.008001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2017-04-15T11:38:39+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=listorders
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.007000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013000s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.008000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.009000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003001s ]
+
+[ 2017-04-15T11:38:58+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=listorders
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.007000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014000s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.007000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2017-04-15T11:39:15+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=listorders
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011000s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.007000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-04-15T12:04:17+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=listorders
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.007000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012001s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.009000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.010000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 5
+ [ SQL语句 ] :  UPDATE i_goods SET listorder = CASE id  WHEN 20170415113508850 THEN 1 
+ WHEN 20170414222636332 THEN 2 
+ 
+ END 
+ WHERE ID IN(20170415113508850,20170414222636332,)
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 5
+ [ SQL语句 ] :  UPDATE i_goods SET listorder = CASE id  WHEN 20170415113508850 THEN 1 
+ WHEN 20170414222636332 THEN 2 
+ 
+ END 
+ WHERE ID IN(20170415113508850,20170414222636332,)
+
+[ 2017-04-15T12:05:20+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=listorders
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.008001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014001s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.007001s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.007001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL:  UPDATE i_goods SET listorder = CASE id  WHEN 20170415113508850 THEN 1 
+ WHEN 20170414222636332 THEN 2 
+ 
+ END 
+ WHERE ID IN(20170415113508850,20170414222636332) [ RunTime:0.0220s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2017-04-15T16:46:59+08:00 ] 127.0.0.1 /index.php?g=Admin&m=AdminPost&a=check&check=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012001s ]
+ERR: 无法加载控制器:AdminPost
+
+[ 2017-04-15T18:17:15+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=changeStatus&check=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011001s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.007001s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.008001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-04-15T18:48:06+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=changeStatus&type=3&status=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.007000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012001s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.007000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+ERR: Think\Model:Recommend方法不存在！
+
+[ 2017-04-15T18:48:32+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=changeStatus&type=3&status=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.007001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013001s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.007001s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.007001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL:  UPDATE i_goods SET status = CASE id  WHEN 20170414222636332 THEN 1 
+ 
+ END 
+ WHERE ID IN(20170414222636332) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2017-04-15T18:48:45+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=changeStatus&type=3&status=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012001s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.006000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.007001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL:  UPDATE i_goods SET status = CASE id  WHEN 20170414222636332 THEN 1 
+ 
+ END 
+ WHERE ID IN(20170414222636332) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-04-15T18:52:07+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=changeStatus&type=3&status=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008001s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.006000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.006000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+
+[ 2017-04-15T18:52:34+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=changeStatus&type=3&status=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010000s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.007000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL:  UPDATE i_goods SET status = CASE id  WHEN 20170415113508850 THEN 1 
+ 
+ END 
+ WHERE ID IN(20170415113508850) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-04-15T18:52:40+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=changeStatus&type=3&status=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009000s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.007000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL:  UPDATE i_goods SET status = CASE id  WHEN 20170415113508850 THEN 1 
+ 
+ END 
+ WHERE ID IN(20170415113508850) [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

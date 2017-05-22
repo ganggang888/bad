@@ -1,0 +1,49 @@
+[ 2017-05-02T20:24:28+08:00 ] 127.0.0.1 /index.php?g=Admin&m=public&a=dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006001s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.005000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0468s ]
+SQL: SELECT * FROM `i_users` WHERE `user_login` = 'admin' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_role_user` [ RunTime:0.0156s ]
+SQL: SELECT `role_id` FROM i_role_user a INNER JOIN i_role as b on a.role_id =b.id  WHERE `user_id` = '1' AND `status` = 1  [ RunTime:0.0156s ]
+SQL: UPDATE `i_users` SET `parentid`='0',`user_login`='admin',`user_pass`='###f25434b0a5e217fd97b2737ecf52d72e',`user_nicename`='admin',`shop_name`='',`user_email`='a526584713@qq.com',`user_url`='',`avatar`=NULL,`sex`='0',`birthday`='2000-01-01',`signature`=NULL,`last_login_ip`='127.0.0.1',`last_login_time`='2017-05-02 20:24:28',`create_time`='2017-04-13 03:02:05',`user_activation_key`='',`user_status`='1',`score`='0',`user_type`='1',`coin`='0',`mobile`='',`uuid`=NULL,`pid`=NULL,`province`='0',`city`='0',`area`='0',`money`='0',`can_money`='0' WHERE `id` = '1' [ RunTime:0.0000s ]
+
+[ 2017-05-02T20:53:25+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=edit&id=20170423124543553
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012001s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.009000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.009000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+NOTIC: [8] Undefined index: validate E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `i_goods` SET `term_id`='7',`name`='next商品',`score`='100',`status`='0',`label`='优惠#限量',`photos_url`='[\"http:\\/\\/bad.cn\\/data\\/upload\\/admin\\/20170501\\/5907278c56fd8.jpg\",\"http:\\/\\/bad.cn\\/data\\/upload\\/admin\\/20170501\\/5907278fe2eec.jpg\"]',`attribute`='[{\"id\":\"1-0\",\"cost_price\":\"60\",\"selling_price\":\"65\",\"market_value\":\"70\",\"unit\":\"\\u4ef6\",\"stock\":\"100\",\"name\":\"50\",\"info\":\"\\u7ea2\\u8272\"},{\"id\":\"1-0\",\"cost_price\":\"60\",\"selling_price\":\"65\",\"market_value\":\"70\",\"unit\":\"\\u4ef6\",\"stock\":\"100\",\"name\":\"50\",\"info\":\"\\u84dd\\u8272\"},{\"id\":\"1-0\",\"cost_price\":\"60\",\"selling_price\":\"65\",\"market_value\":\"70\",\"unit\":\"\\u4ef6\",\"stock\":\"100\",\"name\":\"50\",\"info\":\"\\u9ed1\\u8272\"},{\"id\":\"1-0\",\"cost_price\":\"60\",\"selling_price\":\"65\",\"market_value\":\"70\",\"unit\":\"\\u4ef6\",\"stock\":\"100\",\"name\":\"49\",\"info\":\"\\u9ed1\\u8272\"},{\"id\":\"1-0\",\"cost_price\":\"60\",\"selling_price\":\"65\",\"market_value\":\"70\",\"unit\":\"\\u4ef6\",\"stock\":\"100\",\"name\":\"48\",\"info\":\"\\u9ed1\\u8272\"},{\"id\":\"1-0\",\"cost_price\":\"60\",\"selling_price\":\"65\",\"market_value\":\"70\",\"unit\":\"\\u4ef6\",\"stock\":\"100\",\"name\":\"48\",\"info\":\"\\u84dd\\u8272\"},{\"id\":\"1-0\",\"cost_price\":\"60\",\"selling_price\":\"65\",\"market_value\":\"70\",\"unit\":\"\\u4ef6\",\"stock\":\"100\",\"name\":\"48\",\"info\":\"\\u7eff\\u8272\"}]',`content`='&lt;p&gt;倒萨打算1&lt;/p&gt;' WHERE `id` = '20170423124543553' [ RunTime:0.0560s ]
+
+[ 2017-05-02T20:53:31+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=edit&id=20170422212306786
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007001s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.006000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.006000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+NOTIC: [8] Undefined index: validate E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `i_goods` SET `term_id`='4',`name`='规格',`score`='100',`status`='0',`label`='优惠#限量',`photos_url`='[\"http:\\/\\/bad.cn\\/data\\/upload\\/admin\\/20170501\\/59072797ef409.jpg\",\"http:\\/\\/bad.cn\\/data\\/upload\\/admin\\/20170501\\/5907279c29cd1.jpg\"]',`attribute`='[{\"id\":\"1-1\",\"cost_price\":\"8\",\"selling_price\":\"9\",\"market_value\":\"10\",\"unit\":\"\\u4e2a\",\"stock\":\"13\",\"name\":\"\\u5927\\u6b3e\\u5f0f\",\"info\":\"\\u7eff\\u8272\"},{\"id\":\"1-1\",\"cost_price\":\"8\",\"selling_price\":\"9\",\"market_value\":\"10\",\"unit\":\"\\u4e2a\",\"stock\":\"13\",\"name\":\"\\u5c0f\\u6b3e\\u5f0f\",\"info\":\"\\u7ea2\\u8272\"}]',`content`='&lt;p&gt;的撒旦撒的&lt;/p&gt;' WHERE `id` = '20170422212306786' [ RunTime:0.0450s ]
+

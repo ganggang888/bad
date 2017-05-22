@@ -1,0 +1,73 @@
+[ 2017-05-16T20:34:19+08:00 ] 127.0.0.1 /index.php?g=User&m=Login&a=dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: user E:\bad\application\Common\Controller\HomebaseController.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0040s ]
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: SELECT * FROM `i_users` WHERE `user_status` = 1 AND `mobile` = '18815412178' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-16T20:34:25+08:00 ] 127.0.0.1 /index.php?g=User&m=Login&a=dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.015600s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015600s ]
+NOTIC: [8] Undefined index: user E:\bad\application\Common\Controller\HomebaseController.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: SELECT * FROM `i_users` WHERE `user_status` = 1 AND `mobile` = '18815412178' LIMIT 1   [ RunTime:0.0156s ]
+SQL: UPDATE `i_users` SET `last_login_time`='2017-05-16 20:34:25',`last_login_ip`='127.0.0.1' WHERE `id` = '5' [ RunTime:0.0490s ]
+
+[ 2017-05-16T20:34:44+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=do_duihuan
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_data` [ RunTime:0.0020s ]
+SQL: SELECT `data` FROM `i_data` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_goods` WHERE ( id=20170515213223536.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `i_users` WHERE `uuid` = '8431b7c9-5a98-c32c-8c2d-20979207cca1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_orders` [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `i_orders` WHERE `uid` = 5 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `i_users` WHERE `uuid` = 'fa6e51e1-7475-248c-aa3f-32406676d8de' LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE i_users SET can_monery = can_monery+42 WHERE id = '4' [ RunTime:0.0000s ]
+SQL: INSERT INTO i_ticheng_log (uid,level,pid,score,gid,zhuanfa,add_time,status) VALUES ('4',1,'5',42,20170515213223536,0,NOW(),2) [ RunTime:0.0000s ]
+SQL: UPDATE i_users SET can_monery = can_monery+15 WHERE id = '4' [ RunTime:0.0000s ]
+SQL: INSERT INTO i_ticheng_log (uid,level,pid,score,gid,zhuanfa,add_time,status) VALUES ('4',1,'5',42,20170515213223536,0,NOW(),3) [ RunTime:0.0000s ]
+SQL: UPDATE i_users SET can_monery = can_monery + 15 WHERE id = '3' [ RunTime:0.0000s ]
+SQL: INSERT INTO i_ticheng_log (uid,level,pid,score,gid,add_time,status) VALUES ('3',2,'5',15,20170515213223536,NOW(),2) [ RunTime:0.0000s ]
+SQL:  UPDATE i_users SET can_monery = can_monery + 42 WHERE id = '3' [ RunTime:0.0010s ]
+SQL: INSERT INTO i_ticheng_log (uid,level,pid,score,gid,add_time,status) VALUES ('3',2,'5',42,20170515213223536,NOW(),3) [ RunTime:0.0070s ]
+SQL: UPDATE i_users SET score = score - 850 WHERE id = '5' [ RunTime:0.0000s ]
+SQL:  INSERT INTO i_orders (order_num,uid,address_id,`number`,gid,goodsInfo,score,pay_score,pay_time) VALUES (20170516203444132,'5',4,'1',20170515213223536,'[{"fname":"第一件衣服|M、红","fprice":"850","fcount":1,"prices":"1000","fid":"20170515213223536-0"}]',850,850,NOW()) [ RunTime:0.0000s ]
+SQL: INSERT INTO i_ticheng_log (uid,level,pid,score,gid,action,add_time) VALUES ('5',0,0,850,20170515213223536,0,now()) [ RunTime:0.0000s ]
+SQL: UPDATE `i_goods` SET `attribute`='[{\"id\":\"1-0\",\"cost_price\":\"15\",\"selling_price\":\"20\",\"market_value\":\"30\",\"unit\":\"\\u4ef6\",\"stock\":14,\"name\":\"M\",\"info\":\"\\u7ea2\"},{\"id\":\"1-0\",\"cost_price\":\"15\",\"selling_price\":\"20\",\"market_value\":\"30\",\"unit\":\"\\u4ef6\",\"stock\":\"15\",\"name\":\"M\",\"info\":\"\\u7eff\"}]' WHERE `id` = '20170515213223536' [ RunTime:0.0624s ]
+SQL: SHOW COLUMNS FROM `i_sku` [ RunTime:0.0000s ]
+SQL: INSERT INTO `i_sku` (`gid`,`uid`,`action`,`gid_info`,`add_time`,`number`) VALUES ('20170515213223536','5','1','0','2017-05-16','1') [ RunTime:0.0156s ]
+
+[ 2017-05-16T20:40:57+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=queren&id=45
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.005000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_orders` [ RunTime:0.0020s ]
+SQL: UPDATE `i_orders` SET `status`='3' WHERE `id` = 45 AND `uid` = 5 [ RunTime:0.1180s ]
+

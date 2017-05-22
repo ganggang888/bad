@@ -493,18 +493,33 @@ class CenterController extends MemberbaseController {
                   $updateParent = "UPDATE i_users SET can_monery = can_monery+$getScore WHERE id = '$parent[id]'";
                   $insertParentLog = "INSERT INTO i_ticheng_log (uid,level,pid,score,gid,zhuanfa,add_time,status) VALUES ('$parent[id]',1,'$user[id]',$getScore,$good_id,$zhuanfa,NOW(),2)";
 
-                  //见点奖分配
-                  $insert_jiandian = "UPDATE i_users SET can_monery = can_monery+$jiandian WHERE id = '$parent[id]'";
-                  $insert_jiandian_log = "INSERT INTO i_ticheng_log (uid,level,pid,score,gid,zhuanfa,add_time,status) VALUES ('$parent[id]',1,'$user[id]',$getScore,$good_id,$zhuanfa,NOW(),3)";
+                  //查看是否拿过这个人的见点奖，拿过则不操作
+                  $finds = M('ticheng_log')->where(array('uid'=>$parent['id'],'level'=>1,'pid'=>$user['id'],'status'=>3))->getField('id');
+                  if ($finds) {
+                     $insert_jiandian = "INSERT INTO i_temp (info) VALUES ('123')";
+                     $insert_jiandian_log = "INSERT INTO i_temp (info) VALUES ('123')";
+                  } else {
+                     //见点奖分配
+                     $insert_jiandian = "UPDATE i_users SET can_monery = can_monery+$jiandian WHERE id = '$parent[id]'";
+                     $insert_jiandian_log = "INSERT INTO i_ticheng_log (uid,level,pid,score,gid,zhuanfa,add_time,status) VALUES ('$parent[id]',1,'$user[id]',$getScore,$good_id,$zhuanfa,NOW(),3)";
+                  }
+                  
                //第一次购买
                } else {
                   $getScore = intval($jf * $dataInfo['level_first']); //佣金
                   $updateParent = "UPDATE i_users SET can_monery = can_monery+$getScore WHERE id = '$parent[id]'";
                   $insertParentLog = "INSERT INTO i_ticheng_log (uid,level,pid,score,gid,zhuanfa,add_time,status,times) VALUES ('$parent[id]',1,'$user[id]',$getScore,$good_id,$zhuanfa,NOW(),2,1)";
 
-                  //见点奖分配
-                  $insert_jiandian = "UPDATE i_users SET can_monery = can_monery+$jiandian WHERE id = '$parent[id]'";
-                  $insert_jiandian_log = "INSERT INTO i_ticheng_log (uid,level,pid,score,gid,zhuanfa,add_time,status) VALUES ('$parent[id]',1,'$user[id]',$getScore,$good_id,$zhuanfa,NOW(),3)";
+                  $finds = M('ticheng_log')->where(array('uid'=>$parent['id'],'level'=>1,'pid'=>$user['id'],'status'=>3))->getField('id');
+                  if ($finds) {
+                     $insert_jiandian = "INSERT INTO i_temp (info) VALUES ('123')";
+                     $insert_jiandian_log = "INSERT INTO i_temp (info) VALUES ('123')";
+                  } else {
+                     //见点奖分配
+                     $insert_jiandian = "UPDATE i_users SET can_monery = can_monery+$jiandian WHERE id = '$parent[id]'";
+                     $insert_jiandian_log = "INSERT INTO i_ticheng_log (uid,level,pid,score,gid,zhuanfa,add_time,status) VALUES ('$parent[id]',1,'$user[id]',$getScore,$good_id,$zhuanfa,NOW(),3)";
+                  }
+                  
                }
                
             } elseif ($parent['level'] > 2) {
@@ -515,9 +530,16 @@ class CenterController extends MemberbaseController {
                   $updateParent = "UPDATE i_users SET can_monery = can_monery + $getScore WHERE id = '$parent[id]";
                   $insertParentLog = "INSERT INTO i_ticheng_log (uid,level,pid,score,gid,zhuanfa,add_time,status) VALUES ('$parent[id]',1,'$user[id]',$getScore,$good_id,$zhuanfa,NOW(),2)";
 
-                  //见点奖分配
-                  $insert_jiandian = "UPDATE i_users SET can_monery = can_monery+$jiandian WHERE id = '$parent[id]'";
-                  $insert_jiandian_log = "INSERT INTO i_ticheng_log (uid,level,pid,score,gid,zhuanfa,add_time,status) VALUES ('$parent[id]',1,'$user[id]',$getScore,$good_id,$zhuanfa,NOW(),3)";
+                  $finds = M('ticheng_log')->where(array('uid'=>$parent['id'],'pid'=>$user['id'],'status'=>3))->getField('id');
+                  if ($finds) {
+                     $insert_jiandian = "INSERT INTO i_temp (info) VALUES ('123')";
+                     $insert_jiandian_log = "INSERT INTO i_temp (info) VALUES ('123')";
+                  } else {
+                     //见点奖分配
+                     $insert_jiandian = "UPDATE i_users SET can_monery = can_monery+$jiandian WHERE id = '$parent[id]'";
+                     $insert_jiandian_log = "INSERT INTO i_ticheng_log (uid,level,pid,score,gid,zhuanfa,add_time,status) VALUES ('$parent[id]',1,'$user[id]',$getScore,$good_id,$zhuanfa,NOW(),3)";
+                  }
+                  
                   
                } else {
 
@@ -526,9 +548,15 @@ class CenterController extends MemberbaseController {
                   $updateParent = "UPDATE i_users SET can_monery = can_monery + $getScore WHERE id = '$parent[id]";
                   $insertParentLog = "INSERT INTO i_ticheng_log (uid,level,pid,score,gid,zhuanfa,add_time,status,times) VALUES ('$parent[id]',1,'$user[id]',$getScore,$good_id,$zhuanfa,NOW(),2,1)";
 
-                  //见点奖分配
-                  $insert_jiandian = "UPDATE i_users SET can_monery = can_monery+$jiandian WHERE id = '$parent[id]'";
-                  $insert_jiandian_log = "INSERT INTO i_ticheng_log (uid,level,pid,score,gid,zhuanfa,add_time,status) VALUES ('$parent[id]',1,'$user[id]',$getScore,$good_id,$zhuanfa,NOW(),3)";
+                  $finds = M('ticheng_log')->where(array('uid'=>$parent['id'],'pid'=>$user['id'],'status'=>3))->getField('id');
+                  if ($finds) {
+                     $insert_jiandian = "INSERT INTO i_temp (info) VALUES ('123')";
+                     $insert_jiandian_log = "INSERT INTO i_temp (info) VALUES ('123')";
+                  } else {
+                     //见点奖分配
+                     $insert_jiandian = "UPDATE i_users SET can_monery = can_monery+$jiandian WHERE id = '$parent[id]'";
+                     $insert_jiandian_log = "INSERT INTO i_ticheng_log (uid,level,pid,score,gid,zhuanfa,add_time,status) VALUES ('$parent[id]',1,'$user[id]',$getScore,$good_id,$zhuanfa,NOW(),3)";
+                  }
                }
                
             }
@@ -542,8 +570,15 @@ class CenterController extends MemberbaseController {
                   $updateGrand = "UPDATE i_users SET can_monery = can_monery + $jiandian WHERE id = '$grandfather[id]'";
                   
                   $insertGrandLog = "INSERT INTO i_ticheng_log (uid,level,pid,score,gid,add_time,status) VALUES ('$grandfather[id]',2,'$user[id]',$jiandian,$good_id,NOW(),2)";
-                  $updateGrandYongjin = " UPDATE i_users SET can_monery = can_monery + $level_level WHERE id = '$grandfather[id]'";
-                  $insertGrandYongjinLog = "INSERT INTO i_ticheng_log (uid,level,pid,score,gid,add_time,status) VALUES ('$grandfather[id]',2,'$user[id]',$level_level,$good_id,NOW(),3)";
+                  $finds = M('ticheng_log')->where(array('uid'=>$grandfather['id'],'pid'=>$user['id'],'status'=>3))->getField('id');
+                  if ($finds) {
+                     $updateGrandYongjin = "INSERT INTO i_temp (info) VALUES ('123')";
+                     $insertGrandYongjinLog = "INSERT INTO i_temp (info) VALUES ('123')";
+                  } else {
+                     $updateGrandYongjin = " UPDATE i_users SET can_monery = can_monery + $level_level WHERE id = '$grandfather[id]'";
+                     $insertGrandYongjinLog = "INSERT INTO i_ticheng_log (uid,level,pid,score,gid,add_time,status) VALUES ('$grandfather[id]',2,'$user[id]',$level_level,$good_id,NOW(),3)";
+                  }
+                  
                }
             }
          }

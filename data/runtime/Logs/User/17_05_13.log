@@ -1,0 +1,451 @@
+[ 2017-05-13T12:07:12+08:00 ] 127.0.0.1 /index.php?g=User&m=Login&a=dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.007000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011000s ]
+NOTIC: [8] Undefined index: user E:\bad\application\Common\Controller\HomebaseController.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: SELECT * FROM `i_users` WHERE `user_status` = 1 AND `mobile` = '18815412178' LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `i_users` SET `last_login_time`='2017-05-13 12:07:12',`last_login_ip`='127.0.0.1' WHERE `id` = '5' [ RunTime:0.0450s ]
+
+[ 2017-05-13T14:21:07+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=chongzhima
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_recharges` [ RunTime:0.0030s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND mi =  AND status != 2 AND uid IS NULL ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `i_recharges` WHERE ( code =  AND mi =  AND status != 2 AND uid IS NULL ) LIMIT 1  
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND mi =  AND status != 2 AND uid IS NULL ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `i_recharges` WHERE ( code =  AND mi =  AND status != 2 AND uid IS NULL ) LIMIT 1  
+
+[ 2017-05-13T14:21:11+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=chongzhima
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_recharges` [ RunTime:0.0030s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND mi =  AND status != 2 AND uid IS NULL ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `i_recharges` WHERE ( code =  AND mi =  AND status != 2 AND uid IS NULL ) LIMIT 1  
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND mi =  AND status != 2 AND uid IS NULL ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `i_recharges` WHERE ( code =  AND mi =  AND status != 2 AND uid IS NULL ) LIMIT 1  
+
+[ 2017-05-13T14:21:13+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=chongzhima
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_recharges` [ RunTime:0.0020s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND mi =  AND status != 2 AND uid IS NULL ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `i_recharges` WHERE ( code =  AND mi =  AND status != 2 AND uid IS NULL ) LIMIT 1  
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND mi =  AND status != 2 AND uid IS NULL ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `i_recharges` WHERE ( code =  AND mi =  AND status != 2 AND uid IS NULL ) LIMIT 1  
+
+[ 2017-05-13T14:21:56+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=chongzhima
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_recharges` [ RunTime:0.0020s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND mi =  AND status != 2 AND uid IS NULL ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `i_recharges` WHERE ( code =  AND mi =  AND status != 2 AND uid IS NULL ) LIMIT 1  
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND mi =  AND status != 2 AND uid IS NULL ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `i_recharges` WHERE ( code =  AND mi =  AND status != 2 AND uid IS NULL ) LIMIT 1  
+
+[ 2017-05-13T14:21:57+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=chongzhima
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_recharges` [ RunTime:0.0020s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND mi =  AND status != 2 AND uid IS NULL ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `i_recharges` WHERE ( code =  AND mi =  AND status != 2 AND uid IS NULL ) LIMIT 1  
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND mi =  AND status != 2 AND uid IS NULL ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `i_recharges` WHERE ( code =  AND mi =  AND status != 2 AND uid IS NULL ) LIMIT 1  
+
+[ 2017-05-13T14:21:57+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=chongzhima
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_recharges` [ RunTime:0.0020s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND mi =  AND status != 2 AND uid IS NULL ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `i_recharges` WHERE ( code =  AND mi =  AND status != 2 AND uid IS NULL ) LIMIT 1  
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND mi =  AND status != 2 AND uid IS NULL ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `i_recharges` WHERE ( code =  AND mi =  AND status != 2 AND uid IS NULL ) LIMIT 1  
+
+[ 2017-05-13T14:21:57+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=chongzhima
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_recharges` [ RunTime:0.0010s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND mi =  AND status != 2 AND uid IS NULL ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `i_recharges` WHERE ( code =  AND mi =  AND status != 2 AND uid IS NULL ) LIMIT 1  
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND mi =  AND status != 2 AND uid IS NULL ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `i_recharges` WHERE ( code =  AND mi =  AND status != 2 AND uid IS NULL ) LIMIT 1  
+
+[ 2017-05-13T14:22:23+08:00 ] 127.0.0.1 /index.php?g=User&m=Other&a=gold_get_jf
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+ERR: 1146:Table 'bad.users' doesn't exist
+ [ SQL语句 ] : UPDATE users SET score = score + 1,gold = gold-2 WHERE uid = 5
+ERR: 1146:Table 'bad.users' doesn't exist
+ [ SQL语句 ] : UPDATE users SET score = score + 1,gold = gold-2 WHERE uid = 5
+
+[ 2017-05-13T14:22:23+08:00 ] 127.0.0.1 /index.php?g=User&m=Other&a=gold_get_jf
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+ERR: 1146:Table 'bad.users' doesn't exist
+ [ SQL语句 ] : UPDATE users SET score = score + 1,gold = gold-2 WHERE uid = 5
+ERR: 1146:Table 'bad.users' doesn't exist
+ [ SQL语句 ] : UPDATE users SET score = score + 1,gold = gold-2 WHERE uid = 5
+
+[ 2017-05-13T14:22:23+08:00 ] 127.0.0.1 /index.php?g=User&m=Other&a=gold_get_jf
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+ERR: 1146:Table 'bad.users' doesn't exist
+ [ SQL语句 ] : UPDATE users SET score = score + 1,gold = gold-2 WHERE uid = 5
+ERR: 1146:Table 'bad.users' doesn't exist
+ [ SQL语句 ] : UPDATE users SET score = score + 1,gold = gold-2 WHERE uid = 5
+
+[ 2017-05-13T14:22:24+08:00 ] 127.0.0.1 /index.php?g=User&m=Other&a=gold_get_jf
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+ERR: 1146:Table 'bad.users' doesn't exist
+ [ SQL语句 ] : UPDATE users SET score = score + 1,gold = gold-2 WHERE uid = 5
+ERR: 1146:Table 'bad.users' doesn't exist
+ [ SQL语句 ] : UPDATE users SET score = score + 1,gold = gold-2 WHERE uid = 5
+
+[ 2017-05-13T14:22:24+08:00 ] 127.0.0.1 /index.php?g=User&m=Other&a=gold_get_jf
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+ERR: 1146:Table 'bad.users' doesn't exist
+ [ SQL语句 ] : UPDATE users SET score = score + 1,gold = gold-2 WHERE uid = 5
+ERR: 1146:Table 'bad.users' doesn't exist
+ [ SQL语句 ] : UPDATE users SET score = score + 1,gold = gold-2 WHERE uid = 5
+
+[ 2017-05-13T14:22:33+08:00 ] 127.0.0.1 /index.php?g=User&m=Other&a=gold_get_jf
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+ERR: 1146:Table 'bad.users' doesn't exist
+ [ SQL语句 ] : UPDATE users SET score = score + 1,gold = gold-2 WHERE uid = 5
+ERR: 1146:Table 'bad.users' doesn't exist
+ [ SQL语句 ] : UPDATE users SET score = score + 1,gold = gold-2 WHERE uid = 5
+
+[ 2017-05-13T14:22:44+08:00 ] 127.0.0.1 /index.php?g=User&m=Other&a=gold_get_jf
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0010s ]
+ERR: 1054:Unknown column 'uid' in 'where clause'
+ [ SQL语句 ] : UPDATE i_users SET score = score + 2,gold = gold-4 WHERE uid = 5
+ERR: 1054:Unknown column 'uid' in 'where clause'
+ [ SQL语句 ] : UPDATE i_users SET score = score + 2,gold = gold-4 WHERE uid = 5
+
+[ 2017-05-13T14:22:56+08:00 ] 127.0.0.1 /index.php?g=User&m=Other&a=gold_get_jf
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE i_users SET score = score + 1,gold = gold-2 WHERE id = 5 [ RunTime:0.0000s ]
+SQL: INSERT INTO i_duihuan_log (uid,gold,score,add_time) VALUES (5,2,1,now()) [ RunTime:0.0000s ]
+
+[ 2017-05-13T14:23:16+08:00 ] 127.0.0.1 /index.php?g=User&m=Other&a=gold_get_jf
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE i_users SET score = score + 1,gold = gold-2 WHERE id = 5 [ RunTime:0.0010s ]
+SQL: INSERT INTO i_duihuan_log (uid,gold,score,add_time) VALUES (5,2,1,now()) [ RunTime:0.0000s ]
+
+[ 2017-05-13T14:25:14+08:00 ] 127.0.0.1 /index.php?g=User&m=Other&a=gold_get_jf
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-13T14:28:04+08:00 ] 127.0.0.1 /index.php?g=User&m=Other&a=gold_get_jf
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-05-13T14:28:14+08:00 ] 127.0.0.1 /index.php?g=User&m=Other&a=gold_get_jf
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-13T14:28:30+08:00 ] 127.0.0.1 /index.php?g=User&m=Other&a=gold_get_jf
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-05-13T14:31:15+08:00 ] 127.0.0.1 /index.php?g=User&m=Other&a=gold_get_jf
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-13T14:31:58+08:00 ] 127.0.0.1 /index.php?g=User&m=Other&a=gold_get_jf
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0040s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE i_users SET score = score + 4,gold = gold-2 WHERE id = 5 [ RunTime:0.0010s ]
+SQL: INSERT INTO i_duihuan_log (uid,gold,score,add_time) VALUES (5,2,4,now()) [ RunTime:0.0000s ]
+
+[ 2017-05-13T14:32:17+08:00 ] 127.0.0.1 /index.php?g=User&m=Other&a=gold_get_jf
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE i_users SET score = score + 2,gold = gold-1 WHERE id = 5 [ RunTime:0.0000s ]
+SQL: INSERT INTO i_duihuan_log (uid,gold,score,add_time) VALUES (5,1,2,now()) [ RunTime:0.0000s ]
+
+[ 2017-05-13T14:47:18+08:00 ] 127.0.0.1 /index.php?g=User&m=Other&a=getGold
+ERR: 模板不存在:themes/simplebootx/User/Other/getGold.html
+
+[ 2017-05-13T14:52:54+08:00 ] 127.0.0.1 /index.php?g=User&m=Other&a=getScoreGoldHis
+ERR: 模板不存在:themes/simplebootx/User/Other/getScoreGoldHis.html
+
+[ 2017-05-13T20:03:58+08:00 ] 127.0.0.1 /index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.008001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url E:\bad\application\Common\Controller\AppframeController.class.php 第 22 行.
+
+[ 2017-05-13T21:30:12+08:00 ] 127.0.0.1 /index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: url E:\bad\application\Common\Controller\AppframeController.class.php 第 22 行.
+
+[ 2017-05-13T23:11:25+08:00 ] 127.0.0.1 /index.php?g=User&m=Indexadmin&a=jb_dh_jf
+ERR: 1327:Undeclared variable: 20ORDER
+ [ SQL语句 ] : SELECT a.id,a.uid,a.gold,a.score,a.add_time,b.mobile FROM i_duihuan_log a LEFT JOIN i_users b ON a.uid = b.id  LIMIT 0,20ORDER BY a.id DESC
+
+[ 2017-05-13T23:11:37+08:00 ] 127.0.0.1 /index.php?g=User&m=Indexadmin&a=jb_dh_jf
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ORDER BY a.id DESC' at line 1
+ [ SQL语句 ] : SELECT a.id,a.uid,a.gold,a.score,a.add_time,b.mobile FROM i_duihuan_log a LEFT JOIN i_users b ON a.uid = b.id  LIMIT 0,20 ORDER BY a.id DESC
+
+[ 2017-05-13T23:11:39+08:00 ] 127.0.0.1 /index.php?g=User&m=Indexadmin&a=jb_dh_jf
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ORDER BY a.id DESC' at line 1
+ [ SQL语句 ] : SELECT a.id,a.uid,a.gold,a.score,a.add_time,b.mobile FROM i_duihuan_log a LEFT JOIN i_users b ON a.uid = b.id  LIMIT 0,20 ORDER BY a.id DESC
+
+[ 2017-05-13T23:11:40+08:00 ] 127.0.0.1 /index.php?g=User&m=Indexadmin&a=jb_dh_jf
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ORDER BY a.id DESC' at line 1
+ [ SQL语句 ] : SELECT a.id,a.uid,a.gold,a.score,a.add_time,b.mobile FROM i_duihuan_log a LEFT JOIN i_users b ON a.uid = b.id  LIMIT 0,20 ORDER BY a.id DESC
+
+[ 2017-05-13T23:11:40+08:00 ] 127.0.0.1 /index.php?g=User&m=Indexadmin&a=jb_dh_jf
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ORDER BY a.id DESC' at line 1
+ [ SQL语句 ] : SELECT a.id,a.uid,a.gold,a.score,a.add_time,b.mobile FROM i_duihuan_log a LEFT JOIN i_users b ON a.uid = b.id  LIMIT 0,20 ORDER BY a.id DESC
+
+[ 2017-05-13T23:11:40+08:00 ] 127.0.0.1 /index.php?g=User&m=Indexadmin&a=jb_dh_jf
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ORDER BY a.id DESC' at line 1
+ [ SQL语句 ] : SELECT a.id,a.uid,a.gold,a.score,a.add_time,b.mobile FROM i_duihuan_log a LEFT JOIN i_users b ON a.uid = b.id  LIMIT 0,20 ORDER BY a.id DESC
+
+[ 2017-05-13T23:12:17+08:00 ] 127.0.0.1 /index.php?g=User&m=Indexadmin&a=jb_dh_jf
+ERR: 模板不存在:admin/themes/simplebootx/User/Indexadmin/jb_dh_jf.html
+
+[ 2017-05-13T23:16:37+08:00 ] 127.0.0.1 /index.php?g=User&m=Indexadmin&a=jb_dh_jf
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'id > 0  ORDER BY a.id DESC' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS num FROM i_duihuan_log a LEFT JOIN i_users b ON a.uid = b.id id > 0  ORDER BY a.id DESC
+
+[ 2017-05-13T23:16:46+08:00 ] 127.0.0.1 /index.php?g=User&m=Indexadmin&a=jb_dh_jf
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'a.id > 0  ORDER BY a.id DESC' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS num FROM i_duihuan_log a LEFT JOIN i_users b ON a.uid = b.id a.id > 0  ORDER BY a.id DESC
+
+[ 2017-05-13T23:16:47+08:00 ] 127.0.0.1 /index.php?g=User&m=Indexadmin&a=jb_dh_jf
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'a.id > 0  ORDER BY a.id DESC' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS num FROM i_duihuan_log a LEFT JOIN i_users b ON a.uid = b.id a.id > 0  ORDER BY a.id DESC
+
+[ 2017-05-13T23:16:48+08:00 ] 127.0.0.1 /index.php?g=User&m=Indexadmin&a=jb_dh_jf
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'a.id > 0  ORDER BY a.id DESC' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS num FROM i_duihuan_log a LEFT JOIN i_users b ON a.uid = b.id a.id > 0  ORDER BY a.id DESC
+

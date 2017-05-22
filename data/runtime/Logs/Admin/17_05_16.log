@@ -1,0 +1,35 @@
+[ 2017-05-16T20:25:28+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Setting&a=set_monery
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008000s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.005001s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_options` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_data` [ RunTime:0.0020s ]
+SQL: UPDATE `i_data` SET `data`='{\"level_first\":\"0.15\",\"jiandian\":\"15\",\"level_next\":\"0.05\",\"pu\":\"0.1\",\"zuanshi_first\":\"0.15\",\"zuanshi_next\":\"0.05\",\"level_level\":\"0.05\",\"huangjin\":\"0.15\",\"zuanshi\":\"0.05\",\"jinbi\":\"1000\",\"jinbi_shouyi\":\"5\",\"daili_shouyi\":\"5\"}' WHERE `id` = 1 [ RunTime:0.0000s ]
+
+[ 2017-05-16T20:40:40+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=fa&id=45
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008000s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.005001s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_orders` [ RunTime:0.0030s ]
+SQL: UPDATE `i_orders` SET `logistics_mode`='顺丰',`logistics_num`='41215412145514',`status`='2',`delivery_time`='2017-05-16 20:40:40' WHERE ( id=45 ) [ RunTime:0.0590s ]
+
+[ 2017-05-16T21:06:28+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=index&term_id=0&begin=&end=&name=
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM i_goods a LEFT JOIN i_goods_term as b on a.term_id = b.id  WHERE a.is_delete = 0 AND b.is_delete = 0 AND a.term_id IN () LIMIT 1  
+

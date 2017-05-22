@@ -1,0 +1,203 @@
+[ 2017-05-13T15:23:58+08:00 ] 127.0.0.1 /index.php?g=Admin&m=public&a=dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008000s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.005000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `user_login` = 'admin' LIMIT 1   [ RunTime:0.0300s ]
+SQL: SHOW COLUMNS FROM `i_role_user` [ RunTime:0.0030s ]
+SQL: SELECT `role_id` FROM i_role_user a INNER JOIN i_role as b on a.role_id =b.id  WHERE `user_id` = '1' AND `status` = 1  [ RunTime:0.0010s ]
+SQL: UPDATE `i_users` SET `parentid`='0',`user_login`='admin',`user_pass`='###1fccbd040eb4fc5a3a6440482c5f383e',`user_nicename`='admin',`shop_name`='',`user_email`='a526584713@qq.com',`user_url`='',`avatar`=NULL,`sex`='0',`birthday`='2000-01-01',`signature`=NULL,`last_login_ip`='127.0.0.1',`last_login_time`='2017-05-13 15:23:58',`create_time`='2017-04-13 03:02:05',`user_activation_key`='',`user_status`='1',`score`='0',`user_type`='1',`coin`='0',`mobile`='',`uuid`=NULL,`pid`=NULL,`province`='0',`city`='0',`area`='0',`money`='0',`can_monery`='0',`level`='1',`gold`='0' WHERE `id` = '1' [ RunTime:0.0460s ]
+
+[ 2017-05-13T15:25:19+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=term_delete&id=5
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008001s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.006001s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.006001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: UPDATE `i_goods_term` SET `is_delete`='1' WHERE ( id=5 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-13T15:25:33+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=term_delete&id=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009000s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.008000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.008000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: UPDATE `i_goods_term` SET `is_delete`='1' WHERE ( id=1 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-13T17:32:43+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=term_edit&id=4
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010000s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.004000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: validate E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `i_goods_term` SET `parentid`='0',`name`='第二个商品',`status`='1',`is_index`='1' WHERE `id` = 4 [ RunTime:0.0010s ]
+
+[ 2017-05-13T17:32:47+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=term_edit&id=4
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.005001s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: validate E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `i_goods_term` SET `parentid`='0',`name`='第二个商品',`status`='1',`is_index`='1' WHERE `id` = 4 [ RunTime:0.0000s ]
+
+[ 2017-05-13T17:32:51+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=term_edit&id=7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008001s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.005000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: validate E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `i_goods_term` SET `parentid`='0',`name`='会员专区',`status`='1',`is_index`='1' WHERE `id` = 7 [ RunTime:0.0000s ]
+
+[ 2017-05-13T17:36:58+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=term_edit&id=4
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008001s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.007001s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.007001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: validate E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `i_goods_term` SET `parentid`='0',`name`='家具',`status`='1',`is_index`='1' WHERE `id` = 4 [ RunTime:0.0000s ]
+
+[ 2017-05-13T17:37:06+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=term_edit&id=7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.006000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.006000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: validate E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `i_goods_term` SET `parentid`='0',`name`='日用品',`status`='1',`is_index`='1' WHERE `id` = 7 [ RunTime:0.0000s ]
+
+[ 2017-05-13T18:00:26+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=term_add&parentid=4
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.005000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: validate E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: INSERT INTO `i_goods_term` (`parentid`,`name`,`status`,`is_index`,`add_time`,`admin_id`) VALUES ('4','1','1','1','2017-05-13 18:00:26','1') [ RunTime:0.0000s ]
+
+[ 2017-05-13T18:00:28+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=term_delete&id=8
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.008001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011001s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.006001s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.006001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: UPDATE `i_goods_term` SET `is_delete`='1' WHERE ( id=8 ) [ RunTime:0.0000s ]
+
+[ 2017-05-13T18:11:42+08:00 ] 127.0.0.1 /index.php?g=Admin&m=AdminPost&a=index
+ERR: 无法加载控制器:AdminPost
+
+[ 2017-05-13T23:10:41+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Menu&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+
+[ 2017-05-13T23:10:47+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Menu&a=add&parentid=132&menuid=
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+
+[ 2017-05-13T23:11:22+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Menu&a=add_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.005000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.006000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_menu` [ RunTime:0.0030s ]
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+SQL: SHOW COLUMNS FROM `i_auth_rule` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: validate E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1185 行.
+SQL: SELECT * FROM `i_menu` WHERE `app` = 'User' AND `model` = 'Indexadmin' AND `action` = 'jb_dh_jf' LIMIT 1   [ RunTime:0.0540s ]
+SQL: SELECT `parentid` FROM `i_menu` WHERE `id` = 132 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: INSERT INTO `i_menu` (`parentid`,`name`,`app`,`model`,`action`,`data`,`icon`,`remark`,`status`,`type`) VALUES ('132','金币兑换积分记录','User','Indexadmin','jb_dh_jf','','','','1','1') [ RunTime:0.0900s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `i_auth_rule` WHERE `name` = 'user/indexadmin/jb_dh_jf' LIMIT 1   [ RunTime:0.0390s ]
+SQL: INSERT INTO `i_auth_rule` (`name`,`module`,`type`,`title`) VALUES ('user/indexadmin/jb_dh_jf','User','admin_url','金币兑换积分记录') [ RunTime:0.0650s ]
+SQL: SELECT * FROM `i_menu` WHERE `app` = 'User' ORDER BY `listorder` ASC,`app` ASC,`model` ASC,`action` ASC  [ RunTime:0.0010s ]
+
+[ 2017-05-13T23:11:22+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Menu&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+

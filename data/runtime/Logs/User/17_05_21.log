@@ -1,0 +1,411 @@
+[ 2017-05-21T16:45:46+08:00 ] 127.0.0.1 /index.php?g=User&m=Login&a=dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011001s ]
+NOTIC: [8] Undefined index: user E:\bad\application\Common\Controller\HomebaseController.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: SELECT * FROM `i_users` WHERE `user_status` = 1 AND `mobile` = '18815412178' LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `i_users` SET `last_login_time`='2017-05-21 16:45:46',`last_login_ip`='127.0.0.1' WHERE `id` = '5' [ RunTime:0.0310s ]
+
+[ 2017-05-21T16:46:12+08:00 ] 127.0.0.1 /index.php?g=User&m=Login&a=dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010000s ]
+NOTIC: [8] Undefined index: user E:\bad\application\Common\Controller\HomebaseController.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: SELECT * FROM `i_users` WHERE `user_status` = 1 AND `mobile` = '15412123212' LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `i_users` SET `last_login_time`='2017-05-21 16:46:12',`last_login_ip`='127.0.0.1' WHERE `id` = '4' [ RunTime:0.0390s ]
+
+[ 2017-05-21T16:46:54+08:00 ] 127.0.0.1 /index.php?g=User&m=Login&a=dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009001s ]
+NOTIC: [8] Undefined index: user E:\bad\application\Common\Controller\HomebaseController.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: SELECT * FROM `i_users` WHERE `user_status` = 1 AND `mobile` = '18815412178' LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `i_users` SET `last_login_time`='2017-05-21 16:46:54',`last_login_ip`='127.0.0.1' WHERE `id` = '5' [ RunTime:0.1150s ]
+
+[ 2017-05-21T16:47:43+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=do_duihuan
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_data` [ RunTime:0.0020s ]
+SQL: SELECT `data` FROM `i_data` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_goods` WHERE ( id=20170515213223536.000000 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `i_users` WHERE `uuid` = '8431b7c9-5a98-c32c-8c2d-20979207cca1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_orders` [ RunTime:0.0020s ]
+SQL: SELECT `id` FROM `i_orders` WHERE `uid` = 5 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_ticheng_log` [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `i_ticheng_log` WHERE `uid` = 4 AND `level` = 1 AND `pid` = 5 AND `status` = 3 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `i_users` WHERE `uuid` = 'fa6e51e1-7475-248c-aa3f-32406676d8de' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `i_ticheng_log` WHERE `uid` = 3 AND `pid` = 5 AND `status` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE i_users SET can_monery = can_monery+50 WHERE id = '4' [ RunTime:0.0350s ]
+SQL: INSERT INTO i_ticheng_log (uid,level,pid,score,gid,zhuanfa,add_time,status) VALUES ('4',1,'5',50,20170515213223536,0,NOW(),2) [ RunTime:0.0250s ]
+SQL: INSERT INTO i_temp (info) VALUES ('123') [ RunTime:0.0080s ]
+ERR: 1062:Duplicate entry '0' for key 'PRIMARY'
+ [ SQL语句 ] : INSERT INTO i_temp (info) VALUES ('123')
+ERR: 1062:Duplicate entry '0' for key 'PRIMARY'
+ [ SQL语句 ] : INSERT INTO i_temp (info) VALUES ('123')
+
+[ 2017-05-21T16:48:07+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=do_duihuan
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_data` [ RunTime:0.0020s ]
+SQL: SELECT `data` FROM `i_data` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_goods` WHERE ( id=20170515213223536.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `i_users` WHERE `uuid` = '8431b7c9-5a98-c32c-8c2d-20979207cca1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_orders` [ RunTime:0.0020s ]
+SQL: SELECT `id` FROM `i_orders` WHERE `uid` = 5 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_ticheng_log` [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `i_ticheng_log` WHERE `uid` = 4 AND `level` = 1 AND `pid` = 5 AND `status` = 3 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `i_users` WHERE `uuid` = 'fa6e51e1-7475-248c-aa3f-32406676d8de' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `i_ticheng_log` WHERE `uid` = 3 AND `pid` = 5 AND `status` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE i_users SET can_monery = can_monery+50 WHERE id = '4' [ RunTime:0.0010s ]
+SQL: INSERT INTO i_ticheng_log (uid,level,pid,score,gid,zhuanfa,add_time,status) VALUES ('4',1,'5',50,20170515213223536,0,NOW(),2) [ RunTime:0.0000s ]
+SQL: INSERT INTO i_temp (info) VALUES ('123') [ RunTime:0.0000s ]
+SQL: INSERT INTO i_temp (info) VALUES ('123') [ RunTime:0.0000s ]
+SQL: UPDATE i_users SET can_monery = can_monery + 15 WHERE id = '3' [ RunTime:0.0190s ]
+SQL: INSERT INTO i_ticheng_log (uid,level,pid,score,gid,add_time,status) VALUES ('3',2,'5',15,20170515213223536,NOW(),2) [ RunTime:0.0000s ]
+SQL: INSERT INTO i_temp (info) VALUES ('123') [ RunTime:0.0000s ]
+SQL: INSERT INTO i_temp (info) VALUES ('123') [ RunTime:0.0000s ]
+SQL: UPDATE i_users SET score = score - 1000 WHERE id = '5' [ RunTime:0.0090s ]
+SQL:  INSERT INTO i_orders (order_num,uid,address_id,`number`,gid,goodsInfo,score,pay_score,pay_time) VALUES (20170521164807528,'5',4,'1',20170515213223536,'[{"fname":"第一件衣服|M、红","fprice":"1000","fcount":1,"prices":"1000","fid":"20170515213223536-0"}]',1000,1000,NOW()) [ RunTime:0.0000s ]
+SQL: INSERT INTO i_ticheng_log (uid,level,pid,score,gid,action,add_time) VALUES ('5',0,0,1000,20170515213223536,0,now()) [ RunTime:0.0000s ]
+SQL: UPDATE `i_goods` SET `attribute`='[{\"id\":\"1-0\",\"cost_price\":\"15\",\"selling_price\":\"20\",\"market_value\":\"30\",\"unit\":\"\\u4ef6\",\"stock\":13,\"name\":\"M\",\"info\":\"\\u7ea2\"},{\"id\":\"1-0\",\"cost_price\":\"15\",\"selling_price\":\"20\",\"market_value\":\"30\",\"unit\":\"\\u4ef6\",\"stock\":\"15\",\"name\":\"M\",\"info\":\"\\u7eff\"}]' WHERE `id` = '20170515213223536' [ RunTime:0.0500s ]
+SQL: SHOW COLUMNS FROM `i_sku` [ RunTime:0.0020s ]
+SQL: INSERT INTO `i_sku` (`gid`,`uid`,`action`,`gid_info`,`add_time`,`number`) VALUES ('20170515213223536','5','1','0','2017-05-21','1') [ RunTime:0.0440s ]
+
+[ 2017-05-21T16:48:47+08:00 ] 127.0.0.1 /index.php?g=User&m=Login&a=dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008000s ]
+NOTIC: [8] Undefined index: user E:\bad\application\Common\Controller\HomebaseController.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: SELECT * FROM `i_users` WHERE `user_status` = 1 AND `mobile` = '18816978511' LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `i_users` SET `last_login_time`='2017-05-21 16:48:47',`last_login_ip`='127.0.0.1' WHERE `id` = '3' [ RunTime:0.0410s ]
+
+[ 2017-05-21T17:08:19+08:00 ] 127.0.0.1 /index.php?g=User&m=Login&a=dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008001s ]
+NOTIC: [8] Undefined index: user E:\bad\application\Common\Controller\HomebaseController.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: SELECT * FROM `i_users` WHERE `user_status` = 1 AND `mobile` = '18816978511' LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `i_users` SET `last_login_time`='2017-05-21 17:08:19',`last_login_ip`='127.0.0.1' WHERE `id` = '3' [ RunTime:0.0390s ]
+
+[ 2017-05-21T17:53:58+08:00 ] 127.0.0.1 /index.php?g=user&m=register&a=city&provinceid=130000
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009001s ]
+NOTIC: [8] Undefined index: user E:\bad\application\Common\Controller\HomebaseController.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `i_city` [ RunTime:0.0780s ]
+SQL: SELECT * FROM `i_city` WHERE ( fatherid = 130000 )  [ RunTime:0.0450s ]
+
+[ 2017-05-21T17:53:59+08:00 ] 127.0.0.1 /index.php?g=user&m=register&a=Area&cityid=130400
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009001s ]
+NOTIC: [8] Undefined index: user E:\bad\application\Common\Controller\HomebaseController.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `i_area` [ RunTime:0.0240s ]
+SQL: SELECT * FROM `i_area` WHERE ( fatherid = 130400 )  [ RunTime:0.1130s ]
+
+[ 2017-05-21T17:54:05+08:00 ] 127.0.0.1 /index.php?g=User&m=Register&a=doregister
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009001s ]
+NOTIC: [8] Undefined index: user E:\bad\application\Common\Controller\HomebaseController.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `mobile` = '18816931231' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: INSERT INTO `i_users` (`user_login`,`user_email`,`mobile`,`user_nicename`,`user_pass`,`last_login_ip`,`create_time`,`last_login_time`,`user_status`,`user_type`,`uuid`,`pid`,`province`,`city`,`area`) VALUES ('','','18816931231','','###1fccbd040eb4fc5a3a6440482c5f383e','127.0.0.1','2017-05-21 17:54:05','2017-05-21 17:54:05','1','2','ab3c8c0a-851c-64c4-45d3-3f0640756144','','130000','130400','130430') [ RunTime:0.0810s ]
+
+[ 2017-05-21T17:55:12+08:00 ] 127.0.0.1 /index.php?g=user&m=register&a=city&provinceid=210000
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+NOTIC: [8] Undefined index: user E:\bad\application\Common\Controller\HomebaseController.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `i_city` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `i_city` WHERE ( fatherid = 210000 )  [ RunTime:0.0000s ]
+
+[ 2017-05-21T17:55:13+08:00 ] 127.0.0.1 /index.php?g=user&m=register&a=Area&cityid=211200
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009001s ]
+NOTIC: [8] Undefined index: user E:\bad\application\Common\Controller\HomebaseController.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `i_area` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_area` WHERE ( fatherid = 211200 )  [ RunTime:0.0010s ]
+
+[ 2017-05-21T17:55:27+08:00 ] 127.0.0.1 /index.php?g=User&m=Register&a=doregister
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008000s ]
+NOTIC: [8] Undefined index: user E:\bad\application\Common\Controller\HomebaseController.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `mobile` = '15521212221' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: INSERT INTO `i_users` (`user_login`,`user_email`,`mobile`,`user_nicename`,`user_pass`,`last_login_ip`,`create_time`,`last_login_time`,`user_status`,`user_type`,`uuid`,`pid`,`province`,`city`,`area`) VALUES ('','','15521212221','','###1fccbd040eb4fc5a3a6440482c5f383e','127.0.0.1','2017-05-21 17:55:27','2017-05-21 17:55:27','1','2','ebd6c508-c229-f64a-1995-3ba238ad7366','','210000','211200','211282') [ RunTime:0.0510s ]
+
+[ 2017-05-21T17:58:00+08:00 ] 127.0.0.1 /index.php?g=user&m=register&a=city&provinceid=130000
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.008001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013001s ]
+NOTIC: [8] Undefined index: user E:\bad\application\Common\Controller\HomebaseController.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `i_city` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_city` WHERE ( fatherid = 130000 )  [ RunTime:0.0010s ]
+
+[ 2017-05-21T17:58:01+08:00 ] 127.0.0.1 /index.php?g=user&m=register&a=Area&cityid=130400
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.007001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012001s ]
+NOTIC: [8] Undefined index: user E:\bad\application\Common\Controller\HomebaseController.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `i_area` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_area` WHERE ( fatherid = 130400 )  [ RunTime:0.0010s ]
+
+[ 2017-05-21T17:58:17+08:00 ] 127.0.0.1 /index.php?g=User&m=Register&a=doregister
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011001s ]
+NOTIC: [8] Undefined index: user E:\bad\application\Common\Controller\HomebaseController.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `mobile` = '15562145214' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: INSERT INTO `i_users` (`user_login`,`user_email`,`mobile`,`user_nicename`,`user_pass`,`last_login_ip`,`create_time`,`last_login_time`,`user_status`,`user_type`,`uuid`,`pid`,`province`,`city`,`area`) VALUES ('','','15562145214','','###1fccbd040eb4fc5a3a6440482c5f383e','127.0.0.1','2017-05-21 17:58:17','2017-05-21 17:58:17','1','2','7a3c171d-0cd0-3d5d-5fc8-a77635ebab36','','130000','130400','130423') [ RunTime:0.0410s ]
+
+[ 2017-05-21T17:59:28+08:00 ] 127.0.0.1 /index.php?g=user&m=register&a=city&provinceid=130000
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010000s ]
+NOTIC: [8] Undefined index: user E:\bad\application\Common\Controller\HomebaseController.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `i_city` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_city` WHERE ( fatherid = 130000 )  [ RunTime:0.0000s ]
+
+[ 2017-05-21T17:59:29+08:00 ] 127.0.0.1 /index.php?g=user&m=register&a=Area&cityid=130200
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011001s ]
+NOTIC: [8] Undefined index: user E:\bad\application\Common\Controller\HomebaseController.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `i_area` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_area` WHERE ( fatherid = 130200 )  [ RunTime:0.0020s ]
+
+[ 2017-05-21T17:59:41+08:00 ] 127.0.0.1 /index.php?g=User&m=Register&a=doregister
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009001s ]
+NOTIC: [8] Undefined index: user E:\bad\application\Common\Controller\HomebaseController.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `mobile` = '17715874521' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+
+[ 2017-05-21T18:00:19+08:00 ] 127.0.0.1 /index.php?g=User&m=Register&a=doregister
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011001s ]
+NOTIC: [8] Undefined index: user E:\bad\application\Common\Controller\HomebaseController.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `mobile` = '17715874521' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT `uuid` FROM `i_users` WHERE `mobile` = '15518987521' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-21T18:01:23+08:00 ] 127.0.0.1 /index.php?g=User&m=Register&a=doregister
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009001s ]
+NOTIC: [8] Undefined index: user E:\bad\application\Common\Controller\HomebaseController.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `mobile` = '17715874521' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT `uuid` FROM `i_users` WHERE `mobile` = '15518987521' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-21T18:01:25+08:00 ] 127.0.0.1 /index.php?g=User&m=Register&a=doregister
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007001s ]
+NOTIC: [8] Undefined index: user E:\bad\application\Common\Controller\HomebaseController.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `i_users` WHERE `mobile` = '17715874521' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0040s ]
+SQL: SELECT `uuid` FROM `i_users` WHERE `mobile` = '15518987521' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-21T18:01:27+08:00 ] 127.0.0.1 /index.php?g=User&m=Register&a=doregister
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008000s ]
+NOTIC: [8] Undefined index: user E:\bad\application\Common\Controller\HomebaseController.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `i_users` WHERE `mobile` = '17715874521' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT `uuid` FROM `i_users` WHERE `mobile` = '15518987521' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-21T18:01:28+08:00 ] 127.0.0.1 /index.php?g=User&m=Register&a=doregister
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.007000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.016001s ]
+NOTIC: [8] Undefined index: user E:\bad\application\Common\Controller\HomebaseController.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `mobile` = '17715874521' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT `uuid` FROM `i_users` WHERE `mobile` = '15518987521' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-21T18:01:30+08:00 ] 127.0.0.1 /index.php?g=User&m=Register&a=doregister
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009001s ]
+NOTIC: [8] Undefined index: user E:\bad\application\Common\Controller\HomebaseController.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `mobile` = '17715874521' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT `uuid` FROM `i_users` WHERE `mobile` = '15518987521' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-21T18:01:34+08:00 ] 127.0.0.1 /index.php?g=User&m=Register&a=doregister
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010001s ]
+NOTIC: [8] Undefined index: user E:\bad\application\Common\Controller\HomebaseController.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `i_users` WHERE `mobile` = '17715874521' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT `uuid` FROM `i_users` WHERE `mobile` = '15518987521' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-21T18:01:37+08:00 ] 127.0.0.1 /index.php?g=User&m=Register&a=doregister
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008000s ]
+NOTIC: [8] Undefined index: user E:\bad\application\Common\Controller\HomebaseController.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `mobile` = '17715874521' LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0040s ]
+SQL: SELECT `uuid` FROM `i_users` WHERE `mobile` = '15518987521' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-21T18:01:47+08:00 ] 127.0.0.1 /index.php?g=User&m=Register&a=doregister
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+NOTIC: [8] Undefined index: user E:\bad\application\Common\Controller\HomebaseController.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `mobile` = '17715874521' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT `uuid` FROM `i_users` WHERE `mobile` = '18816978523' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-21T18:02:12+08:00 ] 127.0.0.1 /index.php?g=User&m=Register&a=doregister
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008001s ]
+NOTIC: [8] Undefined index: user E:\bad\application\Common\Controller\HomebaseController.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `mobile` = '17715874521' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT `uuid` FROM `i_users` WHERE `mobile` = '18816978523' LIMIT 1   [ RunTime:0.0000s ]
+SQL: INSERT INTO `i_users` (`user_login`,`user_email`,`mobile`,`user_nicename`,`user_pass`,`last_login_ip`,`create_time`,`last_login_time`,`user_status`,`user_type`,`uuid`,`pid`,`province`,`city`,`area`) VALUES ('','','17715874521','','###1fccbd040eb4fc5a3a6440482c5f383e','127.0.0.1','2017-05-21 18:02:12','2017-05-21 18:02:12','1','2','d114149f-e4eb-fbd2-c3bb-ddb3dd98067f','f1125bfc-a218-69ca-083b-d8af147450ef','130000','130200','130203') [ RunTime:0.0480s ]
+
+[ 2017-05-21T18:10:16+08:00 ] 127.0.0.1 /index.php?g=User&m=Login&a=dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009001s ]
+NOTIC: [8] Undefined index: user E:\bad\application\Common\Controller\HomebaseController.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: SELECT * FROM `i_users` WHERE `user_status` = 1 AND `mobile` = '18815412178' LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `i_users` SET `last_login_time`='2017-05-21 18:10:15',`last_login_ip`='127.0.0.1' WHERE `id` = '5' [ RunTime:0.0420s ]
+
+[ 2017-05-21T18:10:50+08:00 ] 127.0.0.1 /index.php?g=User&m=Login&a=dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.005000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014000s ]
+NOTIC: [8] Undefined index: user E:\bad\application\Common\Controller\HomebaseController.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: SELECT * FROM `i_users` WHERE `user_status` = 1 AND `mobile` = '18816978511' LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `i_users` SET `last_login_time`='2017-05-21 18:10:50',`last_login_ip`='127.0.0.1' WHERE `id` = '3' [ RunTime:0.0340s ]
+

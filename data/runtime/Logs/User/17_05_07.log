@@ -1,0 +1,557 @@
+[ 2017-05-07T16:10:31+08:00 ] 127.0.0.1 /index.php?g=User&m=Login&a=dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.007000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: SELECT * FROM `i_users` WHERE `user_status` = 1 AND `mobile` = '18816978523' LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `i_users` SET `last_login_time`='2017-05-07 16:10:31',`last_login_ip`='127.0.0.1' WHERE `id` = '2' [ RunTime:0.0310s ]
+
+[ 2017-05-07T16:11:42+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=saveGoods
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_user_collection` [ RunTime:0.0310s ]
+SQL: SELECT `id` FROM `i_user_collection` WHERE `gid` = '20170422212306786' AND `uid` = 2 LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-07T16:23:12+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=duihuan&good_id=20170422212306786&pid=undefined
+ERR: 模板不存在:themes/simplebootx/User/Center/duihuan.html
+
+[ 2017-05-07T18:52:18+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=do_duihuan
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_data` [ RunTime:0.0010s ]
+SQL: SELECT `data` FROM `i_data` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_goods` WHERE ( id=20170422212306784.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: goodsInfo E:\bad\application\User\Controller\CenterController.class.php 第 441 行.
+NOTIC: [8] Undefined variable: updateParent E:\bad\application\User\Controller\CenterController.class.php 第 447 行.
+NOTIC: [8] Undefined variable: updateParent E:\bad\application\User\Controller\CenterController.class.php 第 467 行.
+NOTIC: [8] Undefined variable: updateParent E:\bad\application\User\Controller\CenterController.class.php 第 483 行.
+NOTIC: [8] Undefined variable: updateParent E:\bad\application\User\Controller\CenterController.class.php 第 499 行.
+SQL: UPDATE `i_goods` SET `attribute`='[{\"id\":\"1-1\",\"cost_price\":\"8\",\"selling_price\":\"9\",\"market_value\":\"10\",\"unit\":\"\\u4e2a\",\"stock\":\"13\",\"name\":\"\\u5927\\u6b3e\\u5f0f\",\"info\":\"\\u7eff\\u8272\"},{\"id\":\"1-1\",\"cost_price\":\"8\",\"selling_price\":\"9\",\"market_value\":\"10\",\"unit\":\"\\u4e2a\",\"stock\":\"13\",\"name\":\"\\u5c0f\\u6b3e\\u5f0f\",\"info\":\"\\u7ea2\\u8272\"}]' WHERE `id` = '20170422212306786' [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_sku` [ RunTime:0.0020s ]
+SQL: INSERT INTO `i_sku` (`gid`,`uid`,`action`,`gid_info`) VALUES ('20170422212306786','2','1','1') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: success E:\bad\application\User\Controller\CenterController.class.php 第 517 行.
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE add_time =to_days(now())' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS num FROM i_orders WHERE uid = 2 WHERE add_time =to_days(now())
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE add_time =to_days(now())' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS num FROM i_orders WHERE uid = 2 WHERE add_time =to_days(now())
+
+[ 2017-05-07T18:54:40+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=do_duihuan
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_data` [ RunTime:0.0020s ]
+SQL: SELECT `data` FROM `i_data` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_goods` WHERE ( id=20170422212306784.000000 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: goodsInfo E:\bad\application\User\Controller\CenterController.class.php 第 441 行.
+NOTIC: [8] Undefined variable: updateParent E:\bad\application\User\Controller\CenterController.class.php 第 447 行.
+NOTIC: [8] Undefined variable: updateParent E:\bad\application\User\Controller\CenterController.class.php 第 467 行.
+NOTIC: [8] Undefined variable: updateParent E:\bad\application\User\Controller\CenterController.class.php 第 483 行.
+NOTIC: [8] Undefined variable: updateParent E:\bad\application\User\Controller\CenterController.class.php 第 499 行.
+SQL: UPDATE `i_goods` SET `attribute`='[{\"id\":\"1-1\",\"cost_price\":\"8\",\"selling_price\":\"9\",\"market_value\":\"10\",\"unit\":\"\\u4e2a\",\"stock\":\"13\",\"name\":\"\\u5927\\u6b3e\\u5f0f\",\"info\":\"\\u7eff\\u8272\"},{\"id\":\"1-1\",\"cost_price\":\"8\",\"selling_price\":\"9\",\"market_value\":\"10\",\"unit\":\"\\u4e2a\",\"stock\":\"13\",\"name\":\"\\u5c0f\\u6b3e\\u5f0f\",\"info\":\"\\u7ea2\\u8272\"}]' WHERE `id` = '20170422212306786' [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_sku` [ RunTime:0.0030s ]
+SQL: INSERT INTO `i_sku` (`gid`,`uid`,`action`,`gid_info`) VALUES ('20170422212306786','2','1','1') [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: success E:\bad\application\User\Controller\CenterController.class.php 第 517 行.
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE order_time =to_days(now())' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS num FROM i_orders WHERE uid = 2 WHERE order_time =to_days(now())
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE order_time =to_days(now())' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS num FROM i_orders WHERE uid = 2 WHERE order_time =to_days(now())
+
+[ 2017-05-07T18:55:17+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=do_duihuan
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_data` [ RunTime:0.0020s ]
+SQL: SELECT `data` FROM `i_data` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_goods` WHERE ( id=20170422212306784.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: goodsInfo E:\bad\application\User\Controller\CenterController.class.php 第 441 行.
+NOTIC: [8] Undefined variable: updateParent E:\bad\application\User\Controller\CenterController.class.php 第 447 行.
+NOTIC: [8] Undefined variable: updateParent E:\bad\application\User\Controller\CenterController.class.php 第 467 行.
+NOTIC: [8] Undefined variable: updateParent E:\bad\application\User\Controller\CenterController.class.php 第 483 行.
+NOTIC: [8] Undefined variable: updateParent E:\bad\application\User\Controller\CenterController.class.php 第 499 行.
+SQL: UPDATE `i_goods` SET `attribute`='[{\"id\":\"1-1\",\"cost_price\":\"8\",\"selling_price\":\"9\",\"market_value\":\"10\",\"unit\":\"\\u4e2a\",\"stock\":\"13\",\"name\":\"\\u5927\\u6b3e\\u5f0f\",\"info\":\"\\u7eff\\u8272\"},{\"id\":\"1-1\",\"cost_price\":\"8\",\"selling_price\":\"9\",\"market_value\":\"10\",\"unit\":\"\\u4e2a\",\"stock\":\"13\",\"name\":\"\\u5c0f\\u6b3e\\u5f0f\",\"info\":\"\\u7ea2\\u8272\"}]' WHERE `id` = '20170422212306786' [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_sku` [ RunTime:0.0020s ]
+SQL: INSERT INTO `i_sku` (`gid`,`uid`,`action`,`gid_info`) VALUES ('20170422212306786','2','1','1') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: success E:\bad\application\User\Controller\CenterController.class.php 第 517 行.
+SQL: SELECT COUNT(*) AS num FROM i_orders WHERE uid = 2 AND order_time =to_days(now()) [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: success E:\bad\application\User\Controller\CenterController.class.php 第 547 行.
+
+[ 2017-05-07T18:55:59+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=do_duihuan
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_data` [ RunTime:0.0020s ]
+SQL: SELECT `data` FROM `i_data` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_goods` WHERE ( id=20170422212306784.000000 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: goodsInfo E:\bad\application\User\Controller\CenterController.class.php 第 441 行.
+NOTIC: [8] Undefined variable: updateParent E:\bad\application\User\Controller\CenterController.class.php 第 447 行.
+NOTIC: [8] Undefined variable: updateParent E:\bad\application\User\Controller\CenterController.class.php 第 467 行.
+NOTIC: [8] Undefined variable: updateParent E:\bad\application\User\Controller\CenterController.class.php 第 483 行.
+NOTIC: [8] Undefined variable: updateParent E:\bad\application\User\Controller\CenterController.class.php 第 499 行.
+SQL: UPDATE `i_goods` SET `attribute`='[{\"id\":\"1-1\",\"cost_price\":\"8\",\"selling_price\":\"9\",\"market_value\":\"10\",\"unit\":\"\\u4e2a\",\"stock\":\"13\",\"name\":\"\\u5927\\u6b3e\\u5f0f\",\"info\":\"\\u7eff\\u8272\"},{\"id\":\"1-1\",\"cost_price\":\"8\",\"selling_price\":\"9\",\"market_value\":\"10\",\"unit\":\"\\u4e2a\",\"stock\":\"13\",\"name\":\"\\u5c0f\\u6b3e\\u5f0f\",\"info\":\"\\u7ea2\\u8272\"}]' WHERE `id` = '20170422212306786' [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_sku` [ RunTime:0.0020s ]
+SQL: INSERT INTO `i_sku` (`gid`,`uid`,`action`,`gid_info`) VALUES ('20170422212306786','2','1','1') [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: success E:\bad\application\User\Controller\CenterController.class.php 第 518 行.
+SQL: SELECT COUNT(*) AS num FROM i_orders WHERE uid = 2 AND order_time =to_days(now()) [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: success E:\bad\application\User\Controller\CenterController.class.php 第 548 行.
+
+[ 2017-05-07T18:59:18+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=do_duihuan
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_data` [ RunTime:0.0010s ]
+SQL: SELECT `data` FROM `i_data` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `i_goods` WHERE ( id=20170422212306784.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: goodsInfo E:\bad\application\User\Controller\CenterController.class.php 第 440 行.
+NOTIC: [8] Undefined variable: updateParent E:\bad\application\User\Controller\CenterController.class.php 第 446 行.
+NOTIC: [8] Undefined variable: updateParent E:\bad\application\User\Controller\CenterController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: updateParent E:\bad\application\User\Controller\CenterController.class.php 第 482 行.
+NOTIC: [8] Undefined variable: updateParent E:\bad\application\User\Controller\CenterController.class.php 第 498 行.
+SQL: UPDATE i_users SET score = score - 100 WHERE id = '2' [ RunTime:0.0600s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '100,100,NOW())' at line 1
+ [ SQL语句 ] :  INSERT INTO i_orders (order_num,uid,address_id,`number`,gid,goodsInfo,score,pay_score,pay_time) VALUES (20170507185918609,'2',2,'1',20170422212306786,,100,100,NOW())
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '100,100,NOW())' at line 1
+ [ SQL语句 ] :  INSERT INTO i_orders (order_num,uid,address_id,`number`,gid,goodsInfo,score,pay_score,pay_time) VALUES (20170507185918609,'2',2,'1',20170422212306786,,100,100,NOW())
+
+[ 2017-05-07T19:07:55+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=do_duihuan
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_data` [ RunTime:0.0030s ]
+SQL: SELECT `data` FROM `i_data` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_goods` WHERE ( id=20170422212306784.000000 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: goods E:\bad\application\User\Controller\CenterController.class.php 第 441 行.
+NOTIC: [8] Undefined variable: goods E:\bad\application\User\Controller\CenterController.class.php 第 441 行.
+NOTIC: [8] Undefined variable: goods E:\bad\application\User\Controller\CenterController.class.php 第 441 行.
+NOTIC: [8] Undefined variable: goods_id E:\bad\application\User\Controller\CenterController.class.php 第 441 行.
+NOTIC: [8] Undefined variable: updateParent E:\bad\application\User\Controller\CenterController.class.php 第 450 行.
+NOTIC: [8] Undefined variable: updateParent E:\bad\application\User\Controller\CenterController.class.php 第 470 行.
+NOTIC: [8] Undefined variable: updateParent E:\bad\application\User\Controller\CenterController.class.php 第 486 行.
+NOTIC: [8] Undefined variable: updateParent E:\bad\application\User\Controller\CenterController.class.php 第 502 行.
+SQL: UPDATE i_users SET score = score - 100 WHERE id = '2' [ RunTime:0.0000s ]
+ERR: :
+ [ SQL语句 ] :  INSERT INTO i_orders (order_num,uid,address_id,`number`,gid,goodsInfo,score,pay_score,pay_time) VALUES (20170507190755693,'2',2,'1',20170422212306786,[{"fname":":%E5%B0%8F%E6%AC%BE%E5%BC%8F\u3001%E7%BA%A2%E8%89%B2","fprice":null,"fcount":1,"prices":null,"fid":"-1"}],100,100,NOW())
+ERR: :
+ [ SQL语句 ] :  INSERT INTO i_orders (order_num,uid,address_id,`number`,gid,goodsInfo,score,pay_score,pay_time) VALUES (20170507190755693,'2',2,'1',20170422212306786,[{"fname":":%E5%B0%8F%E6%AC%BE%E5%BC%8F\u3001%E7%BA%A2%E8%89%B2","fprice":null,"fcount":1,"prices":null,"fid":"-1"}],100,100,NOW())
+
+[ 2017-05-07T19:08:58+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=do_duihuan
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0040s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_data` [ RunTime:0.0030s ]
+SQL: SELECT `data` FROM `i_data` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_goods` WHERE ( id=20170422212306784.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: goods E:\bad\application\User\Controller\CenterController.class.php 第 441 行.
+NOTIC: [8] Undefined variable: goods E:\bad\application\User\Controller\CenterController.class.php 第 441 行.
+NOTIC: [8] Undefined variable: goods E:\bad\application\User\Controller\CenterController.class.php 第 441 行.
+NOTIC: [8] Undefined variable: goods_id E:\bad\application\User\Controller\CenterController.class.php 第 441 行.
+NOTIC: [8] Undefined variable: updateParent E:\bad\application\User\Controller\CenterController.class.php 第 450 行.
+NOTIC: [8] Undefined variable: updateParent E:\bad\application\User\Controller\CenterController.class.php 第 470 行.
+NOTIC: [8] Undefined variable: updateParent E:\bad\application\User\Controller\CenterController.class.php 第 486 行.
+NOTIC: [8] Undefined variable: updateParent E:\bad\application\User\Controller\CenterController.class.php 第 502 行.
+SQL: UPDATE i_users SET score = score - 100 WHERE id = '2' [ RunTime:0.0000s ]
+SQL:  INSERT INTO i_orders (order_num,uid,address_id,`number`,gid,goodsInfo,score,pay_score,pay_time) VALUES (20170507190858313,'2',2,'1',20170422212306786,'[{"fname":":%E5%B0%8F%E6%AC%BE%E5%BC%8F\u3001%E7%BA%A2%E8%89%B2","fprice":null,"fcount":1,"prices":null,"fid":"-1"}]',100,100,NOW()) [ RunTime:0.0000s ]
+SQL: INSERT INTO i_ticheng_log (uid,level,pid,score,gid,action,add_time) VALUES ('2',0,0,100,20170422212306786,0,now()) [ RunTime:0.0000s ]
+SQL: UPDATE `i_goods` SET `attribute`='[{\"id\":\"1-1\",\"cost_price\":\"8\",\"selling_price\":\"9\",\"market_value\":\"10\",\"unit\":\"\\u4e2a\",\"stock\":\"13\",\"name\":\"\\u5927\\u6b3e\\u5f0f\",\"info\":\"\\u7eff\\u8272\"},{\"id\":\"1-1\",\"cost_price\":\"8\",\"selling_price\":\"9\",\"market_value\":\"10\",\"unit\":\"\\u4e2a\",\"stock\":\"13\",\"name\":\"\\u5c0f\\u6b3e\\u5f0f\",\"info\":\"\\u7ea2\\u8272\"}]' WHERE `id` = '20170422212306786' [ RunTime:0.0220s ]
+SQL: SHOW COLUMNS FROM `i_sku` [ RunTime:0.0020s ]
+SQL: INSERT INTO `i_sku` (`gid`,`uid`,`action`,`gid_info`) VALUES ('20170422212306786','2','1','1') [ RunTime:0.0170s ]
+SQL: UPDATE `i_users` SET `level`='2' WHERE `id` = '2' [ RunTime:0.0410s ]
+NOTIC: [8] Undefined variable: theParentid E:\bad\application\User\Controller\CenterController.class.php 第 534 行.
+SQL: SELECT * FROM `i_users` WHERE `uuid` = null LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS num FROM i_orders WHERE uid = 2 AND order_time =to_days(now()) [ RunTime:0.0000s ]
+
+[ 2017-05-07T19:32:37+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=do_duihuan
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_data` [ RunTime:0.0020s ]
+SQL: SELECT `data` FROM `i_data` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_goods` WHERE ( id=20170422212306784.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: updateParent E:\bad\application\User\Controller\CenterController.class.php 第 450 行.
+NOTIC: [8] Undefined variable: updateParent E:\bad\application\User\Controller\CenterController.class.php 第 470 行.
+NOTIC: [8] Undefined variable: updateParent E:\bad\application\User\Controller\CenterController.class.php 第 486 行.
+NOTIC: [8] Undefined variable: updateParent E:\bad\application\User\Controller\CenterController.class.php 第 502 行.
+SQL: UPDATE i_users SET score = score - 100 WHERE id = '2' [ RunTime:0.0010s ]
+SQL:  INSERT INTO i_orders (order_num,uid,address_id,`number`,gid,goodsInfo,score,pay_score,pay_time) VALUES (20170507193237748,'2',2,'1',20170422212306786,'[{"fname":"\u89c4\u683c:%E5%B0%8F%E6%AC%BE%E5%BC%8F\u3001%E7%BA%A2%E8%89%B2","fprice":"100","fcount":1,"prices":"100","fid":"20170422212306786-1"}]',100,100,NOW()) [ RunTime:0.0000s ]
+SQL: INSERT INTO i_ticheng_log (uid,level,pid,score,gid,action,add_time) VALUES ('2',0,0,100,20170422212306786,0,now()) [ RunTime:0.0000s ]
+SQL: UPDATE `i_goods` SET `attribute`='[{\"id\":\"1-1\",\"cost_price\":\"8\",\"selling_price\":\"9\",\"market_value\":\"10\",\"unit\":\"\\u4e2a\",\"stock\":\"13\",\"name\":\"\\u5927\\u6b3e\\u5f0f\",\"info\":\"\\u7eff\\u8272\"},{\"id\":\"1-1\",\"cost_price\":\"8\",\"selling_price\":\"9\",\"market_value\":\"10\",\"unit\":\"\\u4e2a\",\"stock\":\"13\",\"name\":\"\\u5c0f\\u6b3e\\u5f0f\",\"info\":\"\\u7ea2\\u8272\"}]' WHERE `id` = '20170422212306786' [ RunTime:0.0500s ]
+SQL: SHOW COLUMNS FROM `i_sku` [ RunTime:0.0020s ]
+SQL: INSERT INTO `i_sku` (`gid`,`uid`,`action`,`gid_info`) VALUES ('20170422212306786','2','1','1') [ RunTime:0.0480s ]
+SQL: UPDATE `i_users` SET `level`='2' WHERE `id` = '2' [ RunTime:0.0490s ]
+NOTIC: [8] Undefined variable: theParentid E:\bad\application\User\Controller\CenterController.class.php 第 534 行.
+SQL: SELECT * FROM `i_users` WHERE `uuid` = null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS num FROM i_orders WHERE uid = 2 AND order_time =to_days(now()) [ RunTime:0.0010s ]
+
+[ 2017-05-07T20:16:13+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=do_duihuan
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_data` [ RunTime:0.0020s ]
+SQL: SELECT `data` FROM `i_data` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_goods` WHERE ( id=20170422212306784.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: updateParent E:\bad\application\User\Controller\CenterController.class.php 第 450 行.
+NOTIC: [8] Undefined variable: updateParent E:\bad\application\User\Controller\CenterController.class.php 第 470 行.
+NOTIC: [8] Undefined variable: updateParent E:\bad\application\User\Controller\CenterController.class.php 第 486 行.
+NOTIC: [8] Undefined variable: updateParent E:\bad\application\User\Controller\CenterController.class.php 第 502 行.
+SQL: UPDATE i_users SET score = score - 100 WHERE id = '2' [ RunTime:0.0000s ]
+SQL:  INSERT INTO i_orders (order_num,uid,address_id,`number`,gid,goodsInfo,score,pay_score,pay_time) VALUES (20170507201613387,'2',2,'1',20170422212306786,'[{"fname":"\u89c4\u683c:%E5%B0%8F%E6%AC%BE%E5%BC%8F\u3001%E7%BA%A2%E8%89%B2","fprice":"100","fcount":1,"prices":"100","fid":"20170422212306786-1"}]',100,100,NOW()) [ RunTime:0.0000s ]
+SQL: INSERT INTO i_ticheng_log (uid,level,pid,score,gid,action,add_time) VALUES ('2',0,0,100,20170422212306786,0,now()) [ RunTime:0.0000s ]
+SQL: UPDATE `i_goods` SET `attribute`='[{\"id\":\"1-1\",\"cost_price\":\"8\",\"selling_price\":\"9\",\"market_value\":\"10\",\"unit\":\"\\u4e2a\",\"stock\":\"13\",\"name\":\"\\u5927\\u6b3e\\u5f0f\",\"info\":\"\\u7eff\\u8272\"},{\"id\":\"1-1\",\"cost_price\":\"8\",\"selling_price\":\"9\",\"market_value\":\"10\",\"unit\":\"\\u4e2a\",\"stock\":\"13\",\"name\":\"\\u5c0f\\u6b3e\\u5f0f\",\"info\":\"\\u7ea2\\u8272\"}]' WHERE `id` = '20170422212306786' [ RunTime:0.0500s ]
+SQL: SHOW COLUMNS FROM `i_sku` [ RunTime:0.0020s ]
+SQL: INSERT INTO `i_sku` (`gid`,`uid`,`action`,`gid_info`) VALUES ('20170422212306786','2','1','1') [ RunTime:0.0390s ]
+SQL: UPDATE `i_users` SET `level`='2' WHERE `id` = '2' [ RunTime:0.0190s ]
+NOTIC: [8] Undefined variable: theParentid E:\bad\application\User\Controller\CenterController.class.php 第 534 行.
+SQL: SELECT * FROM `i_users` WHERE `uuid` = null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS num FROM i_orders WHERE uid = 2 AND order_time =to_days(now()) [ RunTime:0.0000s ]
+
+[ 2017-05-07T21:10:56+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=do_duihuan
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0010s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_data` [ RunTime:0.0020s ]
+SQL: SELECT `data` FROM `i_data` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_goods` WHERE ( id=20170422212306784.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-07T21:11:34+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=do_duihuan
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_data` [ RunTime:0.0020s ]
+SQL: SELECT `data` FROM `i_data` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_goods` WHERE ( id=20170422212306784.000000 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-05-07T21:12:00+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=do_duihuan
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_data` [ RunTime:0.0020s ]
+SQL: SELECT `data` FROM `i_data` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_goods` WHERE ( id=20170422212306784.000000 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-05-07T21:12:13+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=do_duihuan
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_data` [ RunTime:0.0030s ]
+SQL: SELECT `data` FROM `i_data` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_goods` WHERE ( id=20170422212306784.000000 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-05-07T21:14:47+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=do_duihuan
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_data` [ RunTime:0.0010s ]
+SQL: SELECT `data` FROM `i_data` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_goods` WHERE ( id=20170422212306784.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-07T21:15:18+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=do_duihuan
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_data` [ RunTime:0.0020s ]
+SQL: SELECT `data` FROM `i_data` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_goods` WHERE ( id=20170422212306784.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-07T21:15:27+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=do_duihuan
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_data` [ RunTime:0.0020s ]
+SQL: SELECT `data` FROM `i_data` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_goods` WHERE ( id=20170422212306784.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: updateParent E:\bad\application\User\Controller\CenterController.class.php 第 466 行.
+NOTIC: [8] Undefined variable: updateParent E:\bad\application\User\Controller\CenterController.class.php 第 486 行.
+NOTIC: [8] Undefined variable: updateParent E:\bad\application\User\Controller\CenterController.class.php 第 502 行.
+NOTIC: [8] Undefined variable: updateParent E:\bad\application\User\Controller\CenterController.class.php 第 518 行.
+SQL: UPDATE i_users SET score = score - 100 WHERE id = '2' [ RunTime:0.0000s ]
+SQL:  INSERT INTO i_orders (order_num,uid,address_id,`number`,gid,goodsInfo,score,pay_score,pay_time) VALUES (20170507211527622,'2',2,'1',20170422212306786,'[{"fname":"\u89c4\u683c|\u5c0f\u6b3e\u5f0f\u3001\u7ea2\u8272","fprice":"100","fcount":1,"prices":"100","fid":"20170422212306786-1"}]',100,100,NOW()) [ RunTime:0.0000s ]
+SQL: INSERT INTO i_ticheng_log (uid,level,pid,score,gid,action,add_time) VALUES ('2',0,0,100,20170422212306786,0,now()) [ RunTime:0.0000s ]
+SQL: UPDATE `i_goods` SET `attribute`='[{\"id\":\"1-1\",\"cost_price\":\"8\",\"selling_price\":\"9\",\"market_value\":\"10\",\"unit\":\"\\u4e2a\",\"stock\":\"13\",\"name\":\"\\u5927\\u6b3e\\u5f0f\",\"info\":\"\\u7eff\\u8272\"},{\"id\":\"1-1\",\"cost_price\":\"8\",\"selling_price\":\"9\",\"market_value\":\"10\",\"unit\":\"\\u4e2a\",\"stock\":12,\"name\":\"\\u5c0f\\u6b3e\\u5f0f\",\"info\":\"\\u7ea2\\u8272\"}]' WHERE `id` = '20170422212306786' [ RunTime:0.0580s ]
+SQL: SHOW COLUMNS FROM `i_sku` [ RunTime:0.0030s ]
+SQL: INSERT INTO `i_sku` (`gid`,`uid`,`action`,`gid_info`) VALUES ('20170422212306786','2','1','1') [ RunTime:0.1010s ]
+SQL: UPDATE `i_users` SET `level`='2' WHERE `id` = '2' [ RunTime:0.0490s ]
+NOTIC: [8] Undefined variable: theParentid E:\bad\application\User\Controller\CenterController.class.php 第 550 行.
+SQL: SELECT * FROM `i_users` WHERE `uuid` = null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS num FROM i_orders WHERE uid = 2 AND order_time =to_days(now()) [ RunTime:0.0000s ]
+
+[ 2017-05-07T21:47:27+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=do_duihuan
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_data` [ RunTime:0.0020s ]
+SQL: SELECT `data` FROM `i_data` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_goods` WHERE ( id=20170422212306784.000000 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-05-07T21:56:28+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=do_duihuan
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_data` [ RunTime:0.0020s ]
+SQL: SELECT `data` FROM `i_data` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_goods` WHERE ( id=20170422212306784.000000 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: updateParent E:\bad\application\User\Controller\CenterController.class.php 第 474 行.
+NOTIC: [8] Undefined variable: updateParent E:\bad\application\User\Controller\CenterController.class.php 第 494 行.
+NOTIC: [8] Undefined variable: updateParent E:\bad\application\User\Controller\CenterController.class.php 第 510 行.
+NOTIC: [8] Undefined variable: updateParent E:\bad\application\User\Controller\CenterController.class.php 第 526 行.
+SQL: UPDATE i_users SET score = score - 85 WHERE id = '2' [ RunTime:0.0000s ]
+SQL:  INSERT INTO i_orders (order_num,uid,address_id,`number`,gid,goodsInfo,score,pay_score,pay_time) VALUES (20170507215628159,'2',2,'1',20170422212306786,'[{"fname":"\u89c4\u683c|\u5c0f\u6b3e\u5f0f\u3001\u7ea2\u8272","fprice":"85","fcount":1,"prices":"100","fid":"20170422212306786-1"}]',85,85,NOW()) [ RunTime:0.0000s ]
+SQL: INSERT INTO i_ticheng_log (uid,level,pid,score,gid,action,add_time) VALUES ('2',0,0,85,20170422212306786,0,now()) [ RunTime:0.0000s ]
+SQL: UPDATE `i_goods` SET `attribute`='[{\"id\":\"1-1\",\"cost_price\":\"8\",\"selling_price\":\"9\",\"market_value\":\"10\",\"unit\":\"\\u4e2a\",\"stock\":\"13\",\"name\":\"\\u5927\\u6b3e\\u5f0f\",\"info\":\"\\u7eff\\u8272\"},{\"id\":\"1-1\",\"cost_price\":\"8\",\"selling_price\":\"9\",\"market_value\":\"10\",\"unit\":\"\\u4e2a\",\"stock\":11,\"name\":\"\\u5c0f\\u6b3e\\u5f0f\",\"info\":\"\\u7ea2\\u8272\"}]' WHERE `id` = '20170422212306786' [ RunTime:0.0920s ]
+SQL: SHOW COLUMNS FROM `i_sku` [ RunTime:0.0020s ]
+SQL: INSERT INTO `i_sku` (`gid`,`uid`,`action`,`gid_info`) VALUES ('20170422212306786','2','1','1') [ RunTime:0.0370s ]
+SQL: SELECT COUNT(*) AS num FROM i_orders WHERE uid = 2 AND order_time =to_days(now()) [ RunTime:0.0000s ]
+
+[ 2017-05-07T21:57:50+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=do_duihuan
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_data` [ RunTime:0.0030s ]
+SQL: SELECT `data` FROM `i_data` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_goods` WHERE ( id=20170422212306784.000000 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-05-07T21:58:11+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=do_duihuan
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_data` [ RunTime:0.0030s ]
+SQL: SELECT `data` FROM `i_data` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_goods` WHERE ( id=20170422212306784.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-07T22:22:02+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=do_duihuan
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_data` [ RunTime:0.0020s ]
+SQL: SELECT `data` FROM `i_data` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_goods` WHERE ( id=20170422212306784.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-07T22:39:43+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=do_duihuan
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.007000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_data` [ RunTime:0.0010s ]
+SQL: SELECT `data` FROM `i_data` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_goods` WHERE ( id=20170422212306784.000000 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: updateParent E:\bad\application\User\Controller\CenterController.class.php 第 474 行.
+NOTIC: [8] Undefined variable: updateParent E:\bad\application\User\Controller\CenterController.class.php 第 494 行.
+NOTIC: [8] Undefined variable: updateParent E:\bad\application\User\Controller\CenterController.class.php 第 510 行.
+NOTIC: [8] Undefined variable: updateParent E:\bad\application\User\Controller\CenterController.class.php 第 526 行.
+SQL: UPDATE i_users SET score = score - 100 WHERE id = '2' [ RunTime:0.0000s ]
+SQL:  INSERT INTO i_orders (order_num,uid,address_id,`number`,gid,goodsInfo,score,pay_score,pay_time) VALUES (20170507223943995,'2',2,'1',20170422212306786,'[{"fname":"规格|小款式、红色","fprice":"100","fcount":1,"prices":"100","fid":"20170422212306786-1"}]',100,100,NOW()) [ RunTime:0.0010s ]
+SQL: INSERT INTO i_ticheng_log (uid,level,pid,score,gid,action,add_time) VALUES ('2',0,0,100,20170422212306786,0,now()) [ RunTime:0.0000s ]
+SQL: UPDATE `i_goods` SET `attribute`='[{\"id\":\"1-1\",\"cost_price\":\"8\",\"selling_price\":\"9\",\"market_value\":\"10\",\"unit\":\"\\u4e2a\",\"stock\":\"13\",\"name\":\"\\u5927\\u6b3e\\u5f0f\",\"info\":\"\\u7eff\\u8272\"},{\"id\":\"1-1\",\"cost_price\":\"8\",\"selling_price\":\"9\",\"market_value\":\"10\",\"unit\":\"\\u4e2a\",\"stock\":10,\"name\":\"\\u5c0f\\u6b3e\\u5f0f\",\"info\":\"\\u7ea2\\u8272\"}]' WHERE `id` = '20170422212306786' [ RunTime:0.1260s ]
+SQL: SHOW COLUMNS FROM `i_sku` [ RunTime:0.0020s ]
+SQL: INSERT INTO `i_sku` (`gid`,`uid`,`action`,`gid_info`) VALUES ('20170422212306786','2','1','1') [ RunTime:0.1410s ]
+SQL: UPDATE `i_users` SET `level`='2' WHERE `id` = '2' [ RunTime:0.0610s ]
+NOTIC: [8] Undefined variable: theParentid E:\bad\application\User\Controller\CenterController.class.php 第 558 行.
+SQL: SELECT * FROM `i_users` WHERE `uuid` = null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS num FROM i_orders WHERE uid = 2 AND order_time =to_days(now()) [ RunTime:0.0010s ]
+

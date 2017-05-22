@@ -1,0 +1,11 @@
+[ 2017-05-02T21:16:21+08:00 ] 127.0.0.1 /index.php?g=User&m=Login&a=dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: SELECT * FROM `i_users` WHERE `user_status` = 1 AND `mobile` = '18816978523' LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `i_users` SET `last_login_time`='2017-05-02 21:16:21',`last_login_ip`='127.0.0.1' WHERE `id` = '2' [ RunTime:0.0000s ]
+

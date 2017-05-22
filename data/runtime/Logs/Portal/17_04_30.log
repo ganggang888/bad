@@ -1,0 +1,46 @@
+[ 2017-04-30T14:00:05+08:00 ] 127.0.0.1 /index.php?g=&m=AdminPost&a=add_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.004000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_posts` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_terms` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_term_relationships` [ RunTime:0.0030s ]
+
+[ 2017-04-30T14:00:08+08:00 ] 127.0.0.1 /index.php?g=&m=AdminPost&a=add_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009001s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.005000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_posts` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_terms` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_term_relationships` [ RunTime:0.0020s ]
+SQL: INSERT INTO `i_posts` (`post_title`,`post_keywords`,`post_source`,`post_excerpt`,`post_date`,`post_status`,`istop`,`recommended`,`post_content`,`post_modified`,`post_author`,`smeta`) VALUES ('1','','','','2017-04-30 13:59:58','1','0','0','<p>1</p>','2017-04-30 14:00:08','1','{\"thumb\":\"\",\"template\":\"\"}') [ RunTime:0.0000s ]
+SQL: INSERT INTO `i_term_relationships` (`term_id`,`object_id`) VALUES ('1','1') [ RunTime:0.0010s ]
+
+[ 2017-04-30T20:30:59+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Login&a=dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010001s ]
+ERR: 无法加载控制器:Login
+
+[ 2017-04-30T20:32:06+08:00 ] 127.0.0.1 /psd_chage.html
+ERR: 无法加载控制器:Psd_chage
+
+[ 2017-04-30T20:32:08+08:00 ] 127.0.0.1 /regist.html
+ERR: 无法加载控制器:Regist
+

@@ -87,7 +87,16 @@ class RegisterController extends HomebaseController {
 	     
 	    $password=I('post.password');
 	    $mobile=I('post.mobile');
-	    
+	    $pid = I('post.uuid');
+	    //如果有推荐人
+	    $tuijian = I('post.tuijian');
+	    if ($tuijian) {
+	    	$id = M('users')->where(array('mobile'=>$tuijian))->getField('uuid');
+	    	if (!$id) {
+	    		$this->error("推荐人不存在，请重新输入");
+	    	}
+	    	$pid = $id;
+	    }
 	    $users_model=M("Users");
 	    $data=array(
 	        'user_login' => '',
@@ -101,6 +110,7 @@ class RegisterController extends HomebaseController {
 	        'user_status' => 1,
 	        "user_type"=>2,//会员
 	        'uuid'=>uuid(),
+	        'pid'=>$pid,
 	        'province'=>I('post.province'),
 	        'city'=>I('post.city'),
 	        'area'=>I('post.area'),

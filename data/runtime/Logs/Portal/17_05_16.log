@@ -1,0 +1,296 @@
+[ 2017-05-16T20:33:53+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-16T20:33:58+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-16T20:34:02+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=49
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '3' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-16T20:34:37+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-16T20:34:39+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170515213223536&name=M
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170515213223536.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-16T20:39:05+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-16T20:39:06+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170422212306786&name=%E5%B0%8F%E6%AC%BE%E5%BC%8F
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170422212306784.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-16T20:39:08+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170422212306786&name=%E5%A4%A7%E6%AC%BE%E5%BC%8F
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170422212306784.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-16T20:39:08+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170422212306786&name=%E5%B0%8F%E6%AC%BE%E5%BC%8F
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170422212306784.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-16T20:39:09+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170422212306786&name=%E5%A4%A7%E6%AC%BE%E5%BC%8F
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170422212306784.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-16T20:39:10+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170422212306786&name=%E5%B0%8F%E6%AC%BE%E5%BC%8F
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0040s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170422212306784.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-16T20:39:11+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170422212306786&name=%E5%A4%A7%E6%AC%BE%E5%BC%8F
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170422212306784.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-16T20:39:11+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170422212306786&name=%E5%B0%8F%E6%AC%BE%E5%BC%8F
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170422212306784.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-16T20:39:12+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170422212306786&name=%E5%A4%A7%E6%AC%BE%E5%BC%8F
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170422212306784.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-16T20:39:15+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170422212306786&name=%E5%B0%8F%E6%AC%BE%E5%BC%8F
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170422212306784.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-16T20:41:17+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-16T20:41:24+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-16T20:41:25+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-16T20:41:27+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-16T20:43:18+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-16T21:22:49+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-16T21:22:50+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-16T21:22:52+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-16T21:28:11+08:00 ] 127.0.0.1 /js/jquery-weui.js
+ERR: 无法加载控制器:Js
+
+[ 2017-05-16T21:29:23+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-16T21:29:26+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-16T21:29:30+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-16T21:29:32+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-16T21:30:10+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-16T21:31:37+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-16T21:32:22+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-16T21:32:28+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=49
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-05-16T21:32:28+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=50
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0020s ]
+
+[ 2017-05-16T21:32:30+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=49
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-16T21:32:30+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=48
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-05-16T21:32:31+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=50
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-05-16T21:50:33+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=48
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '5' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0050s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-16T21:50:43+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-16T21:50:49+08:00 ] 127.0.0.1 /psd_chage.html
+ERR: 无法加载控制器:Psd_chage
+
+[ 2017-05-16T21:50:52+08:00 ] 127.0.0.1 /psd_chage.html
+ERR: 无法加载控制器:Psd_chage
+
+[ 2017-05-16T21:50:59+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-16T21:51:02+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+

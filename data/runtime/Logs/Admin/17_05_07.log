@@ -1,0 +1,392 @@
+[ 2017-05-07T11:56:26+08:00 ] 127.0.0.1 /index.php?g=Admin&m=public&a=dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009000s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.005000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0580s ]
+SQL: SELECT * FROM `i_users` WHERE `user_login` = 'admin' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_role_user` [ RunTime:0.0200s ]
+SQL: SELECT `role_id` FROM i_role_user a INNER JOIN i_role as b on a.role_id =b.id  WHERE `user_id` = '1' AND `status` = 1  [ RunTime:0.0130s ]
+SQL: UPDATE `i_users` SET `parentid`='0',`user_login`='admin',`user_pass`='###f25434b0a5e217fd97b2737ecf52d72e',`user_nicename`='admin',`shop_name`='',`user_email`='a526584713@qq.com',`user_url`='',`avatar`=NULL,`sex`='0',`birthday`='2000-01-01',`signature`=NULL,`last_login_ip`='127.0.0.1',`last_login_time`='2017-05-07 11:56:26',`create_time`='2017-04-13 03:02:05',`user_activation_key`='',`user_status`='1',`score`='0',`user_type`='1',`coin`='0',`mobile`='',`uuid`=NULL,`pid`=NULL,`province`='0',`city`='0',`area`='0',`money`='0',`can_money`='0',`level`='1' WHERE `id` = '1' [ RunTime:0.0350s ]
+
+[ 2017-05-07T12:05:52+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Setting&a=set_monery
+ERR: 模板不存在:admin/themes/simplebootx/Admin/Setting/set_monery.html
+
+[ 2017-05-07T12:30:41+08:00 ] 127.0.0.1 /index.php?g=Admin&m=link&a=add_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.009000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014001s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.008001s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.008001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_links` [ RunTime:0.0250s ]
+NOTIC: [8] Undefined index: validate E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: link_name E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1303 行.
+
+[ 2017-05-07T12:30:55+08:00 ] 127.0.0.1 /index.php?g=Admin&m=link&a=add_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009001s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.005000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.006000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_links` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: validate E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: link_name E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1303 行.
+
+[ 2017-05-07T12:31:20+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Setting&a=set_monery
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008001s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.004000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_options` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_data` [ RunTime:0.0010s ]
+SQL: UPDATE `i_data` SET `data`='{\"level_first\":\"0.15\",\"jiandian\":\"15\",\"level_next\":\"0.05\",\"pu\":\"0.1\",\"zuanshi_first\":\"0.15\",\"zuanshi_next\":\"0.05\",\"level_level\":\"0.05\",\"huangjin\":\"0.15\",\"zuanshi\":\"0.15\"}' WHERE `id` = 1 [ RunTime:0.0000s ]
+
+[ 2017-05-07T12:31:42+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Menu&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+
+[ 2017-05-07T12:31:47+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Menu&a=add&parentid=109&menuid=
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+
+[ 2017-05-07T12:32:13+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Menu&a=add_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009001s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.008000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.008000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_menu` [ RunTime:0.0030s ]
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+SQL: SHOW COLUMNS FROM `i_auth_rule` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: validate E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1185 行.
+SQL: SELECT * FROM `i_menu` WHERE `app` = 'Admin' AND `model` = 'Setting' AND `action` = 'set_monery' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `parentid` FROM `i_menu` WHERE `id` = 109 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: INSERT INTO `i_menu` (`parentid`,`name`,`app`,`model`,`action`,`data`,`icon`,`remark`,`status`,`type`) VALUES ('109','返点设置','Admin','Setting','set_monery','','','','1','1') [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `i_auth_rule` WHERE `name` = 'admin/setting/set_monery' LIMIT 1   [ RunTime:0.0230s ]
+SQL: INSERT INTO `i_auth_rule` (`name`,`module`,`type`,`title`) VALUES ('admin/setting/set_monery','Admin','admin_url','返点设置') [ RunTime:0.0010s ]
+SQL: SELECT * FROM `i_menu` WHERE `app` = 'Admin' ORDER BY `listorder` ASC,`app` ASC,`model` ASC,`action` ASC  [ RunTime:0.0020s ]
+NOTIC: [2] mkdir(): File exists E:\bad\application\Admin\Controller\MenuController.class.php 第 247 行.
+
+[ 2017-05-07T12:32:13+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Menu&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+
+[ 2017-05-07T12:46:11+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=get_number
+ERR: 模板不存在:admin/themes/simplebootx/Admin/Goods/get_number.html
+
+[ 2017-05-07T12:49:38+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=get_number
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010001s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.008001s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.008001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_recharges` [ RunTime:0.0020s ]
+SQL: INSERT INTO `i_recharges` (`code`,`add_time`) VALUES ('1231425158','2017-05-07 12:49:38'),('1026254798','2017-05-07 12:49:38'),('1338021140','2017-05-07 12:49:38'),('1022425452','2017-05-07 12:49:38'),('1138469657','2017-05-07 12:49:38'),('1376402201','2017-05-07 12:49:38'),('1086085203','2017-05-07 12:49:38'),('1061419708','2017-05-07 12:49:38'),('1211302319','2017-05-07 12:49:38'),('1344516012','2017-05-07 12:49:38'),('1019159244','2017-05-07 12:49:38'),('1173296684','2017-05-07 12:49:38'),('1027043192','2017-05-07 12:49:38'),('1174072565','2017-05-07 12:49:38'),('1021912369','2017-05-07 12:49:38'),('1088950955','2017-05-07 12:49:38'),('1187975845','2017-05-07 12:49:38'),('1313580901','2017-05-07 12:49:38'),('1184046385','2017-05-07 12:49:38'),('1154375209','2017-05-07 12:49:38'),('1271220324','2017-05-07 12:49:38'),('1186386541','2017-05-07 12:49:38'),('1390230396','2017-05-07 12:49:38'),('1100464022','2017-05-07 12:49:38'),('1058929382','2017-05-07 12:49:38'),('1240998523','2017-05-07 12:49:38'),('1320100801','2017-05-07 12:49:38'),('1273210082','2017-05-07 12:49:38'),('1358419291','2017-05-07 12:49:38'),('1310827777','2017-05-07 12:49:38'),('1268392114','2017-05-07 12:49:38'),('1403507965','2017-05-07 12:49:38'),('1131711987','2017-05-07 12:49:38'),('1024252525','2017-05-07 12:49:38'),('1324806142','2017-05-07 12:49:38'),('1017219543','2017-05-07 12:49:38'),('1186123743','2017-05-07 12:49:38'),('1034814513','2017-05-07 12:49:38'),('1374011988','2017-05-07 12:49:38'),('1075435616','2017-05-07 12:49:38'),('1303807309','2017-05-07 12:49:38'),('1380957371','2017-05-07 12:49:38'),('1095646054','2017-05-07 12:49:38'),('1104018056','2017-05-07 12:49:38'),('1061882734','2017-05-07 12:49:38'),('1075961212','2017-05-07 12:49:38'),('1194508259','2017-05-07 12:49:38'),('1243926847','2017-05-07 12:49:38'),('1062633586','2017-05-07 12:49:38'),('1388465893','2017-05-07 12:49:38'),('1350235002','2017-05-07 12:49:38'),('1021023861','2017-05-07 12:49:38'),('1293245321','2017-05-07 12:49:38'),('1331751524','2017-05-07 12:49:38'),('1037429981','2017-05-07 12:49:38'),('1396399898','2017-05-07 12:49:38'),('1125805284','2017-05-07 12:49:38'),('1354327147','2017-05-07 12:49:38'),('1165925819','2017-05-07 12:49:38'),('1075786014','2017-05-07 12:49:38'),('1367629745','2017-05-07 12:49:38'),('1289603688','2017-05-07 12:49:38'),('1210326211','2017-05-07 12:49:38'),('1020273009','2017-05-07 12:49:38'),('1390806049','2017-05-07 12:49:38'),('1176024781','2017-05-07 12:49:38'),('1260332967','2017-05-07 12:49:38'),('1165788163','2017-05-07 12:49:38'),('1182519652','2017-05-07 12:49:38'),('1257066760','2017-05-07 12:49:38'),('1200615190','2017-05-07 12:49:38'),('1243226051','2017-05-07 12:49:38'),('1345054122','2017-05-07 12:49:38'),('1161107851','2017-05-07 12:49:38'),('1120874687','2017-05-07 12:49:38'),('1188513955','2017-05-07 12:49:38'),('1045464099','2017-05-07 12:49:38'),('1131624388','2017-05-07 12:49:38'),('1315845972','2017-05-07 12:49:38'),('1142611858','2017-05-07 12:49:38'),('1296098560','2017-05-07 12:49:38'),('1207060004','2017-05-07 12:49:38'),('1055100036','2017-05-07 12:49:38'),('1041447040','2017-05-07 12:49:38'),('1264012143','2017-05-07 12:49:38'),('1220825628','2017-05-07 12:49:38'),('1043436799','2017-05-07 12:49:38'),('1025979485','2017-05-07 12:49:38'),('1141423009','2017-05-07 12:49:38'),('1211364890','2017-05-07 12:49:38'),('1370558068','2017-05-07 12:49:38'),('1032136473','2017-05-07 12:49:38'),('1325582022','2017-05-07 12:49:38'),('1012088720','2017-05-07 12:49:38'),('1101002133','2017-05-07 12:49:38'),('1200877988','2017-05-07 12:49:38'),('1188576526','2017-05-07 12:49:38'),('1071506156','2017-05-07 12:49:38'),('1144601617','2017-05-07 12:49:38'),('1058065902','2017-05-07 12:49:38') [ RunTime:0.0010s ]
+
+[ 2017-05-07T12:52:17+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=get_number
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010000s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.007000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_recharges` [ RunTime:0.0030s ]
+SQL: INSERT INTO `i_recharges` (`code`,`add_time`) VALUES ('1070530048','2017-05-07 12:52:17'),('1230424022','2017-05-07 12:52:17'),('1019647298','2017-05-07 12:52:17'),('1130385482','2017-05-07 12:52:17'),('1046252494','2017-05-07 12:52:17'),('1377741221','2017-05-07 12:52:17'),('1315332890','2017-05-07 12:52:17'),('1093093157','2017-05-07 12:52:17'),('1107672203','2017-05-07 12:52:17'),('1024490295','2017-05-07 12:52:17') [ RunTime:0.0000s ]
+
+[ 2017-05-07T13:38:00+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=jf_list
+ERR: 模板不存在:admin/themes/simplebootx/Admin/Goods/jf_list.html
+
+[ 2017-05-07T14:35:43+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=get_number
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011001s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.007001s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.008001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_recharges` [ RunTime:0.0020s ]
+SQL: INSERT INTO `i_recharges` (`jf`,`code`,`add_time`) VALUES ('0','1082831510','2017-05-07 14:35:43'),('0','1347494392','2017-05-07 14:35:43'),('0','1356617246','2017-05-07 14:35:43'),('0','1216921196','2017-05-07 14:35:43'),('0','1386726419','2017-05-07 14:35:43'),('0','1282370479','2017-05-07 14:35:43'),('0','1152335394','2017-05-07 14:35:43'),('0','1324393173','2017-05-07 14:35:43'),('0','1337420458','2017-05-07 14:35:43'),('0','1264500197','2017-05-07 14:35:43') [ RunTime:0.0000s ]
+
+[ 2017-05-07T14:36:09+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=get_number
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010000s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.007000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_recharges` [ RunTime:0.0020s ]
+SQL: INSERT INTO `i_recharges` (`jf`,`code`,`add_time`) VALUES ('100','1177914425','2017-05-07 14:36:09'),('100','1062646100','2017-05-07 14:36:09'),('100','1229648141','2017-05-07 14:36:09'),('100','1024778122','2017-05-07 14:36:09'),('100','1215507092','2017-05-07 14:36:09'),('100','1290254427','2017-05-07 14:36:09'),('100','1153111275','2017-05-07 14:36:09'),('100','1319262350','2017-05-07 14:36:09'),('100','1252298849','2017-05-07 14:36:09'),('100','1020498264','2017-05-07 14:36:09') [ RunTime:0.0010s ]
+
+[ 2017-05-07T14:39:59+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Menu&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+
+[ 2017-05-07T14:40:07+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Menu&a=add&parentid=109&menuid=
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+
+[ 2017-05-07T14:40:22+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Menu&a=add_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009000s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.004001s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_menu` [ RunTime:0.0030s ]
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+SQL: SHOW COLUMNS FROM `i_auth_rule` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: validate E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1185 行.
+SQL: SELECT * FROM `i_menu` WHERE `app` = 'Admin' AND `model` = 'Goods' AND `action` = 'jf_list' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `parentid` FROM `i_menu` WHERE `id` = 109 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: INSERT INTO `i_menu` (`parentid`,`name`,`app`,`model`,`action`,`data`,`icon`,`remark`,`status`,`type`) VALUES ('109','充值码管理','Admin','Goods','jf_list','','','','1','1') [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `i_auth_rule` WHERE `name` = 'admin/goods/jf_list' LIMIT 1   [ RunTime:0.0000s ]
+SQL: INSERT INTO `i_auth_rule` (`name`,`module`,`type`,`title`) VALUES ('admin/goods/jf_list','Admin','admin_url','充值码管理') [ RunTime:0.0000s ]
+SQL: SELECT * FROM `i_menu` WHERE `app` = 'Admin' ORDER BY `listorder` ASC,`app` ASC,`model` ASC,`action` ASC  [ RunTime:0.0020s ]
+NOTIC: [2] mkdir(): File exists E:\bad\application\Admin\Controller\MenuController.class.php 第 247 行.
+
+[ 2017-05-07T14:40:22+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Menu&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+
+[ 2017-05-07T14:40:26+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Menu&a=add&parentid=204&menuid=
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+
+[ 2017-05-07T14:40:40+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Menu&a=add_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008000s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.005001s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_menu` [ RunTime:0.0020s ]
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+SQL: SHOW COLUMNS FROM `i_auth_rule` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: validate E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1185 行.
+SQL: SELECT * FROM `i_menu` WHERE `app` = 'Admin' AND `model` = 'Goods' AND `action` = 'get_number' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `parentid` FROM `i_menu` WHERE `id` = 204 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `parentid` FROM `i_menu` WHERE `id` = 109 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: INSERT INTO `i_menu` (`parentid`,`name`,`app`,`model`,`action`,`data`,`icon`,`remark`,`status`,`type`) VALUES ('204','生成积分卡','Admin','Goods','get_number','','','','0','1') [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `i_auth_rule` WHERE `name` = 'admin/goods/get_number' LIMIT 1   [ RunTime:0.0000s ]
+SQL: INSERT INTO `i_auth_rule` (`name`,`module`,`type`,`title`) VALUES ('admin/goods/get_number','Admin','admin_url','生成积分卡') [ RunTime:0.0000s ]
+SQL: SELECT * FROM `i_menu` WHERE `app` = 'Admin' ORDER BY `listorder` ASC,`app` ASC,`model` ASC,`action` ASC  [ RunTime:0.0010s ]
+NOTIC: [2] mkdir(): File exists E:\bad\application\Admin\Controller\MenuController.class.php 第 247 行.
+
+[ 2017-05-07T14:40:41+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Menu&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+
+[ 2017-05-07T16:09:43+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=edit&id=20170422212306786
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009001s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.005000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: validate E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `i_goods` SET `term_id`='4',`name`='规格',`score`='100',`huangjin`='1',`status`='0',`label`='优惠#限量',`photos_url`='[\"http:\\/\\/bad.cn\\/data\\/upload\\/admin\\/20170501\\/59072797ef409.jpg\",\"http:\\/\\/bad.cn\\/data\\/upload\\/admin\\/20170501\\/5907279c29cd1.jpg\"]',`attribute`='[{\"id\":\"1-1\",\"cost_price\":\"8\",\"selling_price\":\"9\",\"market_value\":\"10\",\"unit\":\"\\u4e2a\",\"stock\":\"13\",\"name\":\"\\u5927\\u6b3e\\u5f0f\",\"info\":\"\\u7eff\\u8272\"},{\"id\":\"1-1\",\"cost_price\":\"8\",\"selling_price\":\"9\",\"market_value\":\"10\",\"unit\":\"\\u4e2a\",\"stock\":\"13\",\"name\":\"\\u5c0f\\u6b3e\\u5f0f\",\"info\":\"\\u7ea2\\u8272\"}]',`content`='&lt;p&gt;的撒旦撒的&lt;/p&gt;' WHERE `id` = '20170422212306786' [ RunTime:0.0320s ]
+
+[ 2017-05-07T16:09:47+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=edit&id=20170423124543553
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008000s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.005001s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+NOTIC: [8] Undefined index: validate E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `i_goods` SET `term_id`='7',`name`='next商品',`score`='100',`huangjin`='1',`status`='0',`label`='优惠#限量',`photos_url`='[\"http:\\/\\/bad.cn\\/data\\/upload\\/admin\\/20170501\\/5907278c56fd8.jpg\",\"http:\\/\\/bad.cn\\/data\\/upload\\/admin\\/20170501\\/5907278fe2eec.jpg\"]',`attribute`='[{\"id\":\"1-0\",\"cost_price\":\"60\",\"selling_price\":\"65\",\"market_value\":\"70\",\"unit\":\"\\u4ef6\",\"stock\":\"100\",\"name\":\"50\",\"info\":\"\\u7ea2\\u8272\"},{\"id\":\"1-0\",\"cost_price\":\"60\",\"selling_price\":\"65\",\"market_value\":\"70\",\"unit\":\"\\u4ef6\",\"stock\":\"100\",\"name\":\"50\",\"info\":\"\\u84dd\\u8272\"},{\"id\":\"1-0\",\"cost_price\":\"60\",\"selling_price\":\"65\",\"market_value\":\"70\",\"unit\":\"\\u4ef6\",\"stock\":\"100\",\"name\":\"50\",\"info\":\"\\u9ed1\\u8272\"},{\"id\":\"1-0\",\"cost_price\":\"60\",\"selling_price\":\"65\",\"market_value\":\"70\",\"unit\":\"\\u4ef6\",\"stock\":\"100\",\"name\":\"49\",\"info\":\"\\u9ed1\\u8272\"},{\"id\":\"1-0\",\"cost_price\":\"60\",\"selling_price\":\"65\",\"market_value\":\"70\",\"unit\":\"\\u4ef6\",\"stock\":\"100\",\"name\":\"48\",\"info\":\"\\u9ed1\\u8272\"},{\"id\":\"1-0\",\"cost_price\":\"60\",\"selling_price\":\"65\",\"market_value\":\"70\",\"unit\":\"\\u4ef6\",\"stock\":\"100\",\"name\":\"48\",\"info\":\"\\u84dd\\u8272\"},{\"id\":\"1-0\",\"cost_price\":\"60\",\"selling_price\":\"65\",\"market_value\":\"70\",\"unit\":\"\\u4ef6\",\"stock\":\"100\",\"name\":\"48\",\"info\":\"\\u7eff\\u8272\"}]',`content`='&lt;p&gt;倒萨打算1&lt;/p&gt;' WHERE `id` = '20170423124543553' [ RunTime:0.0480s ]
+
+[ 2017-05-07T19:09:27+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=deleteOrder&
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010001s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.005000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_orders` [ RunTime:0.0020s ]
+SQL: DELETE FROM `i_orders` WHERE ( id=0 ) [ RunTime:0.0000s ]
+
+[ 2017-05-07T19:10:19+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=deleteOrder&
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008000s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.005001s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_orders` [ RunTime:0.0030s ]
+SQL: DELETE FROM `i_orders` WHERE ( id=0 ) [ RunTime:0.0000s ]
+
+[ 2017-05-07T19:16:22+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=deleteOrder&id=7
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.005001s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_orders` [ RunTime:0.0020s ]
+SQL: DELETE FROM `i_orders` WHERE ( id=7 ) [ RunTime:0.1580s ]
+
+[ 2017-05-07T19:16:25+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=deleteOrder&id=13
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011001s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.007001s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.007001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_orders` [ RunTime:0.0030s ]
+SQL: DELETE FROM `i_orders` WHERE ( id=13 ) [ RunTime:0.0760s ]
+
+[ 2017-05-07T19:16:43+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=deleteOrder&id=8
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.007000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013001s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.007000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_orders` [ RunTime:0.0020s ]
+SQL: DELETE FROM `i_orders` WHERE ( id=8 ) [ RunTime:0.0410s ]
+
+[ 2017-05-07T19:31:58+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=deleteOrder&id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009001s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.006001s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.006001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_orders` [ RunTime:0.0030s ]
+SQL: DELETE FROM `i_orders` WHERE ( id=2 ) [ RunTime:0.0500s ]
+
+[ 2017-05-07T19:32:00+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=deleteOrder&id=14
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007001s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.006001s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.006001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_orders` [ RunTime:0.0020s ]
+SQL: DELETE FROM `i_orders` WHERE ( id=14 ) [ RunTime:0.0220s ]
+
+[ 2017-05-07T20:15:24+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=fa&id=15
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.005000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015000s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.010000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.010000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_orders` [ RunTime:0.0030s ]
+SQL: UPDATE `i_orders` SET `logistics_mode`='圆通',`logistics_num`='152145214521452',`status`='2',`delivery_time`='2017-05-07 20:15:24' WHERE ( id=15 ) [ RunTime:0.0390s ]
+

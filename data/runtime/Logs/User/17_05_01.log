@@ -1,0 +1,597 @@
+[ 2017-05-01T10:40:16+08:00 ] 127.0.0.1 /index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009001s ]
+NOTIC: [8] Undefined index: url E:\bad\application\Common\Controller\AppframeController.class.php 第 22 行.
+
+[ 2017-05-01T10:49:35+08:00 ] 127.0.0.1 /index.php?g=user&m=register&a=city&provinceid=150000
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008000s ]
+SQL: SHOW COLUMNS FROM `i_city` [ RunTime:0.0250s ]
+SQL: SELECT * FROM `i_city` WHERE ( fatherid = 150000 )  [ RunTime:0.0120s ]
+
+[ 2017-05-01T10:50:24+08:00 ] 127.0.0.1 /index.php?g=user&m=register&a=city&provinceid=120000
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009000s ]
+SQL: SHOW COLUMNS FROM `i_city` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_city` WHERE ( fatherid = 120000 )  [ RunTime:0.0010s ]
+
+[ 2017-05-01T10:50:26+08:00 ] 127.0.0.1 /index.php?g=user&m=register&a=Area&cityid=120100
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `i_area` [ RunTime:0.0280s ]
+SQL: SELECT * FROM `i_area` WHERE ( fatherid = 120100 )  [ RunTime:0.0420s ]
+
+[ 2017-05-01T11:01:38+08:00 ] 127.0.0.1 /index.php?g=user&m=register&a=city&provinceid=120000
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `i_city` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_city` WHERE ( fatherid = 120000 )  [ RunTime:0.0000s ]
+
+[ 2017-05-01T11:01:40+08:00 ] 127.0.0.1 /index.php?g=user&m=register&a=Area&cityid=120100
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006000s ]
+SQL: SHOW COLUMNS FROM `i_area` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_area` WHERE ( fatherid = 120100 )  [ RunTime:0.0010s ]
+
+[ 2017-05-01T13:58:02+08:00 ] 127.0.0.1 /index.php?g=User&m=Login&a=dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: SELECT * FROM `i_users` WHERE `user_status` = 1 AND `mobile` = '18816978523' LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `i_users` SET `last_login_time`='2017-05-01 13:58:02',`last_login_ip`='127.0.0.1' WHERE `id` = '2' [ RunTime:0.0000s ]
+
+[ 2017-05-01T13:58:03+08:00 ] 127.0.0.1 /index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011001s ]
+NOTIC: [8] Undefined index: url E:\bad\application\Common\Controller\AppframeController.class.php 第 22 行.
+
+[ 2017-05-01T13:58:10+08:00 ] 127.0.0.1 /index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012001s ]
+NOTIC: [8] Undefined index: url E:\bad\application\Common\Controller\AppframeController.class.php 第 22 行.
+
+[ 2017-05-01T14:03:18+08:00 ] 127.0.0.1 /index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011001s ]
+NOTIC: [8] Undefined index: url E:\bad\application\Common\Controller\AppframeController.class.php 第 22 行.
+
+[ 2017-05-01T14:26:03+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=addAddress
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 1 E:\bad\application\User\Controller\CenterController.class.php 第 32 行.
+NOTIC: [8] Undefined offset: 2 E:\bad\application\User\Controller\CenterController.class.php 第 33 行.
+SQL: SHOW COLUMNS FROM `i_address` [ RunTime:0.0010s ]
+SQL: UPDATE `i_address` SET `listorder`='0' WHERE `uid` = 2 [ RunTime:0.0000s ]
+ERR: 1048:Column 'city' cannot be null
+ [ SQL语句 ] : INSERT INTO `i_address` (`name`,`phone`,`address`,`province`,`city`,`area`,`uid`,`listorder`) VALUES ('王三','18816521452','湖北省','110101',NULL,NULL,'2','1')
+ERR: 1048:Column 'city' cannot be null
+ [ SQL语句 ] : INSERT INTO `i_address` (`name`,`phone`,`address`,`province`,`city`,`area`,`uid`,`listorder`) VALUES ('王三','18816521452','湖北省','110101',NULL,NULL,'2','1')
+
+[ 2017-05-01T14:26:29+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=addAddress
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T14:26:42+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=addAddress
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.005000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-05-01T14:31:55+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=addAddress
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_address` [ RunTime:0.0020s ]
+SQL: UPDATE `i_address` SET `listorder`='0' WHERE `uid` = 2 [ RunTime:0.0000s ]
+SQL: INSERT INTO `i_address` (`name`,`phone`,`address`,`province`,`city`,`area`,`uid`,`listorder`) VALUES ('王三岁','15521236512','北京市西城区','110000','110000','110102','2','1') [ RunTime:0.0220s ]
+
+[ 2017-05-01T14:33:32+08:00 ] 127.0.0.1 /index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010000s ]
+NOTIC: [8] Undefined index: url E:\bad\application\Common\Controller\AppframeController.class.php 第 22 行.
+
+[ 2017-05-01T14:33:36+08:00 ] 127.0.0.1 /index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012001s ]
+NOTIC: [8] Undefined index: url E:\bad\application\Common\Controller\AppframeController.class.php 第 22 行.
+
+[ 2017-05-01T14:43:43+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=editAddress&id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_address` [ RunTime:0.0010s ]
+
+[ 2017-05-01T14:43:47+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=editAddress&id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_address` [ RunTime:0.0010s ]
+
+[ 2017-05-01T14:43:50+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=editAddress&id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_address` [ RunTime:0.0020s ]
+
+[ 2017-05-01T14:44:10+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=editAddress&id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T14:44:28+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=editAddress&id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.007000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T14:48:22+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=editAddress&id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T14:49:00+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=editAddress&id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.008001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-05-01T14:49:53+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=editAddress&id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T14:50:18+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=editAddress&id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-05-01T14:51:53+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=editAddress&id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_address` [ RunTime:0.0020s ]
+SQL: UPDATE `i_address` SET `name`='王三岁',`phone`='15521236512',`address`='北京市西城区',`province`='110000',`city`='110000',`area`='110102',`listorder`='1',`uid`='2' WHERE `id` = 2 [ RunTime:0.0010s ]
+
+[ 2017-05-01T14:52:07+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=editAddress&id=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_address` [ RunTime:0.0020s ]
+SQL: UPDATE `i_address` SET `name`='王三',`phone`='15541215412',`address`='中山北路901号',`province`='120000',`city`='120100',`area`='120103',`listorder`='1',`uid`='2' WHERE `id` = 1 [ RunTime:0.0010s ]
+
+[ 2017-05-01T14:53:00+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=editAddress&id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_address` [ RunTime:0.0020s ]
+SQL: UPDATE `i_address` SET `listorder`='0' WHERE `uid` = 2 [ RunTime:0.0000s ]
+SQL: UPDATE `i_address` SET `name`='王三岁',`phone`='15521236512',`address`='北京市西城区',`province`='110000',`city`='110000',`area`='110102',`listorder`='1',`uid`='2' WHERE `id` = 2 [ RunTime:0.0000s ]
+
+[ 2017-05-01T14:53:05+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=editAddress&id=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_address` [ RunTime:0.0040s ]
+SQL: UPDATE `i_address` SET `listorder`='0' WHERE `uid` = 2 [ RunTime:0.0000s ]
+SQL: UPDATE `i_address` SET `name`='王三',`phone`='15541215412',`address`='中山北路901号',`province`='120000',`city`='120100',`area`='120103',`listorder`='1',`uid`='2' WHERE `id` = 1 [ RunTime:0.0000s ]
+
+[ 2017-05-01T14:53:15+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=deleteAddress&id=[object%20HTMLInputElement]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_address` [ RunTime:0.0030s ]
+SQL: DELETE FROM `i_address` WHERE `id` = 0 AND `uid` = 2 [ RunTime:0.0200s ]
+
+[ 2017-05-01T14:53:21+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=editAddress&id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_address` [ RunTime:0.0020s ]
+SQL: UPDATE `i_address` SET `listorder`='0' WHERE `uid` = 2 [ RunTime:0.0000s ]
+SQL: UPDATE `i_address` SET `name`='王三岁',`phone`='15521236512',`address`='北京市西城区',`province`='110000',`city`='110000',`area`='110102',`listorder`='1',`uid`='2' WHERE `id` = 2 [ RunTime:0.0000s ]
+
+[ 2017-05-01T14:53:59+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=deleteAddress&id=[object%20HTMLInputElement]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_address` [ RunTime:0.0020s ]
+SQL: DELETE FROM `i_address` WHERE `id` = 0 AND `uid` = 2 [ RunTime:0.0000s ]
+
+[ 2017-05-01T14:54:30+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=deleteAddress&id=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_address` [ RunTime:0.0010s ]
+SQL: DELETE FROM `i_address` WHERE `id` = 1 AND `uid` = 2 [ RunTime:0.0000s ]
+
+[ 2017-05-01T14:54:49+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=addAddress
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_address` [ RunTime:0.0020s ]
+SQL: UPDATE `i_address` SET `listorder`='0' WHERE `uid` = 2 [ RunTime:0.0000s ]
+SQL: INSERT INTO `i_address` (`name`,`phone`,`address`,`province`,`city`,`area`,`uid`,`listorder`) VALUES ('王三秒','15512145214','打扫打扫打扫','130000','130200','130204','2','1') [ RunTime:0.0000s ]
+
+[ 2017-05-01T17:33:09+08:00 ] 127.0.0.1 /index.php?g=user&m=center&a=bank_list
+ERR: 模板不存在:themes/simplebootx/User/Center/bank_list.html
+
+[ 2017-05-01T19:16:07+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=add_bank
+ERR: 模板不存在:themes/simplebootx/User/Center/add_bank.html
+
+[ 2017-05-01T19:22:00+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=add_bank
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: address E:\bad\application\User\Controller\CenterController.class.php 第 220 行.
+
+[ 2017-05-01T19:22:36+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=add_bank
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: address E:\bad\application\User\Controller\CenterController.class.php 第 220 行.
+
+[ 2017-05-01T19:23:41+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=add_bank
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_bank` [ RunTime:0.0010s ]
+SQL: INSERT INTO `i_bank` (`name`,`phone`,`card`,`bank_name`,`uid`,`add_time`) VALUES ('王三岁','18816978542','42102421201231','中国工商银行','2','2017-05-01 19:23:41') [ RunTime:0.0000s ]
+
+[ 2017-05-01T19:28:24+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=add_bank
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_bank` [ RunTime:0.0010s ]
+SQL: INSERT INTO `i_bank` (`name`,`phone`,`card`,`bank_name`,`uid`,`add_time`) VALUES ('王三包','18816985214','421542100214521235','招商银行','2','2017-05-01 19:28:24') [ RunTime:0.0010s ]
+
+[ 2017-05-01T19:42:12+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=delete_bank&id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2048] Only variables should be passed by reference E:\bad\application\User\Controller\CenterController.class.php 第 251 行.
+SQL: SHOW COLUMNS FROM `i_bank` [ RunTime:0.0020s ]
+SQL: DELETE FROM `i_bank` WHERE `id` = 2 AND `uid` = 2 [ RunTime:0.0000s ]
+
+[ 2017-05-01T19:43:08+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=add_bank
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_bank` [ RunTime:0.0020s ]
+SQL: INSERT INTO `i_bank` (`name`,`phone`,`card`,`bank_name`,`uid`,`add_time`) VALUES ('王三包','18816541214','4521452145214521','中国农业银行','2','2017-05-01 19:43:08') [ RunTime:0.0000s ]
+
+[ 2017-05-01T19:43:15+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=delete_bank&id=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_bank` [ RunTime:0.0020s ]
+SQL: DELETE FROM `i_bank` WHERE `id` = 1 AND `uid` = 2 [ RunTime:0.0010s ]
+
+[ 2017-05-01T19:43:54+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=add_bank
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.013000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.027001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_bank` [ RunTime:0.0020s ]
+SQL: INSERT INTO `i_bank` (`name`,`phone`,`card`,`bank_name`,`uid`,`add_time`) VALUES ('王彬彬','13797326214','42154214521421521','华夏银行','2','2017-05-01 19:43:54') [ RunTime:0.0000s ]
+
+[ 2017-05-01T19:43:54+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=add_bank
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_bank` [ RunTime:0.0020s ]
+SQL: INSERT INTO `i_bank` (`name`,`phone`,`card`,`bank_name`,`uid`,`add_time`) VALUES ('王彬彬','13797326214','42154214521421521','华夏银行','2','2017-05-01 19:43:54') [ RunTime:0.0010s ]
+
+[ 2017-05-01T19:44:07+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=delete_bank&id=5
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0040s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_bank` [ RunTime:0.0020s ]
+SQL: DELETE FROM `i_bank` WHERE `id` = 5 AND `uid` = 2 [ RunTime:0.0000s ]
+
+[ 2017-05-01T19:49:04+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=add_bank
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.009000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.018001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_bank` [ RunTime:0.0030s ]
+SQL: INSERT INTO `i_bank` (`name`,`phone`,`card`,`bank_name`,`uid`,`add_time`) VALUES ('王宝林','18816985321','4214214214214521','中国建设银行','2','2017-05-01 19:49:04') [ RunTime:0.0000s ]
+
+[ 2017-05-01T19:49:10+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=delete_bank&id=6
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.007001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT `user_status` FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_bank` [ RunTime:0.0030s ]
+SQL: DELETE FROM `i_bank` WHERE `id` = 6 AND `uid` = 2 [ RunTime:0.0010s ]
+
+[ 2017-05-01T19:49:54+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=index
+ERR: 模板不存在:themes/simplebootx/User/Center/index.html
+
+[ 2017-05-01T20:01:15+08:00 ] 127.0.0.1 /index.php?g=User&m=Center&a=changePassword
+ERR: 模板不存在:themes/simplebootx/User/Center/changePassword.html
+
+[ 2017-05-01T20:31:30+08:00 ] 127.0.0.1 /index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011001s ]
+NOTIC: [8] Undefined index: url E:\bad\application\Common\Controller\AppframeController.class.php 第 22 行.
+
+[ 2017-05-01T20:33:51+08:00 ] 127.0.0.1 /index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009001s ]
+NOTIC: [8] Undefined index: url E:\bad\application\Common\Controller\AppframeController.class.php 第 22 行.
+
+[ 2017-05-01T22:25:04+08:00 ] 127.0.0.1 /index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007001s ]
+NOTIC: [8] Undefined index: url E:\bad\application\Common\Controller\AppframeController.class.php 第 22 行.
+
+[ 2017-05-01T22:25:09+08:00 ] 127.0.0.1 /index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+NOTIC: [8] Undefined index: url E:\bad\application\Common\Controller\AppframeController.class.php 第 22 行.
+
+[ 2017-05-01T22:25:14+08:00 ] 127.0.0.1 /index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012001s ]
+NOTIC: [8] Undefined index: url E:\bad\application\Common\Controller\AppframeController.class.php 第 22 行.
+
+[ 2017-05-01T22:25:17+08:00 ] 127.0.0.1 /index.php?g=user&m=index&a=is_login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012000s ]
+NOTIC: [8] Undefined index: url E:\bad\application\Common\Controller\AppframeController.class.php 第 22 行.
+

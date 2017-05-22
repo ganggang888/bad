@@ -1,0 +1,250 @@
+[ 2017-04-14T21:07:52+08:00 ] 127.0.0.1 /index.php?g=Admin&m=setting&a=site_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.012001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.018001s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.017001s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.018001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_options` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_options` WHERE ( option_name='site_options' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `i_options` SET `option_id`='6',`option_name`='site_options',`option_value`='{\"site_name\":\"\\u7cfb\\u7edf\",\"site_admin_url_password\":\"\",\"site_tpl\":\"simplebootx\",\"site_adminstyle\":\"bluesky\",\"site_icp\":\"\",\"site_admin_email\":\"a526584713@qq.com\",\"site_tongji\":\"\",\"site_copyright\":\"\",\"site_seo_title\":\"\\u7cfb\\u7edf\",\"site_seo_keywords\":\"\\u7cfb\\u7edf\",\"site_seo_description\":\"\\u7cfb\\u7edf\",\"urlmode\":\"0\",\"html_suffix\":\"\",\"comment_time_interval\":\"60\"}' WHERE ( option_name='site_options' ) [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_options` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_options` WHERE ( option_name='cmf_settings' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: INSERT INTO `i_options` (`option_name`,`option_value`) VALUES ('cmf_settings','{\"banned_usernames\":\"\"}') [ RunTime:0.0000s ]
+SQL: SELECT * FROM `i_options` WHERE `option_name` = 'cdn_settings' LIMIT 1   [ RunTime:0.0000s ]
+SQL: INSERT INTO `i_options` (`option_name`,`option_value`) VALUES ('cdn_settings','{\"cdn_static_root\":\"\"}') [ RunTime:0.0000s ]
+
+[ 2017-04-14T21:07:58+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Menu&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+
+[ 2017-04-14T21:07:59+08:00 ] 127.0.0.1 /index.php?g=Admin&m=menu&a=add
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+
+[ 2017-04-14T21:14:27+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Menu&a=add_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.008000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014001s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.007000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.008000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_menu` [ RunTime:0.0030s ]
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+SQL: SHOW COLUMNS FROM `i_auth_rule` [ RunTime:0.0030s ]
+NOTIC: [8] Undefined index: validate E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1185 行.
+SQL: SELECT * FROM `i_menu` WHERE `app` = 'Admin' AND `model` = 'Goods' AND `action` = 'default' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `parentid` FROM `i_menu` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: INSERT INTO `i_menu` (`parentid`,`name`,`app`,`model`,`action`,`data`,`icon`,`remark`,`status`,`type`) VALUES ('0','商品管理','Admin','Goods','default','','flag','','1','1') [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `i_auth_rule` WHERE `name` = 'admin/goods/default' LIMIT 1   [ RunTime:0.0190s ]
+SQL: INSERT INTO `i_auth_rule` (`name`,`module`,`type`,`title`) VALUES ('admin/goods/default','Admin','admin_url','商品管理') [ RunTime:0.0010s ]
+SQL: SELECT * FROM `i_menu` WHERE `app` = 'Admin' ORDER BY `listorder` ASC,`app` ASC,`model` ASC,`action` ASC  [ RunTime:0.0020s ]
+
+[ 2017-04-14T21:14:27+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Menu&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+
+[ 2017-04-14T21:14:33+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Menu&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+
+[ 2017-04-14T21:14:36+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Menu&a=add&parentid=187&menuid=
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+
+[ 2017-04-14T21:14:52+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Menu&a=add_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013001s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.008001s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.009001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_menu` [ RunTime:0.0030s ]
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+SQL: SHOW COLUMNS FROM `i_auth_rule` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: validate E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1185 行.
+SQL: SELECT * FROM `i_menu` WHERE `app` = 'Admin' AND `model` = 'Goods' AND `action` = 'term_index' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `parentid` FROM `i_menu` WHERE `id` = 187 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: INSERT INTO `i_menu` (`parentid`,`name`,`app`,`model`,`action`,`data`,`icon`,`remark`,`status`,`type`) VALUES ('187','分类管理','Admin','Goods','term_index','','','','1','1') [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `i_auth_rule` WHERE `name` = 'admin/goods/term_index' LIMIT 1   [ RunTime:0.0000s ]
+SQL: INSERT INTO `i_auth_rule` (`name`,`module`,`type`,`title`) VALUES ('admin/goods/term_index','Admin','admin_url','分类管理') [ RunTime:0.0000s ]
+SQL: SELECT * FROM `i_menu` WHERE `app` = 'Admin' ORDER BY `listorder` ASC,`app` ASC,`model` ASC,`action` ASC  [ RunTime:0.0010s ]
+NOTIC: [2] mkdir(): File exists E:\bad\application\Admin\Controller\MenuController.class.php 第 247 行.
+
+[ 2017-04-14T21:14:52+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Menu&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+
+[ 2017-04-14T21:16:01+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=term_add&parentid=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013000s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.009000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.009000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+NOTIC: [8] Undefined index: validate E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: INSERT INTO `i_goods_term` (`parentid`,`name`,`status`) VALUES ('2','你好吗','1') [ RunTime:0.0000s ]
+
+[ 2017-04-14T21:16:12+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=term_add
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012000s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.007000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.008000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: validate E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: INSERT INTO `i_goods_term` (`parentid`,`name`,`status`) VALUES ('0','第二个商品','1') [ RunTime:0.0000s ]
+
+[ 2017-04-14T21:16:21+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=term_add&parentid=4
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010001s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.007001s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.007001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: validate E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: INSERT INTO `i_goods_term` (`parentid`,`name`,`status`) VALUES ('4','下级分类','1') [ RunTime:0.0000s ]
+
+[ 2017-04-14T21:16:32+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=term_add&parentid=5
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.008000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014001s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.006000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+NOTIC: [8] Undefined index: validate E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: INSERT INTO `i_goods_term` (`parentid`,`name`,`status`) VALUES ('5','下下级分类','1') [ RunTime:0.0000s ]
+
+[ 2017-04-14T21:59:46+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=add
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.007000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013000s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.007000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+NOTIC: [8] Undefined index: validate E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+ERR: 1054:Unknown column 'add_time' in 'field list'
+ [ SQL语句 ] : INSERT INTO `i_goods` (`term_id`,`name`,`cost_price`,`selling_price`,`market_value`,`unit`,`stock`,`label`,`add_time`,`admin_id`) VALUES ('5','第一个商品','16','18','20','个','15','','2017-04-14 21:59:46','1')
+ERR: 1054:Unknown column 'add_time' in 'field list'
+ [ SQL语句 ] : INSERT INTO `i_goods` (`term_id`,`name`,`cost_price`,`selling_price`,`market_value`,`unit`,`stock`,`label`,`add_time`,`admin_id`) VALUES ('5','第一个商品','16','18','20','个','15','','2017-04-14 21:59:46','1')
+
+[ 2017-04-14T22:01:45+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=add
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.007001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012001s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.007001s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.007001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+NOTIC: [8] Undefined index: validate E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+ERR: 1062:Duplicate entry '' for key 'id'
+ [ SQL语句 ] : INSERT INTO `i_goods` (`term_id`,`name`,`cost_price`,`selling_price`,`market_value`,`unit`,`stock`,`label`,`add_time`,`admin_id`) VALUES ('5','第一个商品','16','18','20','瓶','10','优惠#限量#很多','2017-04-14 22:01:45','1')
+ERR: 1062:Duplicate entry '' for key 'id'
+ [ SQL语句 ] : INSERT INTO `i_goods` (`term_id`,`name`,`cost_price`,`selling_price`,`market_value`,`unit`,`stock`,`label`,`add_time`,`admin_id`) VALUES ('5','第一个商品','16','18','20','瓶','10','优惠#限量#很多','2017-04-14 22:01:45','1')
+
+[ 2017-04-14T22:07:01+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=add
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.008001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014001s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.007001s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.007001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+NOTIC: [8] Undefined index: validate E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+ERR: 1062:Duplicate entry '' for key 'id'
+ [ SQL语句 ] : INSERT INTO `i_goods` (`term_id`,`name`,`cost_price`,`selling_price`,`market_value`,`unit`,`stock`,`label`,`add_time`,`admin_id`) VALUES ('5','第一个商品','16','18','20','个','10','优惠#限量','2017-04-14 22:07:01','1')
+ERR: 1062:Duplicate entry '' for key 'id'
+ [ SQL语句 ] : INSERT INTO `i_goods` (`term_id`,`name`,`cost_price`,`selling_price`,`market_value`,`unit`,`stock`,`label`,`add_time`,`admin_id`) VALUES ('5','第一个商品','16','18','20','个','10','优惠#限量','2017-04-14 22:07:01','1')
+
+[ 2017-04-14T22:10:54+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=add
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010000s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.007000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: validate E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: INSERT INTO `i_goods` (`term_id`,`name`,`cost_price`,`selling_price`,`market_value`,`unit`,`stock`,`label`,`photos_alt`,`id`,`add_time`,`admin_id`) VALUES ('5','第一个商品','16','18','20','个','10','优惠#限量','[\"headicon_30.png\",\"headicon_40.png\"]','20170414221054702','2017-04-14 22:10:54','1') [ RunTime:0.0000s ]
+
+[ 2017-04-14T22:26:36+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=add
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012001s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.007000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.008000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+NOTIC: [8] Undefined index: validate E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: INSERT INTO `i_goods` (`term_id`,`name`,`cost_price`,`selling_price`,`market_value`,`unit`,`stock`,`label`,`photos_url`,`id`,`add_time`,`admin_id`) VALUES ('5','第一个商品','16','18','20','瓶','20','优惠#限量#特惠','[\"admin\\/20170414\\/58f0dc172b3e6.jpg\",\"admin\\/20170414\\/58f0dc1b48d7a.png\"]','20170414222636332','2017-04-14 22:26:36','1') [ RunTime:0.0010s ]
+
+[ 2017-04-14T22:49:07+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=index
+ERR: 模板不存在:admin/themes/simplebootx/Admin/Goods/index.html
+

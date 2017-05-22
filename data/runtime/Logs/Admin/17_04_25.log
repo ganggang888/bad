@@ -1,0 +1,346 @@
+[ 2017-04-25T20:04:13+08:00 ] 127.0.0.1 /index.php?g=Admin&m=public&a=dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.004000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `i_users` WHERE `user_login` = 'admin' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_role_user` [ RunTime:0.0000s ]
+SQL: SELECT `role_id` FROM i_role_user a INNER JOIN i_role as b on a.role_id =b.id  WHERE `user_id` = '1' AND `status` = 1  [ RunTime:0.0000s ]
+SQL: UPDATE `i_users` SET `parentid`='0',`user_login`='admin',`user_pass`='###f25434b0a5e217fd97b2737ecf52d72e',`user_nicename`='admin',`shop_name`='',`user_email`='a526584713@qq.com',`user_url`='',`avatar`=NULL,`sex`='0',`birthday`='2000-01-01',`signature`=NULL,`last_login_ip`='127.0.0.1',`last_login_time`='2017-04-25 20:04:13',`create_time`='2017-04-13 03:02:05',`user_activation_key`='',`user_status`='1',`score`='0',`user_type`='1',`coin`='0',`mobile`='',`uuid`=NULL,`pid`=NULL,`province`='0',`city`='0',`area`='0',`money`='0',`can_money`='0' WHERE `id` = '1' [ RunTime:0.0000s ]
+
+[ 2017-04-25T20:04:25+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=shuxing&value=1-1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007001s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.005000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+
+[ 2017-04-25T21:50:58+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=shuxing&value=1-0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009001s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0000s ]
+
+[ 2017-04-25T21:51:03+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=edit&id=20170422212306786
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007001s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.004000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: validate E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `i_goods` SET `term_id`='4',`name`='规格',`status`='0',`label`='优惠#限量',`attribute`='[{\"id\":\"0-0\",\"cost_price\":\"15\",\"selling_price\":\"16\",\"market_value\":\"17\",\"unit\":\"\\u4e2a\",\"stock\":\"15\",\"name\":\"ML\",\"info\":\"20\"},{\"id\":\"1-1\",\"cost_price\":\"8\",\"selling_price\":\"9\",\"market_value\":\"10\",\"unit\":\"\\u4e2a\",\"stock\":\"13\",\"name\":\"ML\",\"info\":\"\\u7ea2\\u8272\"},{\"id\":\"1-0\",\"cost_price\":\"\",\"selling_price\":\"\",\"market_value\":\"\",\"unit\":\"\",\"stock\":\"\",\"name\":\"\",\"info\":\"\"}]',`content`='&lt;p&gt;的撒旦撒的&lt;/p&gt;' WHERE `id` = '20170422212306786' [ RunTime:0.0312s ]
+
+[ 2017-04-25T21:51:10+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=edit&id=20170422212306786
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009000s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.006001s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.006001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: validate E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `i_goods` SET `term_id`='4',`name`='规格',`status`='0',`label`='优惠#限量',`attribute`='[{\"id\":\"0-0\",\"cost_price\":\"15\",\"selling_price\":\"16\",\"market_value\":\"17\",\"unit\":\"\\u4e2a\",\"stock\":\"15\",\"name\":\"ML\",\"info\":\"20\"},{\"id\":\"1-1\",\"cost_price\":\"8\",\"selling_price\":\"9\",\"market_value\":\"10\",\"unit\":\"\\u4e2a\",\"stock\":\"13\",\"name\":\"ML\",\"info\":\"\\u7ea2\\u8272\"},{\"id\":\"1-0\",\"cost_price\":\"\",\"selling_price\":\"\",\"market_value\":\"\",\"unit\":\"\",\"stock\":\"\",\"name\":\"\",\"info\":\"\"}]',`content`='&lt;p&gt;的撒旦撒的&lt;/p&gt;' WHERE `id` = '20170422212306786' [ RunTime:0.0708s ]
+
+[ 2017-04-25T21:51:24+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=edit&id=20170422212306786
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007001s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.005000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: validate E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `i_goods` SET `term_id`='4',`name`='规格',`status`='0',`label`='优惠#限量',`attribute`='[{\"id\":\"0-0\",\"cost_price\":\"15\",\"selling_price\":\"16\",\"market_value\":\"17\",\"unit\":\"\\u4e2a\",\"stock\":\"15\",\"name\":\"ML\",\"info\":\"20\"},{\"id\":\"1-1\",\"cost_price\":\"8\",\"selling_price\":\"9\",\"market_value\":\"10\",\"unit\":\"\\u4e2a\",\"stock\":\"13\",\"name\":\"ML\",\"info\":\"\\u7ea2\\u8272\"},{\"id\":\"1-0\",\"cost_price\":\"\",\"selling_price\":\"\",\"market_value\":\"\",\"unit\":\"\",\"stock\":\"\",\"name\":\"\",\"info\":\"\"}]',`content`='&lt;p&gt;的撒旦撒的&lt;/p&gt;' WHERE `id` = '20170422212306786' [ RunTime:0.0468s ]
+
+[ 2017-04-25T21:51:35+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=edit&id=20170423124543553
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008001s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.005000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: validate E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `i_goods` SET `term_id`='7',`name`='next商品',`status`='0',`label`='优惠#限量',`attribute`='[{\"id\":\"0-0\",\"cost_price\":\"15\",\"selling_price\":\"16\",\"market_value\":\"17\",\"unit\":\"\\u4e2a\",\"stock\":\"15\",\"name\":\"500ML\",\"info\":\"1\"},{\"id\":\"0-0\",\"cost_price\":\"15\",\"selling_price\":\"16\",\"market_value\":\"17\",\"unit\":\"\\u4e2a\",\"stock\":\"15\",\"name\":\"500ML\",\"info\":\"1\"}]',`content`='&lt;p&gt;倒萨打算&lt;/p&gt;' WHERE `id` = '20170423124543553' [ RunTime:0.0468s ]
+
+[ 2017-04-25T21:51:43+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=edit&id=20170423124543553
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010000s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.005000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: validate E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `i_goods` SET `term_id`='7',`name`='next商品',`status`='0',`label`='优惠#限量',`attribute`='[{\"id\":\"0-0\",\"cost_price\":\"15\",\"selling_price\":\"16\",\"market_value\":\"17\",\"unit\":\"\\u4e2a\",\"stock\":\"15\",\"name\":\"500ML\",\"info\":\"1\"},{\"id\":\"0-0\",\"cost_price\":\"15\",\"selling_price\":\"16\",\"market_value\":\"17\",\"unit\":\"\\u4e2a\",\"stock\":\"15\",\"name\":\"500ML\",\"info\":\"1\"},{\"id\":\"0-0\",\"cost_price\":\"15\",\"selling_price\":\"16\",\"market_value\":\"17\",\"unit\":\"\\u4e2a\",\"stock\":\"15\",\"name\":\"500ML\",\"info\":\"1\"}]',`content`='&lt;p&gt;倒萨打算&lt;/p&gt;' WHERE `id` = '20170423124543553' [ RunTime:0.0312s ]
+
+[ 2017-04-25T21:51:50+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=edit&id=20170423124543553
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010000s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.005000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: validate E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `i_goods` SET `term_id`='7',`name`='next商品',`status`='0',`label`='优惠#限量',`attribute`='[{\"id\":\"0-0\",\"cost_price\":\"15\",\"selling_price\":\"16\",\"market_value\":\"17\",\"unit\":\"\\u4e2a\",\"stock\":\"15\",\"name\":\"500ML\",\"info\":\"1\"},{\"id\":\"0-0\",\"cost_price\":\"15\",\"selling_price\":\"16\",\"market_value\":\"17\",\"unit\":\"\\u4e2a\",\"stock\":\"15\",\"name\":\"500ML\",\"info\":\"1\"},{\"id\":\"0-0\",\"cost_price\":\"15\",\"selling_price\":\"16\",\"market_value\":\"17\",\"unit\":\"\\u4e2a\",\"stock\":\"15\",\"name\":\"500ML\",\"info\":\"1\"}]',`content`='&lt;p&gt;倒萨打算&lt;/p&gt;' WHERE `id` = '20170423124543553' [ RunTime:0.0312s ]
+
+[ 2017-04-25T22:02:13+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=edit&id=20170423124543553
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008000s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.005000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: validate E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `i_goods` SET `term_id`='7',`name`='next商品',`status`='0',`label`='优惠#限量',`attribute`='[{\"id\":\"0-0\",\"cost_price\":\"15\",\"selling_price\":\"16\",\"market_value\":\"17\",\"unit\":\"\\u4e2a\",\"stock\":\"15\",\"name\":\"500ML\",\"info\":\"1\"},{\"id\":\"0-0\",\"cost_price\":\"15\",\"selling_price\":\"16\",\"market_value\":\"17\",\"unit\":\"\\u4e2a\",\"stock\":\"15\",\"name\":\"500ML\",\"info\":\"1\"},{\"id\":\"0-0\",\"cost_price\":\"15\",\"selling_price\":\"16\",\"market_value\":\"17\",\"unit\":\"\\u4e2a\",\"stock\":\"15\",\"name\":\"500ML\",\"info\":\"1\"}]',`content`='&lt;p&gt;倒萨打算&lt;/p&gt;' WHERE `id` = '20170423124543553' [ RunTime:0.0468s ]
+
+[ 2017-04-25T22:03:36+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=edit&id=20170423124543553
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012001s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.008001s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.008001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0040s ]
+NOTIC: [8] Undefined index: validate E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+
+[ 2017-04-25T22:04:23+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=edit&id=20170423124543553
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.007000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0040s ]
+NOTIC: [8] Undefined index: validate E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+
+[ 2017-04-25T22:04:47+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=edit&id=20170423124543553
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.004001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009001s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.005000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: validate E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `i_goods` SET `term_id`='7',`name`='next商品',`status`='0',`label`='优惠#限量',`attribute`='[{\"id\":\"0-0\",\"cost_price\":\"15\",\"selling_price\":\"16\",\"market_value\":\"17\",\"unit\":\"\\u4e2a\",\"stock\":\"15\",\"name\":\"500ML\",\"info\":\"1\"},{\"id\":\"0-0\",\"cost_price\":\"15\",\"selling_price\":\"16\",\"market_value\":\"17\",\"unit\":\"\\u4e2a\",\"stock\":\"15\",\"name\":\"500ML\",\"info\":\"1\"},{\"id\":\"0-0\",\"cost_price\":\"15\",\"selling_price\":\"16\",\"market_value\":\"17\",\"unit\":\"\\u4e2a\",\"stock\":\"15\",\"name\":\"500ML\",\"info\":\"1\"}]',`content`='&lt;p&gt;倒萨打算1&lt;/p&gt;' WHERE `id` = '20170423124543553' [ RunTime:0.0280s ]
+
+[ 2017-04-25T22:07:16+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=edit&id=20170423124543553
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.008000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013001s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.005001s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+
+[ 2017-04-25T22:10:21+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=edit&id=20170423124543553
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008001s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.005000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: validate E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `i_goods` SET `term_id`='7',`name`='next商品',`status`='0',`label`='优惠#限量',`attribute`='[{\"id\":\"0-0\",\"cost_price\":\"15\",\"selling_price\":\"16\",\"market_value\":\"17\",\"unit\":\"\\u4e2a\",\"stock\":\"15\",\"name\":\"500ML\",\"info\":\"1\"},{\"id\":\"0-0\",\"cost_price\":\"15\",\"selling_price\":\"16\",\"market_value\":\"17\",\"unit\":\"\\u4e2a\",\"stock\":\"15\",\"name\":\"500ML\",\"info\":\"1\"}]',`content`='&lt;p&gt;倒萨打算1&lt;/p&gt;' WHERE `id` = '20170423124543553' [ RunTime:0.0312s ]
+
+[ 2017-04-25T22:10:39+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=edit&id=20170422212306786
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007001s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.005000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: validate E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `i_goods` SET `term_id`='4',`name`='规格',`status`='0',`label`='优惠#限量',`attribute`='[{\"id\":\"0-0\",\"cost_price\":\"15\",\"selling_price\":\"16\",\"market_value\":\"17\",\"unit\":\"\\u4e2a\",\"stock\":\"15\",\"name\":\"ML\",\"info\":\"20\"},{\"id\":\"1-1\",\"cost_price\":\"8\",\"selling_price\":\"9\",\"market_value\":\"10\",\"unit\":\"\\u4e2a\",\"stock\":\"13\",\"name\":\"ML\",\"info\":\"\\u7ea2\\u8272\"}]',`content`='&lt;p&gt;的撒旦撒的&lt;/p&gt;' WHERE `id` = '20170422212306786' [ RunTime:0.0312s ]
+
+[ 2017-04-25T22:11:03+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=edit&id=20170423124543553
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010001s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.009000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.009000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+NOTIC: [8] Undefined index: validate E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `i_goods` SET `term_id`='7',`name`='next商品',`status`='0',`label`='优惠#限量',`attribute`='[{\"id\":\"0-0\",\"cost_price\":\"15\",\"selling_price\":\"16\",\"market_value\":\"17\",\"unit\":\"\\u4e2a\",\"stock\":\"15\",\"name\":\"500ML\",\"info\":\"1\"},{\"id\":\"0-0\",\"cost_price\":\"16\",\"selling_price\":\"16\",\"market_value\":\"17\",\"unit\":\"\\u4e2a\",\"stock\":\"15\",\"name\":\"600ML\",\"info\":\"1\"}]',`content`='&lt;p&gt;倒萨打算1&lt;/p&gt;' WHERE `id` = '20170423124543553' [ RunTime:0.0390s ]
+
+[ 2017-04-25T22:11:51+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=changeStatus&type=3&status=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0000s ]
+SQL:  UPDATE i_goods SET `status` = CASE id  WHEN '20170423124543553' THEN 1 
+ 
+ END 
+ WHERE ID IN(20170423124543553) [ RunTime:0.1092s ]
+
+[ 2017-04-25T22:11:56+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=changeStatus&type=3&status=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010000s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.005000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0000s ]
+SQL:  UPDATE i_goods SET `status` = CASE id  WHEN '20170422212306786' THEN 1 
+ 
+ END 
+ WHERE ID IN(20170422212306786) [ RunTime:0.0468s ]
+
+[ 2017-04-25T22:12:25+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=edit&id=20170423124543553
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008001s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.005001s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: validate E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `i_goods` SET `term_id`='7',`name`='next商品',`status`='0',`label`='优惠#限量',`attribute`='[{\"id\":\"0-0\",\"cost_price\":\"15\",\"selling_price\":\"16\",\"market_value\":\"17\",\"unit\":\"\\u4e2a\",\"stock\":\"15\",\"name\":\"500ML\",\"info\":\"1\"},{\"id\":\"0-0\",\"cost_price\":\"16\",\"selling_price\":\"16\",\"market_value\":\"17\",\"unit\":\"\\u4e2a\",\"stock\":\"15\",\"name\":\"600ML\",\"info\":\"1\"},{\"id\":\"0\",\"cost_price\":\"\",\"selling_price\":\"\",\"market_value\":\"\",\"unit\":\"\",\"stock\":\"\",\"name\":\"\",\"info\":\"\"}]',`content`='&lt;p&gt;倒萨打算1&lt;/p&gt;' WHERE `id` = '20170423124543553' [ RunTime:0.0392s ]
+
+[ 2017-04-25T22:12:30+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=edit&id=20170423124543553
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008000s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.004000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: validate E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `i_goods` SET `term_id`='7',`name`='next商品',`status`='0',`label`='优惠#限量',`attribute`='[{\"id\":\"0-0\",\"cost_price\":\"15\",\"selling_price\":\"16\",\"market_value\":\"17\",\"unit\":\"\\u4e2a\",\"stock\":\"15\",\"name\":\"500ML\",\"info\":\"1\"},{\"id\":\"0-0\",\"cost_price\":\"16\",\"selling_price\":\"16\",\"market_value\":\"17\",\"unit\":\"\\u4e2a\",\"stock\":\"15\",\"name\":\"600ML\",\"info\":\"1\"}]',`content`='&lt;p&gt;倒萨打算1&lt;/p&gt;' WHERE `id` = '20170423124543553' [ RunTime:0.0468s ]
+

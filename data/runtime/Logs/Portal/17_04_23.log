@@ -1,0 +1,30 @@
+[ 2017-04-23T13:26:24+08:00 ] 127.0.0.1 /index.php?g=portal&m=index&a=goods
+NOTIC: D方法实例化没找到模型类Common\Model\TermModel
+ERR: 1146:Table 'bad.i_term' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `i_term`
+
+[ 2017-04-23T13:26:43+08:00 ] 127.0.0.1 /index.php?g=portal&m=index&a=goods
+ERR: 1054:Unknown column 'a.index' in 'field list'
+ [ SQL语句 ] : SELECT a.name,b.name AS term_name,a.photos_url,a.cost_price,a.selling_price,a.market_value,a.unit,a.stock,a.status,a.label,a.listorder,a.term_id,a.id,a.index,a.member,a.add_time FROM i_goods a LEFT JOIN i_goods_term as b on a.term_id = b.id  WHERE a.is_delete = 0 AND b.is_delete = 0 ORDER BY `listorder` asc LIMIT 0,15  
+
+[ 2017-04-23T14:07:59+08:00 ] 127.0.0.1 /index.php?g=&m=Index&a=goodsInfo&id=20170423124543553
+ERR: 模板不存在:themes/simplebootx/Portal/Index/goodsInfo.html
+
+[ 2017-04-23T16:03:18+08:00 ] 127.0.0.1 /index.php?g=&m=Cart&a=index
+ERR: 无法加载控制器:Cart
+
+[ 2017-04-23T16:03:23+08:00 ] 127.0.0.1 /index.php?g=&m=Cart&a=index
+ERR: 无法加载控制器:Cart
+
+[ 2017-04-23T16:26:34+08:00 ] 127.0.0.1 /index.php?g=&m=Cart&a=index
+ERR: 无法加载控制器:Cart
+
+[ 2017-04-23T16:26:38+08:00 ] 127.0.0.1 /index.php?g=&m=Cart&a=index
+ERR: 无法加载控制器:Cart
+
+[ 2017-04-23T20:34:37+08:00 ] 127.0.0.1 /index.php?m=cart&a=save
+ERR: 无法加载控制器:Cart
+
+[ 2017-04-23T20:34:44+08:00 ] 127.0.0.1 /index.php?m=cart&a=save
+ERR: 无法加载控制器:Cart
+

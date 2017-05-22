@@ -118,4 +118,18 @@ class OtherController extends MemberbaseController {
 	{
 		$this->display();
 	}
+
+	//获取自己的下级和下下级
+	public function getLevelPeople()
+	{
+		$uid = get_current_userid();
+		$uuid = $_SESSION['user']['uuid'];
+		$result = M('users')->where(array('pid'=>$uuid))->order(array("create_time"=>"ASC"))->select();
+
+		foreach ($result as $key=>$vo) {
+			$vo['son'] = M('users')->where(array('pid'=>$vo['uuid']))->select();
+			$result[$key] = $vo;
+		}
+		var_dump($result);
+	}
 }

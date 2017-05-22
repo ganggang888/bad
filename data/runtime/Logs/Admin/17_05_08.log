@@ -1,0 +1,168 @@
+[ 2017-05-08T20:16:57+08:00 ] 127.0.0.1 /index.php?g=Admin&m=public&a=dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.005001s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `user_login` = 'admin' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-08T20:18:04+08:00 ] 127.0.0.1 /index.php?g=Admin&m=public&a=dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007001s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.004000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `user_login` = 'admin' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-08T20:18:14+08:00 ] 127.0.0.1 /index.php?g=Admin&m=public&a=dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007001s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.004000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `user_login` = 'admin' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_role_user` [ RunTime:0.0020s ]
+SQL: SELECT `role_id` FROM i_role_user a INNER JOIN i_role as b on a.role_id =b.id  WHERE `user_id` = '1' AND `status` = 1  [ RunTime:0.0000s ]
+SQL: UPDATE `i_users` SET `parentid`='0',`user_login`='admin',`user_pass`='###1fccbd040eb4fc5a3a6440482c5f383e',`user_nicename`='admin',`shop_name`='',`user_email`='a526584713@qq.com',`user_url`='',`avatar`=NULL,`sex`='0',`birthday`='2000-01-01',`signature`=NULL,`last_login_ip`='127.0.0.1',`last_login_time`='2017-05-08 20:18:13',`create_time`='2017-04-13 03:02:05',`user_activation_key`='',`user_status`='1',`score`='0',`user_type`='1',`coin`='0',`mobile`='',`uuid`=NULL,`pid`=NULL,`province`='0',`city`='0',`area`='0',`money`='0',`can_money`='0',`level`='1' WHERE `id` = '1' [ RunTime:0.0410s ]
+
+[ 2017-05-08T21:21:20+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=get_number
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.008001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013001s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.007001s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.007001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `i_recharges` [ RunTime:0.0030s ]
+SQL: SELECT `id` FROM `i_recharges` WHERE `code` = 1113616450 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `i_recharges` WHERE `code` = 1038093234 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `i_recharges` WHERE `code` = 1099337744 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `i_recharges` WHERE `code` = 1000237769 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `i_recharges` WHERE `code` = 1039357168 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `i_recharges` WHERE `code` = 1132325183 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `i_recharges` WHERE `code` = 1369969901 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `i_recharges` WHERE `code` = 1115393467 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `i_recharges` WHERE `code` = 1302881258 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `i_recharges` WHERE `code` = 1241574177 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `i_recharges` WHERE `code` = 1064548259 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `i_recharges` WHERE `code` = 1283208930 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `i_recharges` WHERE `code` = 1252248792 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `i_recharges` WHERE `code` = 1245703864 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `i_recharges` WHERE `code` = 1100914534 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `i_recharges` WHERE `code` = 1082406027 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `i_recharges` WHERE `code` = 1350385173 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `i_recharges` WHERE `code` = 1165537878 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `i_recharges` WHERE `code` = 1205157846 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `i_recharges` WHERE `code` = 1001539246 LIMIT 1   [ RunTime:0.0000s ]
+SQL: INSERT INTO `i_recharges` (`jf`,`code`,`mi`,`add_time`) VALUES ('200',NULL,'4958','2017-05-08 21:21:20'),('200',NULL,'1162','2017-05-08 21:21:20'),('200',NULL,'1733','2017-05-08 21:21:20'),('200',NULL,'1868','2017-05-08 21:21:20'),('200',NULL,'9683','2017-05-08 21:21:20'),('200',NULL,'4802','2017-05-08 21:21:20'),('200',NULL,'2407','2017-05-08 21:21:20'),('200',NULL,'1140','2017-05-08 21:21:20'),('200',NULL,'2719','2017-05-08 21:21:20'),('200',NULL,'7651','2017-05-08 21:21:20') [ RunTime:0.0010s ]
+
+[ 2017-05-08T21:22:26+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=get_number
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012001s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.007001s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.007001s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_recharges` [ RunTime:0.0030s ]
+SQL: SELECT `id` FROM `i_recharges` WHERE `code` = 1278078107 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `i_recharges` WHERE `code` = 1088125018 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `i_recharges` WHERE `code` = 1060268402 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `i_recharges` WHERE `code` = 1060180802 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `i_recharges` WHERE `code` = 1169579966 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `i_recharges` WHERE `code` = 1038393575 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `i_recharges` WHERE `code` = 1079615360 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `i_recharges` WHERE `code` = 1157115820 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `i_recharges` WHERE `code` = 1262710666 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `i_recharges` WHERE `code` = 1335255501 LIMIT 1   [ RunTime:0.0000s ]
+SQL: INSERT INTO `i_recharges` (`jf`,`code`,`mi`,`add_time`) VALUES ('200','1088125018','1180','2017-05-08 21:22:26'),('200','1060180802','8720','2017-05-08 21:22:26'),('200','1038393575','2302','2017-05-08 21:22:26'),('200','1157115820','8587','2017-05-08 21:22:26'),('200','1335255501','6829','2017-05-08 21:22:26') [ RunTime:0.0000s ]
+
+[ 2017-05-08T21:40:16+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Menu&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+
+[ 2017-05-08T21:40:21+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Menu&a=add&parentid=132&menuid=
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+
+[ 2017-05-08T21:40:42+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Menu&a=add_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007001s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.005000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `i_menu` [ RunTime:0.0020s ]
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+SQL: SHOW COLUMNS FROM `i_auth_rule` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: validate E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1185 行.
+SQL: SELECT * FROM `i_menu` WHERE `app` = 'Admin' AND `model` = 'Link' AND `action` = 'chongzhi' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `parentid` FROM `i_menu` WHERE `id` = 132 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: INSERT INTO `i_menu` (`parentid`,`name`,`app`,`model`,`action`,`data`,`icon`,`remark`,`status`,`type`) VALUES ('132','充值记录','Admin','Link','chongzhi','','','','1','1') [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `i_auth_rule` WHERE `name` = 'admin/link/chongzhi' LIMIT 1   [ RunTime:0.0010s ]
+SQL: INSERT INTO `i_auth_rule` (`name`,`module`,`type`,`title`) VALUES ('admin/link/chongzhi','Admin','admin_url','充值记录') [ RunTime:0.0000s ]
+SQL: SELECT * FROM `i_menu` WHERE `app` = 'Admin' ORDER BY `listorder` ASC,`app` ASC,`model` ASC,`action` ASC  [ RunTime:0.0020s ]
+NOTIC: [2] mkdir(): File exists E:\bad\application\Admin\Controller\MenuController.class.php 第 247 行.
+
+[ 2017-05-08T21:40:42+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Menu&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+
+[ 2017-05-08T21:40:48+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Menu&a=add&parentid=206&menuid=
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+
+[ 2017-05-08T21:41:20+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Menu&a=add_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009001s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.005000s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `i_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `i_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_menu` [ RunTime:0.0030s ]
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+SQL: SHOW COLUMNS FROM `i_auth_rule` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: validate E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1185 行.
+SQL: SELECT * FROM `i_menu` WHERE `app` = 'Admin' AND `model` = 'Goods' AND `action` = 'jf_chongzhi_history' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `parentid` FROM `i_menu` WHERE `id` = 206 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `parentid` FROM `i_menu` WHERE `id` = 132 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: auto E:\bad\simplewind\Core\Library\Think\Model.class.php 第 1128 行.
+SQL: INSERT INTO `i_menu` (`parentid`,`name`,`app`,`model`,`action`,`data`,`icon`,`remark`,`status`,`type`) VALUES ('206','兑换码记录','Admin','Goods','jf_chongzhi_history','type=3','','','1','1') [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `i_auth_rule` WHERE `name` = 'admin/goods/jf_chongzhi_history' LIMIT 1   [ RunTime:0.0000s ]
+SQL: INSERT INTO `i_auth_rule` (`name`,`module`,`type`,`title`) VALUES ('admin/goods/jf_chongzhi_history','Admin','admin_url','兑换码记录') [ RunTime:0.0000s ]
+SQL: SELECT * FROM `i_menu` WHERE `app` = 'Admin' ORDER BY `listorder` ASC,`app` ASC,`model` ASC,`action` ASC  [ RunTime:0.0020s ]
+NOTIC: [2] mkdir(): File exists E:\bad\application\Admin\Controller\MenuController.class.php 第 247 行.
+
+[ 2017-05-08T21:41:20+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Menu&a=index
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+
+[ 2017-05-08T21:41:27+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Goods&a=jf_chongzhi_history&type=3
+ERR: 模板不存在:admin/themes/simplebootx/Admin/Goods/jf_chongzhi_history.html
+

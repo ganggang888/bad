@@ -1,0 +1,2279 @@
+[ 2017-05-01T11:22:32+08:00 ] 127.0.0.1 /
+ERR: 模板不存在:themes/simplebootx/Portal/Index/index.html
+
+[ 2017-05-01T11:25:17+08:00 ] 127.0.0.1 /
+ERR: 模板不存在:themes/simplebootx/Portal/Index/index.html
+
+[ 2017-05-01T11:28:05+08:00 ] 127.0.0.1 /lib/jquery-2.1.4.js
+ERR: 无法加载控制器:Lib
+
+[ 2017-05-01T11:28:05+08:00 ] 127.0.0.1 /js/swiper.js
+ERR: 无法加载控制器:Js
+
+[ 2017-05-01T11:28:05+08:00 ] 127.0.0.1 /js/jquery-weui.js
+ERR: 无法加载控制器:Js
+
+[ 2017-05-01T11:28:05+08:00 ] 127.0.0.1 /lib/fastclick.js
+ERR: 无法加载控制器:Lib
+
+[ 2017-05-01T11:28:06+08:00 ] 127.0.0.1 /js/jquery-weui.js
+ERR: 无法加载控制器:Js
+
+[ 2017-05-01T11:28:06+08:00 ] 127.0.0.1 /js/swiper.js
+ERR: 无法加载控制器:Js
+
+[ 2017-05-01T11:29:46+08:00 ] 127.0.0.1 /lib/jquery-2.1.4.js
+ERR: 无法加载控制器:Lib
+
+[ 2017-05-01T11:29:46+08:00 ] 127.0.0.1 /js/jquery-weui.js
+ERR: 无法加载控制器:Js
+
+[ 2017-05-01T11:29:47+08:00 ] 127.0.0.1 /js/swiper.js
+ERR: 无法加载控制器:Js
+
+[ 2017-05-01T11:29:47+08:00 ] 127.0.0.1 /lib/fastclick.js
+ERR: 无法加载控制器:Lib
+
+[ 2017-05-01T11:29:47+08:00 ] 127.0.0.1 /js/jquery-weui.js
+ERR: 无法加载控制器:Js
+
+[ 2017-05-01T11:29:47+08:00 ] 127.0.0.1 /js/swiper.js
+ERR: 无法加载控制器:Js
+
+[ 2017-05-01T11:29:51+08:00 ] 127.0.0.1 /pro_info.html
+ERR: 无法加载控制器:Pro_info
+
+[ 2017-05-01T11:29:52+08:00 ] 127.0.0.1 /js/swiper.js
+ERR: 无法加载控制器:Js
+
+[ 2017-05-01T11:29:52+08:00 ] 127.0.0.1 /lib/fastclick.js
+ERR: 无法加载控制器:Lib
+
+[ 2017-05-01T11:29:52+08:00 ] 127.0.0.1 /lib/jquery-2.1.4.js
+ERR: 无法加载控制器:Lib
+
+[ 2017-05-01T11:29:52+08:00 ] 127.0.0.1 /js/jquery-weui.js
+ERR: 无法加载控制器:Js
+
+[ 2017-05-01T11:29:52+08:00 ] 127.0.0.1 /lib/fastclick.js
+ERR: 无法加载控制器:Lib
+
+[ 2017-05-01T11:29:52+08:00 ] 127.0.0.1 /js/jquery-weui.js
+ERR: 无法加载控制器:Js
+
+[ 2017-05-01T11:29:52+08:00 ] 127.0.0.1 /js/swiper.js
+ERR: 无法加载控制器:Js
+
+[ 2017-05-01T12:28:14+08:00 ] 127.0.0.1 /lib/jquery-2.1.4.js
+ERR: 无法加载控制器:Lib
+
+[ 2017-05-01T12:28:14+08:00 ] 127.0.0.1 /js/jquery-weui.js
+ERR: 无法加载控制器:Js
+
+[ 2017-05-01T12:28:15+08:00 ] 127.0.0.1 /js/swiper.js
+ERR: 无法加载控制器:Js
+
+[ 2017-05-01T12:28:15+08:00 ] 127.0.0.1 /lib/fastclick.js
+ERR: 无法加载控制器:Lib
+
+[ 2017-05-01T12:28:15+08:00 ] 127.0.0.1 /js/jquery-weui.js
+ERR: 无法加载控制器:Js
+
+[ 2017-05-01T12:28:15+08:00 ] 127.0.0.1 /js/swiper.js
+ERR: 无法加载控制器:Js
+
+[ 2017-05-01T12:28:21+08:00 ] 127.0.0.1 /lib/fastclick.js
+ERR: 无法加载控制器:Lib
+
+[ 2017-05-01T12:28:21+08:00 ] 127.0.0.1 /js/jquery-weui.js
+ERR: 无法加载控制器:Js
+
+[ 2017-05-01T12:28:21+08:00 ] 127.0.0.1 /js/swiper.js
+ERR: 无法加载控制器:Js
+
+[ 2017-05-01T12:28:21+08:00 ] 127.0.0.1 /lib/jquery-2.1.4.js
+ERR: 无法加载控制器:Lib
+
+[ 2017-05-01T12:28:21+08:00 ] 127.0.0.1 /lib/fastclick.js
+ERR: 无法加载控制器:Lib
+
+[ 2017-05-01T12:28:21+08:00 ] 127.0.0.1 /js/jquery-weui.js
+ERR: 无法加载控制器:Js
+
+[ 2017-05-01T12:28:21+08:00 ] 127.0.0.1 /js/swiper.js
+ERR: 无法加载控制器:Js
+
+[ 2017-05-01T12:28:54+08:00 ] 127.0.0.1 /js/jquery-weui.js
+ERR: 无法加载控制器:Js
+
+[ 2017-05-01T12:28:54+08:00 ] 127.0.0.1 /lib/jquery-2.1.4.js
+ERR: 无法加载控制器:Lib
+
+[ 2017-05-01T12:28:54+08:00 ] 127.0.0.1 /js/swiper.js
+ERR: 无法加载控制器:Js
+
+[ 2017-05-01T12:28:55+08:00 ] 127.0.0.1 /lib/fastclick.js
+ERR: 无法加载控制器:Lib
+
+[ 2017-05-01T12:28:55+08:00 ] 127.0.0.1 /js/jquery-weui.js
+ERR: 无法加载控制器:Js
+
+[ 2017-05-01T12:28:55+08:00 ] 127.0.0.1 /js/swiper.js
+ERR: 无法加载控制器:Js
+
+[ 2017-05-01T12:29:07+08:00 ] 127.0.0.1 /js/swiper.js
+ERR: 无法加载控制器:Js
+
+[ 2017-05-01T12:29:07+08:00 ] 127.0.0.1 /lib/jquery-2.1.4.js
+ERR: 无法加载控制器:Lib
+
+[ 2017-05-01T12:29:07+08:00 ] 127.0.0.1 /lib/fastclick.js
+ERR: 无法加载控制器:Lib
+
+[ 2017-05-01T12:29:07+08:00 ] 127.0.0.1 /js/jquery-weui.js
+ERR: 无法加载控制器:Js
+
+[ 2017-05-01T12:29:07+08:00 ] 127.0.0.1 /js/swiper.js
+ERR: 无法加载控制器:Js
+
+[ 2017-05-01T12:29:48+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T12:30:18+08:00 ] 127.0.0.1 /shopcart.html
+ERR: 无法加载控制器:Shopcart
+
+[ 2017-05-01T12:30:20+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T13:50:50+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T13:57:35+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T13:57:37+08:00 ] 127.0.0.1 /mine.html
+ERR: 无法加载控制器:Mine
+
+[ 2017-05-01T13:57:39+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T14:32:26+08:00 ] 127.0.0.1 /address_edit.html
+ERR: 无法加载控制器:Address_edit
+
+[ 2017-05-01T19:15:42+08:00 ] 127.0.0.1 /add_card.html
+ERR: 无法加载控制器:Add_card
+
+[ 2017-05-01T19:17:11+08:00 ] 127.0.0.1 /js/jquery-weui.js
+ERR: 无法加载控制器:Js
+
+[ 2017-05-01T19:17:33+08:00 ] 127.0.0.1 /js/jquery-weui.js
+ERR: 无法加载控制器:Js
+
+[ 2017-05-01T19:18:05+08:00 ] 127.0.0.1 /js/jquery-weui.js
+ERR: 无法加载控制器:Js
+
+[ 2017-05-01T19:18:32+08:00 ] 127.0.0.1 /js/jquery-weui.js
+ERR: 无法加载控制器:Js
+
+[ 2017-05-01T19:19:00+08:00 ] 127.0.0.1 /js/jquery-weui.js
+ERR: 无法加载控制器:Js
+
+[ 2017-05-01T19:20:29+08:00 ] 127.0.0.1 /js/jquery-weui.js
+ERR: 无法加载控制器:Js
+
+[ 2017-05-01T19:20:48+08:00 ] 127.0.0.1 /js/jquery-weui.js
+ERR: 无法加载控制器:Js
+
+[ 2017-05-01T19:21:47+08:00 ] 127.0.0.1 /js/jquery-weui.js
+ERR: 无法加载控制器:Js
+
+[ 2017-05-01T19:22:02+08:00 ] 127.0.0.1 /js/jquery-weui.js
+ERR: 无法加载控制器:Js
+
+[ 2017-05-01T19:22:38+08:00 ] 127.0.0.1 /js/jquery-weui.js
+ERR: 无法加载控制器:Js
+
+[ 2017-05-01T19:23:30+08:00 ] 127.0.0.1 /js/jquery-weui.js
+ERR: 无法加载控制器:Js
+
+[ 2017-05-01T19:28:10+08:00 ] 127.0.0.1 /js/jquery-weui.js
+ERR: 无法加载控制器:Js
+
+[ 2017-05-01T19:42:22+08:00 ] 127.0.0.1 /js/jquery-weui.js
+ERR: 无法加载控制器:Js
+
+[ 2017-05-01T19:42:57+08:00 ] 127.0.0.1 /js/jquery-weui.js
+ERR: 无法加载控制器:Js
+
+[ 2017-05-01T19:43:24+08:00 ] 127.0.0.1 /js/jquery-weui.js
+ERR: 无法加载控制器:Js
+
+[ 2017-05-01T19:43:35+08:00 ] 127.0.0.1 /js/jquery-weui.js
+ERR: 无法加载控制器:Js
+
+[ 2017-05-01T19:48:42+08:00 ] 127.0.0.1 /js/jquery-weui.js
+ERR: 无法加载控制器:Js
+
+[ 2017-05-01T19:49:16+08:00 ] 127.0.0.1 /js/jquery-weui.js
+ERR: 无法加载控制器:Js
+
+[ 2017-05-01T19:52:44+08:00 ] 127.0.0.1 /password.html
+ERR: 无法加载控制器:Password
+
+[ 2017-05-01T20:01:06+08:00 ] 127.0.0.1 /password.html
+ERR: 无法加载控制器:Password
+
+[ 2017-05-01T20:03:32+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T20:04:18+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T20:06:12+08:00 ] 127.0.0.1 /pro_list.html
+ERR: 无法加载控制器:Pro_list
+
+[ 2017-05-01T20:06:14+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T20:08:17+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T20:13:09+08:00 ] 127.0.0.1 /
+ERR: 1054:Unknown column 'a.index' in 'where clause'
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM i_goods a LEFT JOIN i_goods_term as b on a.term_id = b.id  WHERE a.is_delete = 0 AND b.is_delete = 0 AND a.index = 1 AND a.member = 1 LIMIT 1  
+
+[ 2017-05-01T20:13:26+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T20:15:57+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T20:22:14+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T20:23:00+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T20:23:08+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T20:23:13+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T20:24:34+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T20:26:39+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T20:26:57+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T20:27:10+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T20:27:36+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T20:27:38+08:00 ] 127.0.0.1 /pro_info.html
+ERR: 无法加载控制器:Pro_info
+
+[ 2017-05-01T20:27:39+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T20:28:33+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T20:31:25+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T20:31:32+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T20:31:54+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T20:32:11+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T20:32:26+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T20:32:34+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T20:40:12+08:00 ] 127.0.0.1 /js/swiper.js
+ERR: 无法加载控制器:Js
+
+[ 2017-05-01T20:42:18+08:00 ] 127.0.0.1 /js/swiper.js
+ERR: 无法加载控制器:Js
+
+[ 2017-05-01T20:43:20+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T20:44:16+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T20:46:17+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T20:48:52+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T20:49:06+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T20:49:27+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T20:54:50+08:00 ] 127.0.0.1 /shopcart.html
+ERR: 无法加载控制器:Shopcart
+
+[ 2017-05-01T20:54:51+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T20:59:09+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T20:59:13+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T20:59:22+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T20:59:28+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T20:59:48+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T20:59:52+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T20:59:59+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T21:00:29+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T21:00:30+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T21:05:55+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T21:08:17+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T21:08:27+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T21:08:39+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T21:08:55+08:00 ] 127.0.0.1 /shopcart.html
+ERR: 无法加载控制器:Shopcart
+
+[ 2017-05-01T21:08:57+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T21:09:00+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T21:09:09+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T21:09:54+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T21:10:06+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T21:10:11+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T21:10:16+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T21:10:18+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T21:10:35+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T21:11:15+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T21:11:34+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T21:12:43+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T21:14:06+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T21:18:38+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T21:21:14+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T21:21:51+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T21:22:36+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T21:23:22+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T21:28:10+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T21:28:12+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T21:30:17+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T21:30:35+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T21:31:41+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T21:32:39+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T21:33:11+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T21:34:27+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T21:35:40+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T21:35:55+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T21:36:10+08:00 ] 127.0.0.1 /order_info.html
+ERR: 无法加载控制器:Order_info
+
+[ 2017-05-01T21:36:12+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T21:37:02+08:00 ] 127.0.0.1 /shopcart.html
+ERR: 无法加载控制器:Shopcart
+
+[ 2017-05-01T21:37:04+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T21:38:22+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T21:38:34+08:00 ] 127.0.0.1 /shopcart.html
+ERR: 无法加载控制器:Shopcart
+
+[ 2017-05-01T21:38:35+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T21:39:00+08:00 ] 127.0.0.1 /shopcart.html
+ERR: 无法加载控制器:Shopcart
+
+[ 2017-05-01T21:39:01+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T21:41:42+08:00 ] 127.0.0.1 /shopcart.html
+ERR: 无法加载控制器:Shopcart
+
+[ 2017-05-01T21:41:43+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T22:21:07+08:00 ] 127.0.0.1 /order_info.html
+ERR: 无法加载控制器:Order_info
+
+[ 2017-05-01T22:21:08+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T22:21:23+08:00 ] 127.0.0.1 /shopcart.html
+ERR: 无法加载控制器:Shopcart
+
+[ 2017-05-01T22:21:25+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T22:27:39+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T22:36:33+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T22:36:46+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T22:37:07+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T22:37:12+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T22:37:13+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T22:38:00+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T22:38:43+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T22:40:29+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T22:40:47+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T22:41:00+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T22:41:56+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T22:50:28+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T22:50:33+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T22:50:50+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T22:51:12+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T22:51:40+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T22:52:13+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T22:52:42+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T22:53:07+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T22:53:19+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T22:53:58+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T22:55:54+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T22:55:54+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=50
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=2147483647 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] array_map(): Argument #2 should be an array E:\bad\application\Portal\Controller\IndexController.class.php 第 183 行.
+
+[ 2017-05-01T22:55:56+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=49
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=2147483647 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] array_map(): Argument #2 should be an array E:\bad\application\Portal\Controller\IndexController.class.php 第 183 行.
+
+[ 2017-05-01T22:55:56+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=48
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0040s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=2147483647 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] array_map(): Argument #2 should be an array E:\bad\application\Portal\Controller\IndexController.class.php 第 183 行.
+
+[ 2017-05-01T22:55:57+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=50
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=2147483647 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] array_map(): Argument #2 should be an array E:\bad\application\Portal\Controller\IndexController.class.php 第 183 行.
+
+[ 2017-05-01T22:55:57+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=48
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=2147483647 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2] array_map(): Argument #2 should be an array E:\bad\application\Portal\Controller\IndexController.class.php 第 183 行.
+
+[ 2017-05-01T22:55:58+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=49
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=2147483647 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] array_map(): Argument #2 should be an array E:\bad\application\Portal\Controller\IndexController.class.php 第 183 行.
+
+[ 2017-05-01T22:55:58+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=50
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=2147483647 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] array_map(): Argument #2 should be an array E:\bad\application\Portal\Controller\IndexController.class.php 第 183 行.
+
+[ 2017-05-01T22:56:05+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T22:56:06+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=50
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=2147483647 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] array_map(): Argument #2 should be an array E:\bad\application\Portal\Controller\IndexController.class.php 第 183 行.
+
+[ 2017-05-01T22:56:08+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=49
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=2147483647 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] array_map(): Argument #2 should be an array E:\bad\application\Portal\Controller\IndexController.class.php 第 183 行.
+
+[ 2017-05-01T22:56:23+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=48
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.016001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=2147483647 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] array_map(): Argument #2 should be an array E:\bad\application\Portal\Controller\IndexController.class.php 第 184 行.
+
+[ 2017-05-01T22:56:35+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T22:56:36+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=49
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 180 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 180 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 180 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 180 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 180 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 180 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 180 行.
+
+[ 2017-05-01T22:56:37+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=48
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 180 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 180 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 180 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 180 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 180 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 180 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 180 行.
+
+[ 2017-05-01T22:56:50+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=49
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+
+[ 2017-05-01T22:56:57+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=48
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+
+[ 2017-05-01T22:56:58+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=50
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+
+[ 2017-05-01T22:57:24+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=49
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0010s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 180 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 180 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 180 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 180 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 180 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 180 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 180 行.
+
+[ 2017-05-01T22:57:25+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=48
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 180 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 180 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 180 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 180 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 180 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 180 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 180 行.
+
+[ 2017-05-01T22:57:26+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=49
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 180 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 180 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 180 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 180 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 180 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 180 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 180 行.
+
+[ 2017-05-01T22:57:26+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=50
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 180 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 180 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 180 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 180 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 180 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 180 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 180 行.
+
+[ 2017-05-01T22:57:47+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=49
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+
+[ 2017-05-01T22:57:49+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=48
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+
+[ 2017-05-01T22:57:50+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=49
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+
+[ 2017-05-01T22:57:50+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=50
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.010001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.018001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+
+[ 2017-05-01T22:58:02+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=49
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+
+[ 2017-05-01T22:58:03+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=50
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0010s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+
+[ 2017-05-01T22:58:14+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T22:58:15+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=50
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+
+[ 2017-05-01T22:58:15+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=49
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+
+[ 2017-05-01T22:58:16+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=48
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+
+[ 2017-05-01T22:58:17+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=49
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+
+[ 2017-05-01T22:58:17+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=50
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+
+[ 2017-05-01T22:58:18+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=49
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+
+[ 2017-05-01T22:58:18+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=48
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+
+[ 2017-05-01T22:58:25+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T22:58:25+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=50
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0010s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 180 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 180 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 180 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 180 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 180 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 180 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 180 行.
+
+[ 2017-05-01T22:58:26+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=49
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0040s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 180 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 180 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 180 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 180 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 180 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 180 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 180 行.
+
+[ 2017-05-01T22:58:39+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T22:58:39+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=50
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-05-01T22:58:59+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T22:59:00+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=50
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.007001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.006000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+NOTIC: [8] Undefined variable: name E:\bad\application\Portal\Controller\IndexController.class.php 第 181 行.
+
+[ 2017-05-01T22:59:20+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T22:59:21+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=50
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-05-01T22:59:22+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=49
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T22:59:23+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=48
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T22:59:24+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=50
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T22:59:30+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=49
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T22:59:31+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=50
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T22:59:33+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=49
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.007000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T22:59:34+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=50
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T22:59:35+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=49
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T22:59:35+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=50
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0040s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-05-01T22:59:36+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=49
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T22:59:37+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=50
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T22:59:38+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=49
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0010s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T22:59:39+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=50
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T22:59:55+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T22:59:55+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=49
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-05-01T22:59:56+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=50
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-05-01T22:59:58+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=48
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T22:59:58+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=49
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0010s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T23:02:21+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T23:02:22+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=50
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T23:02:22+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=49
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-05-01T23:02:23+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=48
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T23:02:24+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=50
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-05-01T23:02:26+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=49
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0040s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T23:02:27+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=48
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-05-01T23:02:27+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=50
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.004001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T23:02:28+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=49
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T23:02:29+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=48
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0040s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-05-01T23:02:30+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=50
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-05-01T23:02:30+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=49
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-05-01T23:02:30+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=48
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T23:02:31+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=50
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.009001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-05-01T23:02:31+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=49
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T23:02:32+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=48
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T23:02:33+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=50
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T23:02:34+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=48
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T23:02:34+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=49
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T23:02:36+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=50
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T23:02:48+08:00 ] 127.0.0.1 /order_info.html
+ERR: 无法加载控制器:Order_info
+
+[ 2017-05-01T23:02:50+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T23:03:06+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T23:03:12+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T23:03:21+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T23:03:33+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=49
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T23:03:59+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T23:04:51+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T23:04:51+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=50
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-05-01T23:05:01+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T23:05:03+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=50
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0040s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-05-01T23:05:05+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=49
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-05-01T23:05:06+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=50
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T23:05:11+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T23:05:12+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=50
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-05-01T23:05:14+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=49
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T23:05:15+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=48
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T23:05:18+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=50
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-05-01T23:05:19+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=49
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-05-01T23:05:20+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=50
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-05-01T23:05:20+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=48
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-05-01T23:05:21+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=49
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T23:05:21+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=50
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T23:05:22+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=49
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T23:05:23+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=50
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T23:05:23+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=48
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T23:05:24+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=49
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-05-01T23:05:24+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=50
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-05-01T23:06:58+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-01T23:06:59+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=48
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-05-01T23:06:59+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=49
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T23:07:01+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=48
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.019001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T23:07:02+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=49
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T23:07:02+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=50
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-05-01T23:07:04+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=49
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T23:07:04+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=48
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T23:07:05+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=50
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-05-01T23:07:05+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=49
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T23:07:06+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=48
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T23:07:06+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=50
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T23:07:06+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=49
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T23:07:07+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=48
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T23:07:07+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=50
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-05-01T23:07:08+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=49
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0040s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-05-01T23:07:09+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=48
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T23:07:10+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=50
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0040s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T23:07:12+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=49
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T23:07:14+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=48
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-05-01T23:07:15+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=50
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T23:07:15+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=49
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0040s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T23:07:16+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=48
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-05-01T23:07:16+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=49
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T23:07:16+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=50
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T23:07:17+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=49
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T23:07:17+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=48
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-05-01T23:07:17+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=50
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T23:07:18+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=49
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.007001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0040s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-05-01T23:07:18+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=48
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T23:07:20+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=50
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T23:07:20+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=49
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T23:08:37+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=48
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T23:08:37+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=49
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-05-01T23:08:37+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=50
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T23:08:39+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=49
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T23:08:39+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=48
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T23:08:42+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=49
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0030s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-05-01T23:08:42+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=50
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T23:08:44+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=50
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-05-01T23:08:45+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=49
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-05-01T23:08:47+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Index&a=goodClick&id=20170423124543553&name=48
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005001s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012001s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `i_goods_term` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `i_goods` [ RunTime:0.0020s ]
+SQL: SELECT `attribute` FROM `i_goods` WHERE ( id=20170423124543552.000000 ) LIMIT 1   [ RunTime:0.0000s ]
+
