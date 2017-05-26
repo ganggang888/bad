@@ -2355,3 +2355,27 @@ function getSomeMessage()
 	$info = func_get_args();
 	return M($info[0])->where(array('id'=>$info[1]))->getField($info[2]);
 }
+
+//计算某个人为你带来的收益  uid 受益者  pid他人
+function getScoreYou($uid,$pid)
+{
+	$model = M();
+	$all = $model->query("SELECT SUM(`score`) AS score FROM i_ticheng_log WHERE uid = $uid AND pid = $pid");
+	if ($all[0]['score']) {
+		return $all[0]['score'];
+	} else {
+		return 0;
+	}
+}
+
+//推荐人
+function tuijianName($pid)
+{
+	$model = M();
+	$mobile = M('users')->where(array('uuid'=>$pid))->getField('mobile');
+	if ($mobile) {
+		return $mobile;
+	} else {
+		return '无';
+	}
+}

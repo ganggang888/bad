@@ -28,7 +28,7 @@
         <?php elseif($_SESSION['user']['level'] == 5): ?>
         股东商<?php endif; ?>
         </p>
-        <p class="user-integral">可用金币：<em class="num"><?php echo ($_SESSION['user']['gold']); ?></em></p>
+        <p class="user-integral">可用金币：<em class="num"><?php echo ($_SESSION['user']['gold']); ?></em></p> 
       </div>
     </div>
 <!--    <div class="xx-menu weui-flex">
@@ -109,8 +109,42 @@
     </div>
   </div>
   
-  
+  <!--图标-->
   <div class="weui-panel">
+  <div class="weui-flex wy-iconlist-box">
+    <div class="weui-flex__item"><a href="<?php echo leuu('User/Center/bank_list');?>" class="wy-links-iconlist"><div class="img"><img src="/themes/simplebootx/Public/images/me-5.png"></div><p>我的银行卡</p></a></div>
+    <div class="weui-flex__item"><a href="<?php echo leuu('User/Center/log_index');?>" class="wy-links-iconlist"><div class="img"><img src="/themes/simplebootx/Public/images/me-1.png"></div><p>交易记录</p></a></div>
+    <div class="weui-flex__item"><a href="<?php echo leuu('User/Other/tixian_history');?>" class="wy-links-iconlist"><div class="img"><img src="/themes/simplebootx/Public/images/me-7.png"></div><p>提现记录</p></a></div>
+    <div class="weui-flex__item"><a href="<?php echo leuu('User/Center/chongzhi');?>" class="wy-links-iconlist"><div class="img"><img src="/themes/simplebootx/Public/images/me-4.png"></div><p>去充值</p></a></div>
+  </div>
+  <div class="weui-flex wy-iconlist-box">
+    <div class="weui-flex__item"><a href="<?php echo leuu('User/Other/getLevelPeople');?>" class="wy-links-iconlist"><div class="img"><img src="/themes/simplebootx/Public/images/me-14.png"></div><p>我的团队</p></a></div>
+    <div class="weui-flex__item"><a href="<?php echo leuu('User/Center/my_save');?>" class="wy-links-iconlist"><div class="img"><img src="/themes/simplebootx/Public/images/me-1.png"></div><p>我的收藏</p></a></div>
+    <div class="weui-flex__item"><a href="<?php echo leuu('User/Other/index');?>" class="wy-links-iconlist"><div class="img"><img src="/themes/simplebootx/Public/images/me-7.png"></div><p>兑换积分</p></a></div>
+    <div class="weui-flex__item" ><a href="javascript:;" class="wy-links-iconlist"><div class="img"><img src="/themes/simplebootx/Public/images/me-4.png"></div><p></p></a></div>
+  </div>
+  <div class="weui-flex wy-iconlist-box">
+    <div class="weui-flex__item"><a href="<?php echo leuu('Portal/Index/news_list');?>" class="wy-links-iconlist"><div class="img"><img src="/themes/simplebootx/Public/images/me-3.png"></div><p>新闻中心</p></a></div>
+    <div class="weui-flex__item"><a href="<?php echo leuu('User/Center/addressList');?>" class="wy-links-iconlist"><div class="img"><img src="/themes/simplebootx/Public/images/me-10.png"></div><p>地址管理</p></a></div>
+    <div class="weui-flex__item"><a href="<?php echo leuu('User/Center/changePassword');?>" class="wy-links-iconlist"><div class="img"><img src="/themes/simplebootx/Public/images/me-12.png"></div><p>密码修改</p></a></div>
+    <div class="weui-flex__item"><a href="<?php echo leuu('User/Index/logout');?>" class="wy-links-iconlist"><div class="img"><img src="/themes/simplebootx/Public/images/me-11.png"></div><p>退出账号</p></a></div>
+  </div>
+</div>
+<!--<div class="bdsharebuttonbox" data-tag="share_1">
+	<a class="bds_mshare" data-cmd="mshare"></a>
+	<a class="bds_qzone" data-cmd="qzone" href="#"></a>
+	<a class="bds_tsina" data-cmd="tsina"></a>
+	<a class="bds_baidu" data-cmd="baidu"></a>
+	<a class="bds_renren" data-cmd="renren"></a>
+	<a class="bds_tqq" data-cmd="tqq"></a>
+	<a class="bds_more" data-cmd="more">更多</a>
+	<a class="bds_count" data-cmd="count"></a>
+</div>-->
+
+
+  <!--图标end-->
+  
+  <!--<div class="weui-panel">
         <div class="weui-panel__bd">
           <div class="weui-media-box weui-media-box_small-appmsg">
             <div class="weui-cells">
@@ -189,7 +223,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div>-->
   
   
   

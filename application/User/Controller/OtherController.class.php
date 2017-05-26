@@ -116,20 +116,64 @@ class OtherController extends MemberbaseController {
 	//qiandao
 	public function qiandao()
 	{
+		if (IS_POST) {
+			//提交签到信息
+			//先查询
+		}
+		//返回用户本月签到日期
+		$begin = date("Y-m")."-01";
+		$end = date("Y-m",strtotime("+1 month"))."-01";
+		$info = M('qiandao')->where("date >= '$begin' AND date < '$end'")->order(array('date'=>"ASC"))->select();
+		$this->assign('info',$info);
 		$this->display();
 	}
 
-	//获取自己的下级和下下级
+	//获取自己的下级和下下级  type1  一级      type2  二级
 	public function getLevelPeople()
 	{
 		$uid = get_current_userid();
 		$uuid = $_SESSION['user']['uuid'];
+		$type = I('get.type');
 		$result = M('users')->where(array('pid'=>$uuid))->order(array("create_time"=>"ASC"))->select();
 
 		foreach ($result as $key=>$vo) {
 			$vo['son'] = M('users')->where(array('pid'=>$vo['uuid']))->select();
 			$result[$key] = $vo;
 		}
-		var_dump($result);
+
+		//全部团队
+		$data = array();
+		$allMoney = '';
+		foreach ($result as $vo) {
+			$vo['for_you'] = getScoreYou($uid,$vo['id']);
+			$allMoney += getScoreYou($uid,$vo['id']);
+			$data[] = $vo;
+		}
+		foreach ($result as $vo) {
+			foreach ($vo['son'] as $v) {
+				$v['for_you'] = getScoreYou($uid,$v['id']);
+				$allMoney += getScoreYou($uid,$v['id']);
+				$data[] = $v;
+			}
+		}
+		$allCount = count($data);
+		//一级团队
+		$one = array();$two = array();$oneMoney='';$twoMoney = '';
+		foreach ($result as $vo) {
+			$vo['for_you'] = getScoreYou($uid,$vo['id']);
+			$oneMoney += getScoreYou($uid,$vo['id']);
+			$one[] = $vo;
+		}
+		$oneCount = count($one);
+		foreach ($result as $vo) {
+			foreach ($vo['son'] as $v) {
+				$twoMoney += getScoreYou($uid,$v['id']);
+				$v['for_you'] = getScoreYou($uid,$v['id']);
+				$two[] = $v;
+			}
+		}
+		$twoCount = count($two);
+		$this->assign(compact('data','allCount','allMoney','oneMoney','oneCount','one','twoMoney','twoCount','two'));
+		$this->display();
 	}
 }

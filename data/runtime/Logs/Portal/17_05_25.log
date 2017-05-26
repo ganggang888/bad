@@ -1,0 +1,27 @@
+[ 2017-05-25T20:57:25+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
+[ 2017-05-25T21:23:47+08:00 ] 127.0.0.1 /lib/weui.min.css
+ERR: 无法加载控制器:Lib
+
+[ 2017-05-25T21:23:47+08:00 ] 127.0.0.1 /css/style.css
+ERR: 无法加载控制器:Css
+
+[ 2017-05-25T21:23:47+08:00 ] 127.0.0.1 /css/jquery-weui.css
+ERR: 无法加载控制器:Css
+
+[ 2017-05-25T21:23:47+08:00 ] 127.0.0.1 /lib/jquery-2.1.4.js
+ERR: 无法加载控制器:Lib
+
+[ 2017-05-25T21:23:47+08:00 ] 127.0.0.1 /lib/fastclick.js
+ERR: 无法加载控制器:Lib
+
+[ 2017-05-25T21:23:47+08:00 ] 127.0.0.1 /js/jquery.Spinner.js
+ERR: 无法加载控制器:Js
+
+[ 2017-05-25T21:23:47+08:00 ] 127.0.0.1 /js/jquery-weui.js
+ERR: 无法加载控制器:Js
+
+[ 2017-05-25T22:05:26+08:00 ] 127.0.0.1 /themes/simplebootx/Public/js/maps/swiper.jquery.js.map
+ERR: 无法加载控制器:Themes
+
